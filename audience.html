@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Blind Test - Audience</title>
+        <style>
+            /* Style basique pour l'écran des participants */
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #3498db;
+                color: #ecf0f1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                margin: 0;
+            }
+            #status {
+                font-size: 24px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Blind Test - Audience</h1>
+        <div id="status">Réponses Masquées</div>
+
+        <script>
+            function updateStatus() {
+                const showResponse = localStorage.getItem('showResponse') === 'true';
+                document.getElementById('status').textContent = showResponse
+                    ? 'Réponses Affichées'
+                    : 'Réponses Masquées';
+            }
+
+            // Mettre à jour le statut initial
+            updateStatus();
+
+            // Mettre à jour en temps réel si le stockage change
+            window.addEventListener('storage', updateStatus);
+        </script>
+    </body>
+</html>
