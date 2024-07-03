@@ -1,28 +1,53 @@
-<!-- presenter.html -->
 <!DOCTYPE html>
 <html lang="fr">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="./script.js"></script>
         <title>Blind Test - Présentateur</title>
     </head>
     <body>
-        <h1>Blind Test - Présentateur</h1>
+        <header>
+            <h1>Blind Test - Présentateur</h1>
+        </header>
         <button id="openAudience">Ouvrir Audience</button>
+        <button id="pause">pause</button>
+        <button id="play">play</button>
+        <button id="suivant" onclick="changeMusique()">suivant</button>
         <button id="toggle">Afficher/Masquer les Réponses</button>
+        <button id="json" onclick="readJson()">json</button>
+        <button id="read" onclick="readBlind()">read</button>
         <div class="response" id="response">Réponses ici</div>
 
         <script>
-            document.getElementById('openAudience').addEventListener('click', function () {
-                window.open('audience.html', 'Audience').focus();
-            });
-
-            document.getElementById('toggle').addEventListener('click', function () {
-                const responseDiv = document.getElementById('response');
-                responseDiv.classList.toggle('visible');
-                console.log('element :', typeof responseDiv.classList.contains('visible'));
-                localStorage.setItem('showResponse', responseDiv.classList.contains('visible'));
-            });
+            document
+                .getElementById('toggle')
+                .addEventListener('click', function () {
+                    const responseDiv = document.getElementById('response');
+                    responseDiv.classList.toggle('visible');
+                    console.log(
+                        'element :',
+                        typeof responseDiv.classList.contains('visible')
+                    );
+                    localStorage.setItem(
+                        'showResponse',
+                        responseDiv.classList.contains('visible')
+                    );
+                });
         </script>
+        <main>
+            <iframe
+                id="youtubePlayer"
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/dWz2BWGxqMI"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <div id="participants"></div>
+            <div id="rubrique"></div>
+            <div id="musique"></div>
+        </main>
+        <footer></footer>
     </body>
 </html>

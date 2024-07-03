@@ -1,0 +1,20 @@
+{
+    "blindtest": {
+        "participants": ["j1", "j2"],
+        "rubriques": [
+            {
+                "name": "test rubriques",
+                "musiques": [
+                    {
+                        "lien": "Alvaro Soler - Sofia.mp3",
+                        "titre": "Alvaro Soler - Sofia"
+                    },
+                    {
+                        "lien": "Give_You_Hell.mp3",
+                        "titre": "Give_You_Hell"
+                    }
+                ]
+            }
+        ]
+    }
+}

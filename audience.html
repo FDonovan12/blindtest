@@ -4,18 +4,26 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Blind Test - Audience</title>
+        <script src="./script.js"></script>
     </head>
     <body>
-        <h1>Blind Test - Audience</h1>
+        <header>
+            <h1>Blind Test - Audience</h1>
+        </header>
         <div id="status">Réponses Masquées</div>
 
         <script>
             function updateStatus() {
-                const showResponse = localStorage.getItem('showResponse') === 'true';
-                const content = showResponse ? 'Réponses Affichées' : 'Réponses Masquées';
+                const showResponse =
+                    localStorage.getItem('showResponse') === 'true';
+                const content = showResponse
+                    ? 'Réponses Affichées'
+                    : 'Réponses Masquées';
                 document.getElementById('status').textContent = content;
             }
             window.addEventListener('storage', updateStatus);
         </script>
+        <main></main>
+        <footer></footer>
     </body>
 </html>
