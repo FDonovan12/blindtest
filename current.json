@@ -1,17 +1,18 @@
 {
     "blindtest": {
-        "participants": ["j1", "j2"],
-        "rubriques": [
+        "name": "test_current",
+        "participants": [{ "name": "j1" }, { "name": "j2" }],
+        "sections": [
             {
-                "name": "test rubriques",
+                "name": "test sections",
                 "musiques": [
                     {
-                        "lien": "Alvaro Soler - Sofia.mp3",
-                        "titre": "Alvaro Soler - Sofia"
+                        "link": "Alvaro Soler - Sofia.mp3",
+                        "pointInfos": [{ "name": "titre", "value": "Alvaro Soler - Sofia" }]
                     },
                     {
-                        "lien": "Give_You_Hell.mp3",
-                        "titre": "Give_You_Hell"
+                        "link": "Give_You_Hell.mp3",
+                        "pointInfos": [{ "name": "titre", "value": "Give_You_Hell" }]
                     }
                 ]
             }

@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script src="./script.js"></script>
+        <!-- <script src="./objectValueBlindtest.js" type="module"></script> -->
+        <script type="module" src="./script.js"></script>
         <title>Blind Test - Présentateur</title>
     </head>
     <body>
@@ -13,7 +14,7 @@
         <button id="openAudience">Ouvrir Audience</button>
         <button id="pause">pause</button>
         <button id="play">play</button>
-        <button id="suivant" onclick="changeMusique()">suivant</button>
+        <button id="suivant">suivant</button>
         <button id="toggle">Afficher/Masquer les Réponses</button>
         <button id="json" onclick="readJson()">json</button>
         <button id="read" onclick="readBlind()">read</button>
@@ -36,14 +37,14 @@
                 });
         </script>
         <main>
-            <iframe
+            <!-- <iframe
                 id="youtubePlayer"
                 width="560"
                 height="315"
                 src="https://www.youtube.com/embed/dWz2BWGxqMI"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
+                allowfullscreen></iframe> -->
             <div id="participants"></div>
             <div id="rubrique"></div>
             <div id="musique"></div>
