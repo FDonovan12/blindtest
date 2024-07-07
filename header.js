@@ -7,24 +7,49 @@ window.addEventListener('load', () => {
     addFooter();
 });
 
-const file_map = {
-    '/': 'Accueil',
-    '/fractal/': 'Fractal',
-    '/game_of_life/': 'Jeu de la vie',
-    '/minecraft_beacon/': 'Beacon Minecraft',
-};
+class MappingUrlContent {
+    constructor(pathname, content) {
+        this[pathname] = content;
+    }
+    addPathname(pathname, content) {
+        this[pathname] = content;
+    }
+    getContent(key) {
+        return this[key];
+    }
+}
 
-class pageInfos {
+function createFileMap() {
+    const file_map = new MappingUrlContent('/', 'Accueil');
+    file_map.addPathname('/presenter.html', 'presentateur');
+    file_map.addPathname('/audience.html', 'audience');
+    return file_map;
+}
+
+function getContentFromUrl(url) {
+    url = url || window.location.pathname;
+    const content = createFileMap().getContent(url);
+    return content;
+}
+
+class PageInfos {
     constructor(url, infos) {
         this.url = url;
         this.infos = infos;
     }
 }
 
-class pageInfos2 {
-    constructor(infos) {
+class PageInfos2 {
+    constructor(url, infos) {
         this.url = url;
         this.infos = infos;
+    }
+}
+
+class MetaTag {
+    constructor(type, content) {
+        this.type = type;
+        this.content = content;
     }
 }
 
@@ -66,7 +91,9 @@ function getURlRoot() {
 }
 function setTitle() {
     const pathname = window.location.pathname;
-    document.title = file_map[pathname];
+    // document.title = file_map[pathname];
+    console.log('setTitle');
+    document.title = getContentFromUrl();
 }
 
 function addFooter() {
@@ -142,7 +169,15 @@ function addHeader() {
     let h2 = baliseClass('h2', headers, null, "Developpeur d'application");
     let nav = baliseClass('nav', headers, 'nav-bar row row-cols-2 row-cols-md-4');
     const urlRoot = getURlRoot();
-    // Object.keys(file_map).forEach((key) => {
-    //     createLinkNav(nav, `${urlRoot}${key}`, file_map[key]);
-    // });
+    Object.keys(createFileMap()).forEach((key) => {
+        createLinkNav(nav, `${urlRoot}${key}`, getContentFromUrl(key));
+    });
+}
+
+function createLinkNav(nav, href, text) {
+    let link = baliseClass('a', nav, 'nav-bar-link', text);
+    link.href = href;
+    if (document.title === text) {
+        link.classList.add('active');
+    }
 }

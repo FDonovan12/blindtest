@@ -14,13 +14,29 @@ window.addEventListener('load', () => {
         });
     } catch (error) {}
     // createClickButton('#openAudience', window.open('audience.html', 'Audience').focus());
-    createClickButton('#pause', partyBlindtest.pauseMusic.bind(partyBlindtest));
-    createClickButton('#play', partyBlindtest.playMusic.bind(partyBlindtest));
+    createClickButton('#play', partyBlindtest.playAndPauseMusic.bind(partyBlindtest));
     createClickButton('#previous', partyBlindtest.previousMusic.bind(partyBlindtest));
     createClickButton('#next', partyBlindtest.nextMusic.bind(partyBlindtest));
+    window.addEventListener('keydown', (key) => {
+        console.log('key :', key);
+        switch (key.code) {
+            case 'Space':
+                key.preventDefault();
+                partyBlindtest.playAndPauseMusic();
+                break;
+            case 'ArrowRight':
+                key.preventDefault();
+                partyBlindtest.nextMusic();
+                break;
+            case 'ArrowLeft':
+                key.preventDefault();
+                partyBlindtest.previousMusic();
+                break;
+
+            default:
+                break;
+        }
+    });
     addResponse(partyBlindtest);
-    console.log(partyBlindtest.getSection());
     const player = partyBlindtest.getParticipants()[1];
-    console.log(player);
-    console.log(partyBlindtest.getSection().computeScoreOfPlayer(player));
 });

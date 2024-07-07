@@ -4,19 +4,20 @@ export class PartyBlindtest {
         if (typeof partyBlindtest === 'string') {
             partyBlindtest = JSON.parse(partyBlindtest);
         }
-        try {
-            this.blindtest = new Blindtest(partyBlindtest['blindtest']);
-        } catch (error) {
+        if (partyBlindtest?.blindtest) {
+            this.blindtest = new Blindtest(partyBlindtest.blindtest);
+        } else {
             this.blindtest = new Blindtest(partyBlindtest);
         }
         this.currentMusic = 0;
         this.currentSection = 0;
-        if (partyBlindtest['currentMusic']) {
-            this.currentMusic = partyBlindtest['currentMusic'];
+        if (partyBlindtest?.currentMusic) {
+            this.currentMusic = partyBlindtest.currentMusic;
         }
-        if (partyBlindtest['currentSection']) {
-            this.currentSection = partyBlindtest['currentSection'];
+        if (partyBlindtest?.currentSection) {
+            this.currentSection = partyBlindtest.currentSection;
         }
+        this.audio = document.querySelector('#music-audio');
         this.changeAudio();
     }
 
@@ -34,6 +35,14 @@ export class PartyBlindtest {
 
     getNumberOfMusic() {
         return this.getSection().musics.length;
+    }
+
+    playAndPauseMusic() {
+        if (this.audio.paused) {
+            this.playMusic();
+        } else {
+            this.pauseMusic();
+        }
     }
 
     playMusic() {
@@ -65,8 +74,9 @@ export class PartyBlindtest {
     changeAudio() {
         if (this.audio) {
             this.audio.pause();
+            const linkMusic = this.getMusic().link;
+            this.audio.src = linkMusic;
         }
-        this.audio = new Audio(this.getMusic().link);
     }
 
     nextMusic() {
