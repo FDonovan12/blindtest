@@ -1,7 +1,6 @@
 import { baliseClass } from './utils.js';
 
 window.addEventListener('load', () => {
-    console.log('element');
     addHeadContent();
     addHeader();
     addFooter();
@@ -92,7 +91,6 @@ function getURlRoot() {
 function setTitle() {
     const pathname = window.location.pathname;
     // document.title = file_map[pathname];
-    console.log('setTitle');
     document.title = getContentFromUrl();
 }
 

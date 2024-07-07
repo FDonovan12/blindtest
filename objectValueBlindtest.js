@@ -144,10 +144,7 @@ export class Section {
 
     computeScoreOfPlayer(player) {
         let score = 0;
-        console.log(player);
-        console.log(this);
         this.musics.map((music) => {
-            console.log(music);
             music.pointInfos
                 .filter((pointInfo) => pointInfo?.participant?.name === player.name)
                 .map(() => score++);
@@ -174,7 +171,10 @@ export class PointInfo {
     isShow() {
         return this.participant === undefined;
     }
-    update;
+    changeParticipant(newParticipantName, partyBlindtest) {
+        this.participant = new Participant(newParticipantName);
+        partyBlindtest.save();
+    }
 }
 export class Participant {
     constructor(name) {

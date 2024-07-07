@@ -69,6 +69,9 @@ export function addResponse(partyBlindtest) {
 export function createResponse(partyBlindtest, divResponse) {
     const pointInfos = partyBlindtest.getMusic().pointInfos;
     pointInfos.map((pointInfo) => {
+        if (pointInfo?.participant?.name === 'undefined') {
+            pointInfo.participant = undefined;
+        }
         const classVisible = isAudience() & !pointInfo.participant ? 'invisible' : null;
         const divPointInfo = baliseClass('div', divResponse, 'response-pointInfos');
         const divNamePointInfo = baliseClass('div', divPointInfo, null, pointInfo.name);
@@ -82,6 +85,9 @@ export function createResponse(partyBlindtest, divResponse) {
             );
         } else {
             const selectValuePointInfo = baliseClass('select', divPointInfo);
+            selectValuePointInfo.addEventListener('change', (value) => {
+                pointInfo.changeParticipant(selectValuePointInfo.value, partyBlindtest);
+            });
             addOptionToSelect(selectValuePointInfo, undefined, undefined);
             partyBlindtest.getParticipants().map((participant, index) => {
                 addOptionToSelect(selectValuePointInfo, participant.name, participant.name);
