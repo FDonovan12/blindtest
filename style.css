@@ -1,0 +1,17 @@
+.response-pointInfos {
+    /* display: grid;
+    grid-column: 1fr 1fr 1fr; */
+    columns: 3;
+    /* justify-content: space-around; */
+    border: 2px solid;
+    width: 50%;
+}
+
+.response-pointInfos > div:nth-child(1) {
+    display: flex;
+    justify-content: end;
+}
+
+.invisible {
+    background-color: black;
+}
