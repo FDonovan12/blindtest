@@ -1,3 +1,4 @@
+import { addResponse } from './utils.js';
 export class PartyBlindtest {
     constructor(partyBlindtest) {
         if (typeof partyBlindtest === 'string') {
@@ -5,13 +6,17 @@ export class PartyBlindtest {
         }
         try {
             this.blindtest = new Blindtest(partyBlindtest['blindtest']);
-            // console.log('no error :');
         } catch (error) {
-            // console.log('error :');
             this.blindtest = new Blindtest(partyBlindtest);
         }
         this.currentMusic = 0;
         this.currentSection = 0;
+        if (partyBlindtest['currentMusic']) {
+            this.currentMusic = partyBlindtest['currentMusic'];
+        }
+        if (partyBlindtest['currentSection']) {
+            this.currentSection = partyBlindtest['currentSection'];
+        }
         this.changeAudio();
     }
 
@@ -19,45 +24,93 @@ export class PartyBlindtest {
         return this.blindtest.sections[this.currentSection];
     }
 
-    getMusique() {
-        return this.getSection().musiques[this.currentMusic];
+    getMusic() {
+        return this.getSection().musics[this.currentMusic];
+    }
+
+    getNumberOfSection() {
+        return this.blindtest.sections.length;
+    }
+
+    getNumberOfMusic() {
+        return this.getSection().musics.length;
+    }
+
+    playMusic() {
+        this.audio.play();
+    }
+
+    pauseMusic() {
+        this.audio.pause();
     }
 
     getParticipants() {
         return this.blindtest.participants;
     }
 
-    save() {
-        localStorage.setItem('partyBlindtest', JSON.stringify(this));
+    save(storage) {
+        if (!storage) {
+            storage = 'partyBlindtest';
+        }
+        localStorage.setItem(storage, JSON.stringify(this));
+        addResponse(this);
     }
-    static get() {
-        return new PartyBlindtest(JSON.parse(localStorage.getItem('partyBlindtest')));
+    static get(storage) {
+        if (!storage) {
+            storage = 'partyBlindtest';
+        }
+        return new PartyBlindtest(JSON.parse(localStorage.getItem(storage)));
     }
 
     changeAudio() {
         if (this.audio) {
             this.audio.pause();
         }
-        this.audio = new Audio(this.getMusique().link);
+        this.audio = new Audio(this.getMusic().link);
     }
 
     nextMusic() {
-        if (this.currentMusic < this.getSection().musiques.length - 1) {
+        if (this.currentMusic < this.getNumberOfMusic() - 1) {
             this.currentMusic++;
-            this.changeAudio();
         } else {
             this.nextSection();
         }
+        this.changeAudio();
+        this.save();
     }
 
     nextSection() {
-        this.currentMusic = 0;
-        this.changeAudio();
-        if (this.currentSection < this.blindtest.sections.length - 1) {
+        if (this.currentSection < this.getNumberOfSection() - 1) {
             this.currentSection++;
         } else {
+            // TODO modify when the project is finished, this doesn't have to cycle
             this.currentSection = 0;
         }
+        this.currentMusic = 0;
+        this.changeAudio();
+        this.save();
+    }
+
+    previousMusic() {
+        if (this.currentMusic > 0) {
+            this.currentMusic--;
+        } else {
+            this.previousSection();
+        }
+        this.changeAudio();
+        this.save();
+    }
+
+    previousSection() {
+        if (this.currentSection > 0) {
+            this.currentSection--;
+        } else {
+            // TODO modify when the project is finished, this doesn't have to cycle
+            this.currentSection = this.getNumberOfSection() - 1;
+        }
+        this.currentMusic = this.getNumberOfMusic() - 1;
+        this.changeAudio();
+        this.save();
     }
 }
 
@@ -68,35 +121,50 @@ export class Blindtest {
             (participant) => new Participant(participant['name'])
         );
         this.sections = blindtest['sections'].map(
-            (section) => new Section(section['name'], section['musiques'])
+            (section) => new Section(section['name'], section['details'], section['musics'])
         );
     }
 }
 export class Section {
-    constructor(name, musiques) {
+    constructor(name, details, musics) {
         this.name = name;
-        this.musiques = musiques.map(
-            (musique) => new Musique(musique['link'], musique['pointInfos'])
-        );
+        this.details = details;
+        this.musics = musics.map((musique) => new Music(musique));
+    }
+
+    computeScoreOfPlayer(player) {
+        let score = 0;
+        console.log(player);
+        console.log(this);
+        this.musics.map((music) => {
+            console.log(music);
+            music.pointInfos
+                .filter((pointInfo) => pointInfo?.participant?.name === player.name)
+                .map(() => score++);
+        });
+        return score;
     }
 }
-export class Musique {
-    constructor(link, pointInfos) {
-        this.link = link;
-        this.pointInfos = pointInfos.map(
-            (pointInfo) => new PointInfo(pointInfo['name'], pointInfo['value'])
-        );
+export class Music {
+    constructor(music) {
+        this.link = music.link;
+        this.pointInfos = music.pointInfos.map((pointInfo) => new PointInfo(pointInfo));
     }
 }
 export class PointInfo {
-    constructor(name, value, particpant) {
-        this.name = name;
-        this.value = value;
-        this.particpant = particpant;
+    constructor(pointInfo) {
+        this.name = pointInfo.name;
+        this.value = pointInfo.value;
+        // this.participant = participant;
+        const participant = pointInfo.participant;
+        if (participant) {
+            this.participant = new Participant(participant['name']);
+        }
     }
     isShow() {
-        return this.particpant === undefined;
+        return this.participant === undefined;
     }
+    update;
 }
 export class Participant {
     constructor(name) {

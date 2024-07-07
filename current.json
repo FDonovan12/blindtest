@@ -5,10 +5,17 @@
         "sections": [
             {
                 "name": "test sections",
-                "musiques": [
+                "musics": [
                     {
                         "link": "Alvaro Soler - Sofia.mp3",
-                        "pointInfos": [{ "name": "titre", "value": "Alvaro Soler - Sofia" }]
+                        "pointInfos": [
+                            {
+                                "name": "artiste",
+                                "value": "Alvaro Soler2",
+                                "participant": { "name": "j2" }
+                            },
+                            { "name": "titre", "value": "Sofia" }
+                        ]
                     },
                     {
                         "link": "Give_You_Hell.mp3",

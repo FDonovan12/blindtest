@@ -1,162 +1,148 @@
-class Blindtest {
-    constructor(blindtest) {
-        this.name = blindtest['name'];
-        this.participants = blindtest['participants'].map(
-            (participant) => new Participant(participant['name'])
-        );
-        this.rubriques = blindtest['rubriques'].map(
-            (rubrique) => new Rubrique(rubrique['name'], rubrique['musiques'])
-        );
-    }
-}
-class Rubrique {
-    constructor(name, musiques) {
-        this.name = name;
-        this.musiques = musiques.map(
-            (musique) => new Musique(musique['link'], musique['pointInfos'])
-        );
-    }
-}
-class Musique {
-    constructor(link, pointInfos) {
-        this.link = link;
-        this.pointInfos = pointInfos.map(
-            (pointInfo) => new PointInfo(pointInfo['name'], pointInfo['value'])
-        );
-    }
-}
-class PointInfo {
-    constructor(name, value, particpant) {
-        this.name = name;
-        this.value = value;
-        this.particpant = particpant || null;
-    }
-}
-class Participant {
-    constructor(name) {
-        this.name = name;
-    }
-}
-class ResponseInfos {
-    constructor(pointInfo) {
-        this.pointInfo = pointInfo;
-        this.isShow = isShow;
-    }
-}
+import { baliseClass } from './utils.js';
 
 window.addEventListener('load', () => {
-    openAudience();
-    const music = 'https://www.youtube.com/watch?v=dWz2BWGxqMI';
-    audio = new Audio(music);
-    blindtest = readJsonSynchrone('current.json')['blindtest'];
-    const test = new Blindtest(blindtest);
-    const test2 = new Blindtest(JSON.parse(JSON.stringify(test)));
-    console.log('PointInfo :', test.rubriques[0]);
-    console.log('test1 :', test);
-    console.log('test2 :', test2);
-    console.log('test1 :', JSON.stringify(test));
-    console.log('blin2 :', JSON.stringify(blindtest));
-    console.log('blindtest12 :', blindtest);
-    console.log('blindtest :', JSON.parse(localStorage.getItem('blindtest')));
-    getTruc();
-    document.getElementById('pause').addEventListener('click', function () {
-        audio.pause();
-    });
-    document.getElementById('play').addEventListener('click', function () {
-        audio.play();
-    });
-    document.getElementById('suivant').addEventListener('click', function () {
-        changeMusique();
-    });
+    console.log('element');
+    addHeadContent();
+    addHeader();
+    addFooter();
 });
 
-currentMusic = 0;
-currentRubrique = 0;
-blindtest = null;
+const file_map = {
+    '/': 'Accueil',
+    '/fractal/': 'Fractal',
+    '/game_of_life/': 'Jeu de la vie',
+    '/minecraft_beacon/': 'Beacon Minecraft',
+};
 
-function getTruc() {
-    console.log('element :');
-    const participant = JSON.parse(localStorage.getItem('participants'));
-    document.querySelector('#participants').textContent = participant;
-    const rubrique = JSON.parse(localStorage.getItem('rubrique'));
-    document.querySelector('#rubrique').textContent = rubrique['name'];
-    const musique = JSON.parse(localStorage.getItem('musique'));
-    audio = new Audio(musique['link']);
-    document.querySelector('#musique').textContent = musique['titre'];
-}
-
-function changeMusique() {
-    currentMusic += 1;
-    audio.pause();
-    const blindtest = getLocalStorage('blindtest');
-    const rubrique = blindtest['rubriques'][currentRubrique];
-    const music = rubrique['musiques'][currentMusic];
-    setLocalStorage('musique', music);
-    getTruc();
-    // localStorage.setItem('music_audio', new Audio(music['link']));
-    // localStorage.setItem('response', new Audio(music['titre']));
-}
-
-function setLocalStorage(name, object) {
-    localStorage.setItem(name, JSON.stringify(object));
-}
-
-function getLocalStorage(name) {
-    return JSON.parse(localStorage.getItem(name));
-}
-
-function setLocal(data) {
-    const blindtest = data['blindtest'];
-    const participants = blindtest['participants'];
-    const rubrique = blindtest['rubriques'][0];
-    const musique = rubrique['musiques'][currentMusic];
-    console.log(data);
-    localStorage.setItem('blindtest', JSON.stringify(blindtest));
-    localStorage.setItem('participants', JSON.stringify(participants));
-    localStorage.setItem('rubrique', JSON.stringify(rubrique));
-    localStorage.setItem('musique', JSON.stringify(musique));
-}
-
-async function readJson() {
-    const response = await fetch('current.json');
-    const data = await response.json();
-    console.log('data :', data);
-    blindtest = data;
-    localStorage.setItem('blindtest', data);
-    return data;
-}
-
-function readJsonSynchrone(file) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', file, false);
-
-    try {
-        xhr.send();
-        if (xhr.status === 200) {
-            var data = JSON.parse(xhr.responseText);
-            setLocal(data);
-            return data;
-        } else {
-            console.error(
-                'Erreur de lecture du fichier JSON: ' + xhr.statusText
-            );
-        }
-    } catch (e) {
-        console.error("Une erreur s'est produite:", e);
+class pageInfos {
+    constructor(url, infos) {
+        this.url = url;
+        this.infos = infos;
     }
 }
 
-function readBlind() {
-    console.log('blindtest :', localStorage.getItem('blindtest'));
-    console.log('blindtest :', localStorage.getItem('blindtest')['blindtest']);
+class pageInfos2 {
+    constructor(infos) {
+        this.url = url;
+        this.infos = infos;
+    }
 }
 
-function openAudience() {
-    try {
-        document
-            .getElementById('openAudience')
-            .addEventListener('click', function () {
-                window.open('audience.html', 'Audience').focus();
-            });
-    } catch (error) {}
+function addHeadContent() {
+    const head = document.querySelector('head');
+
+    const metaCharset = baliseClass('meta', '', head);
+    metaCharset.setAttribute('charset', 'utf-8');
+
+    const metaViewport = createMetaTag(head, 'viewport', 'width=device-width, initial-scale=1.0');
+    const metaKeyword = createMetaTag(head, 'keywords', 'Musique, Blindtest');
+    const metaAuthor = createMetaTag(head, 'author', 'Donovan Ferreira');
+    const metaDescription = createMetaTag(
+        head,
+        'description',
+        'Site pour organiser des Blindtest avec mon entourage'
+    );
+
+    setTitle();
+    createLinkFontAwesome(head);
+    createLinkBoostrapStyle(head);
+    createLinkMainCSS(head);
+    // createLinkMainScript(head);
+    createLinkBoostrapScript(head);
+    createLinkChartJsScript(head);
+}
+
+function createMetaTag(head, name, content) {
+    const metaViewport = baliseClass('meta', '', head);
+    metaViewport.name = name;
+    metaViewport.content = content;
+}
+function getURlRoot() {
+    const pathname = window.location.pathname.replace('/experimentation', '');
+    const href = window.location.href;
+    const regexName = new RegExp(pathname + '$');
+    let urlRoot = href.replace(regexName, '');
+    return urlRoot;
+}
+function setTitle() {
+    const pathname = window.location.pathname;
+    document.title = file_map[pathname];
+}
+
+function addFooter() {
+    const footer = document.getElementsByTagName('footer')[0];
+    let div = document.createElement('div');
+    let span = document.createElement('span');
+    span.innerHTML = 'Copyright © 2024 Donovan Ferreira. Tous droits réservés.';
+    div.appendChild(span);
+    footer.appendChild(div);
+}
+function createLink(head, href, rel, integrity, crossorigin) {
+    let balise = document.createElement('script');
+    balise.src = href;
+    if (['stylesheet', 'preconnect'].includes(rel)) {
+        balise = document.createElement('link');
+        balise.rel = rel;
+        balise.href = href;
+    }
+    if (integrity) {
+        balise.integrity = integrity;
+    }
+    if (crossorigin) {
+        balise.crossOrigin = crossorigin;
+    }
+    head.appendChild(balise);
+}
+
+function createLinkFontAwesome(head) {
+    createLink(
+        head,
+        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css',
+        'stylesheet'
+    );
+}
+
+function createLinkBoostrapStyle(head) {
+    createLink(
+        head,
+        'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css',
+        'stylesheet',
+        'sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH',
+        'anonymous'
+    );
+}
+
+function createLinkMainCSS(head) {
+    let nameFileCss = `${getURlRoot()}/style.css`;
+    createLink(head, nameFileCss, 'stylesheet');
+}
+
+// function createLinkMainScript(head) {
+//     if (document.title !== 'Accueil') {
+//         createLink(head, './script.js', 'script');
+//     }
+// }
+
+function createLinkBoostrapScript(head) {
+    createLink(
+        head,
+        'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js',
+        'script',
+        'sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz',
+        'anonymous'
+    );
+}
+
+function createLinkChartJsScript(head) {
+    createLink(head, 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js', 'script');
+}
+function addHeader() {
+    const headers = document.querySelector('header');
+    let h1 = baliseClass('h1', headers, null, 'Experimentation de Donovan Ferreira');
+    let h2 = baliseClass('h2', headers, null, "Developpeur d'application");
+    let nav = baliseClass('nav', headers, 'nav-bar row row-cols-2 row-cols-md-4');
+    const urlRoot = getURlRoot();
+    // Object.keys(file_map).forEach((key) => {
+    //     createLinkNav(nav, `${urlRoot}${key}`, file_map[key]);
+    // });
 }
