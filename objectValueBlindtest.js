@@ -1,6 +1,17 @@
 import { addResponse } from './utils.js';
+
+let localStorageName = 'PartyBlindtest';
+
+export function changeLocalStorageName(name) {
+    localStorageName = name;
+}
+
+export function resetLocalStorageName() {
+    localStorageName = 'PartyBlindtest';
+}
+
 export class PartyBlindtest {
-    constructor(partyBlindtest) {
+    constructor(partyBlindtest, FromGetFunction) {
         if (typeof partyBlindtest === 'string') {
             partyBlindtest = JSON.parse(partyBlindtest);
         }
@@ -18,8 +29,19 @@ export class PartyBlindtest {
             this.currentSection = partyBlindtest.currentSection;
         }
         this.audio = document.querySelector('#music-audio');
-        // console.log(this);
+        this.localStorageName = localStorageName;
+        if (!FromGetFunction) {
+            const partyBlindtestFromStorage = PartyBlindtest.get();
+            if (this.getName() === partyBlindtestFromStorage.getName()) {
+                // this.currentMusic = partyBlindtestFromStorage.currentMusic;
+                return partyBlindtestFromStorage;
+            }
+        }
         this.changeAudio();
+    }
+
+    changeLocalStorageName(localStorageName) {
+        this.localStorageName = localStorageName;
     }
 
     getSection() {
@@ -64,20 +86,17 @@ export class PartyBlindtest {
 
     save(storage) {
         if (!storage) {
-            storage = 'partyBlindtest';
+            storage = this.localStorageName;
         }
-        // if (storage === 'partyBlindtest') {
-        //     throw new Error('test');
-        // }
         console.log('storage :', storage);
         localStorage.setItem(storage, JSON.stringify(this));
         addResponse(this);
     }
     static get(storage) {
         if (!storage) {
-            storage = 'partyBlindtest';
+            storage = localStorageName;
         }
-        return new PartyBlindtest(JSON.parse(localStorage.getItem(storage)));
+        return new PartyBlindtest(JSON.parse(localStorage.getItem(storage)), true);
     }
 
     changeAudio() {

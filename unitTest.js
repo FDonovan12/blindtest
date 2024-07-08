@@ -1,4 +1,8 @@
-import { PartyBlindtest } from './objectValueBlindtest.js';
+import {
+    PartyBlindtest,
+    changeLocalStorageName,
+    resetLocalStorageName,
+} from './objectValueBlindtest.js';
 import { readJsonSynchrone } from './utils.js';
 
 export default function unitTest() {
@@ -10,47 +14,50 @@ export default function unitTest() {
     unitTestNotResetStorageIfSameBlindtest();
 }
 function unitTestWithoutBlindtestAttribut() {
+    const nameUnitTest = 'unitTestWithoutBlindtestAttribut';
     const constPartyBlindtest = new PartyBlindtest(readJsonSynchrone('current.json')['blindtest']);
     const withoutBlindtestAttribut = new PartyBlindtest(readJsonSynchrone('current.json'));
-    assertEquals(constPartyBlindtest, withoutBlindtestAttribut, 'unitTestWithoutBlindtestAttribut');
+    assertEquals(constPartyBlindtest, withoutBlindtestAttribut, nameUnitTest);
 }
 function unitTestCopy() {
+    const nameUnitTest = 'unitTestCopy';
     const constPartyBlindtest = new PartyBlindtest(readJsonSynchrone('current.json')['blindtest']);
     const copy = new PartyBlindtest(constPartyBlindtest);
-    assertEquals(constPartyBlindtest, copy, 'unitTestCopy');
+    assertEquals(constPartyBlindtest, copy, nameUnitTest);
 }
 function unitTestcopyStringify() {
+    const nameUnitTest = 'unitTestcopyStringify';
     const constPartyBlindtest = new PartyBlindtest(readJsonSynchrone('current.json')['blindtest']);
     const copyStringify = new PartyBlindtest(JSON.stringify(constPartyBlindtest));
-    assertEquals(constPartyBlindtest, copyStringify, 'unitTestcopyStringify');
+    assertEquals(constPartyBlindtest, copyStringify, nameUnitTest);
 }
 function unitTestSaveAndGet() {
+    const nameUnitTest = 'unitTestSaveAndGet';
+    changeLocalStorageName(nameUnitTest);
     const constPartyBlindtest = new PartyBlindtest(readJsonSynchrone('current.json')['blindtest']);
-    constPartyBlindtest.save('unitTestSaveAndGet');
-    const saveAndGet = PartyBlindtest.get('unitTestSaveAndGet');
-    assertEquals(constPartyBlindtest, saveAndGet, 'unitTestSaveAndGet');
+    constPartyBlindtest.save(nameUnitTest);
+    const saveAndGet = PartyBlindtest.get(nameUnitTest);
+    assertEquals(constPartyBlindtest, saveAndGet, nameUnitTest);
+    resetLocalStorageName();
 }
 function unitTestNextMusicSaveAndGet() {
+    const nameUnitTest = 'unitTestNextMusicSaveAndGet';
+    changeLocalStorageName(nameUnitTest);
     const constPartyBlindtest = new PartyBlindtest(readJsonSynchrone('current.json')['blindtest']);
-    // constPartyBlindtest.nextMusic();
-    constPartyBlindtest.save('unitTestSaveAndGet');
-    const saveAndGet = PartyBlindtest.get('unitTestSaveAndGet');
-    assertEquals(constPartyBlindtest, saveAndGet, 'unitTestNextMusicSaveAndGet');
+    constPartyBlindtest.save(nameUnitTest);
+    const saveAndGet = PartyBlindtest.get(nameUnitTest);
+    assertEquals(constPartyBlindtest, saveAndGet, nameUnitTest);
+    resetLocalStorageName();
 }
 function unitTestNotResetStorageIfSameBlindtest() {
+    const nameUnitTest = 'unitTestNotResetStorageIfSameBlindtest';
+    changeLocalStorageName(nameUnitTest);
     const constPartyBlindtest = new PartyBlindtest(readJsonSynchrone('current.json')['blindtest']);
     constPartyBlindtest.currentMusic = 1;
-    // constPartyBlindtest.nextMusic();
-    constPartyBlindtest.save('unitTestNotResetStorageIfSameBlindtest');
+    constPartyBlindtest.save();
     const secondPartyBlindtest = new PartyBlindtest(readJsonSynchrone('current.json')['blindtest']);
-    console.log(constPartyBlindtest);
-    console.log(secondPartyBlindtest);
-    // const saveAndGet = PartyBlindtest.get('unitTestNotResetStorageIfSameBlindtest');
-    assertEquals(
-        constPartyBlindtest,
-        secondPartyBlindtest,
-        'unitTestNotResetStorageIfSameBlindtest'
-    );
+    assertEquals(constPartyBlindtest, secondPartyBlindtest, nameUnitTest);
+    resetLocalStorageName();
 }
 
 function assertEquals(param1, param2, errorMessage) {
