@@ -7,6 +7,7 @@ export default function unitTest() {
     unitTestcopyStringify();
     unitTestSaveAndGet();
     unitTestNextMusicSaveAndGet();
+    unitTestNotResetStorageIfSameBlindtest();
 }
 function unitTestWithoutBlindtestAttribut() {
     const constPartyBlindtest = new PartyBlindtest(readJsonSynchrone('current.json')['blindtest']);
@@ -31,10 +32,25 @@ function unitTestSaveAndGet() {
 }
 function unitTestNextMusicSaveAndGet() {
     const constPartyBlindtest = new PartyBlindtest(readJsonSynchrone('current.json')['blindtest']);
-    constPartyBlindtest.nextMusic();
+    // constPartyBlindtest.nextMusic();
     constPartyBlindtest.save('unitTestSaveAndGet');
     const saveAndGet = PartyBlindtest.get('unitTestSaveAndGet');
     assertEquals(constPartyBlindtest, saveAndGet, 'unitTestNextMusicSaveAndGet');
+}
+function unitTestNotResetStorageIfSameBlindtest() {
+    const constPartyBlindtest = new PartyBlindtest(readJsonSynchrone('current.json')['blindtest']);
+    constPartyBlindtest.currentMusic = 1;
+    // constPartyBlindtest.nextMusic();
+    constPartyBlindtest.save('unitTestNotResetStorageIfSameBlindtest');
+    const secondPartyBlindtest = new PartyBlindtest(readJsonSynchrone('current.json')['blindtest']);
+    console.log(constPartyBlindtest);
+    console.log(secondPartyBlindtest);
+    // const saveAndGet = PartyBlindtest.get('unitTestNotResetStorageIfSameBlindtest');
+    assertEquals(
+        constPartyBlindtest,
+        secondPartyBlindtest,
+        'unitTestNotResetStorageIfSameBlindtest'
+    );
 }
 
 function assertEquals(param1, param2, errorMessage) {

@@ -4,14 +4,10 @@
     columns: 3;
     /* justify-content: space-around; */
     border: 2px solid;
-    width: 50%;
+    width: 700px;
 }
 
 .response-pointInfos > div:nth-child(1) {
     display: flex;
     justify-content: end;
-}
-
-.invisible {
-    background-color: black;
 }

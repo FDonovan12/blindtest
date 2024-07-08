@@ -18,6 +18,7 @@ export class PartyBlindtest {
             this.currentSection = partyBlindtest.currentSection;
         }
         this.audio = document.querySelector('#music-audio');
+        // console.log(this);
         this.changeAudio();
     }
 
@@ -57,10 +58,18 @@ export class PartyBlindtest {
         return this.blindtest.participants;
     }
 
+    getName() {
+        return this.blindtest.name;
+    }
+
     save(storage) {
         if (!storage) {
             storage = 'partyBlindtest';
         }
+        // if (storage === 'partyBlindtest') {
+        //     throw new Error('test');
+        // }
+        console.log('storage :', storage);
         localStorage.setItem(storage, JSON.stringify(this));
         addResponse(this);
     }
@@ -121,6 +130,14 @@ export class PartyBlindtest {
         this.currentMusic = this.getNumberOfMusic() - 1;
         this.changeAudio();
         this.save();
+    }
+
+    computeScoreOfPlayer(player) {
+        let score = 0;
+        this.sections.map((section) => {
+            score += section.computeScoreOfPlayer(player);
+        });
+        return score;
     }
 }
 

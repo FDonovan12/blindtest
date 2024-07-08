@@ -3,10 +3,23 @@ import { readJsonSynchrone, addResponse, createClickButton } from './utils.js';
 import unitTest from './unitTest.js';
 
 let partyBlindtest = null;
+let localStorageName = 'PartyBlindtest';
 
 window.addEventListener('load', () => {
     unitTest();
-    partyBlindtest = new PartyBlindtest(readJsonSynchrone('current.json')['blindtest']);
+    const partyBlindtestFromStorage = PartyBlindtest.get();
+    const partyBlindtestFromJson = new PartyBlindtest(
+        readJsonSynchrone('current.json')['blindtest']
+    );
+    console.log('partyBlindtestFromJson :', partyBlindtestFromJson.getName());
+    console.log('partyBlindtestFromStorage :', partyBlindtestFromStorage.getName());
+    if (partyBlindtestFromJson.getName() === partyBlindtestFromStorage.getName()) {
+        console.log('equals');
+        partyBlindtest = partyBlindtestFromStorage;
+    } else {
+        console.log('not equals');
+        partyBlindtest = partyBlindtestFromJson;
+    }
     partyBlindtest.save();
     try {
         document.querySelector('#openAudience').addEventListener('click', function () {

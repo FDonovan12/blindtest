@@ -29,7 +29,7 @@ export function addOptionToSelect(select, optionValue, OptionText) {
     select.add(option);
 }
 
-export function baliseClass(name_balise, balise_parent, class_balise, content) {
+export function createTagWithParentClassContent(name_balise, balise_parent, class_balise, content) {
     const balise = document.createElement(name_balise);
     if (class_balise) {
         balise.className = class_balise;
@@ -72,19 +72,33 @@ export function createResponse(partyBlindtest, divResponse) {
         if (pointInfo?.participant?.name === 'undefined') {
             pointInfo.participant = undefined;
         }
-        const classVisible = isAudience() & !pointInfo.participant ? 'invisible' : null;
-        const divPointInfo = baliseClass('div', divResponse, 'response-pointInfos');
-        const divNamePointInfo = baliseClass('div', divPointInfo, null, pointInfo.name);
-        const divValuePointInfo = baliseClass('div', divPointInfo, classVisible, pointInfo.value);
+        const classVisible = isAudience() && !pointInfo.participant ? 'invisible' : null;
+        const divPointInfo = createTagWithParentClassContent(
+            'div',
+            divResponse,
+            'response-pointInfos'
+        );
+        const divNamePointInfo = createTagWithParentClassContent(
+            'div',
+            divPointInfo,
+            null,
+            pointInfo.name
+        );
+        const divValuePointInfo = createTagWithParentClassContent(
+            'div',
+            divPointInfo,
+            classVisible,
+            pointInfo.value
+        );
         if (isAudience()) {
-            const divValueparticipant = baliseClass(
+            const divValueparticipant = createTagWithParentClassContent(
                 'div',
                 divPointInfo,
                 null,
                 pointInfo?.participant?.name
             );
         } else {
-            const selectValuePointInfo = baliseClass('select', divPointInfo);
+            const selectValuePointInfo = createTagWithParentClassContent('select', divPointInfo);
             selectValuePointInfo.addEventListener('change', (value) => {
                 pointInfo.changeParticipant(selectValuePointInfo.value, partyBlindtest);
             });
