@@ -1,6 +1,6 @@
 {
     "blindtest": {
-        "name": "test_current",
+        "name": "test_current10",
         "participants": [{ "name": "j1" }, { "name": "j2" }],
         "sections": [
             {

@@ -1,6 +1,17 @@
-import { addResponse } from './utils.js';
+import { addResponse, addParticipantsScore } from './utils.js';
+
+let localStorageName = 'PartyBlindtest';
+
+export function changeLocalStorageName(name) {
+    localStorageName = name;
+}
+
+export function resetLocalStorageName() {
+    localStorageName = 'PartyBlindtest';
+}
+
 export class PartyBlindtest {
-    constructor(partyBlindtest) {
+    constructor(partyBlindtest, FromGetFunction) {
         if (typeof partyBlindtest === 'string') {
             partyBlindtest = JSON.parse(partyBlindtest);
         }
@@ -9,16 +20,22 @@ export class PartyBlindtest {
         } else {
             this.blindtest = new Blindtest(partyBlindtest);
         }
-        this.currentMusic = 0;
-        this.currentSection = 0;
-        if (partyBlindtest?.currentMusic) {
-            this.currentMusic = partyBlindtest.currentMusic;
-        }
-        if (partyBlindtest?.currentSection) {
-            this.currentSection = partyBlindtest.currentSection;
-        }
+        this.currentMusic = partyBlindtest?.currentMusic || 0;
+        this.currentSection = partyBlindtest?.currentSection || 0;
         this.audio = document.querySelector('#music-audio');
+        this.localStorageName = localStorageName;
+        if (!FromGetFunction) {
+            const partyBlindtestFromStorage = PartyBlindtest.get();
+            if (this.getName() === partyBlindtestFromStorage.getName()) {
+                // this.currentMusic = partyBlindtestFromStorage.currentMusic;
+                return partyBlindtestFromStorage;
+            }
+        }
         this.changeAudio();
+    }
+
+    changeLocalStorageName(localStorageName) {
+        this.localStorageName = localStorageName;
     }
 
     getSection() {
@@ -57,18 +74,23 @@ export class PartyBlindtest {
         return this.blindtest.participants;
     }
 
+    getName() {
+        return this.blindtest.name;
+    }
+
     save(storage) {
         if (!storage) {
-            storage = 'partyBlindtest';
+            storage = this.localStorageName;
         }
         localStorage.setItem(storage, JSON.stringify(this));
         addResponse(this);
+        addParticipantsScore(this);
     }
     static get(storage) {
         if (!storage) {
-            storage = 'partyBlindtest';
+            storage = localStorageName;
         }
-        return new PartyBlindtest(JSON.parse(localStorage.getItem(storage)));
+        return new PartyBlindtest(JSON.parse(localStorage.getItem(storage)), true);
     }
 
     changeAudio() {
@@ -122,27 +144,33 @@ export class PartyBlindtest {
         this.changeAudio();
         this.save();
     }
+
+    getScoreOfPlayer(player) {
+        let score = 0;
+        this.blindtest.sections.map((section) => {
+            score += section.getScoreOfPlayer(player);
+        });
+        return score;
+    }
 }
 
 export class Blindtest {
     constructor(blindtest) {
-        this.name = blindtest['name'];
-        this.participants = blindtest['participants'].map(
-            (participant) => new Participant(participant['name'])
+        this.name = blindtest.name;
+        this.participants = blindtest.participants.map(
+            (participant) => new Participant(participant.name)
         );
-        this.sections = blindtest['sections'].map(
-            (section) => new Section(section['name'], section['details'], section['musics'])
-        );
+        this.sections = blindtest.sections.map((section) => new Section(section));
     }
 }
 export class Section {
-    constructor(name, details, musics) {
-        this.name = name;
-        this.details = details;
-        this.musics = musics.map((musique) => new Music(musique));
+    constructor(section) {
+        this.name = section.name;
+        this.details = section.details;
+        this.musics = section.musics.map((musique) => new Music(musique));
     }
 
-    computeScoreOfPlayer(player) {
+    getScoreOfPlayer(player) {
         let score = 0;
         this.musics.map((music) => {
             music.pointInfos
@@ -165,7 +193,7 @@ export class PointInfo {
         // this.participant = participant;
         const participant = pointInfo.participant;
         if (participant) {
-            this.participant = new Participant(participant['name']);
+            this.participant = new Participant(participant.name);
         }
     }
     isShow() {

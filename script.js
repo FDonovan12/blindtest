@@ -1,5 +1,10 @@
 import { PartyBlindtest } from './objectValueBlindtest.js';
-import { readJsonSynchrone, addResponse, createClickButton } from './utils.js';
+import {
+    readJsonSynchrone,
+    addResponse,
+    createClickButton,
+    addParticipantsScore,
+} from './utils.js';
 import unitTest from './unitTest.js';
 
 let partyBlindtest = null;
@@ -7,6 +12,7 @@ let partyBlindtest = null;
 window.addEventListener('load', () => {
     unitTest();
     partyBlindtest = new PartyBlindtest(readJsonSynchrone('current.json')['blindtest']);
+    console.log(partyBlindtest);
     partyBlindtest.save();
     try {
         document.querySelector('#openAudience').addEventListener('click', function () {
@@ -38,5 +44,6 @@ window.addEventListener('load', () => {
         }
     });
     addResponse(partyBlindtest);
+    addParticipantsScore(partyBlindtest);
     const player = partyBlindtest.getParticipants()[1];
 });

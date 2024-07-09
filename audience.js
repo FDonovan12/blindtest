@@ -1,5 +1,5 @@
 import { PartyBlindtest } from './objectValueBlindtest.js';
-import { addResponse } from './utils.js';
+import { addResponse, addParticipantsScore } from './utils.js';
 
 let partyBlindtest = null;
 
@@ -14,4 +14,5 @@ function updateStatus() {
     partyBlindtest = PartyBlindtest.get();
     console.log(partyBlindtest);
     addResponse(partyBlindtest);
+    addParticipantsScore(partyBlindtest);
 }

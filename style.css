@@ -4,7 +4,7 @@
     columns: 3;
     /* justify-content: space-around; */
     border: 2px solid;
-    width: 50%;
+    width: 700px;
 }
 
 .response-pointInfos > div:nth-child(1) {
@@ -12,6 +12,8 @@
     justify-content: end;
 }
 
-.invisible {
-    background-color: black;
+#participants {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }

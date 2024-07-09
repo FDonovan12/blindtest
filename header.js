@@ -1,4 +1,4 @@
-import { baliseClass } from './utils.js';
+import { createTagWithParentClassContent } from './utils.js';
 
 window.addEventListener('load', () => {
     addHeadContent();
@@ -55,7 +55,7 @@ class MetaTag {
 function addHeadContent() {
     const head = document.querySelector('head');
 
-    const metaCharset = baliseClass('meta', '', head);
+    const metaCharset = createTagWithParentClassContent('meta', '', head);
     metaCharset.setAttribute('charset', 'utf-8');
 
     const metaViewport = createMetaTag(head, 'viewport', 'width=device-width, initial-scale=1.0');
@@ -77,7 +77,7 @@ function addHeadContent() {
 }
 
 function createMetaTag(head, name, content) {
-    const metaViewport = baliseClass('meta', '', head);
+    const metaViewport = createTagWithParentClassContent('meta', '', head);
     metaViewport.name = name;
     metaViewport.content = content;
 }
@@ -163,9 +163,18 @@ function createLinkChartJsScript(head) {
 }
 function addHeader() {
     const headers = document.querySelector('header');
-    let h1 = baliseClass('h1', headers, null, 'Experimentation de Donovan Ferreira');
-    let h2 = baliseClass('h2', headers, null, "Developpeur d'application");
-    let nav = baliseClass('nav', headers, 'nav-bar row row-cols-2 row-cols-md-4');
+    let h1 = createTagWithParentClassContent(
+        'h1',
+        headers,
+        null,
+        'Experimentation de Donovan Ferreira'
+    );
+    let h2 = createTagWithParentClassContent('h2', headers, null, "Developpeur d'application");
+    let nav = createTagWithParentClassContent(
+        'nav',
+        headers,
+        'nav-bar row row-cols-2 row-cols-md-4'
+    );
     const urlRoot = getURlRoot();
     Object.keys(createFileMap()).forEach((key) => {
         createLinkNav(nav, `${urlRoot}${key}`, getContentFromUrl(key));
@@ -173,7 +182,7 @@ function addHeader() {
 }
 
 function createLinkNav(nav, href, text) {
-    let link = baliseClass('a', nav, 'nav-bar-link', text);
+    let link = createTagWithParentClassContent('a', nav, 'nav-bar-link', text);
     link.href = href;
     if (document.title === text) {
         link.classList.add('active');
