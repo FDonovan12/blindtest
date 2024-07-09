@@ -12,6 +12,9 @@ export function resetLocalStorageName() {
 
 export class PartyBlindtest {
     constructor(partyBlindtest, FromGetFunction) {
+        if (!partyBlindtest) {
+            return undefined;
+        }
         if (typeof partyBlindtest === 'string') {
             partyBlindtest = JSON.parse(partyBlindtest);
         }
@@ -75,7 +78,7 @@ export class PartyBlindtest {
     }
 
     getName() {
-        return this.blindtest.name;
+        return this.blindtest?.name;
     }
 
     save(storage) {
