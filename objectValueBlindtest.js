@@ -12,6 +12,7 @@ export function resetLocalStorageName() {
 
 export class PartyBlindtest {
     constructor(partyBlindtest, FromGetFunction) {
+        console.log(partyBlindtest);
         if (!partyBlindtest) {
             return undefined;
         }

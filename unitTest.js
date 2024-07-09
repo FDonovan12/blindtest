@@ -17,9 +17,9 @@ export default function unitTest() {
 }
 function unitTestWithoutBlindtestAttribut() {
     const nameUnitTest = 'unitTestWithoutBlindtestAttribut';
-    const constPartyBlindtest = new PartyBlindtest(
-        readJsonSynchrone(getLinkValue(testFileName))['blindtest']
-    );
+    const fileName = getLinkValue(testFileName);
+    console.log('fileName :', fileName);
+    const constPartyBlindtest = new PartyBlindtest(readJsonSynchrone(fileName)['blindtest']);
     const withoutBlindtestAttribut = new PartyBlindtest(
         readJsonSynchrone(getLinkValue(testFileName))
     );

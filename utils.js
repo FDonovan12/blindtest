@@ -51,6 +51,7 @@ export function readJsonSynchrone(file) {
         xhr.send();
         if (xhr.status === 200) {
             var data = JSON.parse(xhr.responseText);
+            console.log('data :', data);
             return data;
         } else {
             console.error('Erreur de lecture du fichier JSON: ' + xhr.statusText);
