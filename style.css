@@ -11,3 +11,9 @@
     display: flex;
     justify-content: end;
 }
+
+#participants {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

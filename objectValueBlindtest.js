@@ -20,14 +20,8 @@ export class PartyBlindtest {
         } else {
             this.blindtest = new Blindtest(partyBlindtest);
         }
-        this.currentMusic = 0;
-        this.currentSection = 0;
-        if (partyBlindtest?.currentMusic) {
-            this.currentMusic = partyBlindtest.currentMusic;
-        }
-        if (partyBlindtest?.currentSection) {
-            this.currentSection = partyBlindtest.currentSection;
-        }
+        this.currentMusic = partyBlindtest?.currentMusic || 0;
+        this.currentSection = partyBlindtest?.currentSection || 0;
         this.audio = document.querySelector('#music-audio');
         this.localStorageName = localStorageName;
         if (!FromGetFunction) {
@@ -88,7 +82,6 @@ export class PartyBlindtest {
         if (!storage) {
             storage = this.localStorageName;
         }
-        console.log('storage :', storage);
         localStorage.setItem(storage, JSON.stringify(this));
         addResponse(this);
     }
@@ -151,10 +144,10 @@ export class PartyBlindtest {
         this.save();
     }
 
-    computeScoreOfPlayer(player) {
+    getScoreOfPlayer(player) {
         let score = 0;
-        this.sections.map((section) => {
-            score += section.computeScoreOfPlayer(player);
+        this.blindtest.sections.map((section) => {
+            score += section.getScoreOfPlayer(player);
         });
         return score;
     }
@@ -162,23 +155,21 @@ export class PartyBlindtest {
 
 export class Blindtest {
     constructor(blindtest) {
-        this.name = blindtest['name'];
-        this.participants = blindtest['participants'].map(
-            (participant) => new Participant(participant['name'])
+        this.name = blindtest.name;
+        this.participants = blindtest.participants.map(
+            (participant) => new Participant(participant.name)
         );
-        this.sections = blindtest['sections'].map(
-            (section) => new Section(section['name'], section['details'], section['musics'])
-        );
+        this.sections = blindtest.sections.map((section) => new Section(section));
     }
 }
 export class Section {
-    constructor(name, details, musics) {
-        this.name = name;
-        this.details = details;
-        this.musics = musics.map((musique) => new Music(musique));
+    constructor(section) {
+        this.name = section.name;
+        this.details = section.details;
+        this.musics = section.musics.map((musique) => new Music(musique));
     }
 
-    computeScoreOfPlayer(player) {
+    getScoreOfPlayer(player) {
         let score = 0;
         this.musics.map((music) => {
             music.pointInfos
@@ -201,7 +192,7 @@ export class PointInfo {
         // this.participant = participant;
         const participant = pointInfo.participant;
         if (participant) {
-            this.participant = new Participant(participant['name']);
+            this.participant = new Participant(participant.name);
         }
     }
     isShow() {

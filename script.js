@@ -1,20 +1,18 @@
 import { PartyBlindtest } from './objectValueBlindtest.js';
-import { readJsonSynchrone, addResponse, createClickButton } from './utils.js';
+import {
+    readJsonSynchrone,
+    addResponse,
+    createClickButton,
+    addParticipantsScore,
+} from './utils.js';
 import unitTest from './unitTest.js';
 
 let partyBlindtest = null;
 
 window.addEventListener('load', () => {
     unitTest();
-    // const partyBlindtestFromStorage = PartyBlindtest.get();
     partyBlindtest = new PartyBlindtest(readJsonSynchrone('current.json')['blindtest']);
-    // if (partyBlindtestFromJson.getName() === partyBlindtestFromStorage.getName()) {
-    //     console.log('equals');
-    //     partyBlindtest = partyBlindtestFromStorage;
-    // } else {
-    //     console.log('not equals');
-    //     partyBlindtest = partyBlindtestFromJson;
-    // }
+    console.log(partyBlindtest);
     partyBlindtest.save();
     try {
         document.querySelector('#openAudience').addEventListener('click', function () {
@@ -46,5 +44,6 @@ window.addEventListener('load', () => {
         }
     });
     addResponse(partyBlindtest);
+    addParticipantsScore(partyBlindtest);
     const player = partyBlindtest.getParticipants()[1];
 });

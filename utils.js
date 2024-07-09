@@ -112,3 +112,29 @@ export function createResponse(partyBlindtest, divResponse) {
         }
     });
 }
+
+export function addParticipantsScore(partyBlindtest) {
+    const divParticipantsScore = document.querySelector('#participants');
+    divParticipantsScore.innerHTML = null;
+    partyBlindtest
+        .getParticipants()
+        .map((participant) =>
+            addparticipantScore(partyBlindtest, divParticipantsScore, participant)
+        );
+}
+
+export function addparticipantScore(partyBlindtest, divParticipantsScore, participant) {
+    const divParticipant = createTagWithParentClassContent('div', divParticipantsScore);
+    const divParticipantName = createTagWithParentClassContent(
+        'div',
+        divParticipant,
+        null,
+        participant.name
+    );
+    const divParticipantScore = createTagWithParentClassContent(
+        'div',
+        divParticipant,
+        null,
+        partyBlindtest.getScoreOfPlayer(participant)
+    );
+}
