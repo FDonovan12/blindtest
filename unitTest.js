@@ -19,10 +19,8 @@ function unitTestWithoutBlindtestAttribut() {
     const nameUnitTest = 'unitTestWithoutBlindtestAttribut';
     const fileName = getLinkValue(testFileName);
     console.log('fileName :', fileName);
-    const constPartyBlindtest = new PartyBlindtest(readJsonSynchrone(fileName)['blindtest']);
-    const withoutBlindtestAttribut = new PartyBlindtest(
-        readJsonSynchrone(getLinkValue(testFileName))
-    );
+    const constPartyBlindtest = new PartyBlindtest(readJsonSynchrone(testFileName)['blindtest']);
+    const withoutBlindtestAttribut = new PartyBlindtest(readJsonSynchrone(testFileName));
     assertEquals(constPartyBlindtest, withoutBlindtestAttribut, nameUnitTest);
 }
 function unitTestCopy() {
