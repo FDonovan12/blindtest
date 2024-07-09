@@ -1,4 +1,4 @@
-import { addResponse } from './utils.js';
+import { addResponse, addParticipantsScore } from './utils.js';
 
 let localStorageName = 'PartyBlindtest';
 
@@ -84,6 +84,7 @@ export class PartyBlindtest {
         }
         localStorage.setItem(storage, JSON.stringify(this));
         addResponse(this);
+        addParticipantsScore(this);
     }
     static get(storage) {
         if (!storage) {

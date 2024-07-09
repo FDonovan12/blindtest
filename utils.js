@@ -129,12 +129,12 @@ export function addparticipantScore(partyBlindtest, divParticipantsScore, partic
         'div',
         divParticipant,
         null,
-        participant.name
+        'Joueur : ' + participant.name
     );
     const divParticipantScore = createTagWithParentClassContent(
         'div',
         divParticipant,
         null,
-        partyBlindtest.getScoreOfPlayer(participant)
+        'Point : ' + partyBlindtest.getScoreOfPlayer(participant)
     );
 }
