@@ -98,3 +98,12 @@ export function createResponse(partyBlindtest, divResponse) {
         }
     });
 }
+
+export function getLinkValue(pathname) {
+    const href = window.location.href;
+    const projectName = 'blindtest';
+    if (href.includes('github')) {
+        pathname = `${projectName}/${pathname}`;
+    }
+    return pathname;
+}

@@ -82,7 +82,7 @@ function createMetaTag(head, name, content) {
     metaViewport.content = content;
 }
 function getURlRoot() {
-    const pathname = window.location.pathname.replace('/experimentation', '');
+    const pathname = window.location.pathname.replace('/blindtest', '');
     const href = window.location.href;
     const regexName = new RegExp(pathname + '$');
     let urlRoot = href.replace(regexName, '');

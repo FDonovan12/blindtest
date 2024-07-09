@@ -1,5 +1,7 @@
 import { PartyBlindtest } from './objectValueBlindtest.js';
-import { readJsonSynchrone } from './utils.js';
+import { readJsonSynchrone, getLinkValue } from './utils.js';
+
+const testFileName = 'current.json';
 
 export default function unitTest() {
     unitTestWithoutBlindtestAttribut();
@@ -9,8 +11,12 @@ export default function unitTest() {
     unitTestNextMusicSaveAndGet();
 }
 function unitTestWithoutBlindtestAttribut() {
-    const constPartyBlindtest = new PartyBlindtest(readJsonSynchrone('current.json')['blindtest']);
-    const withoutBlindtestAttribut = new PartyBlindtest(readJsonSynchrone('current.json'));
+    const constPartyBlindtest = new PartyBlindtest(
+        readJsonSynchrone(getLinkValue(testFileName))['blindtest']
+    );
+    const withoutBlindtestAttribut = new PartyBlindtest(
+        readJsonSynchrone(getLinkValue(testFileName))
+    );
     assertEquals(constPartyBlindtest, withoutBlindtestAttribut, 'unitTestWithoutBlindtestAttribut');
 }
 function unitTestCopy() {
