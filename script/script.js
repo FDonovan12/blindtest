@@ -1,11 +1,5 @@
 import { PartyBlindtest } from './objectValueBlindtest.js';
-import {
-    readJsonSynchrone,
-    addResponse,
-    createClickButton,
-    addParticipantsScore,
-    updateStatus,
-} from './utils.js';
+import { readJsonSynchrone, createClickButton } from './utils.js';
 import unitTest from './unitTest.js';
 
 let partyBlindtest = null;
@@ -15,7 +9,7 @@ function start() {
     partyBlindtest = new PartyBlindtest(readJsonSynchrone('current.json')['blindtest']);
     console.log(partyBlindtest);
     partyBlindtest.save();
-    updateStatus();
+    PartyBlindtest.updateStatus();
 
     try {
         document.querySelector('#openAudience').addEventListener('click', function () {
@@ -50,4 +44,4 @@ function start() {
 start();
 window.addEventListener('load', () => {});
 
-window.addEventListener('storage', updateStatus);
+window.addEventListener('storage', PartyBlindtest.updateStatus);

@@ -99,7 +99,11 @@ export class PartyBlindtest {
         }
         return new PartyBlindtest(JSON.parse(localStorage.getItem(storage)), true);
     }
-
+    static updateStatus() {
+        const partyBlindtest = PartyBlindtest.get();
+        addResponse(partyBlindtest);
+        addParticipantsScore(partyBlindtest);
+    }
     download() {
         const link = createTagWithParentClassContent('a');
         var dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(this));

@@ -1,5 +1,3 @@
-import { PartyBlindtest } from './objectValueBlindtest.js';
-
 export function createClickButton(idButton, functionUse) {
     const button = document.querySelector(idButton);
     if (button) {
@@ -137,12 +135,6 @@ export function addparticipantScore(partyBlindtest, divParticipantsScore, partic
         null,
         'Point : ' + partyBlindtest.getScoreOfPlayer(participant)
     );
-}
-
-export function updateStatus() {
-    const partyBlindtest = PartyBlindtest.get();
-    addResponse(partyBlindtest);
-    addParticipantsScore(partyBlindtest);
 }
 
 export function getLinkValue(pathname) {
