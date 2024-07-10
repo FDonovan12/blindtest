@@ -17,3 +17,8 @@
     flex-direction: row;
     justify-content: space-around;
 }
+
+button:active,
+button[active] {
+    width: 150px;
+}

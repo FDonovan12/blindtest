@@ -12,7 +12,6 @@ export function resetLocalStorageName() {
 
 export class PartyBlindtest {
     constructor(partyBlindtest, FromGetFunction) {
-        console.log(partyBlindtest);
         if (!partyBlindtest) {
             return undefined;
         }
@@ -59,10 +58,14 @@ export class PartyBlindtest {
     }
 
     playAndPauseMusic() {
+        const buttonPlayPause = document.querySelector('#play');
+        buttonPlayPause.toggleAttribute('active');
         if (this.audio.paused) {
             this.playMusic();
+            buttonPlayPause.textContent = 'pause';
         } else {
             this.pauseMusic();
+            buttonPlayPause.textContent = 'play';
         }
     }
 

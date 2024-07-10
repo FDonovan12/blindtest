@@ -37,7 +37,7 @@ export function createTagWithParentClassContent(name_balise, balise_parent, clas
     if (balise_parent) {
         balise_parent.appendChild(balise);
     }
-    if (content) {
+    if (content != null) {
         balise.textContent = content;
     }
     return balise;
@@ -51,7 +51,6 @@ export function readJsonSynchrone(file) {
         xhr.send();
         if (xhr.status === 200) {
             var data = JSON.parse(xhr.responseText);
-            console.log('data :', data);
             return data;
         } else {
             console.error('Erreur de lecture du fichier JSON: ' + xhr.statusText);
