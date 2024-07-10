@@ -8,10 +8,10 @@ window.addEventListener('load', () => {
 
 class MappingUrlContent {
     constructor(pathname, content) {
-        this[pathname] = content;
+        this[getPathnameFromValue(pathname)] = content;
     }
     addPathname(pathname, content) {
-        this[pathname] = content;
+        this[getPathnameFromValue(pathname)] = content;
     }
     getContent(key) {
         return this[key];
@@ -177,7 +177,7 @@ function addHeader() {
     );
     const urlRoot = getURlRoot();
     Object.keys(createFileMap()).forEach((key) => {
-        createLinkNav(nav, `${getPathnameFromValue(key)}`, getContentFromUrl(key));
+        createLinkNav(nav, `${key}`, getContentFromUrl(key));
     });
 }
 

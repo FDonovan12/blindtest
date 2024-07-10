@@ -140,10 +140,13 @@ export function addparticipantScore(partyBlindtest, divParticipantsScore, partic
 export function getPathnameFromValue(value) {
     const href = window.location.href;
     const projectName = 'blindtest';
-    let pathname = value;
-    if (href.includes('github')) {
-        pathname = `/${projectName}${pathname}`;
-    }
+
+    // let pathname = value;
+    // if (href.includes('github')) {
+    //     pathname = `/${projectName}${pathname}`;
+    // }
+    let pathname = href.includes('github') ? `/${projectName}${pathname}` : value;
+
     console.log(`getPathnameFromValue : value : ${value}, pathname : ${pathname}`);
     return pathname;
 }

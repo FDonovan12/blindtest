@@ -93,6 +93,9 @@ class Biblioteque {
     deletBooks(books) {
         this.books = this.books.filter((book) => !books.includes(book));
     }
+    deletBooksFromTitle(bookstitle) {
+        this.books = this.books.filter((book) => !bookstitle.includes(book.title));
+    }
 
     deletAndAddbooks(books) {
         const bookToAdd = books.filter((book) => !this.books.includes(book));
@@ -110,10 +113,11 @@ book1.toString();
 
 const biblioteque1 = new Biblioteque('name1', 'adress1', [book1, book2]);
 biblioteque1.print();
-// biblioteque1.addBooks([book3]);
+biblioteque1.addBooks([book3]);
 // biblioteque1.print();
 // biblioteque1.deletBooks([book1, book3]);
 // biblioteque1.print();
 // biblioteque1.deletBooks([book2, book3]);
-biblioteque1.deletAndAddbooks([book2, book3]);
+biblioteque1.deletBooksFromTitle(['title2', 'title3']);
+// biblioteque1.deletAndAddbooks([book2, book3]);
 biblioteque1.print();
