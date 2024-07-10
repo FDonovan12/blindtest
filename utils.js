@@ -139,6 +139,14 @@ export function addparticipantScore(partyBlindtest, divParticipantsScore, partic
     );
 }
 
+export function updateStatus() {
+    console.log('updateStatus');
+    const partyBlindtest = PartyBlindtest.get();
+    console.log(partyBlindtest);
+    addResponse(partyBlindtest);
+    addParticipantsScore(partyBlindtest);
+}
+
 export function getLinkValue(pathname) {
     const href = window.location.href;
     const projectName = 'blindtest';

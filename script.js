@@ -4,22 +4,24 @@ import {
     addResponse,
     createClickButton,
     addParticipantsScore,
+    updateStatus,
 } from './utils.js';
 import unitTest from './unitTest.js';
 
 let partyBlindtest = null;
 
-window.addEventListener('load', () => {
+function start() {
     unitTest();
     partyBlindtest = new PartyBlindtest(readJsonSynchrone('current.json')['blindtest']);
     console.log(partyBlindtest);
     partyBlindtest.save();
+    updateStatus();
+
     try {
         document.querySelector('#openAudience').addEventListener('click', function () {
             window.open('audience.html', 'Audience').focus();
         });
     } catch (error) {}
-    // createClickButton('#openAudience', window.open('audience.html', 'Audience').focus());
     createClickButton('#play', partyBlindtest.playAndPauseMusic.bind(partyBlindtest));
     createClickButton('#previous', partyBlindtest.previousMusic.bind(partyBlindtest));
     createClickButton('#next', partyBlindtest.nextMusic.bind(partyBlindtest));
@@ -43,7 +45,8 @@ window.addEventListener('load', () => {
                 break;
         }
     });
-    addResponse(partyBlindtest);
-    addParticipantsScore(partyBlindtest);
-    const player = partyBlindtest.getParticipants()[1];
-});
+}
+start();
+window.addEventListener('load', () => {});
+
+window.addEventListener('storage', updateStatus);
