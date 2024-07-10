@@ -1,4 +1,4 @@
-import { addResponse, addParticipantsScore } from './utils.js';
+import { addResponse, addParticipantsScore, createTagWithParentClassContent } from './utils.js';
 
 let localStorageName = 'PartyBlindtest';
 
@@ -98,6 +98,15 @@ export class PartyBlindtest {
             storage = localStorageName;
         }
         return new PartyBlindtest(JSON.parse(localStorage.getItem(storage)), true);
+    }
+
+    download() {
+        const link = createTagWithParentClassContent('a');
+        var dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(this));
+        var dlAnchorElem = document.getElementById('downloadAnchorElem');
+        link.setAttribute('href', dataStr);
+        link.setAttribute('download', `${this.getName()}.json`);
+        link.click();
     }
 
     changeAudio() {

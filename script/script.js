@@ -25,6 +25,7 @@ function start() {
     createClickButton('#play', partyBlindtest.playAndPauseMusic.bind(partyBlindtest));
     createClickButton('#previous', partyBlindtest.previousMusic.bind(partyBlindtest));
     createClickButton('#next', partyBlindtest.nextMusic.bind(partyBlindtest));
+    createClickButton('#downloadAnchorElem', partyBlindtest.download.bind(partyBlindtest));
     window.addEventListener('keydown', (key) => {
         console.log('key :', key);
         switch (key.code) {
