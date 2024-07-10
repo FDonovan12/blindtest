@@ -3,7 +3,7 @@ import {
     changeLocalStorageName,
     resetLocalStorageName,
 } from './objectValueBlindtest.js';
-import { readJsonSynchrone, getLinkValue } from './utils.js';
+import { readJsonSynchrone } from './utils.js';
 
 const testFileName = 'current.json';
 
@@ -17,8 +17,6 @@ export default function unitTest() {
 }
 function unitTestWithoutBlindtestAttribut() {
     const nameUnitTest = 'unitTestWithoutBlindtestAttribut';
-    const fileName = getLinkValue(testFileName);
-    console.log('fileName :', fileName);
     const constPartyBlindtest = new PartyBlindtest(readJsonSynchrone(testFileName)['blindtest']);
     const withoutBlindtestAttribut = new PartyBlindtest(readJsonSynchrone(testFileName));
     assertEquals(constPartyBlindtest, withoutBlindtestAttribut, nameUnitTest);

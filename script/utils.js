@@ -140,7 +140,7 @@ export function addparticipantScore(partyBlindtest, divParticipantsScore, partic
 export function getPathnameFromValue(value) {
     const href = window.location.href;
     const projectName = 'blindtest';
-    pathname = value;
+    let pathname = value;
     if (href.includes('github')) {
         pathname = `${projectName}/${pathname}`;
     }
@@ -148,10 +148,10 @@ export function getPathnameFromValue(value) {
     return pathname;
 }
 export function getValueFromPathname() {
-    const patchname = window.location.pathname;
+    const pathname = window.location.pathname;
     const href = window.location.href;
     const projectName = 'blindtest';
-    value = pathname;
+    let value = pathname;
     if (href.includes('github')) {
         value = pathname.replace(`${blindtest}/`, '');
     }

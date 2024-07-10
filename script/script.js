@@ -1,5 +1,10 @@
 import { PartyBlindtest } from './objectValueBlindtest.js';
-import { readJsonSynchrone, createClickButton, getValueFromPathname } from './utils.js';
+import {
+    readJsonSynchrone,
+    createClickButton,
+    getValueFromPathname,
+    getPathnameFromValue,
+} from './utils.js';
 import unitTest from './unitTest.js';
 
 let partyBlindtest = null;

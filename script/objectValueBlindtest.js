@@ -69,9 +69,8 @@ export class PartyBlindtest {
         }
     }
 
-    playMusic() {
-        this.audio.play();
-    }
+    //prettier-ignore
+    playMusic() { this.audio.play(); }
 
     pauseMusic() {
         this.audio.pause();
