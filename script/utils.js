@@ -153,7 +153,7 @@ export function getValueFromPathname() {
     const projectName = 'blindtest';
     let value = pathname;
     if (href.includes('github')) {
-        value = pathname.replace(`${blindtest}/`, '');
+        value = pathname.replace(`${projectName}/`, '');
     }
     console.log(`getValueFromPathname : value : ${value}, pathname : ${pathname}`);
     return value;
