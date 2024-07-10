@@ -145,7 +145,7 @@ export function getPathnameFromValue(value) {
     // if (href.includes('github')) {
     //     pathname = `/${projectName}${pathname}`;
     // }
-    let pathname = href.includes('github') ? `/${projectName}${pathname}` : value;
+    let pathname = href.includes('github') ? `/${projectName}${value}` : value;
 
     console.log(`getPathnameFromValue : value : ${value}, pathname : ${pathname}`);
     return pathname;
