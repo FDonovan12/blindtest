@@ -1,4 +1,4 @@
-import { createTagWithParentClassContent } from './utils.js';
+import { createTagWithParentClassContent, getPathnameFromValue } from './utils.js';
 
 window.addEventListener('load', () => {
     addHeadContent();
@@ -177,7 +177,7 @@ function addHeader() {
     );
     const urlRoot = getURlRoot();
     Object.keys(createFileMap()).forEach((key) => {
-        createLinkNav(nav, `${urlRoot}${key}`, getContentFromUrl(key));
+        createLinkNav(nav, `${getPathnameFromValue(key)}`, getContentFromUrl(key));
     });
 }
 
