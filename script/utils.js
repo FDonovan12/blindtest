@@ -137,11 +137,24 @@ export function addparticipantScore(partyBlindtest, divParticipantsScore, partic
     );
 }
 
-export function getLinkValue(pathname) {
+export function getPathnameFromValue(value) {
     const href = window.location.href;
     const projectName = 'blindtest';
+    pathname = value;
     if (href.includes('github')) {
         pathname = `${projectName}/${pathname}`;
     }
+    console.log(`getPathnameFromValue : value : ${value}, pathname : ${pathname}`);
     return pathname;
+}
+export function getValueFromPathname() {
+    const patchname = window.location.pathname;
+    const href = window.location.href;
+    const projectName = 'blindtest';
+    value = pathname;
+    if (href.includes('github')) {
+        value = pathname.replace(`${blindtest}/`, '');
+    }
+    console.log(`getValueFromPathname : value : ${value}, pathname : ${pathname}`);
+    return value;
 }

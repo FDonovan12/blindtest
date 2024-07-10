@@ -1,11 +1,13 @@
 import { PartyBlindtest } from './objectValueBlindtest.js';
-import { readJsonSynchrone, createClickButton } from './utils.js';
+import { readJsonSynchrone, createClickButton, getValueFromPathname } from './utils.js';
 import unitTest from './unitTest.js';
 
 let partyBlindtest = null;
 
 function start() {
     unitTest();
+    getPathnameFromValue('presenter.html');
+    getValueFromPathname();
     partyBlindtest = new PartyBlindtest(readJsonSynchrone('current.json')['blindtest']);
     console.log(partyBlindtest);
     partyBlindtest.save();
