@@ -5,6 +5,7 @@
         "sections": [
             {
                 "name": "test sections",
+                "details": "test details",
                 "musics": [
                     {
                         "link": "Alvaro Soler - Sofia.mp3",
