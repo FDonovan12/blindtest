@@ -9,6 +9,11 @@ import unitTest from './unitTest.js';
 
 let partyBlindtest = null;
 
+start();
+window.addEventListener('load', () => {});
+
+window.addEventListener('storage', PartyBlindtest.updateStatus);
+
 function start() {
     unitTest();
     getPathnameFromValue('presenter.html');
@@ -16,7 +21,14 @@ function start() {
     partyBlindtest = new PartyBlindtest(readJsonSynchrone('current.json')['blindtest']);
     console.log(partyBlindtest);
     partyBlindtest.save();
+    console.log('\nelement :', partyBlindtest);
+    console.log(' :', PartyBlindtest.get());
     PartyBlindtest.updateStatus();
+    console.log('\nelement :', partyBlindtest);
+    console.log(' :', PartyBlindtest.get());
+    partyBlindtest.save();
+    console.log('\nelement :', partyBlindtest);
+    console.log(' :', PartyBlindtest.get());
 
     try {
         document.querySelector('#openAudience').addEventListener('click', function () {
@@ -48,10 +60,6 @@ function start() {
         }
     });
 }
-start();
-window.addEventListener('load', () => {});
-
-window.addEventListener('storage', PartyBlindtest.updateStatus);
 
 class Book {
     constructor(title, auteur, publicationYear) {
