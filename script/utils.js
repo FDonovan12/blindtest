@@ -1,7 +1,12 @@
-export function createClickButton(idButton, functionUse) {
+export function createClickButtonEvent(idButton, functionUse, objectBlindtest) {
     const button = document.querySelector(idButton);
     if (button) {
-        button.addEventListener('click', functionUse);
+        console.log(functionUse);
+        // button.addEventListener('click', functionUse);
+        button.addEventListener('click', (event) => {
+            event.preventDefault();
+            functionUse();
+        });
     } else {
         console.warn(`Button ${idButton} not find in the page ${window.location.href}`);
     }
@@ -20,10 +25,10 @@ export function getLocalStorage(name) {
     return JSON.parse(localStorage.getItem(name));
 }
 
-export function addOptionToSelect(select, optionValue, OptionText) {
+export function addOptionToSelect(select, optionValue, optionText) {
     const option = document.createElement('option');
     option.value = optionValue;
-    option.text = OptionText;
+    option.text = optionText;
     select.add(option);
 }
 

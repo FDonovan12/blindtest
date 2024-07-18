@@ -11,7 +11,7 @@ export function resetLocalStorageName() {
 }
 
 export class PartyBlindtest {
-    constructor(partyBlindtest, FromGetFunction) {
+    constructor(partyBlindtest, fromGetFunction) {
         if (!partyBlindtest) {
             return undefined;
         }
@@ -27,7 +27,7 @@ export class PartyBlindtest {
         this.currentSection = partyBlindtest?.currentSection || 0;
         this.audio = document.querySelector('#music-audio');
         this.localStorageName = localStorageName;
-        if (!FromGetFunction) {
+        if (!fromGetFunction) {
             const partyBlindtestFromStorage = PartyBlindtest.get();
             if (this.getName() === partyBlindtestFromStorage.getName()) {
                 // this.currentMusic = partyBlindtestFromStorage.currentMusic;
@@ -79,6 +79,18 @@ export class PartyBlindtest {
     getParticipants() {
         return this.blindtest.participants;
     }
+    addParticpant(participantName) {
+        if (!participantName) {
+            const input = document.querySelector('#addParticpantInput');
+            participantName = input.value;
+        }
+        if (participantName) {
+            const newParticipant = new Participant(participantName);
+            const participants = this.getParticipants();
+            participants.push(newParticipant);
+        }
+        this.save();
+    }
 
     getName() {
         return this.blindtest?.name;
@@ -88,6 +100,7 @@ export class PartyBlindtest {
         if (!storage) {
             storage = this.localStorageName;
         }
+        console.log(this.getMusic());
         localStorage.setItem(storage, JSON.stringify(this));
         addResponse(this);
         addParticipantsScore(this);
@@ -121,11 +134,14 @@ export class PartyBlindtest {
     }
 
     nextMusic() {
+        console.log('nextMusic');
+        console.log(this.getMusic());
         if (this.currentMusic < this.getNumberOfMusic() - 1) {
             this.currentMusic++;
         } else {
             this.nextSection();
         }
+        console.log(this.getMusic());
         this.changeAudio();
         this.save();
     }

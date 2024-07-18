@@ -1,13 +1,18 @@
 import { PartyBlindtest } from './objectValueBlindtest.js';
 import {
     readJsonSynchrone,
-    createClickButton,
+    createClickButtonEvent,
     getValueFromPathname,
     getPathnameFromValue,
 } from './utils.js';
 import unitTest from './unitTest.js';
 
 let partyBlindtest = null;
+
+start();
+window.addEventListener('load', () => {});
+
+window.addEventListener('storage', PartyBlindtest.updateStatus);
 
 function start() {
     unitTest();
@@ -23,10 +28,23 @@ function start() {
             window.open('audience.html', 'Audience').focus();
         });
     } catch (error) {}
-    createClickButton('#play', partyBlindtest.playAndPauseMusic.bind(partyBlindtest));
-    createClickButton('#previous', partyBlindtest.previousMusic.bind(partyBlindtest));
-    createClickButton('#next', partyBlindtest.nextMusic.bind(partyBlindtest));
-    createClickButton('#downloadAnchorElem', partyBlindtest.download.bind(partyBlindtest));
+
+    try {
+        document.querySelector('#readJson').addEventListener('click', function () {
+            partyBlindtest = new PartyBlindtest(
+                readJsonSynchrone('current.json')['blindtest'],
+                true
+            );
+            partyBlindtest.save();
+        });
+    } catch (error) {}
+
+    createClickButtonEvent('#play', partyBlindtest.playAndPauseMusic.bind(partyBlindtest));
+    createClickButtonEvent('#previous', partyBlindtest.previousMusic.bind(partyBlindtest));
+    createClickButtonEvent('#next', partyBlindtest.nextMusic.bind(partyBlindtest));
+    // createClickButtonEvent('#next', partyBlindtest.nextMusic, partyBlindtest);
+    createClickButtonEvent('#downloadAnchorElem', partyBlindtest.download.bind(partyBlindtest));
+    createClickButtonEvent('#addParticpant', partyBlindtest.addParticpant.bind(partyBlindtest));
     window.addEventListener('keydown', (key) => {
         console.log('key :', key);
         switch (key.code) {
@@ -48,10 +66,6 @@ function start() {
         }
     });
 }
-start();
-window.addEventListener('load', () => {});
-
-window.addEventListener('storage', PartyBlindtest.updateStatus);
 
 class Book {
     constructor(title, auteur, publicationYear) {
