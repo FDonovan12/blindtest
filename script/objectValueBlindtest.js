@@ -102,6 +102,8 @@ export class PartyBlindtest {
         }
         console.log(this.getMusic());
         localStorage.setItem(storage, JSON.stringify(this));
+        console.log(this);
+        console.log(this.getMusic());
         addResponse(this);
         addParticipantsScore(this);
     }
