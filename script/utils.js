@@ -1,7 +1,6 @@
 export function createClickButtonEvent(idButton, functionUse, objectBlindtest) {
     const button = document.querySelector(idButton);
     if (button) {
-        console.log(functionUse);
         // button.addEventListener('click', functionUse);
         button.addEventListener('click', (event) => {
             event.preventDefault();
@@ -133,7 +132,9 @@ export function addparticipantScore(partyBlindtest, divParticipantsScore, partic
         divParticipant,
         'fa-solid fa-trash'
     );
-    divParticipantDelete.addEventListener('click', partyBlindtest.deleteParticipant(participant));
+    divParticipantDelete.addEventListener('click', (event) => {
+        partyBlindtest.deleteParticipant(participant);
+    });
     const divParticipantName = createTagWithParentClassContent(
         'div',
         divParticipant,

@@ -93,7 +93,10 @@ export class PartyBlindtest {
     }
     deleteParticipant(participantToDelete) {
         const participants = this.getParticipants();
-        participants = participants.filter((participant) => participant != participantToDelete);
+        this.blindtest.participants = participants.filter(
+            (participant) => participant != participantToDelete
+        );
+        // console.log('participants :', participants);
         this.save();
     }
 
@@ -105,10 +108,7 @@ export class PartyBlindtest {
         if (!storage) {
             storage = this.localStorageName;
         }
-        console.log(this.getMusic());
         localStorage.setItem(storage, JSON.stringify(this));
-        console.log(this);
-        console.log(this.getMusic());
         addResponse(this);
         addParticipantsScore(this);
     }
