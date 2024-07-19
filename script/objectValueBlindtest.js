@@ -93,10 +93,8 @@ export class PartyBlindtest {
     }
     deleteParticipant(participantToDelete) {
         const participants = this.getParticipants();
-        this.blindtest.participants = participants.filter(
-            (participant) => participant != participantToDelete
-        );
-        // console.log('participants :', participants);
+        const index = participants.indexOf(participantToDelete);
+        participants.splice(index, 1);
         this.save();
     }
 
