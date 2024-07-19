@@ -91,6 +91,11 @@ export class PartyBlindtest {
         }
         this.save();
     }
+    deleteParticipant(participantToDelete) {
+        const participants = this.getParticipants();
+        participants = participants.filter((participant) => participant != participantToDelete);
+        this.save();
+    }
 
     getName() {
         return this.blindtest?.name;

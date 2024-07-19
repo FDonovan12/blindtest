@@ -128,6 +128,12 @@ export function addParticipantsScore(partyBlindtest) {
 
 export function addparticipantScore(partyBlindtest, divParticipantsScore, participant) {
     const divParticipant = createTagWithParentClassContent('div', divParticipantsScore);
+    const divParticipantDelete = createTagWithParentClassContent(
+        'i',
+        divParticipant,
+        'fa-solid fa-trash'
+    );
+    divParticipantDelete.addEventListener('click', partyBlindtest.deleteParticipant(participant));
     const divParticipantName = createTagWithParentClassContent(
         'div',
         divParticipant,
