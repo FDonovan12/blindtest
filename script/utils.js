@@ -75,23 +75,9 @@ export function createResponse(partyBlindtest, divResponse) {
             pointInfo.participant = undefined;
         }
         const classVisible = isAudience() && !pointInfo.participant ? 'invisible' : null;
-        const divPointInfo = createTagWithParentClassContent(
-            'div',
-            divResponse,
-            'response-pointInfos'
-        );
-        const divNamePointInfo = createTagWithParentClassContent(
-            'div',
-            divPointInfo,
-            null,
-            pointInfo.name
-        );
-        const divValuePointInfo = createTagWithParentClassContent(
-            'div',
-            divPointInfo,
-            classVisible,
-            pointInfo.value
-        );
+        const divPointInfo = createTagWithParentClassContent('div', divResponse, 'response-pointInfos');
+        const divNamePointInfo = createTagWithParentClassContent('div', divPointInfo, null, pointInfo.name);
+        const divValuePointInfo = createTagWithParentClassContent('div', divPointInfo, classVisible, pointInfo.value);
         if (isAudience()) {
             const divValueparticipant = createTagWithParentClassContent(
                 'div',
@@ -120,18 +106,12 @@ export function addParticipantsScore(partyBlindtest) {
     divParticipantsScore.innerHTML = null;
     partyBlindtest
         .getParticipants()
-        .map((participant) =>
-            addparticipantScore(partyBlindtest, divParticipantsScore, participant)
-        );
+        .map((participant) => addparticipantScore(partyBlindtest, divParticipantsScore, participant));
 }
 
 export function addparticipantScore(partyBlindtest, divParticipantsScore, participant) {
     const divParticipant = createTagWithParentClassContent('div', divParticipantsScore);
-    const divParticipantDelete = createTagWithParentClassContent(
-        'i',
-        divParticipant,
-        'fa-solid fa-trash'
-    );
+    const divParticipantDelete = createTagWithParentClassContent('i', divParticipant, 'fa-solid fa-trash');
     divParticipantDelete.addEventListener('click', (event) => {
         partyBlindtest.deleteParticipant(participant);
     });
@@ -172,4 +152,49 @@ export function getValueFromPathname() {
     }
     console.log(`getValueFromPathname : value : ${value}, pathname : ${pathname}`);
     return value;
+}
+
+export async function researchFromYoutubeLink() {
+    const youtubeLink = document.querySelector('#linkYoutubeInput').value;
+    const videoId = youtubeLink.split('v=')[1].split('&')[0];
+    console.log('youtubeLink :', youtubeLink);
+    console.log('videoId :', videoId);
+    // const password = getPassword();
+    const password = 'GJrss12dfoe';
+    const cryptedApiKey = 'U2FsdGVkX1/mCdde5zXD5+UC5ZAWM94LlJF559ukbyxuan9OC80O/HRXvBNvnAtcKue3Tzd8Um24QRjSpqBn3g==';
+    const decryptedApiKey = decrypt(cryptedApiKey, password);
+    const apiUrl = `https://www.googleapis.com/youtube/v3/videos?id=${videoId}&key=${decryptedApiKey}&part=snippet`;
+
+    try {
+        const response = await fetch(apiUrl);
+        console.log('response :', response);
+        const data = await response.json();
+        console.log('data :', data);
+        const title = data.items[0].snippet.title;
+        const channelName = data.items[0].snippet.channelTitle;
+        console.log('title :', title);
+        console.log('channel :', channelName);
+        // document.getElementById('videoTitle').innerText = title;
+    } catch (error) {
+        console.error('Error fetching video title:', error);
+        // document.getElementById('videoTitle').innerText = 'Error fetching video title';
+    }
+}
+
+function encrypt(message, password) {
+    return CryptoJS.AES.encrypt(message, password).toString();
+}
+
+function decrypt(encryptedMessage, password) {
+    const bytes = CryptoJS.AES.decrypt(encryptedMessage, password);
+    return bytes.toString(CryptoJS.enc.Utf8);
+}
+
+function getPassword() {
+    const password = document.querySelector('#passwordInput').value;
+    return password;
+}
+
+export function passwordIsGood() {
+    const password = getPassword();
 }

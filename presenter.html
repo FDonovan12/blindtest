@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- <script src="./objectValueBlindtest.js" type="module"></script> -->
         <link rel="stylesheet" href="style.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
         <script type="module" src="./script/script.js"></script>
         <script type="module" src="./script/header.js"></script>
         <title>Blind Test - Présentateur</title>
@@ -15,8 +16,30 @@
         </header>
         <div>
             <form>
+                <input placeholder="Mot de passe" type="text" id="passwordInput" />
+                <button id="password">Valider mot de passe</button>
+            </form>
+        </div>
+        <div>
+            <form>
                 <input placeholder="Nom du particpant" type="text" id="addParticpantInput" />
                 <button id="addParticpant">Ajouter participant</button>
+            </form>
+        </div>
+        <div>
+            <form>
+                <div>
+                    <input placeholder="lien Youtube de la musique" type="text" id="linkYoutubeInput" />
+                    <button id="addLinkYoutube">Ajouter lien Youtube</button>
+                </div>
+                <div id="blockOfPointInfos">
+                    <div>
+                        <input placeholder="Titre Point infos" type="text" />
+                        <input placeholder="Value Point infos" type="text" />
+                        <button id="validMusic">Valide musique</button>
+                    </div>
+                </div>
+                <button id="addPointInfo" class="fa-solid fa-circle-plus"></button>
             </form>
         </div>
         <button id="openAudience">Ouvrir Audience</button>
