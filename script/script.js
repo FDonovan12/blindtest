@@ -11,6 +11,7 @@ import unitTest from './unitTest.js';
 
 let partyBlindtest = null;
 
+createClickButtonEvent('#password', start);
 start();
 window.addEventListener('load', () => {});
 
@@ -40,10 +41,7 @@ function start() {
 
     try {
         document.querySelector('#readJson').addEventListener('click', function () {
-            partyBlindtest = new PartyBlindtest(
-                readJsonSynchrone('current.json')['blindtest'],
-                true
-            );
+            partyBlindtest = new PartyBlindtest(readJsonSynchrone('current.json')['blindtest'], true);
             partyBlindtest.save();
         });
     } catch (error) {}

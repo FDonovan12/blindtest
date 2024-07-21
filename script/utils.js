@@ -75,23 +75,9 @@ export function createResponse(partyBlindtest, divResponse) {
             pointInfo.participant = undefined;
         }
         const classVisible = isAudience() && !pointInfo.participant ? 'invisible' : null;
-        const divPointInfo = createTagWithParentClassContent(
-            'div',
-            divResponse,
-            'response-pointInfos'
-        );
-        const divNamePointInfo = createTagWithParentClassContent(
-            'div',
-            divPointInfo,
-            null,
-            pointInfo.name
-        );
-        const divValuePointInfo = createTagWithParentClassContent(
-            'div',
-            divPointInfo,
-            classVisible,
-            pointInfo.value
-        );
+        const divPointInfo = createTagWithParentClassContent('div', divResponse, 'response-pointInfos');
+        const divNamePointInfo = createTagWithParentClassContent('div', divPointInfo, null, pointInfo.name);
+        const divValuePointInfo = createTagWithParentClassContent('div', divPointInfo, classVisible, pointInfo.value);
         if (isAudience()) {
             const divValueparticipant = createTagWithParentClassContent(
                 'div',
@@ -120,18 +106,12 @@ export function addParticipantsScore(partyBlindtest) {
     divParticipantsScore.innerHTML = null;
     partyBlindtest
         .getParticipants()
-        .map((participant) =>
-            addparticipantScore(partyBlindtest, divParticipantsScore, participant)
-        );
+        .map((participant) => addparticipantScore(partyBlindtest, divParticipantsScore, participant));
 }
 
 export function addparticipantScore(partyBlindtest, divParticipantsScore, participant) {
     const divParticipant = createTagWithParentClassContent('div', divParticipantsScore);
-    const divParticipantDelete = createTagWithParentClassContent(
-        'i',
-        divParticipant,
-        'fa-solid fa-trash'
-    );
+    const divParticipantDelete = createTagWithParentClassContent('i', divParticipant, 'fa-solid fa-trash');
     divParticipantDelete.addEventListener('click', (event) => {
         partyBlindtest.deleteParticipant(participant);
     });
@@ -180,8 +160,7 @@ export async function researchFromYoutubeLink() {
     console.log('youtubeLink :', youtubeLink);
     console.log('videoId :', videoId);
     const password = getPassword();
-    const cryptedApiKey =
-        'U2FsdGVkX1/mCdde5zXD5+UC5ZAWM94LlJF559ukbyxuan9OC80O/HRXvBNvnAtcKue3Tzd8Um24QRjSpqBn3g==';
+    const cryptedApiKey = 'U2FsdGVkX1/mCdde5zXD5+UC5ZAWM94LlJF559ukbyxuan9OC80O/HRXvBNvnAtcKue3Tzd8Um24QRjSpqBn3g==';
     const decryptedApiKey = decrypt(cryptedApiKey, password);
     const apiUrl = `https://www.googleapis.com/youtube/v3/videos?id=${videoId}&key=${decryptedApiKey}&part=snippet`;
 
