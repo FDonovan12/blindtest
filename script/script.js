@@ -4,6 +4,8 @@ import {
     createClickButtonEvent,
     getValueFromPathname,
     getPathnameFromValue,
+    researchFromYoutubeLink,
+    addFormPointInfo,
 } from './utils.js';
 import unitTest from './unitTest.js';
 
@@ -52,6 +54,8 @@ function start() {
     // createClickButtonEvent('#next', partyBlindtest.nextMusic, partyBlindtest);
     createClickButtonEvent('#downloadAnchorElem', partyBlindtest.download.bind(partyBlindtest));
     createClickButtonEvent('#addParticpant', partyBlindtest.addParticpant.bind(partyBlindtest));
+    createClickButtonEvent('#addLinkYoutube', researchFromYoutubeLink);
+    createClickButtonEvent('#addPointInfo', addFormPointInfo);
     window.addEventListener('keydown', (key) => {
         console.log('key :', key);
         switch (key.code) {

@@ -173,3 +173,67 @@ export function getValueFromPathname() {
     console.log(`getValueFromPathname : value : ${value}, pathname : ${pathname}`);
     return value;
 }
+
+export async function researchFromYoutubeLink() {
+    const youtubeLink = document.querySelector('#linkYoutubeInput').value;
+    const videoId = youtubeLink.split('v=')[1].split('&')[0];
+    console.log('youtubeLink :', youtubeLink);
+    console.log('videoId :', videoId);
+    const password = getPassword();
+    const cryptedApiKey =
+        'U2FsdGVkX1/mCdde5zXD5+UC5ZAWM94LlJF559ukbyxuan9OC80O/HRXvBNvnAtcKue3Tzd8Um24QRjSpqBn3g==';
+    const decryptedApiKey = decrypt(cryptedApiKey, password);
+    const apiUrl = `https://www.googleapis.com/youtube/v3/videos?id=${videoId}&key=${decryptedApiKey}&part=snippet`;
+
+    try {
+        const response = await fetch(apiUrl);
+        console.log('response :', response);
+        const data = await response.json();
+        console.log('data :', data);
+        const title = data.items[0].snippet.title;
+        const channelName = data.items[0].snippet.channelTitle;
+        console.log('title :', title);
+        console.log('channel :', channelName);
+        // document.getElementById('videoTitle').innerText = title;
+    } catch (error) {
+        console.error('Error fetching video title:', error);
+        // document.getElementById('videoTitle').innerText = 'Error fetching video title';
+    }
+}
+
+function encrypt(message, password) {
+    return CryptoJS.AES.encrypt(message, password).toString();
+}
+
+function decrypt(encryptedMessage, password) {
+    const bytes = CryptoJS.AES.decrypt(encryptedMessage, password);
+    return bytes.toString(CryptoJS.enc.Utf8);
+}
+
+function getPassword() {
+    const password = document.querySelector('#passwordInput').value;
+    return password;
+}
+
+export function passwordIsGood() {
+    const password = getPassword();
+}
+
+export function addFormPointInfo(contentTitle, contentValue) {
+    const blockPointInfos = document.querySelector('#blockOfPointInfos');
+    const divPointInfo = createTagWithParentClassContent('div', blockPointInfos);
+    const inputTitlePointInfo = createTagWithParentClassContent('input', divPointInfo);
+    const inputValuePointInfo = createTagWithParentClassContent('input', divPointInfo);
+    inputTitlePointInfo.placeholder = 'Titre Point infos';
+    inputTitlePointInfo.type = 'text';
+    if (contentTitle) {
+        inputTitlePointInfo.value = contentTitle;
+    }
+    inputValuePointInfo.placeholder = 'Value Point infos';
+    inputValuePointInfo.type = 'text';
+    if (contentValue) {
+        inputValuePointInfo.value = contentValue;
+    }
+}
+
+function makeFormPointInfoFrom(params) {}
