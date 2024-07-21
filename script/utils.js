@@ -159,8 +159,7 @@ export async function researchFromYoutubeLink() {
     const videoId = youtubeLink.split('v=')[1].split('&')[0];
     console.log('youtubeLink :', youtubeLink);
     console.log('videoId :', videoId);
-    // const password = getPassword();
-    const password = 'GJrss12dfoe';
+    const password = getPassword();
     const cryptedApiKey = 'U2FsdGVkX1/mCdde5zXD5+UC5ZAWM94LlJF559ukbyxuan9OC80O/HRXvBNvnAtcKue3Tzd8Um24QRjSpqBn3g==';
     const decryptedApiKey = decrypt(cryptedApiKey, password);
     const apiUrl = `https://www.googleapis.com/youtube/v3/videos?id=${videoId}&key=${decryptedApiKey}&part=snippet`;
@@ -197,4 +196,10 @@ function getPassword() {
 
 export function passwordIsGood() {
     const password = getPassword();
+}
+
+export function addFormPointInfo() {
+    const divPointInfo = createTagWithParentClassContent('div');
+    const inputTitlePointInfo = createTagWithParentClassContent('input');
+    const inputValuePointInfo = createTagWithParentClassContent('input');
 }
