@@ -198,8 +198,21 @@ export function passwordIsGood() {
     const password = getPassword();
 }
 
-export function addFormPointInfo() {
-    const divPointInfo = createTagWithParentClassContent('div');
-    const inputTitlePointInfo = createTagWithParentClassContent('input');
-    const inputValuePointInfo = createTagWithParentClassContent('input');
+export function addFormPointInfo(contentTitle, contentValue) {
+    const blockPointInfos = document.querySelector('#blockOfPointInfos');
+    const divPointInfo = createTagWithParentClassContent('div', blockPointInfos);
+    const inputTitlePointInfo = createTagWithParentClassContent('input', divPointInfo);
+    const inputValuePointInfo = createTagWithParentClassContent('input', divPointInfo);
+    inputTitlePointInfo.placeholder = 'Titre Point infos';
+    inputTitlePointInfo.type = 'text';
+    if (contentTitle) {
+        inputTitlePointInfo.value = contentTitle;
+    }
+    inputValuePointInfo.placeholder = 'Value Point infos';
+    inputValuePointInfo.type = 'text';
+    if (contentValue) {
+        inputValuePointInfo.value = contentValue;
+    }
 }
+
+function makeFormPointInfoFrom(params) {}

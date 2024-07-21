@@ -5,6 +5,7 @@ import {
     getValueFromPathname,
     getPathnameFromValue,
     researchFromYoutubeLink,
+    addFormPointInfo,
 } from './utils.js';
 import unitTest from './unitTest.js';
 
@@ -40,10 +41,7 @@ function start() {
 
     try {
         document.querySelector('#readJson').addEventListener('click', function () {
-            partyBlindtest = new PartyBlindtest(
-                readJsonSynchrone('current.json')['blindtest'],
-                true
-            );
+            partyBlindtest = new PartyBlindtest(readJsonSynchrone('current.json')['blindtest'], true);
             partyBlindtest.save();
         });
     } catch (error) {}
@@ -55,6 +53,7 @@ function start() {
     createClickButtonEvent('#downloadAnchorElem', partyBlindtest.download.bind(partyBlindtest));
     createClickButtonEvent('#addParticpant', partyBlindtest.addParticpant.bind(partyBlindtest));
     createClickButtonEvent('#addLinkYoutube', researchFromYoutubeLink);
+    createClickButtonEvent('#addPointInfo', addFormPointInfo);
     window.addEventListener('keydown', (key) => {
         console.log('key :', key);
         switch (key.code) {
