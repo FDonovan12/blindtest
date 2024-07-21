@@ -19,8 +19,10 @@ export class PartyBlindtest {
             partyBlindtest = JSON.parse(partyBlindtest);
         }
         if (partyBlindtest?.blindtest) {
+            console.log('partyBlindtest.blindtest :', partyBlindtest.blindtest);
             this.blindtest = new Blindtest(partyBlindtest.blindtest);
         } else {
+            console.log('partyBlindtest :', partyBlindtest);
             this.blindtest = new Blindtest(partyBlindtest);
         }
         this.currentMusic = partyBlindtest?.currentMusic || 0;
@@ -133,8 +135,8 @@ export class PartyBlindtest {
     changeAudio() {
         if (this.audio) {
             this.audio.pause();
-            const linkMusic = this.getMusic().link;
-            this.audio.src = linkMusic;
+            const pathMusic = this.getMusic().path;
+            this.audio.src = pathMusic;
         }
     }
 
@@ -192,14 +194,35 @@ export class PartyBlindtest {
         });
         return score;
     }
+    validMusic() {
+        const youtubeLink = document.querySelector('#linkYoutubeInput').value;
+        const blockPointInfos = document.querySelector('#blockOfPointInfos');
+        const allPointInfosInput = blockPointInfos.querySelectorAll('div');
+        const music = this.addMusic(youtubeLink);
+        allPointInfosInput.forEach((pointInfo) => {
+            const inputs = pointInfo.querySelectorAll('input');
+            console.log('inputs :', inputs);
+            const name = inputs[0].value;
+            const value = inputs[1].value;
+            console.log('name : ', name);
+            console.log('value :', value);
+            console.log('music :', music);
+            music.addPointInfo(name, value);
+            console.log('music :', music);
+        });
+        console.log('music :', music);
+    }
+    addMusic(link) {
+        const section = this.getSection();
+        const music = section.addMusic(link);
+        return music;
+    }
 }
 
 export class Blindtest {
     constructor(blindtest) {
         this.name = blindtest.name;
-        this.participants = blindtest.participants.map(
-            (participant) => new Participant(participant.name)
-        );
+        this.participants = blindtest.participants.map((participant) => new Participant(participant.name));
         this.sections = blindtest.sections.map((section) => new Section(section));
     }
 }
@@ -213,25 +236,35 @@ export class Section {
     getScoreOfPlayer(player) {
         let score = 0;
         this.musics.map((music) => {
-            music.pointInfos
-                .filter((pointInfo) => pointInfo?.participant?.name === player.name)
-                .map(() => score++);
+            music.pointInfos.filter((pointInfo) => pointInfo?.participant?.name === player.name).map(() => score++);
         });
         return score;
+    }
+
+    addMusic(link) {
+        const music = new Music({ link: link });
+        this.musics.push(music);
+        return music;
     }
 }
 export class Music {
     constructor(music) {
+        this.path = music.path;
         this.link = music.link;
-        this.pointInfos = music.pointInfos.map((pointInfo) => new PointInfo(pointInfo));
+        this.pointInfos = music?.pointInfos?.map((pointInfo) => new PointInfo(pointInfo)) || [];
+    }
+    addPointInfo(name, value) {
+        const pointInfo = new PointInfo({ name: name, value: value });
+        this.pointInfos.push(pointInfo);
+        return this;
     }
 }
 export class PointInfo {
     constructor(pointInfo) {
-        this.name = pointInfo.name;
-        this.value = pointInfo.value;
+        this.name = pointInfo?.name;
+        this.value = pointInfo?.value;
         // this.participant = participant;
-        const participant = pointInfo.participant;
+        const participant = pointInfo?.participant;
         if (participant) {
             this.participant = new Participant(participant.name);
         }

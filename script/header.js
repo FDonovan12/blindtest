@@ -61,11 +61,7 @@ function addHeadContent() {
     const metaViewport = createMetaTag(head, 'viewport', 'width=device-width, initial-scale=1.0');
     const metaKeyword = createMetaTag(head, 'keywords', 'Musique, Blindtest');
     const metaAuthor = createMetaTag(head, 'author', 'Donovan Ferreira');
-    const metaDescription = createMetaTag(
-        head,
-        'description',
-        'Site pour organiser des Blindtest avec mon entourage'
-    );
+    const metaDescription = createMetaTag(head, 'description', 'Site pour organiser des Blindtest avec mon entourage');
 
     setTitle();
     createLinkFontAwesome(head);
@@ -120,11 +116,7 @@ function createLink(head, href, rel, integrity, crossorigin) {
 }
 
 function createLinkFontAwesome(head) {
-    createLink(
-        head,
-        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css',
-        'stylesheet'
-    );
+    createLink(head, 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css', 'stylesheet');
 }
 
 function createLinkBoostrapStyle(head) {
@@ -163,18 +155,9 @@ function createLinkChartJsScript(head) {
 }
 function addHeader() {
     const headers = document.querySelector('header');
-    let h1 = createTagWithParentClassContent(
-        'h1',
-        headers,
-        null,
-        'Experimentation de Donovan Ferreira'
-    );
+    let h1 = createTagWithParentClassContent('h1', headers, null, 'Experimentation de Donovan Ferreira');
     let h2 = createTagWithParentClassContent('h2', headers, null, "Developpeur d'application");
-    let nav = createTagWithParentClassContent(
-        'nav',
-        headers,
-        'nav-bar row row-cols-2 row-cols-md-4'
-    );
+    let nav = createTagWithParentClassContent('nav', headers, 'nav-bar row row-cols-2 row-cols-md-4');
     const urlRoot = getURlRoot();
     Object.keys(createFileMap()).forEach((key) => {
         createLinkNav(nav, `${key}`, getContentFromUrl(key));

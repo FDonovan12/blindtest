@@ -70,7 +70,7 @@ export function addResponse(partyBlindtest) {
 
 export function createResponse(partyBlindtest, divResponse) {
     const pointInfos = partyBlindtest.getMusic().pointInfos;
-    pointInfos.map((pointInfo) => {
+    pointInfos?.map((pointInfo) => {
         if (pointInfo?.participant?.name === 'undefined') {
             pointInfo.participant = undefined;
         }
@@ -139,7 +139,7 @@ export function getPathnameFromValue(value) {
     // }
     let pathname = href.includes('github') ? `/${projectName}${value}` : value;
 
-    console.log(`getPathnameFromValue : value : ${value}, pathname : ${pathname}`);
+    // console.log(`getPathnameFromValue : value : ${value}, pathname : ${pathname}`);
     return pathname;
 }
 export function getValueFromPathname() {
@@ -150,7 +150,7 @@ export function getValueFromPathname() {
     if (href.includes('github')) {
         value = pathname.replace(`/${projectName}`, '');
     }
-    console.log(`getValueFromPathname : value : ${value}, pathname : ${pathname}`);
+    // console.log(`getValueFromPathname : value : ${value}, pathname : ${pathname}`);
     return value;
 }
 
@@ -162,6 +162,7 @@ export async function researchFromYoutubeLink() {
     const password = getPassword();
     const cryptedApiKey = 'U2FsdGVkX1/mCdde5zXD5+UC5ZAWM94LlJF559ukbyxuan9OC80O/HRXvBNvnAtcKue3Tzd8Um24QRjSpqBn3g==';
     const decryptedApiKey = decrypt(cryptedApiKey, password);
+    console.log('decryptedApiKey :', decryptedApiKey);
     const apiUrl = `https://www.googleapis.com/youtube/v3/videos?id=${videoId}&key=${decryptedApiKey}&part=snippet`;
 
     try {
@@ -173,6 +174,9 @@ export async function researchFromYoutubeLink() {
         const channelName = data.items[0].snippet.channelTitle;
         console.log('title :', title);
         console.log('channel :', channelName);
+        resetPointInfo();
+        addFormPointInfo('Titre', title);
+        addFormPointInfo('Chanteur', channelName);
         // document.getElementById('videoTitle').innerText = title;
     } catch (error) {
         console.error('Error fetching video title:', error);
@@ -215,4 +219,21 @@ export function addFormPointInfo(contentTitle, contentValue) {
     }
 }
 
-function makeFormPointInfoFrom(params) {}
+function resetPointInfo() {
+    const blockPointInfos = document.querySelector('#blockOfPointInfos');
+    blockPointInfos.innerHTML = '';
+}
+
+// export function validMusic(partyBlindtest) {
+//     const youtubeLink = document.querySelector('#linkYoutubeInput').value;
+//     const blockPointInfos = document.querySelector('#blockOfPointInfos');
+//     const allPointInfosInput = blockPointInfos.querySelectorAll('div');
+//     console.log('allPointInfos :', allPointInfos);
+//     const music = partyBlindtest.addMusic(youtubeLink);
+//     allPointInfosInput.forEach((pointInfo) => {
+//         const inputs = pointInfo.querySelectorAll('input');
+//         const name = inputs[0];
+//         const value = inputs[1];
+//         music.addPointInfo(name, value);
+//     });
+// }

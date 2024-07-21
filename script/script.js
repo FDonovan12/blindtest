@@ -54,6 +54,7 @@ function start() {
     createClickButtonEvent('#addParticpant', partyBlindtest.addParticpant.bind(partyBlindtest));
     createClickButtonEvent('#addLinkYoutube', researchFromYoutubeLink);
     createClickButtonEvent('#addPointInfo', addFormPointInfo);
+    createClickButtonEvent('#validMusic', partyBlindtest.validMusic.bind(partyBlindtest));
     window.addEventListener('keydown', (key) => {
         console.log('key :', key);
         switch (key.code) {
