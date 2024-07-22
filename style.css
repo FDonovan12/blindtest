@@ -22,3 +22,7 @@ button:active,
 button[active] {
     width: 150px;
 }
+
+input {
+    width: 25rem;
+}

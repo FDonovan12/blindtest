@@ -276,6 +276,10 @@ export class PointInfo {
         this.participant = new Participant(newParticipantName);
         partyBlindtest.save();
     }
+    makeVisible() {
+        this.isVisible = true;
+        console.log('PointInfo :', this);
+    }
 }
 export class Participant {
     constructor(name) {

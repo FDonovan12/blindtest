@@ -69,6 +69,15 @@ export function addResponse(partyBlindtest) {
 }
 
 export function createResponse(partyBlindtest, divResponse) {
+    const divSection = createTagWithParentClassContent('div', divResponse);
+    const divSectionName = createTagWithParentClassContent('div', divResponse, 'h4', partyBlindtest.getSection().name);
+    const divSectionDetails = createTagWithParentClassContent(
+        'div',
+        divResponse,
+        null,
+        partyBlindtest.getSection().details
+    );
+
     const pointInfos = partyBlindtest.getMusic().pointInfos;
     pointInfos?.map((pointInfo) => {
         if (pointInfo?.participant?.name === 'undefined') {
@@ -97,10 +106,11 @@ export function createResponse(partyBlindtest, divResponse) {
                     selectValuePointInfo.selectedIndex = index + 1;
                 }
             });
+            const divVisiblePointinfo = createTagWithParentClassContent('div', divPointInfo, 'fa-solid fa-eye');
+            divVisiblePointinfo.addEventListener('click', pointInfo.makeVisible);
         }
     });
 }
-
 export function addParticipantsScore(partyBlindtest) {
     const divParticipantsScore = document.querySelector('#participants');
     divParticipantsScore.innerHTML = null;
@@ -223,17 +233,3 @@ function resetPointInfo() {
     const blockPointInfos = document.querySelector('#blockOfPointInfos');
     blockPointInfos.innerHTML = '';
 }
-
-// export function validMusic(partyBlindtest) {
-//     const youtubeLink = document.querySelector('#linkYoutubeInput').value;
-//     const blockPointInfos = document.querySelector('#blockOfPointInfos');
-//     const allPointInfosInput = blockPointInfos.querySelectorAll('div');
-//     console.log('allPointInfos :', allPointInfos);
-//     const music = partyBlindtest.addMusic(youtubeLink);
-//     allPointInfosInput.forEach((pointInfo) => {
-//         const inputs = pointInfo.querySelectorAll('input');
-//         const name = inputs[0];
-//         const value = inputs[1];
-//         music.addPointInfo(name, value);
-//     });
-// }
