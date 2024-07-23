@@ -83,7 +83,13 @@ export function createResponse(partyBlindtest, divResponse) {
         if (pointInfo?.participant?.name === 'undefined') {
             pointInfo.participant = undefined;
         }
-        const classVisible = isAudience() && !pointInfo.participant ? 'invisible' : null;
+        let classVisible = null;
+        if (isAudience()) {
+            if (!(pointInfo.participant || pointInfo.isVisible)) {
+                classVisible = 'invisible';
+            }
+        }
+        // const classVisible =  && !(pointInfo.participant || pointInfo.isVisible) ? 'invisible' : null;
         const divPointInfo = createTagWithParentClassContent('div', divResponse, 'response-pointInfos');
         const divNamePointInfo = createTagWithParentClassContent('div', divPointInfo, null, pointInfo.name);
         const divValuePointInfo = createTagWithParentClassContent('div', divPointInfo, classVisible, pointInfo.value);
@@ -107,7 +113,11 @@ export function createResponse(partyBlindtest, divResponse) {
                 }
             });
             const divVisiblePointinfo = createTagWithParentClassContent('div', divPointInfo, 'fa-solid fa-eye');
-            divVisiblePointinfo.addEventListener('click', pointInfo.makeVisible);
+
+            divVisiblePointinfo.addEventListener('click', () => {
+                pointInfo.makeVisible(partyBlindtest);
+            });
+            // divVisiblePointinfo.addEventListener('click', pointInfo.makeVisible);
         }
     });
 }
@@ -167,23 +177,16 @@ export function getValueFromPathname() {
 export async function researchFromYoutubeLink() {
     const youtubeLink = document.querySelector('#linkYoutubeInput').value;
     const videoId = youtubeLink.split('v=')[1].split('&')[0];
-    console.log('youtubeLink :', youtubeLink);
-    console.log('videoId :', videoId);
     const password = getPassword();
     const cryptedApiKey = 'U2FsdGVkX1/mCdde5zXD5+UC5ZAWM94LlJF559ukbyxuan9OC80O/HRXvBNvnAtcKue3Tzd8Um24QRjSpqBn3g==';
     const decryptedApiKey = decrypt(cryptedApiKey, password);
-    console.log('decryptedApiKey :', decryptedApiKey);
     const apiUrl = `https://www.googleapis.com/youtube/v3/videos?id=${videoId}&key=${decryptedApiKey}&part=snippet`;
 
     try {
         const response = await fetch(apiUrl);
-        console.log('response :', response);
         const data = await response.json();
-        console.log('data :', data);
         const title = data.items[0].snippet.title;
         const channelName = data.items[0].snippet.channelTitle;
-        console.log('title :', title);
-        console.log('channel :', channelName);
         resetPointInfo();
         addFormPointInfo('Titre', title);
         addFormPointInfo('Chanteur', channelName);

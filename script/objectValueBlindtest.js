@@ -263,6 +263,7 @@ export class PointInfo {
     constructor(pointInfo) {
         this.name = pointInfo?.name;
         this.value = pointInfo?.value;
+        this.isVisible = pointInfo?.isVisible;
         // this.participant = participant;
         const participant = pointInfo?.participant;
         if (participant) {
@@ -276,9 +277,9 @@ export class PointInfo {
         this.participant = new Participant(newParticipantName);
         partyBlindtest.save();
     }
-    makeVisible() {
-        this.isVisible = true;
-        console.log('PointInfo :', this);
+    makeVisible(partyBlindtest) {
+        this.isVisible = !this.isVisible;
+        partyBlindtest.save();
     }
 }
 export class Participant {
