@@ -270,6 +270,11 @@ export class PointInfo {
             this.participant = new Participant(participant.name);
         }
     }
+    changeValue(name, value, partyBlindtest) {
+        this.name = name;
+        this.value = value;
+        // partyBlindtest.save();
+    }
     isShow() {
         return this.participant === undefined;
     }

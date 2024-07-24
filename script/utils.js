@@ -91,8 +91,11 @@ export function createResponse(partyBlindtest, divResponse) {
         }
         // const classVisible =  && !(pointInfo.participant || pointInfo.isVisible) ? 'invisible' : null;
         const divPointInfo = createTagWithParentClassContent('div', divResponse, 'response-pointInfos');
-        const divNamePointInfo = createTagWithParentClassContent('div', divPointInfo, null, pointInfo.name);
-        const divValuePointInfo = createTagWithParentClassContent('div', divPointInfo, classVisible, pointInfo.value);
+        const divVisiblePointinfo = createTagWithParentClassContent('div', divPointInfo, 'fa-solid fa-eye');
+
+        divVisiblePointinfo.addEventListener('click', () => {
+            pointInfo.makeVisible(partyBlindtest);
+        });
         if (isAudience()) {
             const divValueparticipant = createTagWithParentClassContent(
                 'div',
@@ -112,13 +115,18 @@ export function createResponse(partyBlindtest, divResponse) {
                     selectValuePointInfo.selectedIndex = index + 1;
                 }
             });
-            const divVisiblePointinfo = createTagWithParentClassContent('div', divPointInfo, 'fa-solid fa-eye');
-
-            divVisiblePointinfo.addEventListener('click', () => {
-                pointInfo.makeVisible(partyBlindtest);
-            });
             // divVisiblePointinfo.addEventListener('click', pointInfo.makeVisible);
         }
+        const divNamePointInfo = createTagWithParentClassContent('input', divPointInfo, 'inputToEnd', pointInfo.name);
+        divNamePointInfo.value = pointInfo.name;
+        divNamePointInfo.addEventListener('input', (event) => {
+            pointInfo.changeValue(event.target.value, pointInfo.value, partyBlindtest);
+        });
+        const divValuePointInfo = createTagWithParentClassContent('input', divPointInfo, classVisible, pointInfo.value);
+        divValuePointInfo.value = pointInfo.value;
+        divValuePointInfo.addEventListener('input', (event) => {
+            pointInfo.changeValue(pointInfo.name, event.target.value, partyBlindtest);
+        });
     });
 }
 export function addParticipantsScore(partyBlindtest) {
