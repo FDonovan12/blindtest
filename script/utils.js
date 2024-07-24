@@ -69,15 +69,33 @@ export function addResponse(partyBlindtest) {
 }
 
 export function createResponse(partyBlindtest, divResponse) {
+    const divSection = createTagWithParentClassContent('div', divResponse);
+    const divSectionName = createTagWithParentClassContent('div', divResponse, 'h4', partyBlindtest.getSection().name);
+    const divSectionDetails = createTagWithParentClassContent(
+        'div',
+        divResponse,
+        null,
+        partyBlindtest.getSection().details
+    );
+
     const pointInfos = partyBlindtest.getMusic().pointInfos;
     pointInfos?.map((pointInfo) => {
         if (pointInfo?.participant?.name === 'undefined') {
             pointInfo.participant = undefined;
         }
-        const classVisible = isAudience() && !pointInfo.participant ? 'invisible' : null;
+        let classVisible = null;
+        if (isAudience()) {
+            if (!(pointInfo.participant || pointInfo.isVisible)) {
+                classVisible = 'invisible';
+            }
+        }
+        // const classVisible =  && !(pointInfo.participant || pointInfo.isVisible) ? 'invisible' : null;
         const divPointInfo = createTagWithParentClassContent('div', divResponse, 'response-pointInfos');
-        const divNamePointInfo = createTagWithParentClassContent('div', divPointInfo, null, pointInfo.name);
-        const divValuePointInfo = createTagWithParentClassContent('div', divPointInfo, classVisible, pointInfo.value);
+        const divVisiblePointinfo = createTagWithParentClassContent('div', divPointInfo, 'fa-solid fa-eye');
+
+        divVisiblePointinfo.addEventListener('click', () => {
+            pointInfo.makeVisible(partyBlindtest);
+        });
         if (isAudience()) {
             const divValueparticipant = createTagWithParentClassContent(
                 'div',
@@ -97,10 +115,20 @@ export function createResponse(partyBlindtest, divResponse) {
                     selectValuePointInfo.selectedIndex = index + 1;
                 }
             });
+            // divVisiblePointinfo.addEventListener('click', pointInfo.makeVisible);
         }
+        const divNamePointInfo = createTagWithParentClassContent('input', divPointInfo, 'inputToEnd', pointInfo.name);
+        divNamePointInfo.value = pointInfo.name;
+        divNamePointInfo.addEventListener('input', (event) => {
+            pointInfo.changeValue(event.target.value, pointInfo.value, partyBlindtest);
+        });
+        const divValuePointInfo = createTagWithParentClassContent('input', divPointInfo, classVisible, pointInfo.value);
+        divValuePointInfo.value = pointInfo.value;
+        divValuePointInfo.addEventListener('input', (event) => {
+            pointInfo.changeValue(pointInfo.name, event.target.value, partyBlindtest);
+        });
     });
 }
-
 export function addParticipantsScore(partyBlindtest) {
     const divParticipantsScore = document.querySelector('#participants');
     divParticipantsScore.innerHTML = null;
@@ -157,23 +185,16 @@ export function getValueFromPathname() {
 export async function researchFromYoutubeLink() {
     const youtubeLink = document.querySelector('#linkYoutubeInput').value;
     const videoId = youtubeLink.split('v=')[1].split('&')[0];
-    console.log('youtubeLink :', youtubeLink);
-    console.log('videoId :', videoId);
     const password = getPassword();
     const cryptedApiKey = 'U2FsdGVkX1/mCdde5zXD5+UC5ZAWM94LlJF559ukbyxuan9OC80O/HRXvBNvnAtcKue3Tzd8Um24QRjSpqBn3g==';
     const decryptedApiKey = decrypt(cryptedApiKey, password);
-    console.log('decryptedApiKey :', decryptedApiKey);
     const apiUrl = `https://www.googleapis.com/youtube/v3/videos?id=${videoId}&key=${decryptedApiKey}&part=snippet`;
 
     try {
         const response = await fetch(apiUrl);
-        console.log('response :', response);
         const data = await response.json();
-        console.log('data :', data);
         const title = data.items[0].snippet.title;
         const channelName = data.items[0].snippet.channelTitle;
-        console.log('title :', title);
-        console.log('channel :', channelName);
         resetPointInfo();
         addFormPointInfo('Titre', title);
         addFormPointInfo('Chanteur', channelName);
@@ -223,17 +244,3 @@ function resetPointInfo() {
     const blockPointInfos = document.querySelector('#blockOfPointInfos');
     blockPointInfos.innerHTML = '';
 }
-
-// export function validMusic(partyBlindtest) {
-//     const youtubeLink = document.querySelector('#linkYoutubeInput').value;
-//     const blockPointInfos = document.querySelector('#blockOfPointInfos');
-//     const allPointInfosInput = blockPointInfos.querySelectorAll('div');
-//     console.log('allPointInfos :', allPointInfos);
-//     const music = partyBlindtest.addMusic(youtubeLink);
-//     allPointInfosInput.forEach((pointInfo) => {
-//         const inputs = pointInfo.querySelectorAll('input');
-//         const name = inputs[0];
-//         const value = inputs[1];
-//         music.addPointInfo(name, value);
-//     });
-// }

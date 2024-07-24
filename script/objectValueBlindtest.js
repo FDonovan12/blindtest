@@ -263,17 +263,27 @@ export class PointInfo {
     constructor(pointInfo) {
         this.name = pointInfo?.name;
         this.value = pointInfo?.value;
+        this.isVisible = pointInfo?.isVisible;
         // this.participant = participant;
         const participant = pointInfo?.participant;
         if (participant) {
             this.participant = new Participant(participant.name);
         }
     }
+    changeValue(name, value, partyBlindtest) {
+        this.name = name;
+        this.value = value;
+        // partyBlindtest.save();
+    }
     isShow() {
         return this.participant === undefined;
     }
     changeParticipant(newParticipantName, partyBlindtest) {
         this.participant = new Participant(newParticipantName);
+        partyBlindtest.save();
+    }
+    makeVisible(partyBlindtest) {
+        this.isVisible = !this.isVisible;
         partyBlindtest.save();
     }
 }
