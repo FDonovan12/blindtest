@@ -11,6 +11,9 @@
     display: flex;
     justify-content: end;
 }
+.response-pointInfos {
+    align-items: center;
+}
 
 #participants {
     display: flex;

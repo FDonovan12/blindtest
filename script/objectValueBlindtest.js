@@ -136,7 +136,9 @@ export class PartyBlindtest {
         if (this.audio) {
             this.audio.pause();
             const pathMusic = this.getMusic().path;
+            console.log(pathMusic);
             this.audio.src = pathMusic;
+            console.log(this.audio.src);
         }
     }
 

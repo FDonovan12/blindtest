@@ -9,6 +9,7 @@ import {
 } from './utils.js';
 import unitTest from './unitTest.js';
 
+const fileName = 'current/data.json';
 let partyBlindtest = null;
 
 createClickButtonEvent('#password', start);
@@ -16,12 +17,13 @@ start();
 window.addEventListener('load', () => {});
 
 window.addEventListener('storage', PartyBlindtest.updateStatus);
-
 function start() {
     unitTest();
     getPathnameFromValue('presenter.html');
     getValueFromPathname();
-    partyBlindtest = new PartyBlindtest(readJsonSynchrone('current.json')['blindtest']);
+    console.log('before');
+    partyBlindtest = new PartyBlindtest(readJsonSynchrone(fileName)['blindtest']);
+    console.log('after');
     console.log(partyBlindtest);
     partyBlindtest.save();
     console.log('\nelement :', partyBlindtest);
@@ -41,8 +43,9 @@ function start() {
 
     try {
         document.querySelector('#readJson').addEventListener('click', function () {
-            partyBlindtest = new PartyBlindtest(readJsonSynchrone('current.json')['blindtest'], true);
+            partyBlindtest = new PartyBlindtest(readJsonSynchrone(fileName)['blindtest'], true);
             partyBlindtest.save();
+            console.log('read');
         });
     } catch (error) {}
 
