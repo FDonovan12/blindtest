@@ -31,12 +31,12 @@ export class PartyBlindtest {
         this.localStorageName = localStorageName;
         if (!fromGetFunction) {
             const partyBlindtestFromStorage = PartyBlindtest.get();
+            this.changeAudio();
             if (this.getName() === partyBlindtestFromStorage.getName()) {
                 // this.currentMusic = partyBlindtestFromStorage.currentMusic;
                 return partyBlindtestFromStorage;
             }
         }
-        this.changeAudio();
     }
 
     changeLocalStorageName(localStorageName) {
@@ -61,21 +61,26 @@ export class PartyBlindtest {
 
     playAndPauseMusic() {
         const buttonPlayPause = document.querySelector('#play');
-        buttonPlayPause.toggleAttribute('active');
-        if (this.audio.paused) {
+        const isPlaying = buttonPlayPause.hasAttribute('active');
+        if (!isPlaying) {
             this.playMusic();
-            buttonPlayPause.textContent = 'pause';
         } else {
             this.pauseMusic();
-            buttonPlayPause.textContent = 'play';
         }
     }
 
-    //prettier-ignore
-    playMusic() { this.audio.play(); }
+    playMusic() {
+        const buttonPlayPause = document.querySelector('#play');
+        this.audio.play();
+        buttonPlayPause.setAttribute('active', true);
+        buttonPlayPause.textContent = 'pause';
+    }
 
     pauseMusic() {
+        const buttonPlayPause = document.querySelector('#play');
         this.audio.pause();
+        buttonPlayPause.removeAttribute('active');
+        buttonPlayPause.textContent = 'play';
     }
 
     getParticipants() {
@@ -133,12 +138,12 @@ export class PartyBlindtest {
     }
 
     changeAudio() {
+        // const buttonPlayPause = document.querySelector('#play');
         if (this.audio) {
-            this.audio.pause();
+            this.pauseMusic();
+            // this.audio.pause();
             const pathMusic = this.getMusic().path;
-            console.log(pathMusic);
             this.audio.src = pathMusic;
-            console.log(this.audio.src);
         }
     }
 

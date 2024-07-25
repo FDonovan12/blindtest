@@ -18,7 +18,7 @@ window.addEventListener('load', () => {});
 
 window.addEventListener('storage', PartyBlindtest.updateStatus);
 function start() {
-    unitTest();
+    // unitTest();
     getPathnameFromValue('presenter.html');
     getValueFromPathname();
     partyBlindtest = new PartyBlindtest(readJsonSynchrone(fileName)['blindtest']);
