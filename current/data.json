@@ -5,14 +5,14 @@
         "sections": [
             {
                 "name": "test sections2",
-                "details": "test details2",
+                "details": "test details",
                 "musics": [
                     {
                         "path": "current/music/Alvaro Soler - Sofia.mp3",
                         "pointInfos": [
                             {
                                 "name": "artiste",
-                                "value": "Alvaro Soler2",
+                                "value": "Alvaro Soler",
                                 "participant": { "name": "j2" }
                             },
                             { "name": "titre", "value": "Sofia" }

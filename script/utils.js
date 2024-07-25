@@ -1,10 +1,13 @@
-export function createClickButtonEvent(idButton, functionUse, objectBlindtest) {
+import { PartyBlindtest } from './objectValueBlindtest.js';
+
+export function createClickButtonEvent(idButton, functionUse) {
     const button = document.querySelector(idButton);
     if (button) {
         // button.addEventListener('click', functionUse);
         button.addEventListener('click', (event) => {
             event.preventDefault();
-            functionUse();
+            const objectBlindtest = PartyBlindtest.get();
+            functionUse.call(objectBlindtest);
         });
     } else {
         console.warn(`Button ${idButton} not find in the page ${window.location.href}`);

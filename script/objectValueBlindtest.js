@@ -143,14 +143,11 @@ export class PartyBlindtest {
     }
 
     nextMusic() {
-        console.log('nextMusic');
-        console.log(this.getMusic());
         if (this.currentMusic < this.getNumberOfMusic() - 1) {
             this.currentMusic++;
         } else {
             this.nextSection();
         }
-        console.log(this.getMusic());
         this.changeAudio();
         this.save();
     }
@@ -203,16 +200,10 @@ export class PartyBlindtest {
         const music = this.addMusic(youtubeLink);
         allPointInfosInput.forEach((pointInfo) => {
             const inputs = pointInfo.querySelectorAll('input');
-            console.log('inputs :', inputs);
             const name = inputs[0].value;
             const value = inputs[1].value;
-            console.log('name : ', name);
-            console.log('value :', value);
-            console.log('music :', music);
             music.addPointInfo(name, value);
-            console.log('music :', music);
         });
-        console.log('music :', music);
     }
     addMusic(link) {
         const section = this.getSection();

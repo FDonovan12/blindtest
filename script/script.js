@@ -21,19 +21,10 @@ function start() {
     unitTest();
     getPathnameFromValue('presenter.html');
     getValueFromPathname();
-    console.log('before');
     partyBlindtest = new PartyBlindtest(readJsonSynchrone(fileName)['blindtest']);
-    console.log('after');
-    console.log(partyBlindtest);
     partyBlindtest.save();
-    console.log('\nelement :', partyBlindtest);
-    console.log(' :', PartyBlindtest.get());
     PartyBlindtest.updateStatus();
-    console.log('\nelement :', partyBlindtest);
-    console.log(' :', PartyBlindtest.get());
     partyBlindtest.save();
-    console.log('\nelement :', partyBlindtest);
-    console.log(' :', PartyBlindtest.get());
 
     try {
         document.querySelector('#openAudience').addEventListener('click', function () {
@@ -45,19 +36,17 @@ function start() {
         document.querySelector('#readJson').addEventListener('click', function () {
             partyBlindtest = new PartyBlindtest(readJsonSynchrone(fileName)['blindtest'], true);
             partyBlindtest.save();
-            console.log('read');
         });
     } catch (error) {}
 
-    createClickButtonEvent('#play', partyBlindtest.playAndPauseMusic.bind(partyBlindtest));
-    createClickButtonEvent('#previous', partyBlindtest.previousMusic.bind(partyBlindtest));
-    createClickButtonEvent('#next', partyBlindtest.nextMusic.bind(partyBlindtest));
-    // createClickButtonEvent('#next', partyBlindtest.nextMusic, partyBlindtest);
-    createClickButtonEvent('#downloadAnchorElem', partyBlindtest.download.bind(partyBlindtest));
-    createClickButtonEvent('#addParticpant', partyBlindtest.addParticpant.bind(partyBlindtest));
+    createClickButtonEvent('#play', partyBlindtest.playAndPauseMusic);
+    createClickButtonEvent('#previous', partyBlindtest.previousMusic);
+    createClickButtonEvent('#next', partyBlindtest.nextMusic);
+    createClickButtonEvent('#downloadAnchorElem', partyBlindtest.download);
+    createClickButtonEvent('#addParticpant', partyBlindtest.addParticpant);
     createClickButtonEvent('#addLinkYoutube', researchFromYoutubeLink);
     createClickButtonEvent('#addPointInfo', addFormPointInfo);
-    createClickButtonEvent('#validMusic', partyBlindtest.validMusic.bind(partyBlindtest));
+    createClickButtonEvent('#validMusic', partyBlindtest.validMusic);
     window.addEventListener('keydown', (key) => {
         console.log('key :', key);
         switch (key.code) {
@@ -116,7 +105,6 @@ function quickSortRec(tab, minIndex, maxIndex) {
         pivot = partition(tab, minIndex, maxIndex, pivot);
         quickSortRec(tab, minIndex, pivot - 1);
         quickSortRec(tab, pivot + 1, maxIndex);
-        console.log(tab);
     }
     return tab;
 }
@@ -265,20 +253,20 @@ function intTochar(int) {
 // console.log(isPalindrome('kayak'));
 // console.log(isPalindrome('kabk'));
 // console.log(isPalindrome('kayao'));
-console.log('cesar');
-console.log(cesar('kayak', 0));
-console.log(cesar(cesar('kayak', 0), 0, true));
-// console.log(cesar('kayak', 1));
-console.log(cesar(cesar('kayak', 1), 1, true));
-// console.log(cesar('kayak', 25));
-console.log(cesar(cesar('kayak', 250), 250, true));
-console.log('vigenere');
-// console.log(vigenere('kayak', 'a'));
-console.log(vigenere(vigenere('kayak', 'a'), 'a', true));
-// console.log(vigenere('kayak', 'b'));
-console.log(vigenere(vigenere('kayak', 'b'), 'b', true));
-// console.log(vigenere('kayak', 'abcde'));
-console.log(vigenere(vigenere('kayak', 'abcde'), 'abcde', true));
+// console.log('cesar');
+// console.log(cesar('kayak', 0));
+// console.log(cesar(cesar('kayak', 0), 0, true));
+// // console.log(cesar('kayak', 1));
+// console.log(cesar(cesar('kayak', 1), 1, true));
+// // console.log(cesar('kayak', 25));
+// console.log(cesar(cesar('kayak', 250), 250, true));
+// console.log('vigenere');
+// // console.log(vigenere('kayak', 'a'));
+// console.log(vigenere(vigenere('kayak', 'a'), 'a', true));
+// // console.log(vigenere('kayak', 'b'));
+// console.log(vigenere(vigenere('kayak', 'b'), 'b', true));
+// // console.log(vigenere('kayak', 'abcde'));
+// console.log(vigenere(vigenere('kayak', 'abcde'), 'abcde', true));
 
 function testPrimeTimeExecution() {
     const number = 100000;
