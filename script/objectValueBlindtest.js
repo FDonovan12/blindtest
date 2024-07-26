@@ -133,7 +133,8 @@ export class PartyBlindtest {
         var dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(this));
         var dlAnchorElem = document.getElementById('downloadAnchorElem');
         link.setAttribute('href', dataStr);
-        link.setAttribute('download', `${this.getName()}.json`);
+        // link.setAttribute('download', `${this.getName()}.json`);
+        link.setAttribute('download', `data.json`);
         link.click();
     }
 
@@ -199,20 +200,25 @@ export class PartyBlindtest {
         return score;
     }
     validMusic() {
+        console.log('validMusic');
         const youtubeLink = document.querySelector('#linkYoutubeInput').value;
+        console.log(youtubeLink);
         const blockPointInfos = document.querySelector('#blockOfPointInfos');
         const allPointInfosInput = blockPointInfos.querySelectorAll('div');
-        const music = this.addMusic(youtubeLink);
+        const divPathMusic = document.querySelector('#pathMusic');
+        const path = `current/music/${divPathMusic.textContent}.mp3`;
+        const music = this.addMusic(youtubeLink, path);
         allPointInfosInput.forEach((pointInfo) => {
             const inputs = pointInfo.querySelectorAll('input');
             const name = inputs[0].value;
             const value = inputs[1].value;
             music.addPointInfo(name, value);
         });
+        this.save();
     }
-    addMusic(link) {
+    addMusic(link, path) {
         const section = this.getSection();
-        const music = section.addMusic(link);
+        const music = section.addMusic(link, path);
         return music;
     }
 }
@@ -239,8 +245,8 @@ export class Section {
         return score;
     }
 
-    addMusic(link) {
-        const music = new Music({ link: link });
+    addMusic(link, path) {
+        const music = new Music({ link: link, path: path });
         this.musics.push(music);
         return music;
     }

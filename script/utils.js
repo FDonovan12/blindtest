@@ -198,6 +198,8 @@ export async function researchFromYoutubeLink() {
         const data = await response.json();
         const title = data.items[0].snippet.title;
         const channelName = data.items[0].snippet.channelTitle;
+        const divPathMusic = document.querySelector('#pathMusic');
+        divPathMusic.textContent = title;
         resetPointInfo();
         addFormPointInfo('Titre', title);
         addFormPointInfo('Chanteur', channelName);
