@@ -16,7 +16,8 @@ export function createClickButtonEvent(idButton, functionUse) {
 
 export function isAudience() {
     const href = window.location.href;
-    return href.includes('audience');
+    const boolean = href.includes('audience');
+    return boolean;
 }
 
 export function setLocalStorage(name, object) {
@@ -83,53 +84,51 @@ export function createResponse(partyBlindtest, divResponse) {
 
     const pointInfos = partyBlindtest.getMusic().pointInfos;
     pointInfos?.map((pointInfo) => {
-        if (pointInfo?.participant?.name === 'undefined') {
-            pointInfo.participant = undefined;
-        }
-        let classVisible = null;
-        if (isAudience()) {
-            if (!(pointInfo.participant || pointInfo.isVisible)) {
-                classVisible = 'invisible';
-            }
-        }
-        // const classVisible =  && !(pointInfo.participant || pointInfo.isVisible) ? 'invisible' : null;
-        const divPointInfo = createTagWithParentClassContent('div', divResponse, 'response-pointInfos');
-        const divVisiblePointinfo = createTagWithParentClassContent('div', divPointInfo, 'fa-solid fa-eye');
+        pointInfo.createHtmlContent(partyBlindtest, divResponse);
+        // let classVisible = null;
+        // if (isAudience()) {
+        //     if (!(pointInfo.participant || pointInfo.isVisible)) {
+        //         classVisible = 'invisible';
+        //     }
+        // }
+        // // const classVisible =  && !(pointInfo.participant || pointInfo.isVisible) ? 'invisible' : null;
+        // const divPointInfo = createTagWithParentClassContent('div', divResponse, 'response-pointInfos');
+        // const divVisiblePointinfo = createTagWithParentClassContent('div', divPointInfo, 'fa-solid fa-eye');
 
-        divVisiblePointinfo.addEventListener('click', () => {
-            pointInfo.makeVisible(partyBlindtest);
-        });
-        if (isAudience()) {
-            const divValueparticipant = createTagWithParentClassContent(
-                'div',
-                divPointInfo,
-                null,
-                pointInfo?.participant?.name
-            );
-        } else {
-            const selectValuePointInfo = createTagWithParentClassContent('select', divPointInfo);
-            selectValuePointInfo.addEventListener('change', (value) => {
-                pointInfo.changeParticipant(selectValuePointInfo.value, partyBlindtest);
-            });
-            addOptionToSelect(selectValuePointInfo, undefined, undefined);
-            partyBlindtest.getParticipants().map((participant, index) => {
-                addOptionToSelect(selectValuePointInfo, participant.name, participant.name);
-                if (participant.name === pointInfo?.participant?.name) {
-                    selectValuePointInfo.selectedIndex = index + 1;
-                }
-            });
-            // divVisiblePointinfo.addEventListener('click', pointInfo.makeVisible);
-        }
-        const divNamePointInfo = createTagWithParentClassContent('input', divPointInfo, 'inputToEnd', pointInfo.name);
-        divNamePointInfo.value = pointInfo.name;
-        divNamePointInfo.addEventListener('input', (event) => {
-            pointInfo.changeValue(event.target.value, pointInfo.value, partyBlindtest);
-        });
-        const divValuePointInfo = createTagWithParentClassContent('input', divPointInfo, classVisible, pointInfo.value);
-        divValuePointInfo.value = pointInfo.value;
-        divValuePointInfo.addEventListener('input', (event) => {
-            pointInfo.changeValue(pointInfo.name, event.target.value, partyBlindtest);
-        });
+        // divVisiblePointinfo.addEventListener('click', () => {
+        //     pointInfo.makeVisible(partyBlindtest);
+        // });
+        // if (isAudience()) {
+        //     const divValueparticipant = createTagWithParentClassContent(
+        //         'div',
+        //         divPointInfo,
+        //         null,
+        //         pointInfo?.participant?.name
+        //     );
+        // } else {
+        //     const selectValuePointInfo = createTagWithParentClassContent('select', divPointInfo);
+        //     selectValuePointInfo.addEventListener('change', (value) => {
+        //         pointInfo.changeParticipant(selectValuePointInfo.value, partyBlindtest);
+        //     });
+        //     addOptionToSelect(selectValuePointInfo, undefined, undefined);
+        //     partyBlindtest.getParticipants().map((participant, index) => {
+        //         addOptionToSelect(selectValuePointInfo, participant.name, participant.name);
+        //         if (participant.name === pointInfo?.participant?.name) {
+        //             selectValuePointInfo.selectedIndex = index + 1;
+        //         }
+        //     });
+        //     // divVisiblePointinfo.addEventListener('click', pointInfo.makeVisible);
+        // }
+        // const divNamePointInfo = createTagWithParentClassContent('input', divPointInfo, 'inputToEnd', pointInfo.name);
+        // divNamePointInfo.value = pointInfo.name;
+        // divNamePointInfo.addEventListener('input', (event) => {
+        //     pointInfo.changeValue(event.target.value, pointInfo.value, partyBlindtest);
+        // });
+        // const divValuePointInfo = createTagWithParentClassContent('input', divPointInfo, classVisible, pointInfo.value);
+        // divValuePointInfo.value = pointInfo.value;
+        // divValuePointInfo.addEventListener('input', (event) => {
+        //     pointInfo.changeValue(pointInfo.name, event.target.value, partyBlindtest);
+        // });
     });
 }
 export function addParticipantsScore(partyBlindtest) {
