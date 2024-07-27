@@ -10,6 +10,12 @@ export function resetLocalStorageName() {
     localStorageName = 'PartyBlindtest';
 }
 
+export class MainObject {
+    constructor(partyBlindtest) {
+        this.partyBlindtest = new PartyBlindtest(partyBlindtest);
+    }
+}
+
 export class PartyBlindtest {
     constructor(partyBlindtest, fromGetFunction) {
         if (!partyBlindtest) {
@@ -31,12 +37,12 @@ export class PartyBlindtest {
         this.localStorageName = localStorageName;
         if (!fromGetFunction) {
             const partyBlindtestFromStorage = PartyBlindtest.get();
-            this.changeAudio();
             if (this.getName() === partyBlindtestFromStorage.getName()) {
                 // this.currentMusic = partyBlindtestFromStorage.currentMusic;
                 return partyBlindtestFromStorage;
             }
         }
+        this.changeAudio();
     }
 
     changeLocalStorageName(localStorageName) {

@@ -1,12 +1,13 @@
 import { PartyBlindtest } from './objectValueBlindtest.js';
 
-export function createClickButtonEvent(idButton, functionUse) {
+export function createClickEventOnButton(idButton, functionUse, mainObject) {
     const button = document.querySelector(idButton);
     if (button) {
         // button.addEventListener('click', functionUse);
         button.addEventListener('click', (event) => {
             event.preventDefault();
-            const objectBlindtest = PartyBlindtest.get();
+            // const objectBlindtest = PartyBlindtest.get();
+            const objectBlindtest = mainObject.partyBlindtest;
             functionUse.call(objectBlindtest);
         });
     } else {
