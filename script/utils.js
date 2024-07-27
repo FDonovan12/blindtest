@@ -1,4 +1,5 @@
 import { PartyBlindtest } from './objectValueBlindtest.js';
+import { TagBuilder } from './tagBuilder.js';
 
 export function createClickEventOnButton(idButton, functionUse, mainObject) {
     const button = document.querySelector(idButton);
@@ -74,14 +75,23 @@ export function addResponse(partyBlindtest) {
 
 export function createResponse(partyBlindtest, divResponse) {
     const divSection = createTagWithParentClassContent('div', divResponse);
-    const divSectionName = createTagWithParentClassContent('div', divResponse, 'h4', partyBlindtest.getSection().name);
-    const divSectionDetails = createTagWithParentClassContent(
-        'div',
-        divResponse,
-        null,
-        partyBlindtest.getSection().details
-    );
-
+    const divSectionName2 = createTagWithParentClassContent('div', divResponse, 'h4', partyBlindtest.getSection().name);
+    const divSectionName = new TagBuilder('div')
+        .setParent(divResponse)
+        .setClass('h4')
+        .setTextContent(partyBlindtest.getSection().name)
+        .build();
+    // const divSectionDetails = createTagWithParentClassContent(
+    //     'div',
+    //     divResponse,
+    //     null,
+    //     partyBlindtest.getSection().details
+    // );
+    const divSectionDetails = new TagBuilder('div')
+        .setParent(divResponse)
+        .setTextContent(partyBlindtest.getSection().details)
+        .build();
+    console.log(divSectionDetails);
     const pointInfos = partyBlindtest.getMusic().pointInfos;
     pointInfos?.map((pointInfo) => {
         if (pointInfo?.participant?.name === 'undefined') {
@@ -101,12 +111,16 @@ export function createResponse(partyBlindtest, divResponse) {
             pointInfo.makeVisible(partyBlindtest);
         });
         if (isAudience()) {
-            const divValueparticipant = createTagWithParentClassContent(
-                'div',
-                divPointInfo,
-                null,
-                pointInfo?.participant?.name
-            );
+            const divValueparticipant = new TagBuilder('div')
+                .setParent(divPointInfo)
+                .setTextContent(pointInfo?.participant?.name)
+                .build();
+            // const divValueparticipant = createTagWithParentClassContent(
+            //     'div',
+            //     divPointInfo,
+            //     null,
+            //     pointInfo?.participant?.name
+            // );
         } else {
             const selectValuePointInfo = createTagWithParentClassContent('select', divPointInfo);
             selectValuePointInfo.addEventListener('change', (value) => {

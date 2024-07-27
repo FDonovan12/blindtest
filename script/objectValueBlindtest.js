@@ -1,4 +1,5 @@
 import { addResponse, addParticipantsScore, createTagWithParentClassContent } from './utils.js';
+import { TagBuilder } from './tagBuilder.js';
 
 let localStorageName = 'PartyBlindtest';
 
