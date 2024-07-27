@@ -1,7 +1,7 @@
-import { PartyBlindtest } from './objectValueBlindtest.js';
+import { PartyBlindtest, MainObject } from './objectValueBlindtest.js';
 import {
     readJsonSynchrone,
-    createClickButtonEvent,
+    createClickEventOnButton,
     getValueFromPathname,
     getPathnameFromValue,
     researchFromYoutubeLink,
@@ -10,9 +10,12 @@ import {
 import unitTest from './unitTest.js';
 
 const fileName = 'current/data.json';
-let partyBlindtest = null;
+console.log(fileName);
+let mainObject = new MainObject();
+console.log(mainObject);
+// let partyBlindtest = null;
 
-createClickButtonEvent('#password', start);
+createClickEventOnButton('#password', start);
 start();
 window.addEventListener('load', () => {});
 
@@ -21,10 +24,10 @@ function start() {
     // unitTest();
     getPathnameFromValue('presenter.html');
     getValueFromPathname();
-    partyBlindtest = new PartyBlindtest(readJsonSynchrone(fileName)['blindtest']);
-    partyBlindtest.save();
+    mainObject.partyBlindtest = new PartyBlindtest(readJsonSynchrone(fileName)['blindtest']);
+    mainObject.partyBlindtest.save();
     PartyBlindtest.updateStatus();
-    partyBlindtest.save();
+    mainObject.partyBlindtest.save();
 
     try {
         document.querySelector('#openAudience').addEventListener('click', function () {
@@ -34,33 +37,33 @@ function start() {
 
     try {
         document.querySelector('#readJson').addEventListener('click', function () {
-            partyBlindtest = new PartyBlindtest(readJsonSynchrone(fileName)['blindtest'], true);
-            partyBlindtest.save();
+            mainObject.partyBlindtest = new PartyBlindtest(readJsonSynchrone(fileName)['blindtest'], true);
+            mainObject.partyBlindtest.save();
         });
     } catch (error) {}
 
-    createClickButtonEvent('#play', partyBlindtest.playAndPauseMusic);
-    createClickButtonEvent('#previous', partyBlindtest.previousMusic);
-    createClickButtonEvent('#next', partyBlindtest.nextMusic);
-    createClickButtonEvent('#downloadAnchorElem', partyBlindtest.download);
-    createClickButtonEvent('#addParticpant', partyBlindtest.addParticpant);
-    createClickButtonEvent('#addLinkYoutube', researchFromYoutubeLink);
-    createClickButtonEvent('#addPointInfo', addFormPointInfo);
-    createClickButtonEvent('#validMusic', partyBlindtest.validMusic);
+    createClickEventOnButton('#play', mainObject.partyBlindtest.playAndPauseMusic, mainObject);
+    createClickEventOnButton('#previous', mainObject.partyBlindtest.previousMusic, mainObject);
+    createClickEventOnButton('#next', mainObject.partyBlindtest.nextMusic, mainObject);
+    createClickEventOnButton('#downloadAnchorElem', mainObject.partyBlindtest.download, mainObject);
+    createClickEventOnButton('#addParticpant', mainObject.partyBlindtest.addParticpant, mainObject);
+    createClickEventOnButton('#addLinkYoutube', researchFromYoutubeLink);
+    createClickEventOnButton('#addPointInfo', addFormPointInfo);
+    createClickEventOnButton('#validMusic', mainObject.partyBlindtest.validMusic, mainObject);
     window.addEventListener('keydown', (key) => {
         console.log('key :', key);
         switch (key.code) {
             case 'Space':
                 key.preventDefault();
-                partyBlindtest.playAndPauseMusic();
+                mainObject.partyBlindtest.playAndPauseMusic();
                 break;
             case 'ArrowRight':
                 key.preventDefault();
-                partyBlindtest.nextMusic();
+                mainObject.partyBlindtest.nextMusic();
                 break;
             case 'ArrowLeft':
                 key.preventDefault();
-                partyBlindtest.previousMusic();
+                mainObject.partyBlindtest.previousMusic();
                 break;
 
             default:
