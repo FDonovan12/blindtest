@@ -1,6 +1,5 @@
 import { PartyBlindtest, MainObject } from './objectValueBlindtest.js';
 import {
-    readJsonSynchrone,
     createClickEventOnButton,
     getValueFromPathname,
     getPathnameFromValue,
@@ -9,8 +8,7 @@ import {
 } from './utils.js';
 import unitTest from './unitTest.js';
 
-const fileName = 'current/data.json';
-console.log(fileName);
+// console.log(fileName);
 let mainObject = new MainObject();
 console.log(mainObject);
 // let partyBlindtest = null;
@@ -24,7 +22,7 @@ function start() {
     // unitTest();
     getPathnameFromValue('presenter.html');
     getValueFromPathname();
-    mainObject.partyBlindtest = new PartyBlindtest(readJsonSynchrone(fileName)['blindtest']);
+    mainObject.get();
     mainObject.partyBlindtest.save();
     PartyBlindtest.updateStatus();
     mainObject.partyBlindtest.save();
@@ -37,7 +35,7 @@ function start() {
 
     try {
         document.querySelector('#readJson').addEventListener('click', function () {
-            mainObject.partyBlindtest = new PartyBlindtest(readJsonSynchrone(fileName)['blindtest'], true);
+            mainObject.get(true);
             mainObject.partyBlindtest.save();
         });
     } catch (error) {}

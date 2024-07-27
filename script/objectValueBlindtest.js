@@ -4,6 +4,7 @@ import {
     createTagWithParentClassContent,
     isAudience,
     addOptionToSelect,
+    readJsonSynchrone,
 } from './utils.js';
 import { TagBuilder } from './tagBuilder.js';
 
@@ -20,6 +21,10 @@ export function resetLocalStorageName() {
 export class MainObject {
     constructor(partyBlindtest) {
         this.partyBlindtest = new PartyBlindtest(partyBlindtest);
+        this.fileName = 'current/data.json';
+    }
+    get(forceImportJson) {
+        this.partyBlindtest = new PartyBlindtest(readJsonSynchrone(this.fileName)['blindtest'], forceImportJson);
     }
 }
 
