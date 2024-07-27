@@ -1,4 +1,10 @@
-import { addResponse, addParticipantsScore, createTagWithParentClassContent } from './utils.js';
+import {
+    addResponse,
+    addParticipantsScore,
+    createTagWithParentClassContent,
+    isAudience,
+    addOptionToSelect,
+} from './utils.js';
 import { TagBuilder } from './tagBuilder.js';
 
 let localStorageName = 'PartyBlindtest';
@@ -69,10 +75,10 @@ export class PartyBlindtest {
     playAndPauseMusic() {
         const buttonPlayPause = document.querySelector('#play');
         const isPlaying = buttonPlayPause.hasAttribute('active');
-        if (!isPlaying) {
-            this.playMusic();
-        } else {
+        if (isPlaying) {
             this.pauseMusic();
+        } else {
+            this.playMusic();
         }
     }
 
@@ -297,9 +303,66 @@ export class PointInfo {
         this.isVisible = !this.isVisible;
         partyBlindtest.save();
     }
+
+    createHtmlContent(partyBlindtest, divResponse) {
+        console.log('createHtmlContent');
+        let classVisible = null;
+        if (isAudience()) {
+            const hasParticipantOrIsVisible = this.participant || this.isVisible;
+            if (!hasParticipantOrIsVisible) {
+                classVisible = 'invisible';
+            }
+        }
+        const divPointInfo = createTagWithParentClassContent('div', divResponse, 'response-pointInfos');
+        const divVisiblePointinfo = createTagWithParentClassContent('div', divPointInfo, 'fa-solid fa-eye');
+
+        divVisiblePointinfo.addEventListener('click', () => {
+            this.makeVisible(partyBlindtest);
+        });
+        if (isAudience()) {
+            const divValueparticipant = createTagWithParentClassContent(
+                'div',
+                divPointInfo,
+                null,
+                this?.participant?.name
+            );
+        } else {
+            const selectValuePointInfo = createTagWithParentClassContent('select', divPointInfo);
+            selectValuePointInfo.addEventListener('change', (value) => {
+                this.changeParticipant(selectValuePointInfo.value, partyBlindtest);
+            });
+            addOptionToSelect(selectValuePointInfo, undefined, undefined);
+            partyBlindtest.getParticipants().map((participant, index) => {
+                addOptionToSelect(selectValuePointInfo, participant.name, participant.name);
+                if (participant.name === this?.participant?.name) {
+                    selectValuePointInfo.selectedIndex = index + 1;
+                }
+            });
+            // divVisiblePointinfo.addEventListener('click', pointInfo.makeVisible);
+        }
+
+        const divNamePointInfo = createTagWithParentClassContent('input', divPointInfo, 'inputToEnd', this.name);
+        divNamePointInfo.value = this.name;
+        const divValuePointInfo = createTagWithParentClassContent('input', divPointInfo, classVisible, this.value);
+        divValuePointInfo.value = this.value;
+        if (isAudience()) {
+            divNamePointInfo.setAttribute('readonly', true);
+            divValuePointInfo.setAttribute('readonly', true);
+        } else {
+            divNamePointInfo.addEventListener('input', (event) => {
+                this.changeValue(event.target.value, this.value, partyBlindtest);
+            });
+            divValuePointInfo.addEventListener('input', (event) => {
+                this.changeValue(this.name, event.target.value, partyBlindtest);
+            });
+        }
+    }
 }
 export class Participant {
     constructor(name) {
         this.name = name;
+        if (name === 'undefined') {
+            this.name = undefined;
+        }
     }
 }
