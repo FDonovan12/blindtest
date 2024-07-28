@@ -310,7 +310,6 @@ export class PointInfo {
     }
 
     createHtmlContent(partyBlindtest, divResponse) {
-        console.log('createHtmlContent');
         let classVisible = null;
         if (isAudience()) {
             const hasParticipantOrIsVisible = this.participant || this.isVisible;
@@ -318,8 +317,10 @@ export class PointInfo {
                 classVisible = 'invisible';
             }
         }
-        const divPointInfo = createTagWithParentClassContent('div', divResponse, 'response-pointInfos');
-        const divVisiblePointinfo = createTagWithParentClassContent('div', divPointInfo, 'fa-solid fa-eye');
+        // const divPointInfo = createTagWithParentClassContent('div', divResponse, 'response-pointInfos');
+        const divPointInfo = new TagBuilder('div', divResponse).setClass('response-pointInfos').build();
+        // const divVisiblePointinfo = createTagWithParentClassContent('div', divPointInfo, 'fa-solid fa-eye');
+        const divVisiblePointinfo = new TagBuilder('div', divPointInfo).setClass('fa-solid fa-eye').build();
 
         divVisiblePointinfo.addEventListener('click', () => {
             this.makeVisible(partyBlindtest);

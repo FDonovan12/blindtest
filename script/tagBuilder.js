@@ -15,9 +15,11 @@ export class TagBuilder {
         this.textContent = textContent;
         return this;
     }
-    build() {
+    build(tagParent) {
         const tag = document.createElement(this.tagName);
-        if (this.tagParent) {
+        if (tagParent) {
+            tagParent.appendChild(tag);
+        } else if (this.tagParent) {
             this.tagParent.appendChild(tag);
         }
         if (this.className) {

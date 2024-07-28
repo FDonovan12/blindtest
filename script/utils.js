@@ -7,8 +7,7 @@ export function createClickEventOnButton(idButton, functionUse, mainObject) {
         // button.addEventListener('click', functionUse);
         button.addEventListener('click', (event) => {
             event.preventDefault();
-            // const objectBlindtest = PartyBlindtest.get();
-            const objectBlindtest = mainObject.partyBlindtest;
+            const objectBlindtest = mainObject?.partyBlindtest;
             functionUse.call(objectBlindtest);
         });
     } else {
@@ -75,27 +74,19 @@ export function addResponse(partyBlindtest) {
 }
 
 export function createResponse(partyBlindtest, divResponse) {
-    const divSection = createTagWithParentClassContent('div', divResponse);
-    const divSectionName2 = createTagWithParentClassContent('div', divResponse, 'h4', partyBlindtest.getSection().name);
-    const divSectionName = new TagBuilder('div')
-        .setParent(divResponse)
+    // const divSection = createTagWithParentClassContent('div', divResponse);
+    const divSection = new TagBuilder('div', divResponse).build();
+    const divSectionName2 = createTagWithParentClassContent('div', divSection, 'h4', partyBlindtest.getSection().name);
+    const divSectionName = new TagBuilder('div', divSection)
         .setClass('h4')
         .setTextContent(partyBlindtest.getSection().name)
         .build();
-    // const divSectionDetails = createTagWithParentClassContent(
-    //     'div',
-    //     divResponse,
-    //     null,
-    //     partyBlindtest.getSection().details
-    // );
-    const divSectionDetails = new TagBuilder('div')
-        .setParent(divResponse)
+    const divSectionDetails = new TagBuilder('div', divSection)
         .setTextContent(partyBlindtest.getSection().details)
         .build();
-    console.log(divSectionDetails);
     const pointInfos = partyBlindtest.getMusic().pointInfos;
     pointInfos?.map((pointInfo) => {
-        pointInfo.createHtmlContent(partyBlindtest, divResponse);
+        pointInfo.createHtmlContent(partyBlindtest, divSection);
         // let classVisible = null;
         // if (isAudience()) {
         //     if (!(pointInfo.participant || pointInfo.isVisible)) {

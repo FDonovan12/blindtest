@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- <script src="./objectValueBlindtest.js" type="module"></script> -->
+        <link rel="stylesheet" href="style.css" />
+        <script type="module" src="./script/header.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+        <script type="module" src="./script/create.js"></script>
+        <title>Blind Test - Présentateur</title>
+    </head>
+    <body>
+        <header>
+            <h1>Blind Test - Présentateur</h1>
+        </header>
+        <div>
+            <form>
+                <input placeholder="Mot de passe" type="password" id="passwordInput" />
+                <button id="password">Valider mot de passe</button>
+            </form>
+        </div>
+        <div>
+            <form>
+                <input placeholder="Nom du particpant" type="text" id="addParticpantInput" />
+                <button id="addParticpant">Ajouter participant</button>
+            </form>
+        </div>
+        <div>
+            <form>
+                <div>
+                    <div id="pathMusic" class="d-none"></div>
+                    <input
+                        placeholder="lien Youtube de la musique"
+                        type="text"
+                        id="linkYoutubeInput"
+                        value="https://www.youtube.com/watch?v=NaFd8ucHLuo&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=55" />
+                    <button id="addLinkYoutube">Ajouter lien Youtube</button>
+                </div>
+                <div id="blockOfPointInfos">
+                    <div>
+                        <input placeholder="Titre Point infos" type="text" />
+                        <input placeholder="Value Point infos" type="text" />
+                    </div>
+                </div>
+                <button id="validMusic">Valide musique</button>
+                <button id="addPointInfo" class="fa-solid fa-circle-plus"></button>
+            </form>
+        </div>
+        <button id="downloadAnchorElem">export JSON</button>
+        <main>
+            <div id="participants"></div>
+            <div class="response" id="response"></div>
+        </main>
+        <footer></footer>
+    </body>
+</html>
