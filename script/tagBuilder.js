@@ -15,6 +15,15 @@ export class TagBuilder {
         this.textContent = textContent;
         return this;
     }
+    setValueContent(valueContent) {
+        this.valueContent = valueContent;
+        return this;
+    }
+    setAttribute(attributeName, attributeValue) {
+        this.attributeName = attributeName;
+        this.attributeValue = attributeValue || true;
+        return this;
+    }
     build(tagParent) {
         const tag = document.createElement(this.tagName);
         if (tagParent) {
@@ -27,6 +36,12 @@ export class TagBuilder {
         }
         if (this.textContent != null) {
             tag.textContent = this.textContent;
+        }
+        if (this.valueContent != null) {
+            tag.value = this.valueContent;
+        }
+        if (this.attributeName) {
+            tag.setAttribute(this.attributeName, this.attributeValue);
         }
         return tag;
     }

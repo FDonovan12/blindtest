@@ -365,22 +365,24 @@ export class PointInfo {
             });
             // divVisiblePointinfo.addEventListener('click', pointInfo.makeVisible);
         }
-
-        const divNamePointInfo = createTagWithParentClassContent('input', divPointInfo, 'inputToEnd', this.name);
-        divNamePointInfo.value = this.name;
+        const inputNamePointInfo = new TagBuilder('input', divPointInfo)
+            .setClass('inputToEnd')
+            .setValueContent(this.name)
+            .build();
+        // const inputNamePointInfo = createTagWithParentClassContent('input', divPointInfo, 'inputToEnd', this.name);
+        // inputNamePointInfo.value = this.name;
         const divValuePointInfo = createTagWithParentClassContent('input', divPointInfo, classVisible, this.value);
         divValuePointInfo.value = this.value;
         if (isAudience()) {
-            divNamePointInfo.setAttribute('readonly', true);
+            inputNamePointInfo.setAttribute('readonly', true);
             divValuePointInfo.setAttribute('readonly', true);
-        } else {
-            divNamePointInfo.addEventListener('input', (event) => {
-                this.changeValue(event.target.value, this.value, partyBlindtest);
-            });
-            divValuePointInfo.addEventListener('input', (event) => {
-                this.changeValue(this.name, event.target.value, partyBlindtest);
-            });
         }
+        inputNamePointInfo.addEventListener('input', (event) => {
+            this.changeValue(event.target.value, this.value, partyBlindtest);
+        });
+        divValuePointInfo.addEventListener('input', (event) => {
+            this.changeValue(this.name, event.target.value, partyBlindtest);
+        });
     }
 }
 export class Participant {
