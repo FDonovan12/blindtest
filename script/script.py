@@ -35,6 +35,7 @@ def returnAllYoutubeLink(jsonFileName):
             except:
                 print("error link")
     print(f'{musicLinkTab = }')
+    print("musicLinkTab =",musicLinkTab)
     
     f.close()
     return musicLinkTab
