@@ -76,13 +76,16 @@ export function addResponse(partyBlindtest) {
 export function createResponse(partyBlindtest, divResponse) {
     // const divSection = createTagWithParentClassContent('div', divResponse);
     const divSection = new TagBuilder('div', divResponse).build();
-    const divSectionName2 = createTagWithParentClassContent('div', divSection, 'h4', partyBlindtest.getSection().name);
+    // const divSectionName2 = createTagWithParentClassContent('div', divSection, 'h4', partyBlindtest.getSection().name);
     const divSectionName = new TagBuilder('div', divSection)
         .setClass('h4')
         .setTextContent(partyBlindtest.getSection().name)
         .build();
     const divSectionDetails = new TagBuilder('div', divSection)
         .setTextContent(partyBlindtest.getSection().details)
+        .build();
+    const divCurrentMusicNumber = new TagBuilder('div', divSection)
+        .setTextContent(`Musique ${partyBlindtest.currentMusic + 1} / ${partyBlindtest.getSection().musics.length}`)
         .build();
     const pointInfos = partyBlindtest.getMusic().pointInfos;
     pointInfos?.map((pointInfo) => {

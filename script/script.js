@@ -48,11 +48,12 @@ function start() {
     createClickEventOnButton('#addLinkYoutube', researchFromYoutubeLink);
     createClickEventOnButton('#addPointInfo', addFormPointInfo);
     createClickEventOnButton('#validMusic', mainObject.partyBlindtest.validMusic, mainObject);
+    createClickEventOnButton('#shuffleMusics', mainObject.partyBlindtest.shuffleMusics, mainObject);
     window.addEventListener('keydown', (key) => {
         console.log('key :', key);
         switch (key.code) {
             case 'Space':
-                key.preventDefault();
+                // key.preventDefault();
                 mainObject.partyBlindtest.playAndPauseMusic();
                 break;
             case 'ArrowRight':

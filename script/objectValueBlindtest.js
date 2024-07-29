@@ -212,7 +212,7 @@ export class PartyBlindtest {
 
     getScoreOfPlayer(player) {
         let score = 0;
-        this.blindtest.sections.map((section) => {
+        this.blindtest.sections.forEach((section) => {
             score += section.getScoreOfPlayer(player);
         });
         return score;
@@ -239,6 +239,12 @@ export class PartyBlindtest {
         const music = section.addMusic(link, path);
         return music;
     }
+    shuffleMusics() {
+        this.blindtest.sections.forEach((section) => {
+            section.shuffleMusics();
+        });
+        this.save();
+    }
 }
 
 export class Blindtest {
@@ -252,7 +258,7 @@ export class Section {
     constructor(section) {
         this.name = section.name;
         this.details = section.details;
-        this.musics = section.musics.map((musique) => new Music(musique));
+        this.musics = section?.musics?.map((musique) => new Music(musique));
     }
 
     getScoreOfPlayer(player) {
@@ -267,6 +273,19 @@ export class Section {
         const music = new Music({ link: link, path: path });
         this.musics.push(music);
         return music;
+    }
+    shuffleMusics() {
+        let currentIndex = this.musics.length - 1;
+
+        while (currentIndex > 0) {
+            let randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+
+            [this.musics[currentIndex], this.musics[randomIndex]] = [
+                this.musics[randomIndex],
+                this.musics[currentIndex],
+            ];
+        }
     }
 }
 export class Music {
