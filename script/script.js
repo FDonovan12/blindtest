@@ -58,11 +58,20 @@ function start() {
     createClickEventOnButton('#addPointInfo', addFormPointInfo);
     createClickEventOnButton('#validMusic', mainObject.partyBlindtest.validMusic, mainObject);
     createClickEventOnButton('#shuffleMusics', mainObject.partyBlindtest.shuffleMusics, mainObject);
+    document.querySelector('#music-audio').addEventListener('ended', () => {
+        setTimeout(() => {
+            mainObject.partyBlindtest.nextMusic();
+            mainObject.partyBlindtest.playAndPauseMusic();
+        }, 5000);
+    });
     window.addEventListener('keydown', (key) => {
+        if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA') {
+            return;
+        }
         console.log('key :', key);
         switch (key.code) {
             case 'Space':
-                // key.preventDefault();
+                key.preventDefault();
                 mainObject.partyBlindtest.playAndPauseMusic();
                 break;
             case 'ArrowRight':
