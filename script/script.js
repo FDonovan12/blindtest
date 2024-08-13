@@ -8,8 +8,17 @@ import {
 } from './utils.js';
 import unitTest from './unitTest.js';
 
+function testTheme(numberOne, numberTwo) {
+    const result = numberOne;
+    let sum = 0;
+    for (let i = 0; i < numberTwo; i++) {
+        sum += result;
+    }
+    console.log('sum :', sum);
+    return sum;
+}
 // console.log(fileName);
-let mainObject = new MainObject();
+const mainObject = new MainObject();
 console.log(mainObject);
 // let partyBlindtest = null;
 
