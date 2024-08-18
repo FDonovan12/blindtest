@@ -73,6 +73,14 @@ export function addResponse(partyBlindtest) {
     createResponse(partyBlindtest, divResponse);
 }
 
+function secondsToTime(seconds) {
+    const secondsRest = seconds % 60;
+    const minutes = Math.floor(seconds / 60) % 60;
+    const hours = Math.floor(seconds / 3600);
+    const result = `${hours}h ${minutes}m ${secondsRest}s`;
+    return result;
+}
+
 export function createResponse(partyBlindtest, divResponse) {
     // const divSection = createTagWithParentClassContent('div', divResponse);
     const divSection = new TagBuilder('div', divResponse).build();
@@ -86,6 +94,9 @@ export function createResponse(partyBlindtest, divResponse) {
         .build();
     const divCurrentMusicNumber = new TagBuilder('div', divSection)
         .setTextContent(`Musique ${partyBlindtest.currentMusic + 1} / ${partyBlindtest.getSection().musics.length}`)
+        .build();
+    const divTotalTime = new TagBuilder('div', divSection)
+        .setTextContent(`${secondsToTime(partyBlindtest.getDuration())} : ${partyBlindtest.getDuration()}s`)
         .build();
     const pointInfos = partyBlindtest.getMusic().pointInfos;
     pointInfos?.map((pointInfo) => {
@@ -195,23 +206,46 @@ export async function researchFromYoutubeLink() {
     const password = getPassword();
     const cryptedApiKey = 'U2FsdGVkX1/mCdde5zXD5+UC5ZAWM94LlJF559ukbyxuan9OC80O/HRXvBNvnAtcKue3Tzd8Um24QRjSpqBn3g==';
     const decryptedApiKey = decrypt(cryptedApiKey, password);
-    const apiUrl = `https://www.googleapis.com/youtube/v3/videos?id=${videoId}&key=${decryptedApiKey}&part=snippet`;
+    const apiUrl = `https://www.googleapis.com/youtube/v3/videos?id=${videoId}&key=${decryptedApiKey}&part=snippet,contentDetails`;
 
     try {
         const response = await fetch(apiUrl);
         const data = await response.json();
         const title = data.items[0].snippet.title;
+        const durationString = data.items[0]?.contentDetails?.duration;
         const channelName = data.items[0].snippet.channelTitle;
         const divPathMusic = document.querySelector('#pathMusic');
-        divPathMusic.textContent = title;
+        const divDurationMusic = document.querySelector('#durationMusic');
+        divPathMusic.textContent = slugify(title);
+        divDurationMusic.textContent = parseYouTubeDurationToSeconds(durationString);
         resetPointInfo();
-        addFormPointInfo('Titre', title);
         addFormPointInfo('Chanteur', channelName);
+        addFormPointInfo('Titre', title);
         // document.getElementById('videoTitle').innerText = title;
     } catch (error) {
         console.error('Error fetching video title:', error);
         // document.getElementById('videoTitle').innerText = 'Error fetching video title';
     }
+}
+
+function parseYouTubeDurationToSeconds(duration) {
+    const regex = /PT(\d+H)?(\d+M)?(\d+S)?/;
+    const matches = duration.match(regex);
+
+    const hours = parseInt(matches[1]) || 0;
+    const minutes = parseInt(matches[2]) || 0;
+    const seconds = parseInt(matches[3]) || 0;
+    return (hours * 60 + minutes) * 60 + seconds;
+}
+
+function slugify(content) {
+    content = content.toLowerCase();
+    // content = content.replace(/(^a-z0-9|\s|\(|\)|\W)+/gi, ' ');
+    content = content.replace(/[^a-z0-9\s]+/gi, ' '); // TODO very strange try to undertand why this is "work"
+    content = content.trim();
+    content = content.replace(/ +/gi, '-');
+    return content;
+    return content.toLowerCase().replace(/\W+/i, ' ').trim().replaceAll(' ', '-');
 }
 
 function encrypt(message, password) {

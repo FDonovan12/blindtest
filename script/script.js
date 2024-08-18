@@ -25,7 +25,6 @@ console.log(mainObject);
 createClickEventOnButton('#password', start);
 start();
 window.addEventListener('load', () => {});
-
 window.addEventListener('storage', PartyBlindtest.updateStatus);
 function start() {
     // unitTest();
@@ -55,15 +54,18 @@ function start() {
     createClickEventOnButton('#downloadAnchorElem', mainObject.partyBlindtest.download, mainObject);
     createClickEventOnButton('#addParticpant', mainObject.partyBlindtest.addParticpant, mainObject);
     createClickEventOnButton('#addLinkYoutube', researchFromYoutubeLink);
-    createClickEventOnButton('#addPointInfo', addFormPointInfo);
+    // createClickEventOnButton('#addPointInfo', addFormPointInfo);
+    window.addFormPointInfo = addFormPointInfo;
     createClickEventOnButton('#validMusic', mainObject.partyBlindtest.validMusic, mainObject);
     createClickEventOnButton('#shuffleMusics', mainObject.partyBlindtest.shuffleMusics, mainObject);
-    document.querySelector('#music-audio').addEventListener('ended', () => {
-        setTimeout(() => {
-            mainObject.partyBlindtest.nextMusic();
-            mainObject.partyBlindtest.playAndPauseMusic();
-        }, 5000);
-    });
+    try {
+        document.querySelector('#music-audio').addEventListener('ended', () => {
+            setTimeout(() => {
+                mainObject.partyBlindtest.nextMusic();
+                mainObject.partyBlindtest.playAndPauseMusic();
+            }, 5000);
+        });
+    } catch (error) {}
     window.addEventListener('keydown', (key) => {
         if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA') {
             return;

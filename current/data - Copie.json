@@ -1,0 +1,25 @@
+{
+    "blindtest": {
+        "name": "Playlist 30 ans Donovan",
+        "participants": [{ "name": "j1" }, { "name": "j2" }],
+        "sections": [
+            {
+                "name": "test sections2",
+                "details": "test details2",
+                "musics": [
+                    {
+                        "path": "current/music/Alvaro Soler - Sofia.mp3",
+                        "pointInfos": [
+                            { "name": "artiste", "value": "Alvaro Soler", "participant": { "name": "j2" } },
+                            { "name": "titre", "value": "Sofia" }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "currentMusic": 2,
+    "currentSection": 0,
+    "audio": {},
+    "localStorageName": "PartyBlindtest"
+}

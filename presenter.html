@@ -5,9 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- <script src="./objectValueBlindtest.js" type="module"></script> -->
         <link rel="stylesheet" href="style.css" />
-        <script type="module" src="./script/header.js"></script>
+        <script type="module" src="./script/header.js" defer></script>
+        <script type="module" src="./script/script.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-        <script type="module" src="./script/script.js"></script>
         <title>Blind Test - Présentateur</title>
     </head>
     <body>
@@ -27,25 +27,28 @@
             </form>
         </div>
         <div>
+            <form></form>
             <form>
                 <div>
                     <div id="pathMusic" class="d-none"></div>
+                    <div id="durationMusic" class="d-none"></div>
                     <input
                         placeholder="lien Youtube de la musique"
                         type="text"
                         id="linkYoutubeInput"
-                        value="https://www.youtube.com/watch?v=NaFd8ucHLuo&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=55" />
+                        value="https://www.youtube.com/watch?v=NaFd8ucHLuo&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=55"
+                        required />
                     <button id="addLinkYoutube">Ajouter lien Youtube</button>
                 </div>
                 <div id="blockOfPointInfos">
                     <div>
-                        <input placeholder="Titre Point infos" type="text" />
-                        <input placeholder="Value Point infos" type="text" />
+                        <input placeholder="Titre Point infos" type="text" required />
+                        <input placeholder="Value Point infos" type="text" required />
                     </div>
                 </div>
                 <button id="validMusic">Valide musique</button>
-                <button id="addPointInfo" class="fa-solid fa-circle-plus"></button>
             </form>
+            <button id="addPointInfo" onclick="addFormPointInfo()" class="fa-solid fa-circle-plus"></button>
         </div>
         <button id="openAudience">Ouvrir Audience</button>
         <button id="previous">precedent</button>

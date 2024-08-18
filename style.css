@@ -1,3 +1,8 @@
+:root {
+    --success-color: green;
+    --error-color: rgb(158, 5, 5);
+    --warning-color: rgb(185, 122, 3);
+}
 .response-pointInfos {
     display: grid;
     grid-template-columns: 20px 150px 200px 1fr;
@@ -32,4 +37,27 @@ form input {
 
 .inputToEnd {
     text-align: end;
+}
+
+input {
+    border: 3px solid black;
+    border-radius: 5px;
+}
+.response-pointInfos input {
+    border: 0;
+    border-radius: 0;
+    outline: 1px solid black;
+}
+input:valid {
+    border-color: var(--success-color);
+}
+
+input:user-invalid {
+    border-color: var(--error-color);
+}
+input:focus:invalid {
+    border: 3px solid black;
+    border-radius: 5px;
+    outline: 0;
+    border-color: var(--warning-color);
 }

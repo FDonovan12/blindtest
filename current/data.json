@@ -1,820 +1,322 @@
 {
     "blindtest": {
-        "name": "First BlindTest complete",
-        "participants": [{ "name": "j1" }, { "name": "j2" }],
+        "name": "Playlist 30 ans Donovan",
+        "participants": [{ "name": "Rouge" }, { "name": "Noir" }],
         "sections": [
             {
-                "name": "Top 100 musiques 2023",
-                "details": "Les 100 musiques les plus ecouté sur Youtube en 2023 par Donovan",
+                "name": "Pop music",
+                "details": "Plusieurs musiques pop",
                 "musics": [
                     {
-                        "path": "current/music/0Kawaki wo Ameku (カワキヲアメク) by Minami Domestic Girlfriend.mp3",
-                        "link": "https://www.youtube.com/watch?v=Ua5UARWRYLA&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=1",
+                        "path": "current/music/backstreet-boys-the-call.mp3",
+                        "link": "https://www.youtube.com/watch?v=1dRdwWhFvns",
+                        "duration": "205",
                         "pointInfos": [
-                            { "name": "Titre", "value": "\"Kawaki wo Ameku (カワキヲアメク)\" " },
-                            { "name": "Chanteur", "value": "Minami | Domestic Girlfriend" }
+                            { "name": "Chanteur", "value": "Backstreet Boys" },
+                            { "name": "Titre", "value": "The Call" }
                         ]
                     },
                     {
-                        "path": "current/music/The Chainsmokers - Closer (Lyric) ft. Halsey.mp3",
-                        "link": "https://www.youtube.com/watch?v=PT2_F-1esPk&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=2",
+                        "path": "current/music/the-chainsmokers-closer-lyric-ft-halsey.mp3",
+                        "link": "https://www.youtube.com/watch?v=PT2_F-1esPk",
+                        "duration": "262",
                         "pointInfos": [
-                            { "name": "Titre", "value": "Closer (Lyric)" },
-                            { "name": "Chanteur", "value": "The Chainsmokers ft. Halsey" }
+                            { "name": "Chanteur", "value": "The Chainsmokers ft.Halsey" },
+                            { "name": "Titre", "value": "Closer" }
                         ]
                     },
                     {
-                        "path": "current/music/Fall Out Boy - The Last Of The Real Ones (Official Music Video).mp3",
-                        "link": "https://www.youtube.com/watch?v=7YAAyUFL1GQ&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=3",
+                        "path": "current/music/shawn-mendes-there-s-nothing-holding-me-back-lyrics.mp3",
+                        "link": "https://www.youtube.com/watch?v=Bt6TmXqRCb4",
+                        "duration": "206",
                         "pointInfos": [
-                            { "name": "Titre", "value": "The Last Of The Real Ones" },
-                            { "name": "Chanteur", "value": "FallOutBoy" }
+                            { "name": "Chanteur", "value": "Shawn Mendes" },
+                            { "name": "Titre", "value": "There's Nothing Holding Me Back" }
                         ]
                     },
                     {
-                        "path": "current/music/Christina Aguilera - Dirrty (Official HD Video) ft. Redman.mp3",
-                        "link": "https://www.youtube.com/watch?v=4Rg3sAb8Id8&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=4",
+                        "path": "current/music/taylor-swift-shake-it-off.mp3",
+                        "link": "https://www.youtube.com/watch?v=nfWlot6h_JM",
+                        "duration": "242",
                         "pointInfos": [
-                            { "name": "Titre", "value": "Dirrty" },
-                            { "name": "Chanteur", "value": "Christina Aguilera ft. Redman" }
+                            { "name": "Chanteur", "value": "Taylor Swift" },
+                            { "name": "Titre", "value": "Shake It Off" }
                         ]
                     },
                     {
-                        "path": "current/music/The Pretty Reckless - Make Me Wanna Die.mp3",
-                        "link": "https://www.youtube.com/watch?v=txBfhpm1jI0&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=5",
+                        "path": "current/music/pitbull-timber-official-video.mp3",
+                        "link": "https://www.youtube.com/watch?v=hHUbLv4ThOo",
+                        "duration": "215",
                         "pointInfos": [
-                            { "name": "Titre", "value": "Make Me Wanna Die" },
-                            { "name": "Chanteur", "value": "The Pretty Reckless" }
+                            { "name": "Chanteur", "value": "Pitbull ft. Kesha" },
+                            { "name": "Titre", "value": "Timber" }
                         ]
                     },
                     {
-                        "path": "current/music/Fall Out Boy - Irresistible (Official Music Video) ft. Demi Lovato.mp3",
-                        "link": "https://www.youtube.com/watch?v=2Lb2BiUC898&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=6",
+                        "path": "current/music/rihanna-umbrella-orange-version-official-music-video-ft-jay-z.mp3",
+                        "link": "https://www.youtube.com/watch?v=CvBfHwUxHIk",
+                        "duration": "255",
                         "pointInfos": [
-                            { "name": "Titre", "value": "Irresistible" },
-                            { "name": "Chanteur", "value": "Fall Out Boy ft. Demi Lovato" }
+                            { "name": "Chanteur", "value": "Rihanna ft. JAY-Z" },
+                            { "name": "Titre", "value": "Umbrella" }
                         ]
                     },
                     {
-                        "path": "current/music/Bleed It Out [Official Music Video] - Linkin Park.mp3",
-                        "link": "https://www.youtube.com/watch?v=OnuuYcqhzCE&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=7",
+                        "path": "current/music/dua-lipa-hallucinate-official-lyrics-video.mp3",
+                        "link": "https://www.youtube.com/watch?v=lOfFxhAhZuA",
+                        "duration": "209",
                         "pointInfos": [
-                            { "name": "Titre", "value": "Bleed It Out" },
-                            { "name": "Chanteur", "value": "Linkin Park" }
+                            { "name": "Chanteur", "value": "Dua Lipa" },
+                            { "name": "Titre", "value": "Hallucinate" }
                         ]
                     },
                     {
-                        "path": "current/music/Shawn Mendes - There's Nothing Holdin' Me Back (Official Music Video).mp3",
-                        "link": "https://www.youtube.com/watch?v=dT2owtxkU8k&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=8",
+                        "path": "current/music/ariana-grande-the-weeknd-love-me-harder-official-lyric-video.mp3",
+                        "link": "https://www.youtube.com/watch?v=szGomck3sZI",
+                        "duration": "237",
                         "pointInfos": [
-                            { "name": "Titre", "value": "There's Nothing Holdin' Me Back" },
-                            { "name": "Chanteur", "value": "Shawn Mendes" }
+                            { "name": "Chanteur", "value": "Ariana Grande, The Weeknd" },
+                            { "name": "Titre", "value": "Love Me Harder" }
                         ]
                     },
                     {
-                        "path": "current/music/Numb Encore.mp3",
-                        "link": "https://www.youtube.com/watch?v=Wazn8dihI3U&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=9",
+                        "path": "current/music/bruno-mars-runaway-baby-official-lyric-video.mp3",
+                        "link": "https://www.youtube.com/watch?v=HIgvP7B3Hg8",
+                        "duration": "148",
                         "pointInfos": [
-                            { "name": "Titre", "value": "Numb / Encore" },
-                            { "name": "Chanteur", "value": "Linkin Park ft JAY-Z - Topic" }
+                            { "name": "Chanteur", "value": "Bruno Mars" },
+                            { "name": "Titre", "value": "Runaway Baby" }
                         ]
                     },
                     {
-                        "path": "current/music/Thirty Seconds To Mars - The Kill (Bury Me).mp3",
-                        "link": "https://www.youtube.com/watch?v=8yvGCAvOAfM&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=10",
+                        "path": "current/music/lady-gaga-bad-romance-official-music-video.mp3",
+                        "link": "https://www.youtube.com/watch?v=qrO4YZeyl0I",
+                        "duration": "309",
                         "pointInfos": [
-                            { "name": "Titre", "value": "The Kill (Bury Me)" },
-                            { "name": "Chanteur", "value": "Thirty Seconds To Mars" }
+                            { "name": "Chanteur", "value": "Lady Gaga" },
+                            { "name": "Titre", "value": "Bad Romance" }
                         ]
                     },
                     {
-                        "path": "current/music/Fool HD - Move Everybody.mp3",
-                        "link": "https://www.youtube.com/watch?v=u6tUDXBnB7U&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=11",
+                        "path": "current/music/the-weeknd-blinding-lights-official-audio.mp3",
+                        "link": "https://www.youtube.com/watch?v=fHI8X4OXluQ",
+                        "duration": "204",
                         "pointInfos": [
-                            { "name": "Titre", "value": "Move Everybody" },
-                            { "name": "Chanteur", "value": "Fool HD" }
+                            { "name": "Chanteur", "value": "The Weeknd" },
+                            { "name": "Titre", "value": "Blinding Lights" }
                         ]
                     },
                     {
-                        "path": "current/music/Faint (Official Music Video) [4K UPGRADE] – Linkin Park.mp3",
-                        "link": "https://www.youtube.com/watch?v=LYU-8IFcDPw&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=12",
+                        "path": "current/music/demon-slayer-kimetsu-no-yaiba-opening-full-with-lyrics-lisa-gurenge.mp3",
+                        "link": "https://www.youtube.com/watch?v=IGWtNqeZMp0",
+                        "duration": "235",
                         "pointInfos": [
-                            { "name": "Titre", "value": "Faint" },
-                            { "name": "Chanteur", "value": "Linkin Park" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/5 Seconds of Summer - Teeth (Official Video).mp3",
-                        "link": "https://www.youtube.com/watch?v=JWeJHN5P-E8&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=13",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Teeth" },
-                            { "name": "Chanteur", "value": "5 Seconds of Summer" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Justin Timberlake - LoveStoned, I Think She Knows Interlude (Official Video).mp3",
-                        "link": "https://www.youtube.com/watch?v=QUuKvHHt8Sk&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=14",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "LoveStoned / I Think She Knows Interlude" },
-                            { "name": "Chanteur", "value": "Justin Timberlake" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Lady Gaga - Just Dance (Official Music Video) ft. Colby O'Donis.mp3",
-                        "link": "https://www.youtube.com/watch?v=2Abk1jAONjw&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=15",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Just Dance" },
-                            { "name": "Chanteur", "value": "Lady Gaga ft. Colby O'Donis" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Fall Out Boy - Beat It (MTV Version) (Official Music Video) ft. John Mayer.mp3",
-                        "link": "https://www.youtube.com/watch?v=sk8Pb17pcQI&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=16",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Beat It" },
-                            { "name": "Chanteur", "value": "Fall Out Boy ft. John Mayer" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Foo Fighters - The Pretender.mp3",
-                        "link": "https://www.youtube.com/watch?v=SBjQ9tuuTJQ&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=17",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "The Pretender" },
-                            { "name": "Chanteur", "value": "Foo Fighters" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Paramore - Misery Business [OFFICIAL VIDEO].mp3",
-                        "link": "https://www.youtube.com/watch?v=aCyGvGEtOwc&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=18",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Misery Business" },
-                            { "name": "Chanteur", "value": "Paramore" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/LMFAO - Champagne Showers ft. Natalia Kills.mp3",
-                        "link": "https://www.youtube.com/watch?v=UA8rcLvS1BY&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=19",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Champagne Showers" },
-                            { "name": "Chanteur", "value": "LMFAO ft. Natalia Kills" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/The Black Eyed Peas - Pump It (Official Music Video).mp3",
-                        "link": "https://www.youtube.com/watch?v=ZaI2IlHwmgQ&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=20",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Pump It" },
-                            { "name": "Chanteur", "value": "The Black Eyed Peas" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Panic! At The Disco - I Write Sins Not Tragedies [OFFICIAL VIDEO].mp3",
-                        "link": "https://www.youtube.com/watch?v=vc6vs-l5dkc&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=21",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "I Write Sins Not Tragedies" },
-                            { "name": "Chanteur", "value": "Panic! At The Disco" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/【Ado】逆光（ウタ from ONE PIECE FILM RED）.mp3",
-                        "link": "https://www.youtube.com/watch?v=gt-v_YCkaMY&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=22",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Backlight / Gyakkou / 逆光" },
-                            { "name": "Chanteur", "value": "Ado" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/The Killers - Mr. Brightside (Official Music Video).mp3",
-                        "link": "https://www.youtube.com/watch?v=gGdGFtwCNBE&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=23",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Mr. Brightside" },
-                            { "name": "Chanteur", "value": "The Killers" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Project X Pursuit Of Happiness.mp3",
-                        "link": "https://www.youtube.com/watch?v=CVFkvTKfcqk&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=24",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Project X Pursuit Of Happiness" },
-                            { "name": "Chanteur", "value": "Kid kudi" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Papa Roach - Last Resort (Squeaky Clean Version) (Official Music Video).mp3",
-                        "link": "https://www.youtube.com/watch?v=j0lSpNtjPM8&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=25",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Last Resort" },
-                            { "name": "Chanteur", "value": "Papa Roach" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Madonna - 4 Minutes feat. Justin Timberlake & Timbaland (Official Video) [4K].mp3",
-                        "link": "https://www.youtube.com/watch?v=aAQZPBwz2CI&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=26",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "4 Minutes" },
-                            { "name": "Chanteur", "value": "Madonna feat. Justin Timberlake & Timbaland" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Gundam WING générique francais.mp3",
-                        "link": "https://www.youtube.com/watch?v=CYTUKLrKYYs&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=27",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Just communication" },
-                            { "name": "Chanteur", "value": "Gundam WING, Two-Mix" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Lady Gaga - Applause.mp3",
-                        "link": "https://www.youtube.com/watch?v=pco91kroVgQ&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=28",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Applause" },
-                            { "name": "Chanteur", "value": "Lady Gaga" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Fall Out Boy - This Ain't A Scene, It's An Arms Race (Official Music Video).mp3",
-                        "link": "https://www.youtube.com/watch?v=GNm5drtAQXs&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=29",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "This Ain't A Scene, It's An Arms Race" },
-                            { "name": "Chanteur", "value": "Fall Out Boy" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Taylor Swift - We Are Never Ever Getting Back Together.mp3",
-                        "link": "https://www.youtube.com/watch?v=WA4iX5D9Z64&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=30",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "We Are Never Ever Getting Back Together" },
-                            { "name": "Chanteur", "value": "Taylor Swift" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Fall Out Boy - My Songs Know What You Did In The Dark (Light Em Up) - Part 1 of 11.mp3",
-                        "link": "https://www.youtube.com/watch?v=LkIWmsP3c_s&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=31",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "My Songs Know What You Did In The Dark (Light Em Up)" },
-                            { "name": "Chanteur", "value": "Fall Out Boy" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Ava Max - Kings & Queens [Official Music Video].mp3",
-                        "link": "https://www.youtube.com/watch?v=jH1RNk8954Q&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=32",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Kings & Queens" },
-                            { "name": "Chanteur", "value": "Ava Max" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Fall Out Boy - Dance, Dance (Official Music Video).mp3",
-                        "link": "https://www.youtube.com/watch?v=C6MOKXm8x50&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=33",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Dance, Dance" },
-                            { "name": "Chanteur", "value": "Fall Out Boy" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/System Of A Down - Toxicity (Official HD Video).mp3",
-                        "link": "https://www.youtube.com/watch?v=iywaBOMvYLI&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=34",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Toxicity" },
-                            { "name": "Chanteur", "value": "System Of A Down" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Rihanna - Umbrella (Orange Version) (Official Music Video) ft. JAY-Z.mp3",
-                        "link": "https://www.youtube.com/watch?v=CvBfHwUxHIk&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=35",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Umbrella" },
-                            { "name": "Chanteur", "value": "Rihanna ft. JAY-Z" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Pitbull - Timber (Official Video) ft. Ke$ha.mp3",
-                        "link": "https://www.youtube.com/watch?v=hHUbLv4ThOo&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=36",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Timber" },
-                            { "name": "Chanteur", "value": "Pitbull ft. Ke$ha" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Paramore - That's What You Get [OFFICIAL VIDEO].mp3",
-                        "link": "https://www.youtube.com/watch?v=1kz6hNDlEEg&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=37",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "That's What You Get" },
-                            { "name": "Chanteur", "value": "Paramore" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Breaking the Habit (Official Music Video) [HD UPGRADE] – Linkin Park.mp3",
-                        "link": "https://www.youtube.com/watch?v=v2H4l9RpkwM&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=38",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Breaking the Habit" },
-                            { "name": "Chanteur", "value": "Linkin Park" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Black Veil Brides - In The End.mp3",
-                        "link": "https://www.youtube.com/watch?v=f0EQlIzPowM&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=39",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "In The End" },
-                            { "name": "Chanteur", "value": "Black Veil Brides" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/What Goes Around...Comes Around (Official Video).mp3",
-                        "link": "https://www.youtube.com/watch?v=TOrnUquxtwA&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=40",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "What Goes Around...Comes Around" },
-                            { "name": "Chanteur", "value": "Justin Timberlake" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Green Day - American Idiot [Official Music Video].mp3",
-                        "link": "https://www.youtube.com/watch?v=Ee_uujKuJMI&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=41",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "American Idiot" },
-                            { "name": "Chanteur", "value": "Green Day" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/System Of A Down - Chop Suey! (Official HD Video).mp3",
-                        "link": "https://www.youtube.com/watch?v=CSvFpBOe8eY&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=42",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Chop Suey!" },
-                            { "name": "Chanteur", "value": "System Of A Down" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Demon Slayer - Kimetsu no Yaiba Opening Full with lyrics [LiSA - Gurenge].mp3",
-                        "link": "https://www.youtube.com/watch?v=IGWtNqeZMp0&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=43",
-                        "pointInfos": [
+                            { "name": "Chanteur", "value": "LiSA" },
                             { "name": "Titre", "value": "Gurenge" },
-                            { "name": "Chanteur", "value": "Demon Slayer, LiSA " }
+                            { "name": "Anime", "value": "Demon Slayer / Kimetsu no Yaiba - Opening 1" }
                         ]
                     },
                     {
-                        "path": "current/music/Cascada - Everytime We Touch (Official Video).mp3",
-                        "link": "https://www.youtube.com/watch?v=4G6QDNC4jPs&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=44",
+                        "path": "current/music/yoasobi-official-music-video.mp3",
+                        "link": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ",
+                        "duration": "226",
                         "pointInfos": [
-                            { "name": "Titre", "value": "Everytime We Touch" },
-                            { "name": "Chanteur", "value": "Cascada" }
+                            { "name": "Chanteur", "value": "YOASOBI" },
+                            { "name": "Titre", "value": "Idol" },
+                            { "name": "Anime", "value": "Oshi no ko - Opening 1" }
                         ]
                     },
                     {
-                        "path": "current/music/Cobra Starship - Good Girls Go Bad ft. Leighton Meester [OFFICIAL VIDEO].mp3",
-                        "link": "https://www.youtube.com/watch?v=Ix5z1bRz4Sc&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=45",
+                        "path": "current/music/asian-kung-fu-generation-haruka-kanata.mp3",
+                        "link": "https://www.youtube.com/watch?v=nJ6A6GC_ki4",
+                        "duration": "247",
                         "pointInfos": [
-                            { "name": "Titre", "value": "Good Girls Go Bad" },
-                            { "name": "Chanteur", "value": "Cobra Starship ft. Leighton Meester" }
+                            { "name": "Chanteur", "value": "ASIAN KUNG-FU GENERATION" },
+                            { "name": "Titre", "value": "Haruka Kanata" },
+                            { "name": "Anime", "value": "Naruto - Opening 2" }
                         ]
                     },
                     {
-                        "path": "current/music/The Killers - Somebody Told Me (Official Music Video).mp3",
-                        "link": "https://www.youtube.com/watch?v=Y5fBdpreJiU&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=46",
+                        "path": "current/music/il-vento-d-oro.mp3",
+                        "link": "https://www.youtube.com/watch?v=U0TXIXTzJEY",
+                        "duration": "296",
                         "pointInfos": [
-                            { "name": "Titre", "value": "Somebody Told Me" },
-                            { "name": "Chanteur", "value": "The Killers" }
+                            { "name": "Chanteur", "value": "Yugo Kanno" },
+                            { "name": "Titre", "value": "il vento d'oro" },
+                            { "name": "Anime", "value": "JOJO'S BIZARRE ADVENTURE - Golden Wind - Giorno's Theme" }
                         ]
                     },
                     {
-                        "path": "current/music/The All-American Rejects - Dirty Little Secret (Official Music Video).mp3",
-                        "link": "https://www.youtube.com/watch?v=gPDcwjJ8pLg&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=47",
+                        "path": "current/music/hunter-x-hunter-opening-full-departure-lyrics.mp3",
+                        "link": "https://www.youtube.com/watch?v=6q3gd47tTVw",
+                        "duration": "256",
                         "pointInfos": [
-                            { "name": "Titre", "value": "Dirty Little Secret" },
-                            { "name": "Chanteur", "value": "The All-American Rejects" }
+                            { "name": "Chanteur", "value": "Masatoshi Ono" },
+                            { "name": "Titre", "value": "Departure" },
+                            { "name": "Anime", "value": "Hunter X Hunter Opening" }
                         ]
                     },
                     {
-                        "path": "current/music/The Black Eyed Peas - I Gotta Feeling (Official Music Video).mp3",
-                        "link": "https://www.youtube.com/watch?v=uSD4vsh1zDA&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=48",
+                        "path": "current/music/shingeki-no-kyojin-s1-op2-linked-horizon-jiyuu-no-tsubasa-lyrics-with-english-translation.mp3",
+                        "link": "https://www.youtube.com/watch?v=_4aB23WUdIw",
+                        "duration": "333",
                         "pointInfos": [
-                            { "name": "Titre", "value": "I Gotta Feeling" },
-                            { "name": "Chanteur", "value": "The Black Eyed Peas" }
+                            { "name": "Chanteur", "value": "Linked Horizon" },
+                            { "name": "Titre", "value": "Jiyuu no Tsubasa" },
+                            { "name": "Anime", "value": "Shingeki no Kyojin -  Opening 2" }
                         ]
                     },
                     {
-                        "path": "current/music/The Black Eyed Peas - Let's Get It Started.mp3",
-                        "link": "https://www.youtube.com/watch?v=IKqV7DB8Iwg&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=49",
+                        "path": "current/music/brand-new-world.mp3",
+                        "link": "https://www.youtube.com/watch?v=_ULPAtFBkxc",
+                        "duration": "259",
                         "pointInfos": [
-                            { "name": "Titre", "value": "Let's Get It Started" },
-                            { "name": "Chanteur", "value": "The Black Eyed Peas" }
+                            { "name": "Chanteur", "value": "D-51" },
+                            { "name": "Titre", "value": "Brand New World" },
+                            { "name": "Anime", "value": "One piece - Opening 6" }
                         ]
                     },
                     {
-                        "path": "current/music/GAYLE - abcdefu (Official Music Video).mp3",
-                        "link": "https://www.youtube.com/watch?v=NaFd8ucHLuo&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=50",
+                        "path": "current/music/creditless-kaiju-no-8-op-opening-uhd-60fps.mp3",
+                        "link": "https://www.youtube.com/watch?v=aso1mQLUAbc",
+                        "duration": "117",
                         "pointInfos": [
-                            { "name": "Titre", "value": "abcdefu" },
-                            { "name": "Chanteur", "value": "GAYLE" }
+                            { "name": "Chanteur", "value": "YUNGBLUD" },
+                            { "name": "Titre", "value": "Abyss" },
+                            { "name": "Anime", "value": "Kaiju No. 8 - Opening 1" }
                         ]
                     },
                     {
-                        "path": "current/music/Fall Out Boy - Thnks fr th Mmrs (Official Music Video).mp3",
-                        "link": "https://www.youtube.com/watch?v=onzL0EM1pKY&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=51",
+                        "path": "current/music/egoist-monster-without-a-name-namae-no-nai-kaibutsu-eng-sub-romaji-kanji.mp3",
+                        "link": "https://www.youtube.com/watch?v=Q9WcG0OMElo",
+                        "duration": "316",
                         "pointInfos": [
-                            { "name": "Titre", "value": "Thnks fr th Mmrs" },
-                            { "name": "Chanteur", "value": "Fall Out Boy" }
+                            { "name": "Chanteur", "value": "EGOIST" },
+                            { "name": "Titre", "value": "Monster without a name / namae no nai kaibutsu" },
+                            { "name": "Anime", "value": "Psycho-pass - Ending 1" }
                         ]
                     },
                     {
-                        "path": "current/music/Yelle - Je Veux Te Voir.mp3",
-                        "link": "https://www.youtube.com/watch?v=Y99UqvgCmE8&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=52",
+                        "path": "current/music/parasyte-its-the-right-time-lyric-video.mp3",
+                        "link": "https://www.youtube.com/watch?v=N_qDn5ZCoDU",
+                        "duration": "225",
                         "pointInfos": [
-                            { "name": "Titre", "value": "Je Veux Te Voir" },
-                            { "name": "Chanteur", "value": "Yelle" }
+                            { "name": "Chanteur", "value": "Daichi Miura" },
+                            { "name": "Titre", "value": "It's The Right Time" },
+                            { "name": "Anime", "value": "Parasyte - Ending 1" }
                         ]
                     },
                     {
-                        "path": "current/music/Fall Out Boy - Alone Together (Part 4 of 11).mp3",
-                        "link": "https://www.youtube.com/watch?v=LFhEBmNwX_E&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=53",
+                        "path": "current/music/mv.mp3",
+                        "link": "https://www.youtube.com/watch?v=0YF8vecQWYs",
+                        "duration": "254",
                         "pointInfos": [
-                            { "name": "Titre", "value": "Alone Together" },
-                            { "name": "Chanteur", "value": "Fall Out Boy" }
+                            { "name": "Chanteur", "value": "Minami" },
+                            { "name": "Titre", "value": "Crying for rain / Kawaki wo Ameku" },
+                            { "name": "Anime", "value": "Domestic girlfriend / Dometic no kanojo - Opening" }
                         ]
                     },
                     {
-                        "path": "current/music/Taylor Swift - You Belong With Me.mp3",
-                        "link": "https://www.youtube.com/watch?v=VuNIsY6JdUw&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=54",
+                        "path": "current/music/granrodeo-the-other-self.mp3",
+                        "link": "https://www.youtube.com/watch?v=3_MMEKaN_kw",
+                        "duration": "284",
                         "pointInfos": [
-                            { "name": "Titre", "value": "You Belong With Me" },
-                            { "name": "Chanteur", "value": "Taylor Swift" }
+                            { "name": "Chanteur", "value": "GRANRODEO" },
+                            { "name": "Titre", "value": "The Other self" },
+                            { "name": "Anime", "value": "Kuroko no basket - Opening 3" }
                         ]
                     },
                     {
-                        "path": "current/music/Taylor Swift - 22.mp3",
-                        "link": "https://www.youtube.com/watch?v=AgFeZr5ptV8&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=55",
+                        "path": "current/music/.mp3",
+                        "link": "https://www.youtube.com/watch?v=1oMxrHXzOsY",
+                        "duration": "257",
                         "pointInfos": [
-                            { "name": "Titre", "value": "22" },
-                            { "name": "Chanteur", "value": "Taylor Swift" }
+                            { "name": "Chanteur", "value": "Yonezu Kenshi" },
+                            { "name": "Titre", "value": "Peace Sign" },
+                            { "name": "Anime", "value": "My hero academia - Opening 2" }
                         ]
                     },
                     {
-                        "path": "current/music/Panic! At The Disco - High Hopes (Official Video).mp3",
-                        "link": "https://www.youtube.com/watch?v=IPXIgEAGe4U&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=56",
+                        "path": "current/music/music-video-hdver-zankoku-na-tenshi-no-te-ze-the-cruel-angel-s-thesis.mp3",
+                        "link": "https://www.youtube.com/watch?v=o6wtDPVkKqI",
+                        "duration": "244",
                         "pointInfos": [
-                            { "name": "Titre", "value": "High Hopes" },
-                            { "name": "Chanteur", "value": "Panic! At The Disco" }
+                            { "name": "Chanteur", "value": "Takahashi Youko" },
+                            { "name": "Titre", "value": "Zankoku na Tenshi no Thesis" },
+                            { "name": "Anime", "value": "Neon Genesis Evangelion - Opening" }
                         ]
                     },
                     {
-                        "path": "current/music/New Divide (Official Music Video) [4K Upgrade] - Linkin Park.mp3",
-                        "link": "https://www.youtube.com/watch?v=ysSxxIqKNN0&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=57",
+                        "path": "current/music/bleach-opening-5.mp3",
+                        "link": "https://www.youtube.com/watch?v=YTMrvnyhMac",
+                        "duration": "93",
                         "pointInfos": [
-                            { "name": "Titre", "value": "New Divide" },
-                            { "name": "Chanteur", "value": "Linkin Park" }
+                            { "name": "Chanteur", "value": "Yui" },
+                            { "name": "Titre", "value": "Rolling Star" },
+                            { "name": "Anime", "value": "Bleach - Opening 5" }
                         ]
                     },
                     {
-                        "path": "current/music/The Pussycat Dolls - When I Grow Up (Official Music Video).mp3",
-                        "link": "https://www.youtube.com/watch?v=K0K46C82v9o&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=58",
+                        "path": "current/music/fullmetal-alchemist-brotherhood-opening-1-4k-60fps-creditless-cc.mp3",
+                        "link": "https://www.youtube.com/watch?v=elyXcwunIYA",
+                        "duration": "123",
                         "pointInfos": [
-                            { "name": "Titre", "value": "When I Grow Up" },
-                            { "name": "Chanteur", "value": "The Pussycat Dolls" }
+                            { "name": "Chanteur", "value": "Yui" },
+                            { "name": "Titre", "value": "Again" },
+                            { "name": "Anime", "value": "Full Metal Alchemist Brotherhood - Opening 1" }
                         ]
                     },
                     {
-                        "path": "current/music/MACKLEMORE & RYAN LEWIS - THRIFT SHOP FEAT. WANZ (OFFICIAL VIDEO).mp3",
-                        "link": "https://www.youtube.com/watch?v=QK8mJJJvaes&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=59",
+                        "path": "current/music/flow-granrodeo-7-seven.mp3",
+                        "link": "https://www.youtube.com/watch?v=_8u_r7xIKz8",
+                        "duration": "269",
                         "pointInfos": [
-                            { "name": "Titre", "value": "THRIFT SHOP" },
-                            { "name": "Chanteur", "value": "MACKLEMORE & RYAN LEWIS FEAT. WANZ" }
+                            { "name": "Chanteur", "value": "FLOW et GRANRODEO" },
+                            { "name": "Titre", "value": "7 - seven" },
+                            { "name": "Anime", "value": "Seven Deadly Sins - Ending 1" }
                         ]
                     },
                     {
-                        "path": "current/music/Fifth Harmony - Worth It (Official Video) ft. Kid Ink.mp3",
-                        "link": "https://www.youtube.com/watch?v=YBHQbu5rbdQ&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=60",
+                        "path": "current/music/blue-exorcist-opening-1-full-original.mp3",
+                        "link": "https://www.youtube.com/watch?v=fSks0H1wcqc",
+                        "duration": "260",
                         "pointInfos": [
-                            { "name": "Titre", "value": "Worth It" },
-                            { "name": "Chanteur", "value": "Fifth Harmony ft. Kid Ink" }
+                            { "name": "Chanteur", "value": "Uverworld" },
+                            { "name": "Titre", "value": "Core Pride" },
+                            { "name": "Anime", "value": "Blue Exorcist / Ao no Exorcist Opening 1" }
                         ]
                     },
                     {
-                        "path": "current/music/In The End [Official HD Music Video] - Linkin Park.mp3",
-                        "link": "https://www.youtube.com/watch?v=eVTXPUF4Oz4&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=61",
+                        "path": "current/music/eyeshield-21-opening-4-blaze-line.mp3",
+                        "link": "https://www.youtube.com/watch?v=VoftWzc6Cto",
+                        "duration": "249",
                         "pointInfos": [
-                            { "name": "Titre", "value": "In The End" },
-                            { "name": "Chanteur", "value": "Linkin Park" }
+                            { "name": "Chanteur", "value": "back-on" },
+                            { "name": "Titre", "value": "Blaze Line" },
+                            { "name": "Anime", "value": "Eyeshield 21 - Opening 4" }
                         ]
                     },
                     {
-                        "path": "current/music/Fountains of Wayne - Stacy's Mom (Official Music Video).mp3",
-                        "link": "https://www.youtube.com/watch?v=dZLfasMPOU4&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=62",
+                        "path": "current/music/gensomaden-saiyuki-ost-for-real.mp3",
+                        "link": "https://www.youtube.com/watch?v=RpicdhGcWp0",
+                        "duration": "238",
                         "pointInfos": [
-                            { "name": "Titre", "value": "Stacy's Mom" },
-                            { "name": "Chanteur", "value": "Fountains of Wayne" }
+                            { "name": "Chanteur", "value": "Tokuyama Hidenori" },
+                            { "name": "Titre", "value": "For Real" },
+                            { "name": "Anime", "value": "Gensomaden Saiyuki - Opening 1" }
                         ]
                     },
                     {
-                        "path": "current/music/LMFAO - Party Rock Anthem ft. Lauren Bennett, GoonRock.mp3",
-                        "link": "https://www.youtube.com/watch?v=KQ6zr6kCPj8&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=63",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Party Rock Anthem" },
-                            { "name": "Chanteur", "value": "LMFAO ft. Lauren Bennett, GoonRock" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Backstreet Boys - The Call.mp3",
-                        "link": "https://www.youtube.com/watch?v=1dRdwWhFvns&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=64",
-                        "pointInfos": [
-                            { "name": "Titre", "value": " he Call" },
-                            { "name": "Chanteur", "value": "Backstreet Boys" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Hikaru no Go OP 1 HD.mp3",
-                        "link": "https://www.youtube.com/watch?v=UwBTjSMCUYo&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=65",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Get Over" },
-                            { "name": "Chanteur", "value": "Hikaru no Go OP 1, Dream" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Olly Murs - Troublemaker ft. Flo Rida.mp3",
-                        "link": "https://www.youtube.com/watch?v=4aQDOUbErNg&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=66",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Troublemaker" },
-                            { "name": "Chanteur", "value": "Olly Murs ft. Flo Rida" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Moby - 'Lift Me Up' (Evan Bernard Version) (Official Video).mp3",
-                        "link": "https://www.youtube.com/watch?v=pT_Y-eodTv4&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=67",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Lift Me Up" },
-                            { "name": "Chanteur", "value": "Moby" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Fall Out Boy - Death Valley (Part 8 of 11) ft. Tommy Lee.mp3",
-                        "link": "https://www.youtube.com/watch?v=dX50r4WRmRw&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=68",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Death Valley" },
-                            { "name": "Chanteur", "value": "Fall Out Boy ft. Tommy Lee" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Numb (Official Music Video) [4K UPGRADE] – Linkin Park.mp3",
-                        "link": "https://www.youtube.com/watch?v=kXYiU_JCYtU&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=69",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Numb" },
-                            { "name": "Chanteur", "value": "Linkin Park" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Crawling [Official HD Music Video] - Linkin Park.mp3",
-                        "link": "https://www.youtube.com/watch?v=Gd9OhYroLN0&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=70",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Crawling" },
-                            { "name": "Chanteur", "value": "Linkin Park" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/will.i.am - Scream & Shout ft. Britney Spears.mp3",
-                        "link": "https://www.youtube.com/watch?v=kYtGl1dX5qI&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=71",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Scream & Shout" },
-                            { "name": "Chanteur", "value": "will.i.am ft. Britney Spears" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Maroon 5 - Girls Like You ft. Cardi B (Official Music Video).mp3",
-                        "link": "https://www.youtube.com/watch?v=aJOTlE1K90k&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=72",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Girls Like You" },
-                            { "name": "Chanteur", "value": "Maroon 5 ft. Cardi B" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Pushing Me Away - Linkin Park (Hybrid Theory).mp3",
-                        "link": "https://www.youtube.com/watch?v=Ve1LNJEIKUE&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=73",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Pushing Me Away" },
-                            { "name": "Chanteur", "value": "Linkin Park" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Justin Timberlake - SexyBack (Official Video) ft. Timbaland.mp3",
-                        "link": "https://www.youtube.com/watch?v=3gOHvDP_vCs&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=74",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "SexyBack" },
-                            { "name": "Chanteur", "value": "Justin Timberlake ft. Timbaland" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Nelly Furtado - Say It Right (Official Music Video).mp3",
-                        "link": "https://www.youtube.com/watch?v=6JnGBs88sL0&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=75",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Say It Right" },
-                            { "name": "Chanteur", "value": "Nelly Furtado ft Timbaland" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Fall Out Boy - The Take Over, The Breaks Over (Official Music Video).mp3",
-                        "link": "https://www.youtube.com/watch?v=aVbPvf2aYH4&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=76",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "The Take Over, The Breaks Over" },
-                            { "name": "Chanteur", "value": "Fall Out Boy" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/S & M.mp3",
-                        "link": "https://www.youtube.com/watch?v=rCF8BLm6gKA&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=77",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "S & M" },
-                            { "name": "Chanteur", "value": "Rihanna" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/David Guetta & Bebe Rexha - I'm Good (Blue) [Official Music Video].mp3",
-                        "link": "https://www.youtube.com/watch?v=90RLzVUuXe4&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=78",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "I'm Good (Blue)" },
-                            { "name": "Chanteur", "value": "David Guetta & Bebe Rexha" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/MIKA - Boum Boum Boum.mp3",
-                        "link": "https://www.youtube.com/watch?v=_MPtXUeUznY&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=79",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Boum Boum Boum" },
-                            { "name": "Chanteur", "value": "MIKA" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/MACKLEMORE & RYAN LEWIS - CAN'T HOLD US FEAT. RAY DALTON (OFFICIAL MUSIC VIDEO).mp3",
-                        "link": "https://www.youtube.com/watch?v=2zNSgSzhBfM&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=80",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "CAN'T HOLD US" },
-                            { "name": "Chanteur", "value": "MACKLEMORE & RYAN LEWISFEAT. RAY DALTON" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Fall Out Boy - Just One Yesterday (Part 6 of 11) ft. Foxes.mp3",
-                        "link": "https://www.youtube.com/watch?v=dSfKSUd31MM&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=81",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Just One Yesterday" },
-                            { "name": "Chanteur", "value": "Fall Out Boy ft. Foxes" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Ke$ha - TiK ToK (Official HD Video).mp3",
-                        "link": "https://www.youtube.com/watch?v=iP6XpLQM2Cs&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=82",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "TiK ToK" },
-                            { "name": "Chanteur", "value": "Ke$ha" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Paramore - crushcrushcrush [OFFICIAL VIDEO].mp3",
-                        "link": "https://www.youtube.com/watch?v=ei8hPkyJ0bU&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=83",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "crushcrushcrush" },
-                            { "name": "Chanteur", "value": "Paramore" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/The All-American Rejects - Gives You Hell (Official Music Video).mp3",
-                        "link": "https://www.youtube.com/watch?v=uxUATkpMQ8A&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=84",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Gives You Hell" },
-                            { "name": "Chanteur", "value": "The All-American Rejects" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/OneRepublic - Counting Stars.mp3",
-                        "link": "https://www.youtube.com/watch?v=hT_nvWreIhg&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=85",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Counting Stars" },
-                            { "name": "Chanteur", "value": "OneRepublic" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Ava Max - Sweet but Psycho [Official Music Video].mp3",
-                        "link": "https://www.youtube.com/watch?v=WXBHCQYxwr0&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=86",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Sweet but Psycho" },
-                            { "name": "Chanteur", "value": "Ava Max" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Legends Never Die (ft. Against The Current) Worlds 2017 - League of Legends.mp3",
-                        "link": "https://www.youtube.com/watch?v=r6zIGXun57U&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=87",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Legends Never Die" },
-                            { "name": "Chanteur", "value": "League of Legends Worlds 2017 ft. Against The Current" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Billy Joel - We Didn't Start the Fire (Official HD Video).mp3",
-                        "link": "https://www.youtube.com/watch?v=eFTLKWw542g&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=88",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "We Didn't Start the Fire" },
-                            { "name": "Chanteur", "value": "Billy Joel" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/RISE (ft. The Glitch Mob, Mako, and The Word Alive) Worlds 2018 - League of Legends.mp3",
-                        "link": "https://www.youtube.com/watch?v=fB8TyLTD7EE&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=89",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "RISE" },
-                            {
-                                "name": "Chanteur",
-                                "value": "League of Legends Worlds 2018 ft. The Glitch Mob, Mako, and The Word Alive"
-                            }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Fatal Bazooka Fous Ta Cagoule HD.mp3",
-                        "link": "https://www.youtube.com/watch?v=PI9yKr39vGI&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=90",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Fous Ta Cagoule" },
-                            { "name": "Chanteur", "value": "Fatal Bazooka" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Imagine Dragons - Believer (Official Music Video).mp3",
-                        "link": "https://www.youtube.com/watch?v=7wtfhZwyrcc&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=91",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Believer" },
-                            { "name": "Chanteur", "value": "Imagine Dragons" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Justin Timberlake - Cry Me A River (Official Video).mp3",
-                        "link": "https://www.youtube.com/watch?v=DksSPZTZES0&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=92",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Cry Me A River" },
-                            { "name": "Chanteur", "value": "Justin Timberlake" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Fall Out Boy - Uma Thurman (Official Music Video).mp3",
-                        "link": "https://www.youtube.com/watch?v=2VTxYQL2SbA&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=93",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Uma Thurman" },
-                            { "name": "Chanteur", "value": "Fall Out Boy" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Flo Rida - Right Round (feat. Ke$ha) (Official Video) [HD].mp3",
-                        "link": "https://www.youtube.com/watch?v=CcCw1ggftuQ&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=94",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Right Round" },
-                            { "name": "Chanteur", "value": "Flo Rida feat. Ke$ha" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Vitaa - Game Over ft. Maître Gims.mp3",
-                        "link": "https://www.youtube.com/watch?v=97Nis75DAgc&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=95",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Game Over" },
-                            { "name": "Chanteur", "value": "Vitaa ft. Maître Gims" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Taylor Swift - Bad Blood ft. Kendrick Lamar.mp3",
-                        "link": "https://www.youtube.com/watch?v=QcIy9NiNbmo&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=96",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Bad Blood" },
-                            { "name": "Chanteur", "value": "Taylor Swift ft. Kendrick Lamar" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Papa Roach - ...To Be Loved.mp3",
-                        "link": "https://www.youtube.com/watch?v=REuLlW2ktMg&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=97",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "To Be Loved" },
-                            { "name": "Chanteur", "value": "Papa Roach" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Taylor Swift - Blank Space.mp3",
-                        "link": "https://www.youtube.com/watch?v=e-ORhEE9VVg&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=98",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Blank Space" },
-                            { "name": "Chanteur", "value": "Taylor Swift" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/Fall Out Boy - The Phoenix (Official Video) - Part 2 of 11.mp3",
-                        "link": "https://www.youtube.com/watch?v=5hDZbroaQDc&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=99",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "The Phoenix" },
-                            { "name": "Chanteur", "value": "Fall Out Boy" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/5 Seconds of Summer - Youngblood (Official Video).mp3",
-                        "link": "https://www.youtube.com/watch?v=-RJSbO8UZVY&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=100",
-                        "pointInfos": [
-                            { "name": "Titre", "value": "Youngblood" },
-                            { "name": "Chanteur", "value": "5 Seconds of Summer" }
-                        ]
+                        "path": "current/music/gayle-abcdefu-official-music-video.mp3",
+                        "link": "https://www.youtube.com/watch?v=NaFd8ucHLuo&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=55",
+                        "duration": "",
+                        "pointInfos": [{ "name": "", "value": "" }]
                     }
                 ]
             }
         ]
     },
-    "currentMusic": 0,
+    "currentMusic": 32,
     "currentSection": 0,
     "audio": {},
     "localStorageName": "PartyBlindtest"
