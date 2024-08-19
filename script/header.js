@@ -155,13 +155,11 @@ function createLinkChartJsScript(head) {
 }
 function addHeader() {
     const headers = document.querySelector('header');
-    let h1 = createTagWithParentClassContent('h1', headers, null, 'Experimentation de Donovan Ferreira');
-    let h2 = createTagWithParentClassContent('h2', headers, null, "Developpeur d'application");
-    let nav = createTagWithParentClassContent('nav', headers, 'nav-bar row row-cols-2 row-cols-md-4');
-    const urlRoot = getURlRoot();
-    Object.keys(createFileMap()).forEach((key) => {
-        createLinkNav(nav, `${key}`, getContentFromUrl(key));
-    });
+    // let nav = createTagWithParentClassContent('nav', headers, 'nav-bar row row-cols-2 row-cols-md-4');
+    // const urlRoot = getURlRoot();
+    // Object.keys(createFileMap()).forEach((key) => {
+    //     createLinkNav(nav, `${key}`, getContentFromUrl(key));
+    // });
 }
 
 function createLinkNav(nav, href, text) {

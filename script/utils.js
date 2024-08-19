@@ -29,8 +29,9 @@ export function getLocalStorage(name) {
     return JSON.parse(localStorage.getItem(name));
 }
 
-export function addOptionToSelect(select, optionValue, optionText) {
+export function addOptionToSelect(select, optionValue, optionText, classCss) {
     const option = document.createElement('option');
+    option.className = classCss;
     option.value = optionValue;
     option.text = optionText;
     select.add(option);
@@ -89,10 +90,11 @@ export function createResponse(partyBlindtest, divResponse) {
         .setClass('h4')
         .setTextContent(partyBlindtest.getSection().name)
         .build();
-    const divSectionDetails = new TagBuilder('div', divSection)
+    const divSectionDetails = new TagBuilder('div', divSection).setClass('section-details').build();
+    const divSectionDetailsContent = new TagBuilder('div', divSectionDetails)
         .setTextContent(partyBlindtest.getSection().details)
         .build();
-    const divCurrentMusicNumber = new TagBuilder('div', divSection)
+    const divCurrentMusicNumberSection = new TagBuilder('div', divSectionDetails)
         .setTextContent(`Musique ${partyBlindtest.currentMusic + 1} / ${partyBlindtest.getSection().musics.length}`)
         .build();
     const divTotalTime = new TagBuilder('div', divSection)
@@ -156,7 +158,7 @@ export function addParticipantsScore(partyBlindtest) {
 }
 
 export function addparticipantScore(partyBlindtest, divParticipantsScore, participant) {
-    const divParticipant = createTagWithParentClassContent('div', divParticipantsScore);
+    const divParticipant = createTagWithParentClassContent('div', divParticipantsScore, participant.classCss);
     const divParticipantDelete = createTagWithParentClassContent('i', divParticipant, 'fa-solid fa-trash');
     divParticipantDelete.addEventListener('click', (event) => {
         partyBlindtest.deleteParticipant(participant);

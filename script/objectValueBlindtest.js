@@ -104,14 +104,20 @@ export class PartyBlindtest {
     getParticipants() {
         return this.blindtest.participants;
     }
+
+    getParticipant(participantName) {
+        return this.getParticipants().find((participant) => participant.name === participantName);
+    }
+
     addParticpant(participantName) {
         if (!participantName) {
             const input = document.querySelector('#addParticpantInput');
             participantName = input.value;
         }
         if (participantName) {
-            const newParticipant = new Participant(participantName);
             const participants = this.getParticipants();
+            const classCSS = 'joueur-' + (participants.length + 1);
+            const newParticipant = new Participant(participantName, classCSS);
             participants.push(newParticipant);
         }
         this.save();
@@ -228,7 +234,7 @@ export class PartyBlindtest {
         const divPathMusic = document.querySelector('#pathMusic');
         const divDurationMusic = document.querySelector('#durationMusic');
         const path = `current/music/${divPathMusic.textContent}.mp3`;
-        const duration = divDurationMusic.textContent;
+        const duration = parseInt(divDurationMusic.textContent);
         const music = this.addMusic(youtubeLink, path, duration);
         allPointInfosInput.forEach((pointInfo) => {
             const inputs = pointInfo.querySelectorAll('input');
@@ -259,7 +265,9 @@ export class PartyBlindtest {
 export class Blindtest {
     constructor(blindtest) {
         this.name = blindtest.name;
-        this.participants = blindtest.participants.map((participant) => new Participant(participant.name));
+        this.participants = blindtest.participants.map(
+            (participant) => new Participant(participant.name, participant.classCss)
+        );
         this.sections = blindtest.sections.map((section) => new Section(section));
     }
 }
@@ -288,19 +296,15 @@ export class Section {
 
         while (currentIndex > 0) {
             let randomIndex = Math.floor(Math.random() * currentIndex);
-            currentIndex--;
 
             [this.musics[currentIndex], this.musics[randomIndex]] = [
                 this.musics[randomIndex],
                 this.musics[currentIndex],
             ];
+            currentIndex--;
         }
     }
     getDuration() {
-        console.log(
-            'duration section',
-            this.musics.map((music) => music.getDuration())
-        );
         return this.musics.map((music) => music.getDuration()).reduce((subtotal, duration) => subtotal + duration, 0);
     }
 }
@@ -337,47 +341,46 @@ export class PointInfo {
         // this.participant = participant;
         const participant = pointInfo?.participant;
         if (participant) {
-            this.participant = new Participant(participant.name);
+            this.participant = new Participant(participant.name, participant?.classCss);
         }
     }
+
     changeValue(name, value, partyBlindtest, event) {
         const cursorPosition = event.target.selectionStart;
-        console.log(event);
-        console.log(event.target);
         this.name = name;
         this.value = value;
         partyBlindtest.save();
         event.target.focus();
     }
+
     isShow() {
         return this.participant === undefined;
     }
+
     changeParticipant(newParticipantName, partyBlindtest) {
-        this.participant = newParticipantName ? new Participant(newParticipantName) : undefined;
+        console.log('changeParticipant : ', newParticipantName);
+        console.log(newParticipantName);
+        const newParticipant = partyBlindtest.getParticipant(newParticipantName);
+        console.log(newParticipant);
+        this.participant = newParticipant ? newParticipant : undefined;
         // this.participant = newParticipantName && new Participant(newParticipantName);
+        console.log('this.participant : ', this.participant);
         partyBlindtest.save();
     }
+
     makeVisible(partyBlindtest) {
         this.isVisible = !this.isVisible;
         partyBlindtest.save();
     }
 
     createHtmlContent(partyBlindtest, divResponse) {
-        let classVisible = null;
-        if (isAudience()) {
-            const hasParticipantOrIsVisible = this?.participant?.name || this.isVisible;
-            console.log(`hasParticipantOrIsVisible : ${hasParticipantOrIsVisible}`);
-            if (!hasParticipantOrIsVisible) {
-                classVisible = 'invisible';
-            }
-        }
-        console.log(`classVisible : ${classVisible}`);
-        console.log(`this : ${this}`, this);
-        console.log('this : ', this);
+        const divPointInfo = new TagBuilder('div', divResponse)
+            .setClass('response-pointInfos ' + this?.participant?.classCss)
+            .build();
+
         // const divPointInfo = createTagWithParentClassContent('div', divResponse, 'response-pointInfos');
-        const divPointInfo = new TagBuilder('div', divResponse).setClass('response-pointInfos').build();
         // const divVisiblePointinfo = createTagWithParentClassContent('div', divPointInfo, 'fa-solid fa-eye');
-        const divVisiblePointinfo = new TagBuilder('div', divPointInfo).setClass('fa-solid fa-eye').build();
+        const divVisiblePointinfo = new TagBuilder('i', divPointInfo).setClass('fa-solid fa-eye').build();
 
         divVisiblePointinfo.addEventListener('click', () => {
             this.makeVisible(partyBlindtest);
@@ -396,39 +399,48 @@ export class PointInfo {
             });
             addOptionToSelect(selectValuePointInfo, '', undefined);
             partyBlindtest.getParticipants().map((participant, index) => {
-                addOptionToSelect(selectValuePointInfo, participant.name, participant.name);
+                addOptionToSelect(selectValuePointInfo, participant.name, participant.name, participant.classCss);
                 if (participant.name === this?.participant?.name) {
                     selectValuePointInfo.selectedIndex = index + 1;
                 }
             });
             // divVisiblePointinfo.addEventListener('click', pointInfo.makeVisible);
         }
-        const inputNamePointInfo = new TagBuilder('input', divPointInfo)
+        const divNamePointInfo = new TagBuilder('div', divPointInfo)
             .setClass('inputToEnd')
-            .setValueContent(this.name)
+            .setTextContent(this.name)
             .build();
+
+        let classVisible = null;
+        const hasParticipantOrIsVisible = this?.participant?.name || this.isVisible;
+        if (!hasParticipantOrIsVisible) {
+            if (isAudience()) {
+                classVisible = 'invisible';
+            }
+        } else {
+        }
+        const divValuePointInfo = createTagWithParentClassContent('div', divPointInfo, classVisible, this.value);
         // const inputNamePointInfo = createTagWithParentClassContent('input', divPointInfo, 'inputToEnd', this.name);
         // inputNamePointInfo.value = this.name;
-        const divValuePointInfo = createTagWithParentClassContent('input', divPointInfo, classVisible, this.value);
-        divValuePointInfo.value = this.value;
-        if (isAudience()) {
-            inputNamePointInfo.setAttribute('readonly', true);
-            divValuePointInfo.setAttribute('readonly', true);
-        }
-        inputNamePointInfo.addEventListener('input', (event) => {
-            this.changeValue(event.target.value, this.value, partyBlindtest, event);
-        });
-        divValuePointInfo.addEventListener('input', (event) => {
-            this.changeValue(this.name, event.target.value, partyBlindtest, event);
-        });
+        // divValuePointInfo.value = this.value;
+        // if (isAudience()) {
+        //     inputNamePointInfo.setAttribute('readonly', true);
+        //     divValuePointInfo.setAttribute('readonly', true);
+        // }
+        // divNamePointInfo.addEventListener('input', (event) => {
+        //     this.changeValue(event.target.value, this.value, partyBlindtest, event);
+        // });
+        // divValuePointInfo.addEventListener('input', (event) => {
+        //     this.changeValue(this.name, event.target.value, partyBlindtest, event);
+        // });
     }
 }
 export class Participant {
-    constructor(name) {
+    constructor(name, classCss) {
         this.name = name;
         if (name === 'undefined') {
-            console.log('**********************************');
             this.name = undefined;
         }
+        this.classCss = classCss;
     }
 }

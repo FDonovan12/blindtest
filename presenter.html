@@ -11,56 +11,85 @@
         <title>Blind Test - Présentateur</title>
     </head>
     <body>
-        <header>
+        <header class="star">
             <h1>Blind Test - Présentateur</h1>
         </header>
-        <div>
-            <form>
-                <input placeholder="Mot de passe" type="password" id="passwordInput" />
-                <button id="password">Valider mot de passe</button>
-            </form>
-        </div>
-        <div>
-            <form>
-                <input placeholder="Nom du particpant" type="text" id="addParticpantInput" />
-                <button id="addParticpant">Ajouter participant</button>
-            </form>
-        </div>
-        <div>
-            <form></form>
-            <form>
-                <div>
-                    <div id="pathMusic" class="d-none"></div>
-                    <div id="durationMusic" class="d-none"></div>
-                    <input
-                        placeholder="lien Youtube de la musique"
-                        type="text"
-                        id="linkYoutubeInput"
-                        value="https://www.youtube.com/watch?v=NaFd8ucHLuo&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=55"
-                        required />
-                    <button id="addLinkYoutube">Ajouter lien Youtube</button>
-                </div>
-                <div id="blockOfPointInfos">
+        <!-- <div id="particles-js"></div>
+
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script>
+            particlesJS('particles-js', {
+                particles: {
+                    number: {
+                        value: 100,
+                    },
+                    color: {
+                        value: '#ffffff',
+                    },
+                    shape: {
+                        type: 'circle',
+                    },
+                    opacity: {
+                        value: 1,
+                    },
+                    size: {
+                        value: 2,
+                    },
+                    move: {
+                        speed: 0.5,
+                    },
+                },
+            });
+        </script> -->
+        <div class="d-none">
+            <div>
+                <form>
+                    <input placeholder="Mot de passe" type="password" id="passwordInput" />
+                    <button id="password">Valider mot de passe</button>
+                </form>
+            </div>
+            <div>
+                <form>
+                    <input placeholder="Nom du particpant" type="text" id="addParticpantInput" />
+                    <button id="addParticpant">Ajouter participant</button>
+                </form>
+            </div>
+            <div>
+                <form></form>
+                <form>
                     <div>
-                        <input placeholder="Titre Point infos" type="text" required />
-                        <input placeholder="Value Point infos" type="text" required />
+                        <div id="pathMusic" class="d-none"></div>
+                        <div id="durationMusic" class="d-none"></div>
+                        <input
+                            placeholder="lien Youtube de la musique"
+                            type="text"
+                            id="linkYoutubeInput"
+                            value="https://www.youtube.com/watch?v=NaFd8ucHLuo&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=55"
+                            required />
+                        <button id="addLinkYoutube">Ajouter lien Youtube</button>
                     </div>
-                </div>
-                <button id="validMusic">Valide musique</button>
-            </form>
-            <button id="addPointInfo" onclick="addFormPointInfo()" class="fa-solid fa-circle-plus"></button>
+                    <div id="blockOfPointInfos">
+                        <div>
+                            <input placeholder="Titre Point infos" type="text" required />
+                            <input placeholder="Value Point infos" type="text" required />
+                        </div>
+                    </div>
+                    <button id="validMusic">Valide musique</button>
+                </form>
+                <button id="addPointInfo" onclick="addFormPointInfo()" class="fa-solid fa-circle-plus"></button>
+            </div>
+            <button id="openAudience">Ouvrir Audience</button>
+            <button id="previous">precedent</button>
+            <button id="play">play</button>
+            <button id="next">suivant</button>
+            <button id="downloadAnchorElem">export JSON</button>
+            <button id="readJson">import JSON</button>
+            <button id="shuffleMusics">Shuffle musique</button>
         </div>
-        <button id="openAudience">Ouvrir Audience</button>
-        <button id="previous">precedent</button>
-        <button id="play">play</button>
-        <button id="next">suivant</button>
-        <button id="downloadAnchorElem">export JSON</button>
-        <button id="readJson">import JSON</button>
-        <button id="shuffleMusics">Shuffle musique</button>
+        <div id="participants"></div>
         <main>
-            <div id="participants"></div>
             <div class="response" id="response"></div>
-            <audio id="music-audio" controls></audio>
+            <audio id="music-audio"></audio>
         </main>
         <footer></footer>
     </body>

@@ -63,7 +63,7 @@ function start() {
             setTimeout(() => {
                 mainObject.partyBlindtest.nextMusic();
                 mainObject.partyBlindtest.playAndPauseMusic();
-            }, 5000);
+            }, 1000);
         });
     } catch (error) {}
     window.addEventListener('keydown', (key) => {
