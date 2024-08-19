@@ -15,8 +15,8 @@
                         "link": "https://www.youtube.com/watch?v=1dRdwWhFvns",
                         "duration": "205",
                         "pointInfos": [
-                            { "name": "Chanteur", "value": "Backstreet Boys" },
-                            { "name": "Titre", "value": "The Call" }
+                            { "name": "Chanteur", "value": "Backstreet Boys", "isVisible": false },
+                            { "name": "Titre", "value": "The Call", "isVisible": false }
                         ]
                     },
                     {
@@ -24,7 +24,8 @@
                         "link": "https://www.youtube.com/watch?v=PT2_F-1esPk",
                         "duration": "262",
                         "pointInfos": [
-                            { "name": "Chanteur", "value": "The Chainsmokers ft.Halsey" },
+                            { "name": "Chanteur", "value": "The Chainsmokers" },
+                            { "name": "Featuring", "value": "Halsey" },
                             { "name": "Titre", "value": "Closer" }
                         ]
                     },
@@ -51,7 +52,8 @@
                         "link": "https://www.youtube.com/watch?v=hHUbLv4ThOo",
                         "duration": "215",
                         "pointInfos": [
-                            { "name": "Chanteur", "value": "Pitbull ft. Kesha" },
+                            { "name": "Chanteur", "value": "Pitbull" },
+                            { "name": "Featuring", "value": "Kesha" },
                             { "name": "Titre", "value": "Timber" }
                         ]
                     },
@@ -60,7 +62,8 @@
                         "link": "https://www.youtube.com/watch?v=CvBfHwUxHIk",
                         "duration": "255",
                         "pointInfos": [
-                            { "name": "Chanteur", "value": "Rihanna ft. JAY-Z" },
+                            { "name": "Chanteur", "value": "Rihanna" },
+                            { "name": "Featuring", "value": "JAY-Z" },
                             { "name": "Titre", "value": "Umbrella" }
                         ]
                     },
@@ -107,6 +110,16 @@
                         "pointInfos": [
                             { "name": "Chanteur", "value": "The Weeknd" },
                             { "name": "Titre", "value": "Blinding Lights" }
+                        ]
+                    },
+                    {
+                        "path": "current/music/play-hard-feat-ne-yo-akon-new-edit.mp3",
+                        "link": "https://www.youtube.com/watch?v=a2CTWkTQY6A",
+                        "duration": 209,
+                        "pointInfos": [
+                            { "name": "Chanteur", "value": "David Guetta" },
+                            { "name": "Featuring", "value": "Ne-Yo & Akon" },
+                            { "name": "Titre", "value": "Play Hard" }
                         ]
                     }
                 ]
@@ -596,7 +609,8 @@
                         "link": "https://www.youtube.com/watch?v=oyFobb9_dlg",
                         "duration": "198",
                         "pointInfos": [
-                            { "name": "Chanteur", "value": "Lucenzo ft. Don Omar" },
+                            { "name": "Chanteur", "value": "Lucenzo" },
+                            { "name": "Featuring", "value": "Don Omar" },
                             { "name": "Titre", "value": "Danza Kuduro" }
                         ]
                     },
@@ -694,7 +708,7 @@
             }
         ]
     },
-    "currentMusic": 60,
+    "currentMusic": 2,
     "currentSection": 0,
     "audio": {},
     "localStorageName": "PartyBlindtest"

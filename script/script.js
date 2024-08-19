@@ -5,6 +5,7 @@ import {
     getPathnameFromValue,
     researchFromYoutubeLink,
     addFormPointInfo,
+    isAudience,
 } from './utils.js';
 import unitTest from './unitTest.js';
 
@@ -90,6 +91,98 @@ function start() {
         }
     });
 }
+
+// Sélectionner les éléments du DOM
+const audioElement = document.getElementById('music-audio');
+const canvas = document.getElementById('audioVisualizer');
+const ctx = canvas.getContext('2d');
+
+// Redimensionner le canvas pour couvrir toute la fenêtre
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+// Créer un contexte audio
+const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+const audioSource = audioContext.createMediaElementSource(audioElement);
+
+// Créer un analyseur de fréquence
+const analyser = audioContext.createAnalyser();
+audioSource.connect(analyser);
+analyser.connect(audioContext.destination);
+
+// Configurer l'analyseur
+analyser.fftSize = 256; // Taille de la transformée de Fourier (détermine la résolution)
+const bufferLength = analyser.frequencyBinCount; // Nombre de valeurs de fréquence
+let dataArray = new Uint8Array(bufferLength); // Tableau pour stocker les données de fréquence
+
+const channel = new BroadcastChannel('audio-channel');
+
+// Fonction de visualisation
+function draw(dataArray) {
+    // Définir l'animation
+    console.log('draw');
+
+    // Effacer le canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Obtenir les données de fréquence
+    // analyser.getByteFrequencyData(dataArray);
+    // channel.postMessage(dataArray);
+
+    // Dessiner les barres de visualisation
+    const barWidth = (canvas.width / bufferLength) * 2.5;
+    let barHeight;
+    let x = 0;
+
+    for (let i = 0; i < bufferLength; i++) {
+        barHeight = dataArray[i];
+
+        // Couleurs de la barre
+        const r = barHeight + 25 * (i / bufferLength);
+        const g = 250 * (i / bufferLength);
+        const b = 50;
+
+        ctx.fillStyle = `rgb(${r},${g},${b})`;
+        ctx.fillRect(x, canvas.height - barHeight / 2, barWidth, barHeight / 2);
+
+        x += barWidth;
+    }
+}
+channel.onmessage = function (event) {
+    if (isAudience()) {
+        const receivedData = new Uint8Array(event.data); // Recevoir les données de fréquence
+        dataArray.set(receivedData); // Mettre à jour le tableau local
+        draw(receivedData); // Dessiner la visualisation avec les nouvelles données
+        console.log('event.data : ', event.data);
+        console.log('receivedData : ', receivedData);
+        console.log('dataArray : ', dataArray);
+        console.log('onmessage');
+    }
+};
+
+function updateData() {
+    analyser.getByteFrequencyData(dataArray);
+    channel.postMessage(dataArray); // Envoyer les données aux autres fenêtres
+    draw(dataArray); // Dessiner dans la fenêtre maître
+    // requestAnimationFrame(updateData); // Appeler la mise à jour uniquement dans la fenêtre maître
+    console.log('updateData');
+}
+audioElement.onplay = function () {
+    // La première fenêtre à démarrer l'audio devient la fenêtre maître
+    if (!isAudience()) {
+        audioContext.resume().then(() => {
+            function loop() {
+                console.log('loop');
+                if (audioElement.paused) return; // Arrêter la boucle si la musique est en pause
+                // analyser.getByteFrequencyData(dataArray);
+                // channel.postMessage(dataArray); // Envoyer les données aux autres fenêtres
+                requestAnimationFrame(loop); // Continuer la boucle
+                updateData();
+            }
+            loop(); // Démarrer la boucle
+        });
+    }
+};
 
 function bubbleSort(tab) {
     for (let i = 0; i < tab.length; i++) {

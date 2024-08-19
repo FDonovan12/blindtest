@@ -54,6 +54,7 @@ export class PartyBlindtest {
                 return partyBlindtestFromStorage;
             }
         }
+        console.log(this);
         this.changeAudio();
     }
 
@@ -78,27 +79,35 @@ export class PartyBlindtest {
     }
 
     playAndPauseMusic() {
-        const buttonPlayPause = document.querySelector('#play');
-        const isPlaying = buttonPlayPause.hasAttribute('active');
-        if (isPlaying) {
+        if (this.isPlaying()) {
             this.pauseMusic();
         } else {
             this.playMusic();
         }
     }
 
+    isPlaying() {
+        // const buttonPlayPause = document.querySelector('#play');
+        // const isPlaying = buttonPlayPause.hasAttribute('active');
+        return !this.audio.paused;
+    }
+
     playMusic() {
         const buttonPlayPause = document.querySelector('#play');
         this.audio.play();
-        buttonPlayPause.setAttribute('active', true);
-        buttonPlayPause.textContent = 'pause';
+        if (buttonPlayPause) {
+            buttonPlayPause.setAttribute('active', true);
+            buttonPlayPause.textContent = 'pause';
+        }
     }
 
     pauseMusic() {
         const buttonPlayPause = document.querySelector('#play');
         this.audio.pause();
-        buttonPlayPause.removeAttribute('active');
-        buttonPlayPause.textContent = 'play';
+        if (buttonPlayPause) {
+            buttonPlayPause.removeAttribute('active');
+            buttonPlayPause.textContent = 'play';
+        }
     }
 
     getParticipants() {
@@ -139,6 +148,7 @@ export class PartyBlindtest {
             storage = this.localStorageName;
         }
         localStorage.setItem(storage, JSON.stringify(this));
+        localStorage.setItem('audio-is-playing', this.isPlaying());
         addResponse(this);
         addParticipantsScore(this);
     }
@@ -151,6 +161,13 @@ export class PartyBlindtest {
     static updateStatus() {
         console.log('updateStatus');
         const partyBlindtest = PartyBlindtest.get();
+        const isPresentateurPlaying = localStorage.getItem('audio-is-playing') === 'true' ? true : false;
+        console.log('isPresentateurPlaying : ', isPresentateurPlaying);
+        console.log('partyBlindtest.isPlaying() : ', partyBlindtest.isPlaying());
+        if (isPresentateurPlaying !== partyBlindtest.isPlaying()) {
+            // not work well the two music are desync and
+            // partyBlindtest.playAndPauseMusic();
+        }
         addResponse(partyBlindtest);
         addParticipantsScore(partyBlindtest);
     }
