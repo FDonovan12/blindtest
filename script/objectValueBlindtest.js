@@ -94,6 +94,7 @@ export class PartyBlindtest {
 
     playMusic() {
         const buttonPlayPause = document.querySelector('#play');
+        console.log(this.audio);
         this.audio.play();
         if (buttonPlayPause) {
             buttonPlayPause.setAttribute('active', true);

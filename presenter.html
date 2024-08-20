@@ -14,7 +14,6 @@
         <header class="star">
             <h1>Blind Test - Présentateur</h1>
         </header>
-        <canvas id="audioVisualizer"></canvas>
         <!-- <div id="particles-js"></div>
 
         <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -42,7 +41,7 @@
                 },
             });
         </script> -->
-        <div class="d-non">
+        <div class="d-none">
             <div>
                 <form>
                     <input placeholder="Mot de passe" type="password" id="passwordInput" />
@@ -89,8 +88,9 @@
         </div>
         <div id="participants"></div>
         <main>
+            <canvas id="audioVisualizer"></canvas>
             <div class="response" id="response"></div>
-            <audio id="music-audio"></audio>
+            <audio id="music-audio" controls></audio>
         </main>
         <footer></footer>
     </body>

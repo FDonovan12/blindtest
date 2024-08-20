@@ -98,8 +98,11 @@ const canvas = document.getElementById('audioVisualizer');
 const ctx = canvas.getContext('2d');
 
 // Redimensionner le canvas pour couvrir toute la fenêtre
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+const main = document.querySelector('main');
+canvas.width = main.getBoundingClientRect().width;
+canvas.height = main.getBoundingClientRect().height;
+console.log('canvas.width : ', canvas.width);
+console.log('canvas.height : ', canvas.height);
 
 // Créer un contexte audio
 const audioContext = new (window.AudioContext || window.webkitAudioContext)();
@@ -111,7 +114,7 @@ audioSource.connect(analyser);
 analyser.connect(audioContext.destination);
 
 // Configurer l'analyseur
-analyser.fftSize = 256; // Taille de la transformée de Fourier (détermine la résolution)
+analyser.fftSize = 1024; // Taille de la transformée de Fourier (détermine la résolution)
 const bufferLength = analyser.frequencyBinCount; // Nombre de valeurs de fréquence
 let dataArray = new Uint8Array(bufferLength); // Tableau pour stocker les données de fréquence
 
@@ -119,60 +122,60 @@ const channel = new BroadcastChannel('audio-channel');
 
 // Fonction de visualisation
 function draw(dataArray) {
-    // Définir l'animation
-    console.log('draw');
-
     // Effacer le canvas
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Obtenir les données de fréquence
-    // analyser.getByteFrequencyData(dataArray);
-    // channel.postMessage(dataArray);
-
     // Dessiner les barres de visualisation
-    const barWidth = (canvas.width / bufferLength) * 2.5;
+    const ratioZeroInData = 2.9;
+    const barWidth = (canvas.width / bufferLength) * ratioZeroInData;
     let barHeight;
     let x = 0;
 
     for (let i = 0; i < bufferLength; i++) {
-        barHeight = dataArray[i];
-
+        const currentData = dataArray[i];
+        barHeight = (currentData / 255) * canvas.height;
         // Couleurs de la barre
-        const r = barHeight + 25 * (i / bufferLength);
-        const g = 250 * (i / bufferLength);
+        const r = barHeight + 50 * (i / (bufferLength * ratioZeroInData));
+        const g = 150 * ((i / bufferLength) * ratioZeroInData);
         const b = 50;
 
         ctx.fillStyle = `rgb(${r},${g},${b})`;
-        ctx.fillRect(x, canvas.height - barHeight / 2, barWidth, barHeight / 2);
+        ctx.fillRect(x, canvas.height - barHeight, barWidth, canvas.height);
 
         x += barWidth;
     }
+}
+
+function processFrequencyData(data) {
+    // Appliquer une amplification logarithmique pour accentuer les basses fréquences
+    for (let i = 0; i < data.length; i++) {
+        // data[i] = Math.pow(data[i], 1.1); // Vous pouvez ajuster l'exposant pour plus d'effet
+        const oldValue = data[i];
+        // const newValue = Math.max(data[i] - (255 - data[i]) * 0.5, 0);
+        // data[i] = newValue; // Vous pouvez ajuster l'exposant pour plus d'effet
+    }
+    return data;
 }
 channel.onmessage = function (event) {
     if (isAudience()) {
         const receivedData = new Uint8Array(event.data); // Recevoir les données de fréquence
         dataArray.set(receivedData); // Mettre à jour le tableau local
         draw(receivedData); // Dessiner la visualisation avec les nouvelles données
-        console.log('event.data : ', event.data);
-        console.log('receivedData : ', receivedData);
-        console.log('dataArray : ', dataArray);
-        console.log('onmessage');
     }
 };
 
 function updateData() {
     analyser.getByteFrequencyData(dataArray);
-    channel.postMessage(dataArray); // Envoyer les données aux autres fenêtres
+    const processedData = processFrequencyData(dataArray);
+    channel.postMessage(processedData); // Envoyer les données aux autres fenêtres
     draw(dataArray); // Dessiner dans la fenêtre maître
     // requestAnimationFrame(updateData); // Appeler la mise à jour uniquement dans la fenêtre maître
-    console.log('updateData');
 }
 audioElement.onplay = function () {
     // La première fenêtre à démarrer l'audio devient la fenêtre maître
     if (!isAudience()) {
         audioContext.resume().then(() => {
             function loop() {
-                console.log('loop');
                 if (audioElement.paused) return; // Arrêter la boucle si la musique est en pause
                 // analyser.getByteFrequencyData(dataArray);
                 // channel.postMessage(dataArray); // Envoyer les données aux autres fenêtres
