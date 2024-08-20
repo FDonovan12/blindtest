@@ -435,6 +435,7 @@ export class PointInfo {
             if (isAudience()) {
                 classVisible = 'invisible';
             }
+            classVisible = 'invisible';
         } else {
         }
         const divValuePointInfo = createTagWithParentClassContent('div', divPointInfo, classVisible, this.value);

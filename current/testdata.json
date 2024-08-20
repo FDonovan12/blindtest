@@ -8,10 +8,23 @@
                 "details": "test details2",
                 "musics": [
                     {
-                        "path": "current/music/Alvaro Soler - Sofia.mp3",
+                        "path": "current/music/僕のヒーローアカデミア米津玄師ピースサインスペシャルミュージックビデオ.mp3",
+                        "link": "https://www.youtube.com/watch?v=1oMxrHXzOsY",
+                        "duration": 257,
                         "pointInfos": [
-                            { "name": "artiste", "value": "Alvaro Soler", "participant": { "name": "j2" } },
-                            { "name": "titre", "value": "Sofia" }
+                            { "name": "Chanteur", "value": "Yonezu Kenshi" },
+                            { "name": "Titre", "value": "Peace Sign" },
+                            { "name": "Anime", "value": "My hero academia - Opening 2" }
+                        ]
+                    },
+                    {
+                        "path": "current/music/美波カワキヲアメクmv.mp3",
+                        "link": "https://www.youtube.com/watch?v=0YF8vecQWYs",
+                        "duration": 254,
+                        "pointInfos": [
+                            { "name": "Chanteur", "value": "Minami" },
+                            { "name": "Titre", "value": "Crying for rain / Kawaki wo Ameku" },
+                            { "name": "Anime", "value": "Domestic girlfriend / Dometic no kanojo - Opening" }
                         ]
                     }
                 ]

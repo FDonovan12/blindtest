@@ -148,11 +148,17 @@ function draw(dataArray) {
 
 function processFrequencyData(data) {
     // Appliquer une amplification logarithmique pour accentuer les basses fréquences
+    let newValue;
     for (let i = 0; i < data.length; i++) {
         // data[i] = Math.pow(data[i], 1.1); // Vous pouvez ajuster l'exposant pour plus d'effet
         const oldValue = data[i];
-        // const newValue = Math.max(data[i] - (255 - data[i]) * 0.5, 0);
-        // data[i] = newValue; // Vous pouvez ajuster l'exposant pour plus d'effet
+        newValue = oldValue;
+        // newValue = Math.max(data[i] - (255 - data[i]) * 0.5, 0);
+        newValue = Math.min(Math.pow(data[i], 1.05), 255);
+        // if (oldValue > 160) {
+        //     newValue = Math.min(oldValue * 1.2, 255);
+        // }
+        data[i] = newValue; // Vous pouvez ajuster l'exposant pour plus d'effet
     }
     return data;
 }
