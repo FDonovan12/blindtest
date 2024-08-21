@@ -8,23 +8,19 @@
                 "details": "test details2",
                 "musics": [
                     {
-                        "path": "current/music/僕のヒーローアカデミア米津玄師ピースサインスペシャルミュージックビデオ.mp3",
-                        "link": "https://www.youtube.com/watch?v=1oMxrHXzOsY",
-                        "duration": 257,
+                        "link": "https://www.youtube.com/watch?v=gAjR4_CbPpQ",
+                        "duration": 223,
                         "pointInfos": [
-                            { "name": "Chanteur", "value": "Yonezu Kenshi" },
-                            { "name": "Titre", "value": "Peace Sign" },
-                            { "name": "Anime", "value": "My hero academia - Opening 2" }
+                            { "name": "Chanteur", "value": "Daft Punk" },
+                            { "name": "Titre", "value": "Harder, Better, Faster, Stronger" }
                         ]
                     },
                     {
-                        "path": "current/music/美波カワキヲアメクmv.mp3",
-                        "link": "https://www.youtube.com/watch?v=0YF8vecQWYs",
-                        "duration": 254,
+                        "link": "https://www.youtube.com/watch?v=NdYWuo9OFAw",
+                        "duration": 223,
                         "pointInfos": [
-                            { "name": "Chanteur", "value": "Minami" },
-                            { "name": "Titre", "value": "Crying for rain / Kawaki wo Ameku" },
-                            { "name": "Anime", "value": "Domestic girlfriend / Dometic no kanojo - Opening" }
+                            { "name": "Chanteur", "value": "Goo Goo Dolls" },
+                            { "name": "Titre", "value": "Iris" }
                         ]
                     }
                 ]

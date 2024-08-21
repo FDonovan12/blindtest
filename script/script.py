@@ -37,9 +37,10 @@ def extract_title(youtube_url):
     with yt_dlp.YoutubeDL({'quiet': True}) as ydl:
         info_dict = ydl.extract_info(youtube_url, download=False)
         title = info_dict.get('title', 'unknown_title')
-        print(f'{title = }')
+        print(f'\n {title = }')
         
         custom_filename = slugify(title)
+        print(f'\n {custom_filename = }')
         return custom_filename
 
 def download_one_music(youtube_url):
@@ -47,10 +48,6 @@ def download_one_music(youtube_url):
     custom_filename = extract_title(youtube_url)
     path_for_json = os.path.join('current/music/', custom_filename + ".mp3")
     download_path = os.path.join("./../current/music/" , custom_filename)
-    print(f'{custom_filename = }')
-    print(f'{path_for_json = }')
-    print(f'{download_path = }')
-    
     if os.path.exists(download_path + ".mp3"):
         print("File already exists")
         return path_for_json
@@ -78,24 +75,31 @@ def download_all_musics(jsonFileName):
         musics = section["musics"]
         for music in musics:
             try:
-                print(f'{music = }')
-                path = download_one_music(music["link"])
-                print(f'{path = }')
+                try:
+                    oldPath = music["path"]
+                except:
+                    print("path no exist")
+                finally:
+                    oldPath = ""
+                newPath = download_one_music(music["link"])
+                if oldPath != newPath and os.path.exists("./../"+oldPath) and oldPath != "":
+                    os.remove("./../"+oldPath)
                 
-                music["path"] = path
-                audio = MP3("./../"+path)
+                music["path"] = newPath
+                audio = MP3("./../"+newPath)
                 duration = math.ceil(audio.info.length)
                 music["duration"] = duration
-                print(f'{duration = }')
                 
                 
             except:
-                print("error link")
+                print("error occured and was catch")
+                print(f'{music = }')
+                
     with open(jsonFileName, "w") as jsonFile:
         json.dump(data, jsonFile, ensure_ascii=False)
     f.close()
     jsonFile.close()
 
 filename = "./../current/data.json"
-# filename = "./../current/testdata.json"
+filename = "./../current/testdata.json"
 download_all_musics(filename)

@@ -117,6 +117,8 @@ analyser.connect(audioContext.destination);
 analyser.fftSize = 1024; // Taille de la transformée de Fourier (détermine la résolution)
 const bufferLength = analyser.frequencyBinCount; // Nombre de valeurs de fréquence
 let dataArray = new Uint8Array(bufferLength); // Tableau pour stocker les données de fréquence
+let previousDataArray = new Uint8Array(bufferLength);
+let waves = [];
 
 const channel = new BroadcastChannel('audio-channel');
 
@@ -133,7 +135,22 @@ function draw(dataArray) {
 
     for (let i = 0; i < bufferLength; i++) {
         const currentData = dataArray[i];
+        const previousData = previousDataArray[i];
         barHeight = (currentData / 255) * canvas.height;
+        if (currentData > previousData) {
+            // ctx.fillStyle = 'red'; // Changer la couleur de la barre pour un effet visuel
+            // ctx.shadowBlur = 20; // Ajouter un effet de glow
+            // ctx.shadowColor = 'white';
+            waves.push({
+                x: i * (barWidth + 1), // Position X de la barre
+                y: canvas.height - barHeight, // Position Y de la barre
+                radius: 0, // Rayon initial de l'onde
+                alpha: 1, // Opacité initiale de l'onde
+                reduce: 1 / (currentData - previousData),
+            });
+        } else {
+            ctx.shadowBlur = 0;
+        }
         // Couleurs de la barre
         const r = barHeight + 50 * (i / (bufferLength * ratioZeroInData));
         const g = 150 * ((i / bufferLength) * ratioZeroInData);
@@ -142,25 +159,48 @@ function draw(dataArray) {
         ctx.fillStyle = `rgb(${r},${g},${b})`;
         ctx.fillRect(x, canvas.height - barHeight, barWidth, canvas.height);
 
+        previousDataArray[i] = currentData;
         x += barWidth;
+    }
+    for (let j = 0; j < waves.length; j++) {
+        let wave = waves[j];
+
+        // Dessiner l'onde
+        ctx.beginPath();
+        ctx.arc(wave.x, wave.y, wave.radius, 0, Math.PI * 2);
+        ctx.strokeStyle = `rgba(255, 255, 255, ${wave.alpha})`; // Couleur blanche avec alpha
+        ctx.stroke();
+        ctx.closePath();
+
+        // Agrandir le rayon et diminuer l'opacité pour l'effet de dissipation
+        wave.radius += 1;
+        wave.alpha -= wave.reduce;
+
+        // Retirer l'onde une fois qu'elle est devenue complètement transparente
+        if (wave.alpha <= 0) {
+            waves.splice(j, 1);
+            j--; // Ajuster l'indice car l'onde a été retirée
+        }
     }
 }
 
 function processFrequencyData(data) {
     // Appliquer une amplification logarithmique pour accentuer les basses fréquences
+    const newData = [];
     let newValue;
     for (let i = 0; i < data.length; i++) {
         // data[i] = Math.pow(data[i], 1.1); // Vous pouvez ajuster l'exposant pour plus d'effet
         const oldValue = data[i];
         newValue = oldValue;
         // newValue = Math.max(data[i] - (255 - data[i]) * 0.5, 0);
-        newValue = Math.min(Math.pow(data[i], 1.05), 255);
+        // newValue = Math.min(Math.pow(data[i], 1.05), 255);
         // if (oldValue > 160) {
         //     newValue = Math.min(oldValue * 1.2, 255);
         // }
-        data[i] = newValue; // Vous pouvez ajuster l'exposant pour plus d'effet
+        newData.push(newValue);
+        // data[i] = newValue; // Vous pouvez ajuster l'exposant pour plus d'effet
     }
-    return data;
+    return newData;
 }
 channel.onmessage = function (event) {
     if (isAudience()) {

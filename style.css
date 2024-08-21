@@ -54,10 +54,11 @@ main {
     color: aliceblue;
 }
 footer {
-    /* position: absolute;
-    bottom: 0; */
+    padding-left: 1rem;
     width: 100%;
     background-color: darkgray;
+    /* position: sticky;
+    bottom: 0; */
 }
 #participants {
     display: flex;
@@ -104,6 +105,7 @@ div:has(.response-pointInfos) {
     display: grid;
     grid-template-columns: 30px 150px 120px 1fr;
     border: 2px solid;
+    border-radius: 10px;
     background-color: transparent;
 }
 .response-pointInfos i {
