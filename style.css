@@ -213,9 +213,10 @@ form {
     }
 }
 input {
-    border: 3px solid black;
+    border: 3px solid;
     margin-block: 0.2rem;
     border-radius: 5px;
+    padding-inline: 0.2rem;
     &:valid {
         border-color: var(--success-color);
     }

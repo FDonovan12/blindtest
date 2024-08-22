@@ -128,8 +128,6 @@ function draw(dataArray) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // Dessiner les barres de visualisation
-    const ratioZeroInData = 2.9;
-    const barWidth = (canvas.width / bufferLength) * ratioZeroInData;
     let barHeight;
     let x = 0;
 
@@ -137,12 +135,14 @@ function draw(dataArray) {
         const currentData = dataArray[i];
         const previousData = previousDataArray[i];
         barHeight = (currentData / 255) * canvas.height;
+        const ratioZeroInData = 2.9;
+        const barWidth = (canvas.width / bufferLength) * ratioZeroInData;
         if (currentData > previousData) {
             // ctx.fillStyle = 'red'; // Changer la couleur de la barre pour un effet visuel
             // ctx.shadowBlur = 20; // Ajouter un effet de glow
             // ctx.shadowColor = 'white';
             waves.push({
-                x: i * (barWidth + 1), // Position X de la barre
+                x: (i + 1) * barWidth - barWidth / 2, // Position X de la barre
                 y: canvas.height - barHeight, // Position Y de la barre
                 radius: 0, // Rayon initial de l'onde
                 alpha: 1, // Opacité initiale de l'onde
