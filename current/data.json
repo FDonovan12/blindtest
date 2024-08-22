@@ -484,6 +484,15 @@
                             { "name": "Chanteur", "value": "Skillet" },
                             { "name": "Titre", "value": "Monster" }
                         ]
+                    },
+                    {
+                        "link": "https://www.youtube.com/watch?v=NdYWuo9OFAw",
+                        "duration": 216,
+                        "pointInfos": [
+                            { "name": "Chanteur", "value": "Goo Goo Dolls" },
+                            { "name": "Titre", "value": "Iris" }
+                        ],
+                        "path": "current/music/goo-goo-dolls-iris-official-music-video-4k-remaster.mp3"
                     }
                 ]
             },
@@ -517,6 +526,15 @@
                             { "name": "Chanteur", "value": "Swedish House Mafia ft John Martin" },
                             { "name": "Titre", "value": "Don't You Worry Child" }
                         ]
+                    },
+                    {
+                        "link": "https://www.youtube.com/watch?v=gAjR4_CbPpQ",
+                        "duration": 223,
+                        "pointInfos": [
+                            { "name": "Chanteur", "value": "Daft Punk" },
+                            { "name": "Titre", "value": "Harder, Better, Faster, Stronger" }
+                        ],
+                        "path": "current/music/daft-punk-harder-better-faster-stronger-official-video.mp3"
                     },
                     {
                         "path": "current/music/brain-power.mp3",

@@ -126,7 +126,7 @@ export class PartyBlindtest {
         }
         if (participantName) {
             const participants = this.getParticipants();
-            const classCSS = 'joueur-' + (participants.length + 1);
+            const classCSS = 'joueur joueur-' + (participants.length + 1);
             const newParticipant = new Participant(participantName, classCSS);
             participants.push(newParticipant);
         }
@@ -411,7 +411,8 @@ export class PointInfo {
                 this?.participant?.name
             );
         } else {
-            const selectValuePointInfo = createTagWithParentClassContent('select', divPointInfo);
+            const divselectValuePointInfo = createTagWithParentClassContent('div', divPointInfo);
+            const selectValuePointInfo = createTagWithParentClassContent('select', divselectValuePointInfo);
             selectValuePointInfo.addEventListener('change', (value) => {
                 this.changeParticipant(selectValuePointInfo.value, partyBlindtest);
             });

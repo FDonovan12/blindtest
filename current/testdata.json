@@ -13,15 +13,17 @@
                         "pointInfos": [
                             { "name": "Chanteur", "value": "Daft Punk" },
                             { "name": "Titre", "value": "Harder, Better, Faster, Stronger" }
-                        ]
+                        ],
+                        "path": "current/music/daft-punk-harder-better-faster-stronger-official-video.mp3"
                     },
                     {
                         "link": "https://www.youtube.com/watch?v=NdYWuo9OFAw",
-                        "duration": 223,
+                        "duration": 216,
                         "pointInfos": [
                             { "name": "Chanteur", "value": "Goo Goo Dolls" },
                             { "name": "Titre", "value": "Iris" }
-                        ]
+                        ],
+                        "path": "current/music/goo-goo-dolls-iris-official-music-video-4k-remaster.mp3"
                     }
                 ]
             }
