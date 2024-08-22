@@ -216,17 +216,11 @@ export async function researchFromYoutubeLink() {
         const title = data.items[0].snippet.title;
         const durationString = data.items[0]?.contentDetails?.duration;
         const channelName = data.items[0].snippet.channelTitle;
-        const divPathMusic = document.querySelector('#pathMusic');
-        const divDurationMusic = document.querySelector('#durationMusic');
-        divPathMusic.textContent = slugify(title);
-        divDurationMusic.textContent = parseYouTubeDurationToSeconds(durationString);
         resetPointInfo();
         addFormPointInfo('Chanteur', channelName);
         addFormPointInfo('Titre', title);
-        // document.getElementById('videoTitle').innerText = title;
     } catch (error) {
         console.error('Error fetching video title:', error);
-        // document.getElementById('videoTitle').innerText = 'Error fetching video title';
     }
 }
 
