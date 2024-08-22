@@ -3,20 +3,32 @@
     --error-color: rgb(158, 5, 5);
     --warning-color: rgb(185, 122, 3);
     --color-text: aliceblue;
+    --background-color: rgba(0, 0, 0, 0);
     --primary-color: rgb(3, 14, 107);
     --background-gradient: linear-gradient(to right, rgb(3, 14, 107), #666cb6);
     --button-active: rgba(133, 37, 2, 0.4);
 }
-* {
+
+*,
+*:before,
+*:after {
     transition: ease-in-out 0.3s;
     color: var(--color-text);
+    background-color: var(--background-color);
+    border-color: currentColor;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font: inherit;
 }
-#particles-js {
-    width: 100vh;
-    height: 100%;
-    position: absolute;
-    z-index: -10;
+img,
+picture,
+video,
+svg {
+    display: block;
+    max-width: 100%;
 }
+
 canvas {
     display: block;
     position: absolute;
@@ -31,14 +43,6 @@ canvas {
     display: none;
 }
 
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
 h1 {
     margin: 2rem;
     color: var(--color-text);
@@ -111,9 +115,8 @@ footer {
 .all-buttons > button {
     flex-basis: 100%;
     border-radius: 10px;
-    border-color: var(--color-text);
-    background-color: rgba(0, 0, 0, 0.4);
     color: var(--color-text);
+    background-color: rgba(0, 0, 0, 0.4);
     margin: 0.2rem;
 }
 button:hover {
@@ -152,12 +155,12 @@ button[active] {
 }
 .joueur-rouge,
 .joueur-rouge *:not(.joueur, .undefined) {
-    background-color: brown;
+    --background-color: brown;
     --color-text: black;
 }
 .joueur-noir,
 .joueur-noir *:not(.joueur, .undefined) {
-    background-color: black;
+    --background-color: black;
     --color-text: white;
 }
 
