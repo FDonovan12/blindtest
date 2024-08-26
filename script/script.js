@@ -26,14 +26,16 @@ console.log(mainObject);
 createClickEventOnButton('#password', start);
 start();
 window.addEventListener('load', () => {});
-window.addEventListener('storage', PartyBlindtest.updateStatus);
+window.addEventListener('storage', () => {
+    mainObject.updateStatus();
+});
 function start() {
     // unitTest();
     getPathnameFromValue('presenter.html');
     getValueFromPathname();
     mainObject.get();
     mainObject.partyBlindtest.save();
-    PartyBlindtest.updateStatus();
+    mainObject.updateStatus();
     mainObject.partyBlindtest.save();
 
     try {
@@ -232,6 +234,68 @@ audioElement.onplay = function () {
         });
     }
 };
+createTournamentLJD();
+function createTournamentLJD() {
+    const possibleResult = ['2-0', '2-1', '1-2', '0-2'];
+    let count = 0;
+    for (const matchAvsB of possibleResult) {
+        for (const matchAvsC of possibleResult) {
+            for (const matchAvsD of possibleResult) {
+                for (const matchBvsC of possibleResult) {
+                    for (const matchBvsD of possibleResult) {
+                        for (const matchCvsD of possibleResult) {
+                            const pointA =
+                                extractPointFromResult(matchAvsB, 0) + extractPointFromResult(matchAvsC, 0) + extractPointFromResult(matchAvsD, 0);
+                            const pointB =
+                                extractPointFromResult(matchAvsB, 1) + extractPointFromResult(matchBvsC, 0) + extractPointFromResult(matchBvsD, 0);
+                            const pointC =
+                                extractPointFromResult(matchAvsC, 1) + extractPointFromResult(matchBvsC, 1) + extractPointFromResult(matchCvsD, 0);
+                            const pointD =
+                                extractPointFromResult(matchAvsD, 1) + extractPointFromResult(matchBvsD, 1) + extractPointFromResult(matchCvsD, 1);
+                            let occurPoint = [];
+                            occurPoint[pointA] = occurPoint[pointA] + 1 || 1;
+                            occurPoint[pointB] = occurPoint[pointB] + 1 || 1;
+                            occurPoint[pointC] = occurPoint[pointC] + 1 || 1;
+                            occurPoint[pointD] = occurPoint[pointD] + 1 || 1;
+
+                            const nbWinA = isWin(matchAvsB, 0) + isWin(matchAvsC, 0) + isWin(matchAvsD, 0);
+                            const nbWinB = isWin(matchAvsB, 1) + isWin(matchBvsC, 0) + isWin(matchBvsD, 0);
+                            const nbWinC = isWin(matchAvsC, 1) + isWin(matchBvsC, 1) + isWin(matchCvsD, 0);
+                            const nbWinD = isWin(matchAvsD, 1) + isWin(matchBvsD, 1) + isWin(matchCvsD, 1);
+                            let occurWin = [];
+                            occurWin[nbWinA] = occurWin[nbWinA] + 1 || 1;
+                            occurWin[nbWinB] = occurWin[nbWinB] + 1 || 1;
+                            occurWin[nbWinC] = occurWin[nbWinC] + 1 || 1;
+                            occurWin[nbWinD] = occurWin[nbWinD] + 1 || 1;
+                            // if (occur.find((e) => e === 4) && nbWinA===nbWinB===nbWinC) {
+                            if (
+                                occurPoint.find((e) => e === 3) &&
+                                occurWin.find((e) => e === 3) &&
+                                occurPoint.findIndex((e) => e === 3) === 4 &&
+                                pointD === 9
+                            ) {
+                                console.log('\n match A : ', '   ', matchAvsB, matchAvsC, matchAvsD, ':', pointA, ':', nbWinA);
+                                console.log(' match B : ', matchAvsB, '   ', matchBvsC, matchBvsD, ':', pointB, ':', nbWinB);
+                                console.log(' match C : ', matchAvsC, matchBvsC, '   ', matchCvsD, ':', pointC, ':', nbWinC);
+                                console.log(' match D : ', matchAvsD, matchBvsD, matchCvsD, '   ', ':', pointD, ':', nbWinD);
+                                count++;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    console.log(count);
+}
+function extractPointFromResult(result, player) {
+    const value = result.split('-')[player];
+    return parseInt(value) + isWin(result, player);
+}
+
+function isWin(result, player) {
+    return result.split('-')[player] == 2;
+}
 
 function bubbleSort(tab) {
     for (let i = 0; i < tab.length; i++) {

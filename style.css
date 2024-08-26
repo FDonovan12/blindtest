@@ -4,7 +4,8 @@
     --warning-color: rgb(185, 122, 3);
     --color-text: aliceblue;
     --background-color: rgba(0, 0, 0, 0);
-    --primary-color: rgb(3, 14, 107);
+    --primary-color: rgba(3, 14, 107);
+    --primary-color_transparent: rgba(3, 14, 107, 0.5);
     --background-gradient: linear-gradient(to right, rgb(3, 14, 107), #666cb6);
     --button-active: rgba(133, 37, 2, 0.4);
 }
@@ -12,9 +13,9 @@
 *,
 *:before,
 *:after {
-    transition: ease-in-out 0.3s;
     color: var(--color-text);
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
+    background-color: transparent;
     border-color: currentColor;
     box-sizing: border-box;
     margin: 0;
@@ -67,8 +68,10 @@ select {
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
-    background-color: transparent;
     outline: 0;
+    .undefined {
+        background-color: var(--primary-color);
+    }
 }
 div:has(> select) {
     position: relative;
@@ -78,14 +81,16 @@ div:has(> select) {
     &::after {
         content: '';
         position: absolute;
-        width: 10px;
-        height: 10px;
-        top: 40%;
-        transform: translateY(-50%) rotate(135deg);
-        right: 10px;
-        transform-origin: center;
-        background-image: linear-gradient(45deg, transparent 50%, var(--color-text) 50%);
-        background-repeat: no-repeat;
+        width: 5px;
+        height: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 5%;
+        width: 0;
+        height: 0;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-top: 7px solid;
         pointer-events: none;
     }
 }
@@ -93,12 +98,15 @@ div:has(> select) {
 main {
     position: relative;
     padding-inline: clamp(0.5rem, 5%, 15rem);
+    margin: 0;
     flex-grow: 1;
 }
 footer {
     padding-left: 1rem;
     width: 100%;
+    /* --background-color: darkgray; */
     background-color: darkgray;
+    /* --color-text: black; */
     margin: 0;
     /* position: sticky;
     bottom: 0; */
@@ -120,13 +128,16 @@ footer {
 }
 button {
     border-radius: 10px;
+    --background-color: rgba(0, 0, 0, 0.4);
     background-color: rgba(0, 0, 0, 0.4);
     padding-inline: 0.2rem;
+    transition: scale ease-in-out 300ms, filter ease-in-out 300ms;
     &:is(:focus:focus-visible, :hover) {
         scale: 1.1;
         z-index: 10;
     }
     &:is(:active, [active]) {
+        /* --background-color: var(--button-active); */
         background-color: var(--button-active);
     }
 }
@@ -148,15 +159,18 @@ button {
     }
 }
 .undefined {
-    background-color: var(--primary-color);
+    /* --background-color: var(--primary-color_transparent); */
+    background-color: var(--primary-color_transparent);
     --color-text: aliceblue;
 }
 .joueur-rouge {
-    --background-color: brown;
+    /* --background-color: brown; */
+    background-color: brown;
     --color-text: black;
 }
 .joueur-noir {
-    --background-color: black;
+    /* --background-color: black; */
+    background-color: black;
     --color-text: white;
 }
 
@@ -169,22 +183,18 @@ button {
 }
 
 .response-pointInfos {
-    background-color: rgba(0, 0, 0, 0.4);
     display: grid;
     grid-template-columns: 30px 150px 120px 1fr;
     border: 2px solid;
     border-radius: 10px;
     overflow: hidden;
+    align-items: center;
     i {
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
-    i:before {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        &::before {
+            height: 15px;
+        }
     }
     > div {
         padding-inline: 0.3rem;
@@ -232,7 +242,9 @@ input {
 }
 
 div:has(.grid) {
+    --background-color: white;
     background-color: white;
+    display: none;
     padding: 1rem;
 }
 .grid {
@@ -247,11 +259,9 @@ div:has(.grid) {
 .grid > * {
     border-bottom: 7px solid black;
     border-right: 7px solid black;
-    background-color: white;
-    color: black;
+    --color-text: black;
     display: flex;
     justify-content: center;
-    /* border-bottom-right-radius: 10px; */
 }
 .grid > *:last-child,
 .grid > *:nth-child(3n):nth-last-child(-n + 3) {

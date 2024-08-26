@@ -1,11 +1,4 @@
-import {
-    addResponse,
-    addParticipantsScore,
-    createTagWithParentClassContent,
-    isAudience,
-    addOptionToSelect,
-    readJsonSynchrone,
-} from './utils.js';
+import { addResponse, addParticipantsScore, createTagWithParentClassContent, isAudience, addOptionToSelect, readJsonSynchrone } from './utils.js';
 import { TagBuilder } from './tagBuilder.js';
 
 let localStorageName = 'PartyBlindtest';
@@ -25,6 +18,20 @@ export class MainObject {
     }
     get(forceImportJson) {
         this.partyBlindtest = new PartyBlindtest(readJsonSynchrone(this.fileName)['blindtest'], forceImportJson);
+    }
+
+    updateStatus() {
+        console.log('updateStatus');
+        this.partyBlindtest = PartyBlindtest.get();
+        const isPresentateurPlaying = localStorage.getItem('audio-is-playing') === 'true' ? true : false;
+        // console.log('isPresentateurPlaying : ', isPresentateurPlaying);
+        // console.log('partyBlindtest.isPlaying() : ', partyBlindtest.isPlaying());
+        // if (isPresentateurPlaying !== partyBlindtest.isPlaying()) {
+        //     // not work well the two music are desync and
+        //     // partyBlindtest.playAndPauseMusic();
+        // }
+        addResponse(this.partyBlindtest);
+        addParticipantsScore(this.partyBlindtest);
     }
 }
 
@@ -270,18 +277,14 @@ export class PartyBlindtest {
         this.save();
     }
     getDuration() {
-        return this.blindtest.sections
-            .map((section) => section.getDuration())
-            .reduce((subtotal, duration) => subtotal + duration, 0);
+        return this.blindtest.sections.map((section) => section.getDuration()).reduce((subtotal, duration) => subtotal + duration, 0);
     }
 }
 
 export class Blindtest {
     constructor(blindtest) {
         this.name = blindtest.name;
-        this.participants = blindtest.participants.map(
-            (participant) => new Participant(participant.name, participant.classCss)
-        );
+        this.participants = blindtest.participants.map((participant) => new Participant(participant.name, participant.classCss));
         this.sections = blindtest.sections.map((section) => new Section(section));
     }
 }
@@ -311,10 +314,7 @@ export class Section {
         while (currentIndex > 0) {
             let randomIndex = Math.floor(Math.random() * currentIndex);
 
-            [this.musics[currentIndex], this.musics[randomIndex]] = [
-                this.musics[randomIndex],
-                this.musics[currentIndex],
-            ];
+            [this.musics[currentIndex], this.musics[randomIndex]] = [this.musics[randomIndex], this.musics[currentIndex]];
             currentIndex--;
         }
     }
@@ -388,24 +388,17 @@ export class PointInfo {
     }
 
     createHtmlContent(partyBlindtest, divResponse) {
-        const divPointInfo = new TagBuilder('div', divResponse)
-            .setClass('response-pointInfos ' + this?.participant?.classCss)
-            .build();
+        const divPointInfo = new TagBuilder('div', divResponse).setClass('response-pointInfos ' + this?.participant?.classCss).build();
 
         // const divPointInfo = createTagWithParentClassContent('div', divResponse, 'response-pointInfos');
-        // const divVisiblePointinfo = createTagWithParentClassContent('div', divPointInfo, 'fa-solid fa-eye');
-        const divVisiblePointinfo = new TagBuilder('i', divPointInfo).setClass('fa-solid fa-eye').build();
+        // const divVisiblePointinfo = createTagWithParentClassContent('div', divPointInfo, 'fa-solid fa-eye'); <i class="fa-solid fa-eye-slash"></i>
+        const divVisiblePointinfo = new TagBuilder('i', divPointInfo).setClass('fa-solid fa-eye' + (this.isVisible ? '-slash' : '')).build();
 
         divVisiblePointinfo.addEventListener('click', () => {
             this.makeVisible(partyBlindtest);
         });
         if (isAudience()) {
-            const divValueparticipant = createTagWithParentClassContent(
-                'div',
-                divPointInfo,
-                null,
-                this?.participant?.name
-            );
+            const divValueparticipant = createTagWithParentClassContent('div', divPointInfo, null, this?.participant?.name);
         } else {
             const divselectValuePointInfo = createTagWithParentClassContent('div', divPointInfo);
             const selectValuePointInfo = createTagWithParentClassContent('select', divselectValuePointInfo);
@@ -421,10 +414,7 @@ export class PointInfo {
             });
             // divVisiblePointinfo.addEventListener('click', pointInfo.makeVisible);
         }
-        const divNamePointInfo = new TagBuilder('div', divPointInfo)
-            .setClass('inputToEnd')
-            .setTextContent(this.name)
-            .build();
+        const divNamePointInfo = new TagBuilder('div', divPointInfo).setClass('inputToEnd').setTextContent(this.name).build();
 
         let classVisible = null;
         const hasParticipantOrIsVisible = this?.participant?.name || this.isVisible;
