@@ -100,9 +100,14 @@ const canvas = document.getElementById('audioVisualizer');
 const ctx = canvas.getContext('2d');
 
 // Redimensionner le canvas pour couvrir toute la fenêtre
-const main = document.querySelector('main');
-canvas.width = main.getBoundingClientRect().width;
-canvas.height = main.getBoundingClientRect().height;
+// const main = document.querySelector('main');
+// canvas.width = main.getBoundingClientRect().width;
+// canvas.height = main.getBoundingClientRect().height;
+const style = getComputedStyle(canvas);
+canvas.width = parseInt(style.width, 10);
+canvas.height = parseInt(style.height, 10);
+console.log('style.width : ', style.width);
+console.log('style.height : ', style.height);
 console.log('canvas.width : ', canvas.width);
 console.log('canvas.height : ', canvas.height);
 
@@ -234,7 +239,7 @@ audioElement.onplay = function () {
         });
     }
 };
-createTournamentLJD();
+// createTournamentLJD();
 function createTournamentLJD() {
     const possibleResult = ['2-0', '2-1', '1-2', '0-2'];
     let count = 0;

@@ -11,70 +11,61 @@
         <title>Blind Test - Présentateur</title>
     </head>
     <body>
-        <header class="star">
+        <header class="content-grid">
             <h1>Blind Test - Présentateur</h1>
         </header>
-        <div id="forms" class="d-none">
-            <div>
-                <form>
-                    <input placeholder="Mot de passe" type="password" id="passwordInput" />
-                    <button id="password">Valider mot de passe</button>
-                </form>
-            </div>
-            <div>
-                <form>
-                    <input placeholder="Nom du particpant" type="text" id="addParticpantInput" />
-                    <button id="addParticpant">Ajouter participant</button>
-                </form>
-            </div>
-            <div>
-                <form>
-                    <div>
-                        <input
-                            placeholder="lien Youtube de la musique"
-                            type="text"
-                            id="linkYoutubeInput"
-                            value="https://www.youtube.com/watch?v=NaFd8ucHLuo&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=55"
-                            required />
-                        <button id="addLinkYoutube">Ajouter lien Youtube</button>
-                    </div>
-                    <div id="blockOfPointInfos">
+        <main class="content-grid">
+            <div id="forms" class="d-none">
+                <div>
+                    <form>
+                        <input placeholder="Mot de passe" type="password" id="passwordInput" />
+                        <button id="password">Valider mot de passe</button>
+                    </form>
+                </div>
+                <div>
+                    <form>
+                        <input placeholder="Nom du particpant" type="text" id="addParticpantInput" />
+                        <button id="addParticpant">Ajouter participant</button>
+                    </form>
+                </div>
+                <div>
+                    <form>
                         <div>
-                            <input placeholder="Titre Point infos" type="text" required />
-                            <input placeholder="Value Point infos" type="text" required />
+                            <input
+                                placeholder="lien Youtube de la musique"
+                                type="text"
+                                id="linkYoutubeInput"
+                                value="https://www.youtube.com/watch?v=NaFd8ucHLuo&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=55"
+                                required />
+                            <button id="addLinkYoutube">Ajouter lien Youtube</button>
                         </div>
-                    </div>
-                    <button id="validMusic">Valide musique</button>
-                </form>
-                <i id="addPointInfo" onclick="addFormPointInfo()" class="fa-solid fa-circle-plus"></i>
-            </div>
-        </div>
-        <div class="all-buttons">
-            <button id="openAudience">Ouvrir Audience</button>
-            <button id="previous">precedent</button>
-            <button id="play">play</button>
-            <button id="next">suivant</button>
-            <button id="downloadAnchorElem">export JSON</button>
-            <button id="readJson">import JSON</button>
-            <button id="shuffleMusics">Shuffle musique</button>
-        </div>
-        <div id="participants"></div>
-        <main>
-            <canvas id="audioVisualizer"></canvas>
-            <div class="response" id="response"></div>
-            <audio id="music-audio" controls></audio>
-            <div>
-                <div class="grid">
-                    <div>1</div>
-                    <div>2</div>
-                    <div>3</div>
-                    <div>4</div>
-                    <div>5</div>
-                    <div>6</div>
-                    <div>7</div>
+                        <div id="blockOfPointInfos">
+                            <div>
+                                <input placeholder="Titre Point infos" type="text" required />
+                                <input placeholder="Value Point infos" type="text" required />
+                            </div>
+                        </div>
+                        <button id="validMusic">Valide musique</button>
+                    </form>
+                    <i id="addPointInfo" onclick="addFormPointInfo()" class="fa-solid fa-circle-plus"></i>
                 </div>
             </div>
+            <div class="all-buttons breakout">
+                <button id="openAudience">Ouvrir Audience</button>
+                <button id="previous">precedent</button>
+                <button id="play">play</button>
+                <button id="next">suivant</button>
+                <button id="downloadAnchorElem">export JSON</button>
+                <button id="readJson">import JSON</button>
+                <button id="shuffleMusics">Shuffle musique</button>
+            </div>
+            <div id="participants" class="full-width"></div>
+            <div class="content-wrapper full-width">
+                <canvas id="audioVisualizer" class="full-width"></canvas>
+                <div class="response" id="response"></div>
+                <audio id="music-audio" controls></audio>
+            </div>
         </main>
-        <footer></footer>
+        <footer class="full-width"></footer>
     </body>
 </html>

@@ -8,6 +8,14 @@
     --primary-color_transparent: rgba(3, 14, 107, 0.5);
     --background-gradient: linear-gradient(to right, rgb(3, 14, 107), #666cb6);
     --button-active: rgba(133, 37, 2, 0.4);
+
+    --fs-300: clamp(0.94rem, calc(0.92rem + 0.08vw), 0.98rem);
+    --fs-400: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
+    --fs-500: clamp(1.35rem, calc(1.21rem + 0.69vw), 1.75rem);
+    --fs-600: clamp(1.62rem, calc(1.37rem + 1.24vw), 2.33rem);
+    --fs-700: clamp(1.94rem, calc(1.54rem + 2.03vw), 3.11rem);
+    --fs-800: clamp(2.33rem, calc(1.7rem + 3.15vw), 4.14rem);
+    --fs-900: clamp(2.8rem, calc(1.85rem + 4.74vw), 5.52rem);
 }
 
 *,
@@ -40,25 +48,86 @@ canvas {
     z-index: -100;
 }
 
+main {
+    position: relative;
+    grid-template-rows: auto auto 1fr;
+    height: 100%;
+    flex-grow: 1;
+    /* & > :not(.content-wrapper) {
+        align-self: auto;
+        height: fit-content;
+        background-color: #666cb6;
+    } */
+    .content-wrapper {
+        position: relative;
+        height: 100%;
+        /* align-self: max; */
+        /* background-color: red; */
+    }
+}
+
+.content-grid {
+    --gap: clamp(1rem, 6vw, 3rem);
+    --full: minmax(var(--gap), 1fr);
+    --popout: minmax(0rem, 2rem);
+    --feature: minmax(0rem, 5rem);
+    --content: min(75ch, 100% - calc((var(--gap)) * 2));
+    display: grid;
+    grid-template-columns:
+        [full-width-start] var(--full)
+        [breakout-start] var(--popout)
+        [content-start] var(--content) [content-end]
+        var(--popout) [breakout-end]
+        var(--full) [full-width-end];
+
+    > :not(.breakout, .full-width) {
+        grid-column: content;
+    }
+    > .breakout {
+        grid-column: breakout;
+    }
+    > .full-width {
+        grid-column: full-width;
+        display: grid;
+        grid-template-columns: inherit;
+    }
+}
+.full-width > :not(.breakout, .full-width) {
+    grid-column: content;
+}
+/* .content-grid {
+    > :not(.breakout, .full-width),
+    > .full-width > :not(.breakout, .full-width) {
+        margin-inline: 200px;
+    }
+    > .breakout {
+        margin-inline: 100px;
+    }
+    > .full-width {
+        margin-inline: 0;
+    }
+} */
 .d-none {
     display: none;
+}
+h1 {
+    font-size: var(--fs-700);
 }
 html,
 body {
     height: 100%;
+    font-size: var(--fs-400);
 }
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    min-height: 100svh;
     background: url('1230968-ciel-etoile-gratuit-photo.jpeg');
     background: url('7210104-galaxy-stars-in-the-univers-hors-terre-abstract-graphic-design-wallpaper-card-3d-gratuit-photo.jpg');
     background: url('7359962-galaxy-stars-in-the-univers-hors-terre-abstract-graphic-design-wallpaper-card-3d-gratuit-photo.jpg');
     background-size: cover;
     /* background-size: contain; */
-    > * {
-        margin: 2rem;
-    }
 }
 select {
     appearance: none;
@@ -95,19 +164,12 @@ div:has(> select) {
     }
 }
 
-main {
-    position: relative;
-    padding-inline: clamp(0.5rem, 5%, 15rem);
-    margin: 0;
-    flex-grow: 1;
-}
 footer {
-    padding-left: 1rem;
+    /* padding-left: 1rem; */
     width: 100%;
     /* --background-color: darkgray; */
     background-color: darkgray;
-    /* --color-text: black; */
-    margin: 0;
+    --color-text: black;
     /* position: sticky;
     bottom: 0; */
 }
@@ -115,8 +177,9 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin: 0.5rem 2rem;
-    width: 50%;
+    /* margin: 0.5rem 2rem; */
+    /* width: 50%; */
+    font-size: var(--fs-300);
     > button {
         flex-basis: 100%;
         margin: 0.2rem;
@@ -128,7 +191,7 @@ footer {
 }
 button {
     border-radius: 10px;
-    --background-color: rgba(0, 0, 0, 0.4);
+    /* --background-color: rgba(0, 0, 0, 0.4); */
     background-color: rgba(0, 0, 0, 0.4);
     padding-inline: 0.2rem;
     transition: scale ease-in-out 300ms, filter ease-in-out 300ms;
@@ -140,12 +203,15 @@ button {
         /* --background-color: var(--button-active); */
         background-color: var(--button-active);
     }
+    &:not(:hover) {
+        animation: zIndexHack 100ms;
+    }
 }
+
 #participants {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin: 0;
     > div {
         flex-basis: 20%;
         flex-grow: 1;
@@ -173,7 +239,21 @@ button {
     background-color: black;
     --color-text: white;
 }
-
+.joueur-3 {
+    /* --background-color: black; */
+    background-color: rgb(11, 167, 6);
+    --color-text: black;
+}
+.joueur-4 {
+    /* --background-color: black; */
+    background-color: rgb(27, 161, 161);
+    --color-text: black;
+}
+.joueur-5 {
+    /* --background-color: black; */
+    background-color: rgb(235, 211, 78);
+    --color-text: black;
+}
 .section-details {
     display: flex;
     justify-content: space-between;
@@ -184,7 +264,7 @@ button {
 
 .response-pointInfos {
     display: grid;
-    grid-template-columns: 30px 150px 120px 1fr;
+    grid-template-columns: 1.5em 15ch 15ch 1fr;
     border: 2px solid;
     border-radius: 10px;
     overflow: hidden;
@@ -192,18 +272,18 @@ button {
     i {
         display: flex;
         justify-content: center;
-        &::before {
+        align-items: center;
+        /* &::before {
             height: 15px;
-        }
+        } */
     }
     > div {
         padding-inline: 0.3rem;
     }
-    div:has(&) {
+    .response:has(&) {
         display: flex;
         flex-direction: column;
         gap: 1em;
-        margin: 1rem;
     }
     input {
         border: 0;
@@ -249,7 +329,7 @@ div:has(.grid) {
 }
 .grid {
     display: grid;
-    grid-template-columns: 100px 100px 100px;
+    /* grid-template-columns: 100px 100px 100px; */
     border-left: 7px solid black;
     border-top: 7px solid black;
     width: fit-content;
@@ -266,4 +346,11 @@ div:has(.grid) {
 .grid > *:last-child,
 .grid > *:nth-child(3n):nth-last-child(-n + 3) {
     border-bottom-right-radius: 10px;
+}
+
+@keyframes zIndexHack {
+    0%,
+    100% {
+        z-index: 100;
+    }
 }

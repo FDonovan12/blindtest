@@ -84,25 +84,20 @@ function secondsToTime(seconds) {
 
 export function createResponse(partyBlindtest, divResponse) {
     // const divSection = createTagWithParentClassContent('div', divResponse);
-    const divSection = new TagBuilder('div', divResponse).build();
-    // const divSectionName2 = createTagWithParentClassContent('div', divSection, 'h4', partyBlindtest.getSection().name);
-    const divSectionName = new TagBuilder('div', divSection)
-        .setClass('h4')
-        .setTextContent(partyBlindtest.getSection().name)
-        .build();
-    const divSectionDetails = new TagBuilder('div', divSection).setClass('section-details').build();
-    const divSectionDetailsContent = new TagBuilder('div', divSectionDetails)
-        .setTextContent(partyBlindtest.getSection().details)
-        .build();
+    // const divSection = new TagBuilder('div', divResponse).build();
+    // const divSectionName2 = createTagWithParentClassContent('div', divResponse, 'h4', partyBlindtest.getSection().name);
+    const divSectionName = new TagBuilder('div', divResponse).setClass('h4').setTextContent(partyBlindtest.getSection().name).build();
+    const divSectionDetails = new TagBuilder('div', divResponse).setClass('section-details').build();
+    const divSectionDetailsContent = new TagBuilder('div', divSectionDetails).setTextContent(partyBlindtest.getSection().details).build();
     const divCurrentMusicNumberSection = new TagBuilder('div', divSectionDetails)
         .setTextContent(`Musique ${partyBlindtest.currentMusic + 1} / ${partyBlindtest.getSection().musics.length}`)
         .build();
-    const divTotalTime = new TagBuilder('div', divSection)
+    const divTotalTime = new TagBuilder('div', divResponse)
         .setTextContent(`${secondsToTime(partyBlindtest.getDuration())} : ${partyBlindtest.getDuration()}s`)
         .build();
     const pointInfos = partyBlindtest.getMusic().pointInfos;
     pointInfos?.map((pointInfo) => {
-        pointInfo.createHtmlContent(partyBlindtest, divSection);
+        pointInfo.createHtmlContent(partyBlindtest, divResponse);
         // let classVisible = null;
         // if (isAudience()) {
         //     if (!(pointInfo.participant || pointInfo.isVisible)) {
@@ -152,9 +147,7 @@ export function createResponse(partyBlindtest, divResponse) {
 export function addParticipantsScore(partyBlindtest) {
     const divParticipantsScore = document.querySelector('#participants');
     divParticipantsScore.innerHTML = null;
-    partyBlindtest
-        .getParticipants()
-        .map((participant) => addparticipantScore(partyBlindtest, divParticipantsScore, participant));
+    partyBlindtest.getParticipants().map((participant) => addparticipantScore(partyBlindtest, divParticipantsScore, participant));
 }
 
 export function addparticipantScore(partyBlindtest, divParticipantsScore, participant) {
@@ -163,12 +156,7 @@ export function addparticipantScore(partyBlindtest, divParticipantsScore, partic
     divParticipantDelete.addEventListener('click', (event) => {
         partyBlindtest.deleteParticipant(participant);
     });
-    const divParticipantName = createTagWithParentClassContent(
-        'div',
-        divParticipant,
-        null,
-        'Joueur : ' + participant.name
-    );
+    const divParticipantName = createTagWithParentClassContent('div', divParticipant, null, 'Joueur : ' + participant.name);
     const divParticipantScore = createTagWithParentClassContent(
         'div',
         divParticipant,
