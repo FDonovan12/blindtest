@@ -5,7 +5,7 @@
     --color-text: aliceblue;
     --background-color: rgba(0, 0, 0, 0);
     --primary-color: rgba(3, 14, 107);
-    --primary-color_transparent: rgba(3, 14, 107, 0.5);
+    --primary-color_transparent: rgba(3, 14, 107, 0.6);
     --background-gradient: linear-gradient(to right, rgb(3, 14, 107), #666cb6);
     --button-active: rgba(133, 37, 2, 0.4);
 
@@ -22,7 +22,6 @@
 *:before,
 *:after {
     color: var(--color-text);
-    /* background-color: var(--background-color); */
     background-color: transparent;
     border-color: currentColor;
     box-sizing: border-box;
@@ -53,33 +52,28 @@ main {
     grid-template-rows: auto auto 1fr;
     height: 100%;
     flex-grow: 1;
-    /* & > :not(.content-wrapper) {
-        align-self: auto;
-        height: fit-content;
-        background-color: #666cb6;
-    } */
     .content-wrapper {
         position: relative;
         height: 100%;
-        /* align-self: max; */
-        /* background-color: red; */
     }
 }
 
 .content-grid {
     --gap: clamp(1rem, 6vw, 3rem);
     --full: minmax(var(--gap), 1fr);
-    --popout: minmax(0rem, 2rem);
+    --breakout: minmax(0rem, 4rem);
     --feature: minmax(0rem, 5rem);
     --content: min(75ch, 100% - calc((var(--gap)) * 2));
     display: grid;
     grid-template-columns:
         [full-width-start] var(--full)
-        [breakout-start] var(--popout)
+        [breakout-start] var(--breakout)
         [content-start] var(--content) [content-end]
-        var(--popout) [breakout-end]
+        var(--breakout) [breakout-end]
         var(--full) [full-width-end];
-
+}
+.content-grid,
+.full-width {
     > :not(.breakout, .full-width) {
         grid-column: content;
     }
@@ -92,21 +86,7 @@ main {
         grid-template-columns: inherit;
     }
 }
-.full-width > :not(.breakout, .full-width) {
-    grid-column: content;
-}
-/* .content-grid {
-    > :not(.breakout, .full-width),
-    > .full-width > :not(.breakout, .full-width) {
-        margin-inline: 200px;
-    }
-    > .breakout {
-        margin-inline: 100px;
-    }
-    > .full-width {
-        margin-inline: 0;
-    }
-} */
+
 .d-none {
     display: none;
 }
@@ -116,18 +96,19 @@ h1 {
 html,
 body {
     height: 100%;
-    font-size: var(--fs-400);
+    width: 100%;
+    /* width: 100dvh; */
 }
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     min-height: 100svh;
+    font-size: var(--fs-400);
     background: url('1230968-ciel-etoile-gratuit-photo.jpeg');
     background: url('7210104-galaxy-stars-in-the-univers-hors-terre-abstract-graphic-design-wallpaper-card-3d-gratuit-photo.jpg');
     background: url('7359962-galaxy-stars-in-the-univers-hors-terre-abstract-graphic-design-wallpaper-card-3d-gratuit-photo.jpg');
     background-size: cover;
-    /* background-size: contain; */
 }
 select {
     appearance: none;
@@ -138,6 +119,8 @@ select {
     font-size: inherit;
     line-height: inherit;
     outline: 0;
+    display: flex;
+    flex-direction: column;
     .undefined {
         background-color: var(--primary-color);
     }
@@ -152,8 +135,8 @@ div:has(> select) {
         position: absolute;
         width: 5px;
         height: 5px;
-        top: 50%;
-        transform: translateY(-50%);
+        bottom: 10%;
+        /* transform: translateY(-50%); */
         right: 5%;
         width: 0;
         height: 0;
@@ -165,23 +148,19 @@ div:has(> select) {
 }
 
 footer {
-    /* padding-left: 1rem; */
     width: 100%;
-    /* --background-color: darkgray; */
     background-color: darkgray;
     --color-text: black;
-    /* position: sticky;
-    bottom: 0; */
+    font-size: var(--fs-300);
 }
 .all-buttons {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
-    /* margin: 0.5rem 2rem; */
-    /* width: 50%; */
-    font-size: var(--fs-300);
     > button {
-        flex-basis: 100%;
+        flex-basis: 0%;
+        flex-grow: 1;
         margin: 0.2rem;
     }
     &:has(button:focus:focus-visible) button:not(:focus:focus-visible),
@@ -191,7 +170,6 @@ footer {
 }
 button {
     border-radius: 10px;
-    /* --background-color: rgba(0, 0, 0, 0.4); */
     background-color: rgba(0, 0, 0, 0.4);
     padding-inline: 0.2rem;
     transition: scale ease-in-out 300ms, filter ease-in-out 300ms;
@@ -200,7 +178,6 @@ button {
         z-index: 10;
     }
     &:is(:active, [active]) {
-        /* --background-color: var(--button-active); */
         background-color: var(--button-active);
     }
     &:not(:hover) {
@@ -225,32 +202,26 @@ button {
     }
 }
 .undefined {
-    /* --background-color: var(--primary-color_transparent); */
     background-color: var(--primary-color_transparent);
     --color-text: aliceblue;
 }
 .joueur-rouge {
-    /* --background-color: brown; */
     background-color: brown;
     --color-text: black;
 }
 .joueur-noir {
-    /* --background-color: black; */
     background-color: black;
     --color-text: white;
 }
 .joueur-3 {
-    /* --background-color: black; */
     background-color: rgb(11, 167, 6);
     --color-text: black;
 }
 .joueur-4 {
-    /* --background-color: black; */
     background-color: rgb(27, 161, 161);
     --color-text: black;
 }
 .joueur-5 {
-    /* --background-color: black; */
     background-color: rgb(235, 211, 78);
     --color-text: black;
 }
@@ -264,11 +235,16 @@ button {
 
 .response-pointInfos {
     display: grid;
-    grid-template-columns: 1.5em 15ch 15ch 1fr;
+    grid-template-columns: 1.5em minmax(10ch, 15ch) minmax(9ch, 15ch) 1fr;
     border: 2px solid;
     border-radius: 10px;
     overflow: hidden;
     align-items: center;
+    * {
+        height: 100%;
+        /* text-align: center; */
+        vertical-align: middle;
+    }
     i {
         display: flex;
         justify-content: center;
@@ -279,11 +255,13 @@ button {
     }
     > div {
         padding-inline: 0.3rem;
+        display: flex;
+        align-items: center;
     }
     .response:has(&) {
-        display: flex;
-        flex-direction: column;
-        gap: 1em;
+        /* display: flex;
+        flex-direction: column; */
+        row-gap: 1em;
     }
     input {
         border: 0;
@@ -292,7 +270,6 @@ button {
     }
 }
 .inputToEnd {
-    display: flex;
     justify-content: end;
     border-right: 0.3rem solid;
 }
@@ -322,7 +299,6 @@ input {
 }
 
 div:has(.grid) {
-    --background-color: white;
     background-color: white;
     display: none;
     padding: 1rem;

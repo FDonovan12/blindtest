@@ -388,7 +388,7 @@ export class PointInfo {
     }
 
     createHtmlContent(partyBlindtest, divResponse) {
-        const divPointInfo = new TagBuilder('div', divResponse).setClass('response-pointInfos ' + this?.participant?.classCss).build();
+        const divPointInfo = new TagBuilder('div', divResponse).setClass('breakout response-pointInfos ' + this?.participant?.classCss).build();
 
         // const divPointInfo = createTagWithParentClassContent('div', divResponse, 'response-pointInfos');
         // const divVisiblePointinfo = createTagWithParentClassContent('div', divPointInfo, 'fa-solid fa-eye'); <i class="fa-solid fa-eye-slash"></i>

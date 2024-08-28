@@ -92,8 +92,8 @@ function setTitle() {
 
 function addFooter() {
     const footer = document.getElementsByTagName('footer')[0];
-    let div = document.createElement('div');
-    let span = document.createElement('span');
+    const div = document.createElement('div');
+    const span = document.createElement('span');
     span.innerHTML = 'Copyright © 2024 Donovan Ferreira. Tous droits réservés.';
     div.appendChild(span);
     footer.appendChild(div);
