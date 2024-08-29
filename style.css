@@ -51,7 +51,7 @@ main {
     position: relative;
     grid-template-rows: auto auto 1fr;
     height: 100%;
-    flex-grow: 1;
+    /* flex-grow: 1; */
     .content-wrapper {
         position: relative;
         height: 100%;
@@ -109,42 +109,6 @@ body {
     background: url('7210104-galaxy-stars-in-the-univers-hors-terre-abstract-graphic-design-wallpaper-card-3d-gratuit-photo.jpg');
     background: url('7359962-galaxy-stars-in-the-univers-hors-terre-abstract-graphic-design-wallpaper-card-3d-gratuit-photo.jpg');
     background-size: cover;
-}
-select {
-    appearance: none;
-    border: none;
-    width: 100%;
-    margin: 0;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    outline: 0;
-    display: flex;
-    flex-direction: column;
-    .undefined {
-        background-color: var(--primary-color);
-    }
-}
-div:has(> select) {
-    position: relative;
-    border-left: 0.2em solid;
-    border-right: 0.2em solid;
-    padding: 0 0.2em;
-    &::after {
-        content: '';
-        position: absolute;
-        width: 5px;
-        height: 5px;
-        bottom: 10%;
-        /* transform: translateY(-50%); */
-        right: 5%;
-        width: 0;
-        height: 0;
-        border-left: 7px solid transparent;
-        border-right: 7px solid transparent;
-        border-top: 7px solid;
-        pointer-events: none;
-    }
 }
 
 footer {
@@ -235,45 +199,90 @@ button {
 
 .response-pointInfos {
     display: grid;
-    grid-template-columns: 1.5em minmax(10ch, 15ch) minmax(9ch, 15ch) 1fr;
+    /* grid-template-columns: [name-start value-start] 1.5em minmax(10ch, 15ch) minmax(9ch, 15ch) 1fr [value-end]; */
+    grid-template-columns: [name-start value-start] minmax(10ch, 1fr) [name-end select-start] minmax(9ch, 15ch) [select-end icon-start] 1.5em [icon-end value-end];
+    grid-template-rows: [name-start select-start] 2fr [icon-start] 1fr [name-end select-end value-start] 1fr [icon-end] 2fr [value-end];
     border: 2px solid;
     border-radius: 10px;
     overflow: hidden;
     align-items: center;
+    .response:has(&) {
+        height: fit-content;
+        row-gap: 1em;
+    }
     * {
         height: 100%;
-        /* text-align: center; */
         vertical-align: middle;
     }
     i {
         display: flex;
         justify-content: center;
         align-items: center;
-        /* &::before {
-            height: 15px;
-        } */
+        grid-column: icon;
+        grid-row: icon;
+        z-index: 1;
+    }
+    > div:has(select) {
+        grid-column: select;
+        grid-row: select;
     }
     > div {
         padding-inline: 0.3rem;
         display: flex;
         align-items: center;
     }
-    .response:has(&) {
-        /* display: flex;
-        flex-direction: column; */
-        row-gap: 1em;
-    }
     input {
         border: 0;
         border-radius: 0;
         outline: 1px solid black;
     }
+    .name-point-infos {
+        /* justify-content: end; */
+        /* border-right: 0.3rem solid; */
+        grid-column: name;
+        grid-row: name;
+    }
+    .value-point-infos {
+        grid-column: value;
+        grid-row: value;
+    }
 }
-.inputToEnd {
-    justify-content: end;
-    border-right: 0.3rem solid;
+select {
+    appearance: none;
+    border: none;
+    width: 100%;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    outline: 0;
+    display: flex;
+    flex-direction: column;
+    .undefined {
+        background-color: var(--primary-color);
+    }
 }
-
+div:has(> select) {
+    position: relative;
+    /* border-left: 0.2em solid;
+    border-right: 0.2em solid; */
+    padding: 0 0.2em;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        bottom: 50%;
+        /* transform: translateY(-50%); */
+        right: 5%;
+        width: 0;
+        height: 0;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-top: 7px solid;
+        pointer-events: none;
+    }
+}
 form {
     input {
         min-width: 25rem;

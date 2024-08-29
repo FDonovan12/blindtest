@@ -414,7 +414,7 @@ export class PointInfo {
             });
             // divVisiblePointinfo.addEventListener('click', pointInfo.makeVisible);
         }
-        const divNamePointInfo = new TagBuilder('div', divPointInfo).setClass('inputToEnd').setTextContent(this.name).build();
+        const divNamePointInfo = new TagBuilder('div', divPointInfo).setClass('name-point-infos').setTextContent(this.name).build();
 
         let classVisible = null;
         const hasParticipantOrIsVisible = this?.participant?.name || this.isVisible;
@@ -425,7 +425,7 @@ export class PointInfo {
             classVisible = 'invisible';
         } else {
         }
-        const divValuePointInfo = createTagWithParentClassContent('div', divPointInfo, classVisible, this.value);
+        const divValuePointInfo = createTagWithParentClassContent('div', divPointInfo, classVisible + ' value-point-infos', this.value);
         // const inputNamePointInfo = createTagWithParentClassContent('input', divPointInfo, 'inputToEnd', this.name);
         // inputNamePointInfo.value = this.name;
         // divValuePointInfo.value = this.value;
