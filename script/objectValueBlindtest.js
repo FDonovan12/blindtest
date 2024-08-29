@@ -389,17 +389,12 @@ export class PointInfo {
 
     createHtmlContent(partyBlindtest, divResponse) {
         const divPointInfo = new TagBuilder('div', divResponse).setClass('breakout response-pointInfos ' + this?.participant?.classCss).build();
-
-        // const divPointInfo = createTagWithParentClassContent('div', divResponse, 'response-pointInfos');
-        // const divVisiblePointinfo = createTagWithParentClassContent('div', divPointInfo, 'fa-solid fa-eye'); <i class="fa-solid fa-eye-slash"></i>
         const divVisiblePointinfo = new TagBuilder('i', divPointInfo).setClass('fa-solid fa-eye' + (this.isVisible ? '-slash' : '')).build();
 
         divVisiblePointinfo.addEventListener('click', () => {
             this.makeVisible(partyBlindtest);
         });
-        if (isAudience()) {
-            const divValueparticipant = createTagWithParentClassContent('div', divPointInfo, null, this?.participant?.name);
-        } else {
+        if (!isAudience()) {
             const divselectValuePointInfo = createTagWithParentClassContent('div', divPointInfo);
             const selectValuePointInfo = createTagWithParentClassContent('select', divselectValuePointInfo);
             selectValuePointInfo.addEventListener('change', (value) => {
@@ -423,7 +418,6 @@ export class PointInfo {
                 classVisible = 'invisible';
             }
             classVisible = 'invisible';
-        } else {
         }
         const divValuePointInfo = createTagWithParentClassContent('div', divPointInfo, classVisible + ' value-point-infos', this.value);
         // const inputNamePointInfo = createTagWithParentClassContent('input', divPointInfo, 'inputToEnd', this.name);
