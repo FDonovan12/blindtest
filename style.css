@@ -125,7 +125,7 @@ footer {
     > button {
         flex-basis: 0%;
         flex-grow: 1;
-        margin: 0.2rem;
+        margin: 0.2em;
     }
     &:has(button:focus:focus-visible) button:not(:focus:focus-visible),
     &:has(button:hover) button:not(:hover) {
@@ -135,7 +135,7 @@ footer {
 button {
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.4);
-    padding-inline: 0.2rem;
+    padding-inline: 0.2em;
     transition: scale ease-in-out 300ms, filter ease-in-out 300ms;
     &:is(:focus:focus-visible, :hover) {
         scale: 1.1;
@@ -162,7 +162,7 @@ button {
         justify-content: center;
         align-content: center;
         align-items: center;
-        padding: 0.5rem 0rem;
+        padding: 0.4em 0em;
     }
 }
 .undefined {
@@ -218,33 +218,45 @@ button {
         display: flex;
         justify-content: center;
         align-items: center;
-        grid-column: icon;
-        grid-row: icon;
+        grid-area: icon;
         z-index: 1;
     }
     > div:has(select) {
-        grid-column: select;
-        grid-row: select;
-    }
-    > div {
-        padding-inline: 0.3rem;
-        display: flex;
-        align-items: center;
+        grid-area: select;
+        position: relative;
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            right: 2em;
+            border: 7px solid transparent;
+            pointer-events: none;
+        }
+        &::after {
+            top: 52%;
+            border-top-color: currentColor;
+        }
+        &::before {
+            bottom: 52%;
+            border-bottom-color: currentColor;
+        }
     }
     input {
         border: 0;
         border-radius: 0;
         outline: 1px solid black;
     }
+    .value-point-infos,
     .name-point-infos {
-        /* justify-content: end; */
-        /* border-right: 0.3rem solid; */
-        grid-column: name;
-        grid-row: name;
+        padding: 0.2em 0.5em;
+        display: flex;
+        align-items: center;
+    }
+    .name-point-infos {
+        grid-area: name;
     }
     .value-point-infos {
-        grid-column: value;
-        grid-row: value;
+        grid-area: value;
     }
 }
 select {
@@ -262,36 +274,16 @@ select {
         background-color: var(--primary-color);
     }
 }
-div:has(> select) {
-    position: relative;
-    padding: 0 0.2em;
-    &::after,
-    &::before {
-        content: '';
-        position: absolute;
-        right: 2em;
-        border: 7px solid transparent;
-        pointer-events: none;
-    }
-    &::after {
-        top: 52%;
-        border-top-color: currentColor;
-    }
-    &::before {
-        bottom: 52%;
-        border-bottom-color: currentColor;
-    }
-}
 form {
     input {
-        min-width: 25rem;
+        min-width: 40ch;
     }
 }
 input {
     border: 3px solid;
-    margin-block: 0.2rem;
+    margin-block: 0.2em;
     border-radius: 5px;
-    padding-inline: 0.2rem;
+    padding-inline: 0.2em;
     &:valid {
         border-color: var(--success-color);
     }
@@ -304,32 +296,6 @@ input {
     &:focus {
         outline: 1px;
     }
-}
-
-div:has(.grid) {
-    background-color: white;
-    display: none;
-    padding: 1rem;
-}
-.grid {
-    display: grid;
-    /* grid-template-columns: 100px 100px 100px; */
-    border-left: 7px solid black;
-    border-top: 7px solid black;
-    width: fit-content;
-    border-radius: 10px;
-    /* overflow: hidden; */
-}
-.grid > * {
-    border-bottom: 7px solid black;
-    border-right: 7px solid black;
-    --color-text: black;
-    display: flex;
-    justify-content: center;
-}
-.grid > *:last-child,
-.grid > *:nth-child(3n):nth-last-child(-n + 3) {
-    border-bottom-right-radius: 10px;
 }
 
 @keyframes zIndexHack {

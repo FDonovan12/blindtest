@@ -400,7 +400,7 @@ export class PointInfo {
             selectValuePointInfo.addEventListener('change', (value) => {
                 this.changeParticipant(selectValuePointInfo.value, partyBlindtest);
             });
-            addOptionToSelect(selectValuePointInfo, '', '', undefined);
+            addOptionToSelect(selectValuePointInfo, '', 'undefined', undefined);
             partyBlindtest.getParticipants().map((participant, index) => {
                 addOptionToSelect(selectValuePointInfo, participant.name, participant.name, participant.classCss);
                 if (participant.name === this?.participant?.name) {
