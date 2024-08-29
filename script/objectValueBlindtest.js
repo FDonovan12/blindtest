@@ -405,12 +405,12 @@ export class PointInfo {
             selectValuePointInfo.addEventListener('change', (value) => {
                 this.changeParticipant(selectValuePointInfo.value, partyBlindtest);
             });
-            addOptionToSelect(selectValuePointInfo, '', undefined);
+            addOptionToSelect(selectValuePointInfo, '', '');
             partyBlindtest.getParticipants().map((participant, index) => {
                 addOptionToSelect(selectValuePointInfo, participant.name, participant.name, participant.classCss);
-                if (participant.name === this?.participant?.name) {
-                    selectValuePointInfo.selectedIndex = index + 1;
-                }
+                // if (participant.name === this?.participant?.name) {
+                //     selectValuePointInfo.selectedIndex = index + 1;
+                // }
             });
             // divVisiblePointinfo.addEventListener('click', pointInfo.makeVisible);
         }

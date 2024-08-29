@@ -200,8 +200,8 @@ button {
 .response-pointInfos {
     display: grid;
     /* grid-template-columns: [name-start value-start] 1.5em minmax(10ch, 15ch) minmax(9ch, 15ch) 1fr [value-end]; */
-    grid-template-columns: [name-start value-start] minmax(10ch, 1fr) [name-end select-start] minmax(9ch, 15ch) [select-end icon-start] 1.5em [icon-end value-end];
-    grid-template-rows: [name-start select-start] 2fr [icon-start] 1fr [name-end select-end value-start] 1fr [icon-end] 2fr [value-end];
+    grid-template-columns: [name-start value-start select-start] minmax(10ch, 1fr) [name-end] minmax(9ch, 15ch) [ icon-start] 1.5em [icon-end value-end select-end];
+    grid-template-rows: [name-start select-start] 2fr [icon-start] 1fr [name-end value-start] 1fr [icon-end] 2fr [value-end select-end];
     border: 2px solid;
     border-radius: 10px;
     overflow: hidden;
@@ -274,7 +274,7 @@ div:has(> select) {
         height: 5px;
         bottom: 50%;
         /* transform: translateY(-50%); */
-        right: 5%;
+        right: 2em;
         width: 0;
         height: 0;
         border-left: 7px solid transparent;
