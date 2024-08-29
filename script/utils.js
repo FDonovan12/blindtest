@@ -34,6 +34,10 @@ export function addOptionToSelect(select, optionValue, optionText, classCss) {
     option.className = classCss;
     option.value = optionValue;
     option.text = optionText;
+    if (!optionText) {
+        // Assurez-vous que l'option par défaut est marquée comme sélectionnée
+        option.selected = true;
+    }
     select.add(option);
 }
 
