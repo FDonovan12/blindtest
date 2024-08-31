@@ -35,6 +35,7 @@ video,
 svg {
     display: block;
     max-width: 100%;
+    fill: currentColor;
 }
 
 canvas {
@@ -60,35 +61,63 @@ main {
 
 .content-grid {
     --gap: clamp(1rem, 6vw, 3rem);
-    --full: minmax(var(--gap), 1fr);
+    --full: minmax(var(--gap), 5fr);
     --breakout: minmax(0rem, 4rem);
+    /* --breakout-size: clamp(0.5rem, 6vw, 3rem);
+    --breakout: minmax(var(--breakout-size), 1fr); */
     --feature: minmax(0rem, 5rem);
-    --content: min(75ch, 100% - calc((var(--gap)) * 2));
+    --max-content-size: 75ch;
+    --content: min(var(--max-content-size), 100% - calc((calc(var(--gap))) * 2));
+    --half-content: calc(var(--content) / 2);
     display: grid;
     grid-template-columns:
         [full-width-start] var(--full)
         [breakout-start] var(--breakout)
-        [content-start] var(--content) [content-end]
+        [content-start] var(--half-content)
+        [middle]
+        var(--half-content) [content-end]
         var(--breakout) [breakout-end]
         var(--full) [full-width-end];
-}
-.content-grid,
-.full-width {
-    > :not(.breakout, .full-width) {
+    > * {
         grid-column: content;
+    }
+    > .middle {
+        grid-column: middle;
+        padding-left: 0.5em;
+    }
+    > .middle-start {
+        grid-column-start: middle;
+        padding-left: 0.5em;
+    }
+    > .middle-end {
+        grid-column-end: middle;
+        padding-right: 0.5em;
     }
     > .breakout {
         grid-column: breakout;
     }
+    > .breakout-start {
+        grid-column-start: breakout;
+    }
+    > .breakout-end {
+        grid-column-end: breakout;
+    }
     > .full-width {
         grid-column: full-width;
-        display: grid;
-        grid-template-columns: inherit;
+    }
+    > .full-width-start {
+        grid-column-start: full-width;
+    }
+    > .full-width-end {
+        grid-column-end: full-width;
     }
 }
 
 .d-none {
     display: none;
+}
+.invisible {
+    color: transparent;
 }
 h1 {
     font-size: var(--fs-700);
@@ -96,14 +125,12 @@ h1 {
 html,
 body {
     height: 100%;
-    width: 100%;
+    /* width: 100%; */
     /* width: 100dvh; */
 }
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    min-height: 100svh;
     font-size: var(--fs-400);
     background: url('1230968-ciel-etoile-gratuit-photo.jpeg');
     background: url('7210104-galaxy-stars-in-the-univers-hors-terre-abstract-graphic-design-wallpaper-card-3d-gratuit-photo.jpg');
@@ -122,6 +149,8 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(11ch, 1fr));
     > button {
         flex-basis: 0%;
         flex-grow: 1;
@@ -190,11 +219,11 @@ button {
     --color-text: black;
 }
 .section-details {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
     > div {
         max-width: 50%;
-    }
+    } */
 }
 
 .response-pointInfos {

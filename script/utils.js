@@ -91,9 +91,13 @@ export function createResponse(partyBlindtest, divResponse) {
     // const divSection = new TagBuilder('div', divResponse).build();
     // const divSectionName2 = createTagWithParentClassContent('div', divResponse, 'h4', partyBlindtest.getSection().name);
     const divSectionName = new TagBuilder('div', divResponse).setClass('h4').setTextContent(partyBlindtest.getSection().name).build();
-    const divSectionDetails = new TagBuilder('div', divResponse).setClass('section-details').build();
-    const divSectionDetailsContent = new TagBuilder('div', divSectionDetails).setTextContent(partyBlindtest.getSection().details).build();
+    const divSectionDetails = new TagBuilder('div', divResponse).setClass('section-details content-grid').build();
+    const divSectionDetailsContent = new TagBuilder('div', divSectionDetails)
+        .setClass('middle-end')
+        .setTextContent(partyBlindtest.getSection().details)
+        .build();
     const divCurrentMusicNumberSection = new TagBuilder('div', divSectionDetails)
+        .setClass('middle-start')
         .setTextContent(`Musique ${partyBlindtest.currentMusic + 1} / ${partyBlindtest.getSection().musics.length}`)
         .build();
     const divTotalTime = new TagBuilder('div', divResponse)

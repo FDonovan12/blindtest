@@ -388,7 +388,10 @@ export class PointInfo {
     }
 
     createHtmlContent(partyBlindtest, divResponse) {
-        const divPointInfo = new TagBuilder('div', divResponse).setClass('breakout response-pointInfos ' + this?.participant?.classCss).build();
+        const classdivPointInfo = divResponse.childElementCount % 2 === 0 ? 'breakout-start' : 'breakout-end';
+        const divPointInfo = new TagBuilder('div', divResponse)
+            .setClass(classdivPointInfo + ' response-pointInfos ' + this?.participant?.classCss)
+            .build();
         const divVisiblePointinfo = new TagBuilder('i', divPointInfo).setClass('fa-solid fa-eye' + (this.isVisible ? '-slash' : '')).build();
 
         divVisiblePointinfo.addEventListener('click', () => {

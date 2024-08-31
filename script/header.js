@@ -65,10 +65,10 @@ function addHeadContent() {
 
     setTitle();
     createLinkFontAwesome(head);
-    createLinkBoostrapStyle(head);
+    // createLinkBoostrapStyle(head);
     createLinkMainCSS(head);
     // createLinkMainScript(head);
-    createLinkBoostrapScript(head);
+    // createLinkBoostrapScript(head);
     createLinkChartJsScript(head);
 }
 
