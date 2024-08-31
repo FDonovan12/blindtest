@@ -50,11 +50,13 @@ canvas {
 
 main {
     position: relative;
-    grid-template-rows: auto auto 1fr;
+    grid-template-rows: repeat(3, auto) 1fr;
+    /* work with the span 3 of content-wrapper to keep the content-wrapper with the 1fr
+    in present and audience page and with the form display */
     height: 100%;
-    /* flex-grow: 1; */
     .content-wrapper {
         position: relative;
+        grid-row: span 3;
         height: 100%;
     }
 }
@@ -119,9 +121,6 @@ main {
 .invisible {
     color: transparent;
 }
-h1 {
-    font-size: var(--fs-700);
-}
 html,
 body {
     height: 100%;
@@ -136,6 +135,18 @@ body {
     background: url('7210104-galaxy-stars-in-the-univers-hors-terre-abstract-graphic-design-wallpaper-card-3d-gratuit-photo.jpg');
     background: url('7359962-galaxy-stars-in-the-univers-hors-terre-abstract-graphic-design-wallpaper-card-3d-gratuit-photo.jpg');
     background-size: cover;
+}
+h1 {
+    font-size: var(--fs-700);
+}
+h2 {
+    font-size: var(--fs-600);
+}
+h3 {
+    font-size: var(--fs-500);
+}
+h4 {
+    font-size: var(--fs-400);
 }
 
 footer {
@@ -229,12 +240,15 @@ button {
 .response-pointInfos {
     display: grid;
     /* grid-template-columns: [name-start value-start] 1.5em minmax(10ch, 15ch) minmax(9ch, 15ch) 1fr [value-end]; */
-    grid-template-columns: [name-start value-start select-start] minmax(10ch, 1fr) [name-end] minmax(9ch, 15ch) [ icon-start] 1.5em [icon-end value-end select-end];
-    grid-template-rows: [name-start select-start] 2fr [icon-start] 1fr [name-end value-start] 1fr [icon-end] 2fr [value-end select-end];
+    grid-template-columns: [name-start value-start select-start] minmax(20ch, 1fr) [name-end] 2em [ icon-start] 1.5em [icon-end value-end select-end];
+    grid-template-rows: [name-start select-start] 3fr [icon-start] 1fr [name-end value-start] 1fr [icon-end] 3fr [value-end select-end];
     border: 2px solid;
     border-radius: 10px;
     overflow: hidden;
     align-items: center;
+    /* aspect-ratio: 5; */
+    /* min-height: fit-content; */
+    container-type: normal;
     .response:has(&) {
         height: fit-content;
         row-gap: 1em;
@@ -244,10 +258,10 @@ button {
         vertical-align: middle;
     }
     i {
+        grid-area: icon;
         display: flex;
         justify-content: center;
         align-items: center;
-        grid-area: icon;
         z-index: 1;
     }
     > div:has(select) {
@@ -278,6 +292,7 @@ button {
     .value-point-infos,
     .name-point-infos {
         padding: 0.2em 0.5em;
+        /* font-size: 30cqh; */
         display: flex;
         align-items: center;
     }

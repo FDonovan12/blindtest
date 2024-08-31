@@ -397,22 +397,22 @@ export class PointInfo {
         divVisiblePointinfo.addEventListener('click', () => {
             this.makeVisible(partyBlindtest);
         });
-        if (!isAudience()) {
-            const divselectValuePointInfo = createTagWithParentClassContent('div', divPointInfo);
-            const selectValuePointInfo = createTagWithParentClassContent('select', divselectValuePointInfo);
-            selectValuePointInfo.addEventListener('change', (value) => {
-                this.changeParticipant(selectValuePointInfo.value, partyBlindtest);
-            });
-            addOptionToSelect(selectValuePointInfo, '', 'undefined', undefined);
-            partyBlindtest.getParticipants().map((participant, index) => {
-                addOptionToSelect(selectValuePointInfo, participant.name, participant.name, participant.classCss);
-                if (participant.name === this?.participant?.name) {
-                    selectValuePointInfo.selectedIndex = index + 1;
-                }
-            });
-            selectValuePointInfo.value = ' ';
-        }
-        const divNamePointInfo = new TagBuilder('div', divPointInfo).setClass('name-point-infos').setTextContent(this.name).build();
+        // if (!isAudience()) {
+        const divselectValuePointInfo = createTagWithParentClassContent('div', divPointInfo);
+        const selectValuePointInfo = createTagWithParentClassContent('select', divselectValuePointInfo);
+        selectValuePointInfo.addEventListener('change', (value) => {
+            this.changeParticipant(selectValuePointInfo.value, partyBlindtest);
+        });
+        addOptionToSelect(selectValuePointInfo, '', 'undefined', undefined);
+        partyBlindtest.getParticipants().map((participant, index) => {
+            addOptionToSelect(selectValuePointInfo, participant.name, participant.name, participant.classCss);
+            if (participant.name === this?.participant?.name) {
+                selectValuePointInfo.selectedIndex = index + 1;
+            }
+        });
+        selectValuePointInfo.value = ' ';
+        // }
+        const divNamePointInfo = new TagBuilder('h3', divPointInfo).setClass('name-point-infos').setTextContent(this.name).build();
 
         let classVisible = null;
         const hasParticipantOrIsVisible = this?.participant?.name || this.isVisible;
@@ -422,7 +422,7 @@ export class PointInfo {
             }
             classVisible = 'invisible';
         }
-        const divValuePointInfo = createTagWithParentClassContent('div', divPointInfo, classVisible + ' value-point-infos', this.value);
+        const divValuePointInfo = createTagWithParentClassContent('h3', divPointInfo, classVisible + ' value-point-infos', this.value);
         // const inputNamePointInfo = createTagWithParentClassContent('input', divPointInfo, 'inputToEnd', this.name);
         // inputNamePointInfo.value = this.name;
         // divValuePointInfo.value = this.value;
