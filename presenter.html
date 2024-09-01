@@ -11,11 +11,12 @@
         <title>Blind Test - Présentateur</title>
     </head>
     <body>
-        <header class="content-grid">
-            <h1>Blind Test - Présentateur</h1>
+        <header>
+            <div id="participants"></div>
         </header>
-        <main class="content-grid">
-            <div id="forms" class="d-non">
+        <main class="grid-container">
+            <canvas id="audioVisualizer" class="full-width"></canvas>
+            <div id="forms" class="d-none">
                 <div>
                     <form>
                         <input placeholder="Mot de passe" type="password" id="passwordInput" />
@@ -59,11 +60,9 @@
                 <button id="readJson">import JSON</button>
                 <button id="shuffleMusics">Shuffle musique</button>
             </div>
-            <div id="participants" class="full-width"></div>
             <div class="content-wrapper full-width">
-                <canvas id="audioVisualizer"></canvas>
-                <div id="response" class="response content-grid"></div>
-                <audio id="music-audio" controls></audio>
+                <div id="response" class="response grid-container"></div>
+                <audio id="music-audio"></audio>
             </div>
         </main>
         <footer></footer>

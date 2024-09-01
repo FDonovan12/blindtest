@@ -90,17 +90,31 @@ export function createResponse(partyBlindtest, divResponse) {
     // const divSection = createTagWithParentClassContent('div', divResponse);
     // const divSection = new TagBuilder('div', divResponse).build();
     // const divSectionName2 = createTagWithParentClassContent('div', divResponse, 'h4', partyBlindtest.getSection().name);
-    const divSectionName = new TagBuilder('div', divResponse).setClass('h4').setTextContent(partyBlindtest.getSection().name).build();
-    const divSectionDetails = new TagBuilder('div', divResponse).setClass('section-details content-grid').build();
-    const divSectionDetailsContent = new TagBuilder('div', divSectionDetails)
-        .setClass('middle-end')
+    const divSectionDetails = new TagBuilder('div', divResponse).setClass('section-details full-width grid-container').build();
+
+    const firstDivSection = new TagBuilder('div', divSectionDetails).setClass('basic-grid breakout').build();
+    const divSectionName = new TagBuilder('h1', firstDivSection)
+        .setClass('center start-2 col-8')
+        .setTextContent(partyBlindtest.getSection().name)
+        .build();
+    const divSectionNumber = new TagBuilder('div', firstDivSection).setClass('right col-2').build();
+    const firstDivSectionNumber = new TagBuilder('div', divSectionNumber).setTextContent(`Section`).build();
+    const secondDivSectionNumber = new TagBuilder('div', divSectionNumber)
+        .setTextContent(`${partyBlindtest.currentSection + 1} / ${partyBlindtest.getNumberOfSection()}`)
+        .build();
+
+    const secondDivSection = new TagBuilder('div', divSectionDetails).setClass('basic-grid breakout').build();
+    const divCurrentMusicNumberSection = new TagBuilder('div', secondDivSection).setClass('col-3').build();
+    const firstDivCurrentMusicNumberSection = new TagBuilder('div', divCurrentMusicNumberSection).setTextContent(`Musique`).build();
+    const secondDivCurrentMusicNumberSection = new TagBuilder('div', divCurrentMusicNumberSection)
+        .setTextContent(`${partyBlindtest.currentMusic + 1} / ${partyBlindtest.getNumberOfMusic()}`)
+        .build();
+
+    const divSectionDetailsContent = new TagBuilder('div', secondDivSection)
+        .setClass('col-6 center')
         .setTextContent(partyBlindtest.getSection().details)
         .build();
-    const divCurrentMusicNumberSection = new TagBuilder('div', divSectionDetails)
-        .setClass('middle-start')
-        .setTextContent(`Musique ${partyBlindtest.currentMusic + 1} / ${partyBlindtest.getSection().musics.length}`)
-        .build();
-    const divTotalTime = new TagBuilder('div', divResponse)
+    const divTotalTime = new TagBuilder('div', divSectionDetails)
         .setTextContent(`${secondsToTime(partyBlindtest.getDuration())} : ${partyBlindtest.getDuration()}s`)
         .build();
     const pointInfos = partyBlindtest.getMusic().pointInfos;

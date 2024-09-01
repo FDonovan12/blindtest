@@ -66,7 +66,7 @@ function addHeadContent() {
     setTitle();
     createLinkFontAwesome(head);
     // createLinkBoostrapStyle(head);
-    createLinkMainCSS(head);
+    // createLinkMainCSS(head);
     // createLinkMainScript(head);
     // createLinkBoostrapScript(head);
     createLinkChartJsScript(head);

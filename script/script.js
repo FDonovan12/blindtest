@@ -25,7 +25,9 @@ console.log(mainObject);
 
 createClickEventOnButton('#password', start);
 start();
-window.addEventListener('load', () => {});
+window.addEventListener('load', () => {
+    resizeCanvas();
+});
 window.addEventListener('storage', () => {
     mainObject.updateStatus();
 });
@@ -94,23 +96,20 @@ function start() {
     });
 }
 
-// Sélectionner les éléments du DOM
-const audioElement = document.getElementById('music-audio');
+function resizeCanvas() {
+    const main = document.querySelector('main');
+    canvas.width = main.getBoundingClientRect().width;
+    canvas.height = main.getBoundingClientRect().height;
+    // const style = getComputedStyle(canvas);
+    // canvas.width = parseInt(style.width);
+    // canvas.height = parseInt(style.height);
+    console.log('canvas.width : ', canvas.width);
+    console.log('canvas.height : ', canvas.height);
+}
+
 const canvas = document.getElementById('audioVisualizer');
 const ctx = canvas.getContext('2d');
-
-// Redimensionner le canvas pour couvrir toute la fenêtre
-// const main = document.querySelector('main');
-// canvas.width = main.getBoundingClientRect().width;
-// canvas.height = main.getBoundingClientRect().height;
-const style = getComputedStyle(canvas);
-canvas.width = parseInt(style.width, 10);
-canvas.height = parseInt(style.height, 10);
-console.log('style.width : ', style.width);
-console.log('style.height : ', style.height);
-console.log('canvas.width : ', canvas.width);
-console.log('canvas.height : ', canvas.height);
-
+const audioElement = document.getElementById('music-audio');
 // Créer un contexte audio
 const audioContext = new (window.AudioContext || window.webkitAudioContext)();
 const audioSource = audioContext.createMediaElementSource(audioElement);
@@ -137,7 +136,6 @@ function draw(dataArray) {
     // Dessiner les barres de visualisation
     let barHeight;
     let x = 0;
-
     for (let i = 0; i < bufferLength; i++) {
         const currentData = dataArray[i];
         const previousData = previousDataArray[i];
@@ -145,9 +143,6 @@ function draw(dataArray) {
         const ratioZeroInData = 2.9;
         const barWidth = (canvas.width / bufferLength) * ratioZeroInData;
         if (currentData > previousData) {
-            // ctx.fillStyle = 'red'; // Changer la couleur de la barre pour un effet visuel
-            // ctx.shadowBlur = 20; // Ajouter un effet de glow
-            // ctx.shadowColor = 'white';
             waves.push({
                 x: (i + 1) * barWidth - barWidth / 2, // Position X de la barre
                 y: canvas.height - barHeight, // Position Y de la barre
@@ -229,7 +224,10 @@ audioElement.onplay = function () {
     if (!isAudience()) {
         audioContext.resume().then(() => {
             function loop() {
-                if (audioElement.paused) return; // Arrêter la boucle si la musique est en pause
+                if (audioElement.paused) {
+                    console.log('stop loop');
+                    return;
+                } // Arrêter la boucle si la musique est en pause
                 // analyser.getByteFrequencyData(dataArray);
                 // channel.postMessage(dataArray); // Envoyer les données aux autres fenêtres
                 requestAnimationFrame(loop); // Continuer la boucle
