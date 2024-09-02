@@ -73,9 +73,7 @@ export function readJsonSynchrone(file) {
 }
 
 export function addResponse(partyBlindtest) {
-    const divResponse = document.querySelector('#response');
-    divResponse.innerHTML = null;
-    createResponse(partyBlindtest, divResponse);
+    createResponse(partyBlindtest);
 }
 
 function secondsToTime(seconds) {
@@ -86,85 +84,76 @@ function secondsToTime(seconds) {
     return result;
 }
 
-export function createResponse(partyBlindtest, divResponse) {
+export function updateSectionContent(partyBlindtest) {
+    document.querySelector('#section-title').textContent = partyBlindtest.getSection().name;
+    document.querySelector('#section-description').textContent = partyBlindtest.getSection().details;
+    document.querySelector('#number-section').textContent = `${partyBlindtest.currentSection + 1} / ${partyBlindtest.getNumberOfSection()}`;
+    document.querySelector('#number-music').textContent = `${partyBlindtest.currentMusic + 1} / ${partyBlindtest.getNumberOfMusic()}`;
+    document.querySelector('#timer').textContent = `${secondsToTime(partyBlindtest.getDuration())} : ${partyBlindtest.getDuration()}s`;
+}
+
+export function createResponse(partyBlindtest) {
     // const divSection = createTagWithParentClassContent('div', divResponse);
     // const divSection = new TagBuilder('div', divResponse).build();
     // const divSectionName2 = createTagWithParentClassContent('div', divResponse, 'h4', partyBlindtest.getSection().name);
-    const divSectionDetails = new TagBuilder('div', divResponse).setClass('section-details full-width grid-container').build();
+    // const divSectionDetails = new TagBuilder('div', divResponse).setClass('section-details full-width grid-container').build();
+    const divSectionDetails = document.querySelector('#section-details');
+    // divSectionDetails.innerHTML = null;
+    updateSectionContent(partyBlindtest);
 
-    const firstDivSection = new TagBuilder('div', divSectionDetails).setClass('basic-grid breakout').build();
-    const divSectionName = new TagBuilder('h1', firstDivSection)
-        .setClass('center start-2 col-8')
-        .setTextContent(partyBlindtest.getSection().name)
-        .build();
-    const divSectionNumber = new TagBuilder('div', firstDivSection).setClass('right col-2').build();
-    const firstDivSectionNumber = new TagBuilder('div', divSectionNumber).setTextContent(`Section`).build();
-    const secondDivSectionNumber = new TagBuilder('div', divSectionNumber)
-        .setTextContent(`${partyBlindtest.currentSection + 1} / ${partyBlindtest.getNumberOfSection()}`)
-        .build();
+    // const firstDivSection = new TagBuilder('div', divSectionDetails).setClass('basic-grid breakout').build();
+    // const divSectionName = new TagBuilder('h1', firstDivSection)
+    //     .setClass('center start-2 col-8')
+    //     .setTextContent(partyBlindtest.getSection().name)
+    //     .build();
+    // const divSectionNumber = new TagBuilder('div', firstDivSection).setClass('right col-2').build();
+    // const firstDivSectionNumber = new TagBuilder('div', divSectionNumber).setTextContent(`Section`).build();
+    // const secondDivSectionNumber = new TagBuilder('div', divSectionNumber)
+    //     .setTextContent(`${partyBlindtest.currentSection + 1} / ${partyBlindtest.getNumberOfSection()}`)
+    //     .build();
 
-    const secondDivSection = new TagBuilder('div', divSectionDetails).setClass('basic-grid breakout').build();
-    const divCurrentMusicNumberSection = new TagBuilder('div', secondDivSection).setClass('col-3').build();
-    const firstDivCurrentMusicNumberSection = new TagBuilder('div', divCurrentMusicNumberSection).setTextContent(`Musique`).build();
-    const secondDivCurrentMusicNumberSection = new TagBuilder('div', divCurrentMusicNumberSection)
-        .setTextContent(`${partyBlindtest.currentMusic + 1} / ${partyBlindtest.getNumberOfMusic()}`)
-        .build();
+    // const secondDivSection = new TagBuilder('div', divSectionDetails).setClass('basic-grid breakout').build();
+    // const divCurrentMusicNumberSection = new TagBuilder('div', secondDivSection).setClass('col-3').build();
+    // const firstDivCurrentMusicNumberSection = new TagBuilder('div', divCurrentMusicNumberSection).setTextContent(`Musique`).build();
+    // const secondDivCurrentMusicNumberSection = new TagBuilder('div', divCurrentMusicNumberSection)
+    //     .setTextContent(`${partyBlindtest.currentMusic + 1} / ${partyBlindtest.getNumberOfMusic()}`)
+    //     .build();
 
-    const divSectionDetailsContent = new TagBuilder('div', secondDivSection)
-        .setClass('col-6 center')
-        .setTextContent(partyBlindtest.getSection().details)
-        .build();
-    const divTotalTime = new TagBuilder('div', divSectionDetails)
-        .setTextContent(`${secondsToTime(partyBlindtest.getDuration())} : ${partyBlindtest.getDuration()}s`)
-        .build();
+    // const divSectionDetailsContent = new TagBuilder('div', secondDivSection)
+    //     .setClass('col-6 center')
+    //     .setTextContent(partyBlindtest.getSection().details)
+    //     .build();
+    // const divTotalTime = new TagBuilder('div', divSectionDetails)
+    //     .setTextContent(`${secondsToTime(partyBlindtest.getDuration())} : ${partyBlindtest.getDuration()}s`)
+    //     .build();
+
+    const divResponse = document.querySelector('#response');
+    // divResponse.innerHTML = null;
     const pointInfos = partyBlindtest.getMusic().pointInfos;
-    pointInfos?.map((pointInfo) => {
-        pointInfo.createHtmlContent(partyBlindtest, divResponse);
-        // let classVisible = null;
-        // if (isAudience()) {
-        //     if (!(pointInfo.participant || pointInfo.isVisible)) {
-        //         classVisible = 'invisible';
-        //     }
-        // }
-        // // const classVisible =  && !(pointInfo.participant || pointInfo.isVisible) ? 'invisible' : null;
-        // const divPointInfo = createTagWithParentClassContent('div', divResponse, 'response-pointInfos');
-        // const divVisiblePointinfo = createTagWithParentClassContent('div', divPointInfo, 'fa-solid fa-eye');
-
-        // divVisiblePointinfo.addEventListener('click', () => {
-        //     pointInfo.makeVisible(partyBlindtest);
-        // });
-        // if (isAudience()) {
-        //     const divValueparticipant = createTagWithParentClassContent(
-        //         'div',
-        //         divPointInfo,
-        //         null,
-        //         pointInfo?.participant?.name
-        //     );
-        // } else {
-        //     const selectValuePointInfo = createTagWithParentClassContent('select', divPointInfo);
-        //     selectValuePointInfo.addEventListener('change', (value) => {
-        //         pointInfo.changeParticipant(selectValuePointInfo.value, partyBlindtest);
-        //     });
-        //     addOptionToSelect(selectValuePointInfo, undefined, undefined);
-        //     partyBlindtest.getParticipants().map((participant, index) => {
-        //         addOptionToSelect(selectValuePointInfo, participant.name, participant.name);
-        //         if (participant.name === pointInfo?.participant?.name) {
-        //             selectValuePointInfo.selectedIndex = index + 1;
-        //         }
-        //     });
-        //     // divVisiblePointinfo.addEventListener('click', pointInfo.makeVisible);
-        // }
-        // const divNamePointInfo = createTagWithParentClassContent('input', divPointInfo, 'inputToEnd', pointInfo.name);
-        // divNamePointInfo.value = pointInfo.name;
-        // divNamePointInfo.addEventListener('input', (event) => {
-        //     pointInfo.changeValue(event.target.value, pointInfo.value, partyBlindtest);
-        // });
-        // const divValuePointInfo = createTagWithParentClassContent('input', divPointInfo, classVisible, pointInfo.value);
-        // divValuePointInfo.value = pointInfo.value;
-        // divValuePointInfo.addEventListener('input', (event) => {
-        //     pointInfo.changeValue(pointInfo.name, event.target.value, partyBlindtest);
-        // });
-    });
+    for (let i = 0; i < Math.max(pointInfos.length, divResponse.childElementCount); i++) {
+        const classdivPointInfo = i % 2 ? 'breakout-start' : 'breakout-end';
+        let divPointInfo;
+        console.log(i, divResponse.childElementCount);
+        if (i >= divResponse.childElementCount) {
+            console.log('create tag');
+            divPointInfo = new TagBuilder('div', divResponse)
+                .setClass(classdivPointInfo + ' response-pointInfos ' + this?.participant?.classCss)
+                .build();
+        } else if (i >= pointInfos.length) {
+            console.log('remove tag');
+            divResponse.removeChild(divResponse.children[i]);
+        } else {
+            console.log('modify tag');
+            divPointInfo = divResponse.children[i];
+            const pointInfo = pointInfos[i];
+            divPointInfo.classList = classdivPointInfo + ' response-pointInfos ' + pointInfo?.participant?.classCss;
+            divPointInfo.innerHTML = '';
+            pointInfo.createHtmlContent(partyBlindtest, divPointInfo);
+        }
+    }
+    // pointInfos?.map((pointInfo) => {
+    //     pointInfo.createHtmlContent(partyBlindtest, divResponse);
+    // });
 }
 export function addParticipantsScore(partyBlindtest) {
     const divParticipantsScore = document.querySelector('#participants');

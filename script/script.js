@@ -67,7 +67,7 @@ function start() {
         document.querySelector('#music-audio').addEventListener('ended', () => {
             setTimeout(() => {
                 mainObject.partyBlindtest.nextMusic();
-                mainObject.partyBlindtest.playAndPauseMusic();
+                mainObject.partyBlindtest.playMusic();
             }, 1000);
         });
     } catch (error) {}
@@ -130,6 +130,7 @@ const channel = new BroadcastChannel('audio-channel');
 
 // Fonction de visualisation
 function draw(dataArray) {
+    console.log('draw');
     // Effacer le canvas
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -142,7 +143,7 @@ function draw(dataArray) {
         barHeight = (currentData / 255) * canvas.height;
         const ratioZeroInData = 2.9;
         const barWidth = (canvas.width / bufferLength) * ratioZeroInData;
-        if (currentData > previousData) {
+        if (currentData > previousData + 10) {
             waves.push({
                 x: (i + 1) * barWidth - barWidth / 2, // Position X de la barre
                 y: canvas.height - barHeight, // Position Y de la barre

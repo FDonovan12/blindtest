@@ -207,16 +207,17 @@ export class PartyBlindtest {
         }
         this.changeAudio();
         this.save();
+        this.playAndPauseMusic();
     }
 
     nextSection() {
         if (this.currentSection < this.getNumberOfSection() - 1) {
             this.currentSection++;
+            this.currentMusic = 0;
         } else {
             // TODO modify when the project is finished, this doesn't have to cycle
-            this.currentSection = 0;
+            // this.currentSection = 0;
         }
-        this.currentMusic = 0;
         this.changeAudio();
         this.save();
     }
@@ -234,11 +235,13 @@ export class PartyBlindtest {
     previousSection() {
         if (this.currentSection > 0) {
             this.currentSection--;
+            this.currentMusic = this.getNumberOfMusic() - 1;
         } else {
             // TODO modify when the project is finished, this doesn't have to cycle
-            this.currentSection = this.getNumberOfSection() - 1;
+            // this.currentSection = this.getNumberOfSection() - 1;
         }
-        this.currentMusic = this.getNumberOfMusic() - 1;
+        // console.log(this.currentMusic);
+        // console.log(this.currentMusic);
         this.changeAudio();
         this.save();
     }
@@ -387,11 +390,7 @@ export class PointInfo {
         partyBlindtest.save();
     }
 
-    createHtmlContent(partyBlindtest, divResponse) {
-        const classdivPointInfo = divResponse.childElementCount % 2 === 0 ? 'breakout-start' : 'breakout-end';
-        const divPointInfo = new TagBuilder('div', divResponse)
-            .setClass(classdivPointInfo + ' response-pointInfos ' + this?.participant?.classCss)
-            .build();
+    createHtmlContent(partyBlindtest, divPointInfo) {
         const divVisiblePointinfo = new TagBuilder('i', divPointInfo).setClass('fa-solid fa-eye' + (this.isVisible ? '-slash' : '')).build();
 
         divVisiblePointinfo.addEventListener('click', () => {
@@ -420,7 +419,7 @@ export class PointInfo {
             if (isAudience()) {
                 classVisible = 'invisible';
             }
-            classVisible = 'invisible';
+            // classVisible = 'invisible';
         }
         const divValuePointInfo = createTagWithParentClassContent('h3', divPointInfo, classVisible + ' value-point-infos', this.value);
         // const inputNamePointInfo = createTagWithParentClassContent('input', divPointInfo, 'inputToEnd', this.name);
