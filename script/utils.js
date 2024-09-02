@@ -136,7 +136,7 @@ export function createResponse(partyBlindtest) {
         console.log(i, divResponse.childElementCount);
         if (i >= divResponse.childElementCount) {
             console.log('create tag');
-            divPointInfo = new TagBuilder('div', divResponse)
+            const divPointInfo = new TagBuilder('div', divResponse)
                 .setClass(classdivPointInfo + ' response-pointInfos ' + this?.participant?.classCss)
                 .build();
         } else if (i >= pointInfos.length) {

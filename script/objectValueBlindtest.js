@@ -419,7 +419,7 @@ export class PointInfo {
             if (isAudience()) {
                 classVisible = 'invisible';
             }
-            // classVisible = 'invisible';
+            classVisible = 'invisible';
         }
         const divValuePointInfo = createTagWithParentClassContent('h3', divPointInfo, classVisible + ' value-point-infos', this.value);
         // const inputNamePointInfo = createTagWithParentClassContent('input', divPointInfo, 'inputToEnd', this.name);
