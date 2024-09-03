@@ -2,8 +2,11 @@
     "blindtest": {
         "name": "Playlist 30 ans Donovan",
         "participants": [
-            { "name": "Rouge", "classCss": "joueur joueur-rouge" },
-            { "name": "Noir", "classCss": "joueur joueur-noir" }
+            { "name": "Benjamin", "classCss": "joueur joueur-rouge" },
+            { "name": "Dorian", "classCss": "joueur joueur-noir" },
+            { "name": "Tristan", "classCss": "joueur joueur-3" },
+            { "name": "Idriss", "classCss": "joueur joueur-4" },
+            { "name": "David", "classCss": "joueur joueur-5" }
         ],
         "sections": [
             {
