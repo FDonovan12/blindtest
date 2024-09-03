@@ -9,14 +9,15 @@
         <script type="module" src="./script/header.js" defer></script>
     </head>
     <body>
-        <header class="content-grid">
-            <h1>Blind Test - Audience</h1>
-        </header>
-        <main class="content-grid">
+        <header class="grid-container">
             <div id="participants" class="full-width"></div>
-            <canvas id="audioVisualizer"></canvas>
-            <div class="response full-width" id="response"></div>
-            <audio id="music-audio"></audio>
+        </header>
+        <main class="grid-container">
+            <canvas id="audioVisualizer" class="full-width"></canvas>
+            <div class="content-wrapper full-width">
+                <div id="response" class="response grid-container"></div>
+                <audio id="music-audio"></audio>
+            </div>
         </main>
         <footer></footer>
     </body>

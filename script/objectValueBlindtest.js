@@ -207,16 +207,17 @@ export class PartyBlindtest {
         }
         this.changeAudio();
         this.save();
+        this.playAndPauseMusic();
     }
 
     nextSection() {
         if (this.currentSection < this.getNumberOfSection() - 1) {
             this.currentSection++;
+            this.currentMusic = 0;
         } else {
             // TODO modify when the project is finished, this doesn't have to cycle
-            this.currentSection = 0;
+            // this.currentSection = 0;
         }
-        this.currentMusic = 0;
         this.changeAudio();
         this.save();
     }
@@ -234,11 +235,13 @@ export class PartyBlindtest {
     previousSection() {
         if (this.currentSection > 0) {
             this.currentSection--;
+            this.currentMusic = this.getNumberOfMusic() - 1;
         } else {
             // TODO modify when the project is finished, this doesn't have to cycle
-            this.currentSection = this.getNumberOfSection() - 1;
+            // this.currentSection = this.getNumberOfSection() - 1;
         }
-        this.currentMusic = this.getNumberOfMusic() - 1;
+        // console.log(this.currentMusic);
+        // console.log(this.currentMusic);
         this.changeAudio();
         this.save();
     }
@@ -387,29 +390,28 @@ export class PointInfo {
         partyBlindtest.save();
     }
 
-    createHtmlContent(partyBlindtest, divResponse) {
-        const divPointInfo = new TagBuilder('div', divResponse).setClass('breakout response-pointInfos ' + this?.participant?.classCss).build();
+    createHtmlContent(partyBlindtest, divPointInfo) {
         const divVisiblePointinfo = new TagBuilder('i', divPointInfo).setClass('fa-solid fa-eye' + (this.isVisible ? '-slash' : '')).build();
 
         divVisiblePointinfo.addEventListener('click', () => {
             this.makeVisible(partyBlindtest);
         });
-        if (!isAudience()) {
-            const divselectValuePointInfo = createTagWithParentClassContent('div', divPointInfo);
-            const selectValuePointInfo = createTagWithParentClassContent('select', divselectValuePointInfo);
-            selectValuePointInfo.addEventListener('change', (value) => {
-                this.changeParticipant(selectValuePointInfo.value, partyBlindtest);
-            });
-            addOptionToSelect(selectValuePointInfo, '', 'undefined', undefined);
-            partyBlindtest.getParticipants().map((participant, index) => {
-                addOptionToSelect(selectValuePointInfo, participant.name, participant.name, participant.classCss);
-                if (participant.name === this?.participant?.name) {
-                    selectValuePointInfo.selectedIndex = index + 1;
-                }
-            });
-            selectValuePointInfo.value = ' ';
-        }
-        const divNamePointInfo = new TagBuilder('div', divPointInfo).setClass('name-point-infos').setTextContent(this.name).build();
+        // if (!isAudience()) {
+        const divselectValuePointInfo = createTagWithParentClassContent('div', divPointInfo);
+        const selectValuePointInfo = createTagWithParentClassContent('select', divselectValuePointInfo);
+        selectValuePointInfo.addEventListener('change', (value) => {
+            this.changeParticipant(selectValuePointInfo.value, partyBlindtest);
+        });
+        addOptionToSelect(selectValuePointInfo, '', 'undefined', undefined);
+        partyBlindtest.getParticipants().map((participant, index) => {
+            addOptionToSelect(selectValuePointInfo, participant.name, participant.name, participant.classCss);
+            if (participant.name === this?.participant?.name) {
+                selectValuePointInfo.selectedIndex = index + 1;
+            }
+        });
+        selectValuePointInfo.value = ' ';
+        // }
+        const divNamePointInfo = new TagBuilder('h3', divPointInfo).setClass('name-point-infos').setTextContent(this.name).build();
 
         let classVisible = null;
         const hasParticipantOrIsVisible = this?.participant?.name || this.isVisible;
@@ -419,7 +421,7 @@ export class PointInfo {
             }
             classVisible = 'invisible';
         }
-        const divValuePointInfo = createTagWithParentClassContent('div', divPointInfo, classVisible + ' value-point-infos', this.value);
+        const divValuePointInfo = createTagWithParentClassContent('h3', divPointInfo, classVisible + ' value-point-infos', this.value);
         // const inputNamePointInfo = createTagWithParentClassContent('input', divPointInfo, 'inputToEnd', this.name);
         // inputNamePointInfo.value = this.name;
         // divValuePointInfo.value = this.value;

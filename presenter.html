@@ -11,10 +11,11 @@
         <title>Blind Test - Présentateur</title>
     </head>
     <body>
-        <header class="content-grid">
-            <h1>Blind Test - Présentateur</h1>
+        <header>
+            <div id="participants"></div>
         </header>
-        <main class="content-grid">
+        <main class="grid-container">
+            <canvas id="audioVisualizer" class="full-width"></canvas>
             <div id="forms" class="d-none">
                 <div>
                     <form>
@@ -59,11 +60,57 @@
                 <button id="readJson">import JSON</button>
                 <button id="shuffleMusics">Shuffle musique</button>
             </div>
-            <div id="participants" class="full-width"></div>
             <div class="content-wrapper full-width">
-                <canvas id="audioVisualizer" class="full-width"></canvas>
-                <div class="response full-width" id="response"></div>
-                <audio id="music-audio" controls></audio>
+                <div id="section-details" class="section-details grid-container">
+                    <div class="basic-grid breakout">
+                        <h1 id="section-title" class="center start-2 col-8"></h1>
+                        <div class="right col-2">
+                            <div>Section</div>
+                            <div id="number-section"></div>
+                        </div>
+                    </div>
+                    <div class="basic-grid breakout">
+                        <div class="col-3">
+                            <div>Musique</div>
+                            <div id="number-music"></div>
+                        </div>
+                        <div id="section-description" class="col-6 center"></div>
+                    </div>
+                    <div id="timer"></div>
+                </div>
+                <div id="response" class="response grid-container"></div>
+                <audio id="music-audio"></audio>
+                <div class="basic-flex small">
+                    <div>1</div>
+                    <div class="row-2 col-3">2</div>
+                    <div class="col-3">3</div>
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>
+                    <div>7</div>
+                    <div>8</div>
+                    <div>9</div>
+                    <div>10</div>
+                    <div>11</div>
+                    <div>12</div>
+                </div>
+                <div class="auto-grid gap-2">
+                    <div class="start-1">1</div>
+                    <div class="row-2">2</div>
+                    <div class="col-3">3</div>
+                    <div>4</div>
+                    <!-- <div>
+                        <div>5</div>
+                        <div>5</div>
+                    </div>
+                    <div>6</div>
+                    <div>7</div>
+                    <div>8</div>
+                    <div>9</div>
+                    <div>10</div>
+                    <div>11</div>
+                    <div>12</div> -->
+                </div>
             </div>
         </main>
         <footer></footer>
