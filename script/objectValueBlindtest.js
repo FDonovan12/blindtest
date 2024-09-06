@@ -24,12 +24,6 @@ export class MainObject {
         console.log('updateStatus');
         this.partyBlindtest = PartyBlindtest.get();
         const isPresentateurPlaying = localStorage.getItem('audio-is-playing') === 'true' ? true : false;
-        // console.log('isPresentateurPlaying : ', isPresentateurPlaying);
-        // console.log('partyBlindtest.isPlaying() : ', partyBlindtest.isPlaying());
-        // if (isPresentateurPlaying !== partyBlindtest.isPlaying()) {
-        //     // not work well the two music are desync and
-        //     // partyBlindtest.playAndPauseMusic();
-        // }
         addResponse(this.partyBlindtest);
         addParticipantsScore(this.partyBlindtest);
     }
@@ -207,7 +201,7 @@ export class PartyBlindtest {
         }
         this.changeAudio();
         this.save();
-        this.playAndPauseMusic();
+        this.playMusic();
     }
 
     nextSection() {

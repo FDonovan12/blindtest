@@ -134,15 +134,18 @@ export function createResponse(partyBlindtest) {
         const classdivPointInfo = i % 2 ? 'breakout-start' : 'breakout-end';
         let divPointInfo;
         console.log(i, divResponse.childElementCount);
-        if (i >= divResponse.childElementCount) {
-            console.log('create tag');
-            const divPointInfo = new TagBuilder('div', divResponse)
-                .setClass(classdivPointInfo + ' response-pointInfos ' + this?.participant?.classCss)
-                .build();
-        } else if (i >= pointInfos.length) {
+        const notEnoughDiv = i >= divResponse.childElementCount;
+        const tooMuchDiv = i >= pointInfos.length;
+        if (tooMuchDiv) {
             console.log('remove tag');
             divResponse.removeChild(divResponse.children[i]);
         } else {
+            if (notEnoughDiv) {
+                console.log('create tag');
+                const divPointInfo = new TagBuilder('div', divResponse)
+                    .setClass(classdivPointInfo + ' response-pointInfos ' + this?.participant?.classCss)
+                    .build();
+            }
             console.log('modify tag');
             divPointInfo = divResponse.children[i];
             const pointInfo = pointInfos[i];

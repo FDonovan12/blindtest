@@ -1,0 +1,35 @@
+:where(.bootfish) {
+    --border-radius: 0.4em;
+    :where(.btn) {
+        border: 0.1em solid currentColor;
+        border-radius: var(--border-radius);
+        padding: 0.2em;
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 7%;
+            width: 0%;
+            left: 50%;
+            transform: translateX(-50%);
+            /* scale: 0 1; */
+            /* height: 10px; */
+            transition: scale 300ms ease-in-out;
+            transition: width 300ms ease-in-out;
+        }
+        &:where(:focus:focus-visible, :hover) {
+            scale: 1.1;
+            z-index: 10;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            &::after {
+                outline: 1px currentColor;
+                /* animation: scale-up 300ms ease-in-out infinite; */
+                width: 100%;
+                /* scale: 1 1; */
+            }
+        }
+    }
+}

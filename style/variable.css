@@ -1,0 +1,13 @@
+html:where(.bootfish) {
+    --spacer: 0.2em; /* affect margin padding */
+    --success-color: hsl(120 100% 25%);
+    --error-color: hsl(0 90% 40%);
+    --warning-color: hsl(40 90% 40%);
+    --primary-color: hsl(0 50% 50%);
+    --primary-color: hsl(0 30% 50%);
+
+    --primary-color: hsl(200, 80%, 50%);
+    --primary-color-dark: hsl(200, 80%, 30%);
+    --secondary-color: hsl(85, 100%, 55%);
+    --secondary-color-dark: hsl(85, 100%, 25%);
+}
