@@ -10,11 +10,11 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
         <title>Blind Test - Présentateur</title>
     </head>
-    <body>
-        <header>
+    <body class="grid-container">
+        <header class="full-width">
             <div id="participants"></div>
         </header>
-        <main class="grid-container">
+        <main class="full-width grid-container">
             <canvas id="audioVisualizer" class="full-width"></canvas>
             <div id="forms" class="d-none">
                 <div>
@@ -63,7 +63,7 @@
             <div class="content-wrapper full-width">
                 <div id="section-details" class="section-details grid-container">
                     <div class="basic-grid breakout">
-                        <h1 id="section-title" class="center start-2 col-8"></h1>
+                        <h2 id="section-title" class="center start-2 col-8"></h2>
                         <div class="right col-2">
                             <div>Section</div>
                             <div id="number-section"></div>
@@ -74,7 +74,7 @@
                             <div>Musique</div>
                             <div id="number-music"></div>
                         </div>
-                        <div id="section-description" class="col-6 center"></div>
+                        <div id="section-description" class="fs-400 col-6 center"></div>
                     </div>
                     <div id="timer"></div>
                 </div>
@@ -94,7 +94,7 @@
                     <div>11</div>
                     <div>12</div>
                 </div> -->
-                <div class="gap-1 gap-col-5">
+                <!-- <div class="auto-grid gap-1 gap-col-5">
                     <div class="start-1">1</div>
                     <div class="row-2 p-3 m-1 btn">2</div>
                     <div class="col-3 fs-900 btn">3</div>
@@ -110,9 +110,9 @@
                     <div>10</div>
                     <div>11</div>
                     <div>12</div>
-                </div>
+                </div> -->
             </div>
         </main>
-        <footer></footer>
+        <footer class="full-width ch-ml-3"></footer>
     </body>
 </html>

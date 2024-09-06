@@ -1,4 +1,5 @@
 @import url(variable.css);
+@import url(reset.css);
 @import url(layout.css);
 @import url(component.css);
 @import url(utilities.css);
@@ -44,10 +45,8 @@
     align-items: center;
 }
 .invisible {
-    color: transparent;
-    background-color: transparent;
-    text-shadow: 0 0 0 transparent;
+    visibility: hidden !important;
 }
 .d-none {
-    display: none;
+    display: none !important;
 }

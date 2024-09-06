@@ -3,7 +3,7 @@
     :where(.btn) {
         border: 0.1em solid currentColor;
         border-radius: var(--border-radius);
-        padding: 0.2em;
+        padding: var(--spacer);
         position: relative;
         display: inline-flex;
         justify-content: center;

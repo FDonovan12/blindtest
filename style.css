@@ -1,109 +1,36 @@
-@layer reset, bootfish, base, application;
+@layer reset, bootfish, base, layout, component, utilities;
 
 @import url(style/bootfish.css) layer(bootfish);
 
 @layer reset {
-    *,
-    *:before,
-    *:after {
-        color: var(--color-text);
-        background-color: transparent;
-        border-color: currentColor;
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font: inherit;
-    }
-    img,
-    picture,
-    video,
-    svg {
-        display: block;
-        max-width: 100%;
-        fill: currentColor;
-    }
-    p,
-    li,
-    figcaption {
-        max-width: 65ch;
-        text-wrap: pretty;
-    }
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        text-wrap: balance;
-    }
-    header,
-    footer,
-    main,
-    section,
-    article {
-        container-type: inline-size;
-    }
-    html,
-    body {
-        height: 100dvh;
-    }
 }
 
 @layer base {
     :root {
         --color-text: hsl(208 100% 97%);
         --background-color: hsla(0 0% 0% / 0);
-        --primary-color: hsl(234 95% 22%);
-        --background-gradient: linear-gradient(to right, rgb(3, 14, 107), #666cb6);
+        /* --primary-color: hsl(234 95% 22%); */
         --button-active: hsla(16 97% 26% / 0.4);
-
-        --fs-300: clamp(0.94rem, calc(0.92rem + 0.08vw), 0.98rem);
-        --fs-400: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
-        --fs-500: clamp(1.35rem, calc(1.21rem + 0.69vw), 1.75rem);
-        --fs-600: clamp(1.62rem, calc(1.37rem + 1.24vw), 2.33rem);
-        --fs-700: clamp(1.94rem, calc(1.54rem + 2.03vw), 3.11rem);
-        --fs-800: clamp(2.33rem, calc(1.7rem + 3.15vw), 4.14rem);
-        --fs-900: clamp(2.8rem, calc(1.85rem + 4.74vw), 5.52rem);
     }
 
     body {
-        display: flex;
+        /* display: flex; */
         flex-direction: column;
-        font-size: var(--fs-400);
-        font-family: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri,
-            source-sans-pro, sans-serif;
-        font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
-            sans-serif;
         background: url('1230968-ciel-etoile-gratuit-photo.jpeg');
         background: url('7210104-galaxy-stars-in-the-univers-hors-terre-abstract-graphic-design-wallpaper-card-3d-gratuit-photo.jpg');
         background: url('7359962-galaxy-stars-in-the-univers-hors-terre-abstract-graphic-design-wallpaper-card-3d-gratuit-photo.jpg');
         background-size: cover;
     }
-    h1 {
-        font-size: var(--fs-700);
-        font-weight: 700;
-    }
-    h2 {
-        font-size: var(--fs-600);
-    }
-    h3 {
-        font-size: var(--fs-500);
-    }
-    h4 {
-        font-size: var(--fs-400);
-    }
 }
 main {
+    /* flex-grow: 1; */
     position: relative;
     grid-template-rows: repeat(2, auto) 1fr;
     /* work with the span 3 of content-wrapper to keep the content-wrapper with the 1fr
 in present and audience page and with the form display */
-    height: 100%;
     & .content-wrapper {
         position: relative;
         grid-row: span 3;
-        height: 100%;
     }
 }
 canvas {
@@ -193,7 +120,7 @@ footer {
     --color-text: aliceblue;
 }
 .joueur-rouge {
-    --background-color: brown;
+    --background-color: hsl(0, 59%, 41%);
     --color-text: black;
 }
 .joueur-noir {
@@ -233,7 +160,7 @@ footer {
     border-radius: 10px;
     align-items: center;
     background-color: var(--background-color);
-    background-color: hsl(from var(--background-color) h s l / 0.8);
+    background-color: rgb(from var(--background-color) r g b / 0.8);
     transition: all 300ms ease-in-out;
     /* aspect-ratio: 5; */
     /* min-height: fit-content; */
@@ -280,6 +207,7 @@ footer {
     & .value-point-infos,
     & .name-point-infos {
         padding: 0.2em 0.5em;
+        font-size: var(--fs-500);
         /* font-size: 30cqh; */
         /* display: flex;
         align-items: center; */
