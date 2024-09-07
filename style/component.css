@@ -1,35 +1,56 @@
 :where(.bootfish) {
     --border-radius: 0.4em;
-    :where(.btn) {
-        border: 0.1em solid currentColor;
+    --scale-button: 1.1;
+    --border-size: 0.1em;
+    --color-box: currentColor;
+    :where(.btn, .btn-group > *) {
+        border: solid var(--color-box) var(--border-size);
+        /* border: solid currentColor 0.1em; */
         border-radius: var(--border-radius);
+        background-color: rgba(0, 0, 0, 0.9);
         padding: var(--spacer);
         position: relative;
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: 7%;
-            width: 0%;
-            left: 50%;
-            transform: translateX(-50%);
-            /* scale: 0 1; */
-            /* height: 10px; */
-            transition: scale 300ms ease-in-out;
-            transition: width 300ms ease-in-out;
+    }
+    :where(.btn.scale, .btn-group.scale > *, .btn-group > *:where(.scale)) {
+        transition: scale ease-in-out 300ms, filter ease-in-out 300ms;
+        &:where(:not(:hover)) {
+            animation: zIndexHack 100ms;
         }
         &:where(:focus:focus-visible, :hover) {
-            scale: 1.1;
+            scale: var(--scale-button);
             z-index: 10;
-            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        }
+    }
+    :where(.btn.inline, .btn-group.inline > *, .btn-group > *:where(.inline)) {
+        &::after {
+            content: '';
+            width: calc(100% - 4 * var(--spacer));
+            outline: calc(var(--border-size) / 2) currentColor solid;
+            position: absolute;
+            bottom: calc(var(--border-size));
+            scale: 0 1;
+            transition: scale 300ms ease-in-out;
+        }
+        &:where(:focus:focus-visible, :hover) {
             &::after {
-                outline: 1px currentColor;
-                /* animation: scale-up 300ms ease-in-out infinite; */
-                width: 100%;
-                /* scale: 1 1; */
+                scale: 1 1;
             }
         }
+    }
+    :where(.btn-group.blur) {
+        &:has(*:focus:focus-visible) *:not(:focus:focus-visible),
+        &:has(*:hover) *:not(:hover) {
+            filter: blur(1px);
+        }
+    }
+}
+
+@keyframes zIndexHack {
+    0%,
+    100% {
+        z-index: 100;
     }
 }

@@ -46,7 +46,7 @@ body {
 :where(body) {
     display: grid;
     grid-template-rows: auto 1fr auto;
-    & :where(*:nth-child(1)) {
+    & > :where(*:nth-child(1)) {
         display: grid;
         grid-template-rows: auto 1fr auto;
     }

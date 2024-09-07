@@ -61,9 +61,8 @@ canvas {
 }
 button {
     border-radius: 0.4em;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.9);
     padding: 0.2em;
-    transition: scale ease-in-out 300ms, filter ease-in-out 300ms;
     position: relative;
     &::after {
         content: '';
@@ -79,8 +78,8 @@ button {
         transition: width 300ms ease-in-out;
     }
     &:where(:focus:focus-visible, :hover) {
-        scale: 1.1;
-        z-index: 10;
+        /* scale: 1.3;
+        z-index: 10; */
         /* animation: name duration timing-function delay iteration-count direction fill-mode; */
         &::after {
             outline: 1px white solid;
@@ -263,10 +262,4 @@ footer {
     background-color: darkgray;
     --color-text: black;
     font-size: var(--fs-300);
-}
-@keyframes zIndexHack {
-    0%,
-    100% {
-        z-index: 100;
-    }
 }

@@ -2,6 +2,9 @@
 :where(.bootfish) {
     /* child margin */
     &:where(.bootfish) {
+        & :where(.ch-m-auto, .ch-mt-auto, .ch-my-auto) > * {
+            margin-top: auto;
+        }
         & :where(.ch-m-0, .ch-mt-0, .ch-my-0) > * {
             margin-top: 0;
         }
@@ -21,6 +24,9 @@
             margin-top: calc(var(--spacer) * 5);
         }
 
+        & :where(.ch-m-auto, .ch-mb-auto, .ch-my-auto) > * {
+            margin-bottom: auto;
+        }
         & :where(.ch-m-0, .ch-mb-0, .ch-my-0) > * {
             margin-bottom: 0;
         }
@@ -40,6 +46,9 @@
             margin-bottom: calc(var(--spacer) * 5);
         }
 
+        & :where(.ch-m-auto, .ch-ml-auto, .ch-mx-auto) > * {
+            margin-left: auto;
+        }
         & :where(.ch-m-0, .ch-ml-0, .ch-mx-0) > * {
             margin-left: 0;
         }
@@ -59,6 +68,9 @@
             margin-left: calc(var(--spacer) * 5);
         }
 
+        & :where(.ch-m-auto, .ch-mr-auto, .ch-mx-auto) > * {
+            margin-right: auto;
+        }
         & :where(.ch-m-0, .ch-mr-0, .ch-mx-0) > * {
             margin-right: 0;
         }
@@ -158,6 +170,9 @@
     }
     /* self margin */
     &:where(.bootfish) {
+        & :where(.m-auto, .mt-auto, .my-auto) {
+            margin-top: auto;
+        }
         & :where(.m-0, .mt-0, .my-0) {
             margin-top: 0;
         }
@@ -177,6 +192,9 @@
             margin-top: calc(var(--spacer) * 5);
         }
 
+        & :where(.m-auto, .mb-auto, .my-auto) {
+            margin-bottom: auto;
+        }
         & :where(.m-0, .mb-0, .my-0) {
             margin-bottom: 0;
         }
@@ -196,6 +214,9 @@
             margin-bottom: calc(var(--spacer) * 5);
         }
 
+        & :where(.m-auto, .ml-auto, .mx-auto) {
+            margin-left: auto;
+        }
         & :where(.m-0, .ml-0, .mx-0) {
             margin-left: 0;
         }
@@ -215,6 +236,9 @@
             margin-left: calc(var(--spacer) * 5);
         }
 
+        & :where(.m-auto, .mr-auto, .mx-auto) {
+            margin-right: auto;
+        }
         & :where(.m-0, .mr-0, .mx-0) {
             margin-right: 0;
         }
@@ -340,22 +364,22 @@
     }
     /* font weight */
     &:where(.bootfish) {
-        & :where(.fw-300) {
+        & :where(.fw-300, .h6) {
             font-weight: 300;
         }
-        & :where(.fw-400) {
+        & :where(.fw-400, .h5) {
             font-weight: 400;
         }
-        & :where(.fw-500) {
+        & :where(.fw-500, .h4) {
             font-weight: 500;
         }
-        & :where(.fw-600) {
+        & :where(.fw-600, .h3) {
             font-weight: 600;
         }
-        & :where(.fw-700) {
+        & :where(.fw-700, .h2) {
             font-weight: 700;
         }
-        & :where(.fw-800) {
+        & :where(.fw-800, .h1) {
             font-weight: 800;
         }
         & :where(.fw-900) {

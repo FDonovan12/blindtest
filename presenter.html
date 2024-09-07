@@ -12,7 +12,7 @@
     </head>
     <body class="grid-container">
         <header class="full-width">
-            <div id="participants"></div>
+            <div id="participants" class="fw-500"></div>
         </header>
         <main class="full-width grid-container">
             <canvas id="audioVisualizer" class="full-width"></canvas>
@@ -51,20 +51,30 @@
                     <i id="addPointInfo" onclick="addFormPointInfo()" class="fa-solid fa-circle-plus"></i>
                 </div>
             </div>
-            <div class="all-buttons breakout">
+            <div class="all-buttons breakout btn-group">
                 <button id="openAudience">Ouvrir Audience</button>
                 <button id="previous">precedent</button>
-                <button id="play">play</button>
+                <button id="play" class="scale">play</button>
                 <button id="next">suivant</button>
                 <button id="downloadAnchorElem">export JSON</button>
                 <button id="readJson">import JSON</button>
                 <button id="shuffleMusics">Shuffle musique</button>
             </div>
+            <div class="ch-p-2">
+                <div class="btn m-auto scale">Bouton</div>
+                <div class="btn m-auto scale">Bouton avec plus de texte</div>
+                <div class="btn m-auto inline">Bouton avec plus de texte</div>
+            </div>
+            <div class="btn-group blur">
+                <div class="btn m-auto scale">Bouton</div>
+                <div class="btn m-auto scale">Bouton avec plus de texte</div>
+                <div class="btn m-auto inline">Bouton avec plus de texte</div>
+            </div>
             <div class="content-wrapper full-width">
                 <div id="section-details" class="section-details grid-container">
                     <div class="basic-grid breakout">
-                        <h2 id="section-title" class="center start-2 col-8"></h2>
-                        <div class="right col-2">
+                        <h1 id="section-title" class="h2 center start-2 col-8"></h1>
+                        <div class="mb-auto ml-auto col-2">
                             <div>Section</div>
                             <div id="number-section"></div>
                         </div>
@@ -76,7 +86,7 @@
                         </div>
                         <div id="section-description" class="fs-400 col-6 center"></div>
                     </div>
-                    <div id="timer"></div>
+                    <!-- <div id="timer"></div> -->
                 </div>
                 <div id="response" class="response grid-container"></div>
                 <audio id="music-audio"></audio>

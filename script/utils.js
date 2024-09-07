@@ -85,11 +85,13 @@ function secondsToTime(seconds) {
 }
 
 export function updateSectionContent(partyBlindtest) {
-    document.querySelector('#section-title').textContent = partyBlindtest.getSection().name;
-    document.querySelector('#section-description').textContent = partyBlindtest.getSection().details;
-    document.querySelector('#number-section').textContent = `${partyBlindtest.currentSection + 1} / ${partyBlindtest.getNumberOfSection()}`;
-    document.querySelector('#number-music').textContent = `${partyBlindtest.currentMusic + 1} / ${partyBlindtest.getNumberOfMusic()}`;
-    document.querySelector('#timer').textContent = `${secondsToTime(partyBlindtest.getDuration())} : ${partyBlindtest.getDuration()}s`;
+    try {
+        document.querySelector('#section-title').textContent = partyBlindtest.getSection().name;
+        document.querySelector('#section-description').textContent = partyBlindtest.getSection().details;
+        document.querySelector('#number-section').textContent = `${partyBlindtest.currentSection + 1} / ${partyBlindtest.getNumberOfSection()}`;
+        document.querySelector('#number-music').textContent = `${partyBlindtest.currentMusic + 1} / ${partyBlindtest.getNumberOfMusic()}`;
+        document.querySelector('#timer').textContent = `${secondsToTime(partyBlindtest.getDuration())} : ${partyBlindtest.getDuration()}s`;
+    } catch (error) {}
 }
 
 export function createResponse(partyBlindtest) {
