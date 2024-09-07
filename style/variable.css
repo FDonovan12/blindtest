@@ -3,6 +3,11 @@
     inherits: true;
     initial-value: #3bd11d;
 }
+@property --row-gap-container-grid {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: 1em;
+}
 
 html:where(.bootfish) {
     --spacer: 0.2em; /* affect margin padding .btn*/

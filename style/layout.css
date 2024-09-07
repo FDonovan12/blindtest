@@ -38,7 +38,8 @@
         var(--partial-margin) [content-end]
         var(--breakout) [breakout-end]
         var(--full) [full-width-end];
-    row-gap: var(--fs-400);
+    row-gap: var(--row-gap-container-grid);
+    row-gap: 1em;
     & > * {
         grid-column: content;
     }
