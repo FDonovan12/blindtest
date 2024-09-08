@@ -1,1 +1,54 @@
-{"blindtest": {"name": "test_current1", "participants": [{"name": "j1"}, {"name": "j2"}], "sections": [{"name": "test sections2", "details": "test details2", "musics": [{"link": "https://www.youtube.com/watch?v=gAjR4_CbPpQ", "duration": 223, "pointInfos": [{"name": "Chanteur", "value": "Daft Punk"}, {"name": "Titre", "value": "Harder, Better, Faster, Stronger"}], "path": "current/music/daft-punk-harder-better-faster-stronger-official-video.mp3"}, {"link": "https://www.youtube.com/watch?v=NdYWuo9OFAw", "duration": 216, "pointInfos": [{"name": "Chanteur", "value": "Goo Goo Dolls"}, {"name": "Titre", "value": "Iris"}], "path": "current/music/goo-goo-dolls-iris-official-music-video-4k-remaster.mp3"}]}]}, "currentMusic": 2, "currentSection": 0, "audio": {}, "localStorageName": "PartyBlindtest"}
+{
+    "blindtest": {
+        "name": "test_current1",
+        "participants": [{ "name": "j1" }, { "name": "j2" }],
+        "sections": [
+            {
+                "name": "test sections2",
+                "details": "test details2",
+                "musics": [
+                    {
+                        "path": "current/music/zebda-tomber-la-chemise.mp3",
+                        "link": "https://www.youtube.com/watch?v=wsQaQBpTOK0",
+                        "duration": 262,
+                        "pointInfos": [
+                            { "name": "Chanteur", "value": "Zebda" },
+                            { "name": "Titre", "value": "Tomber La Chemise" }
+                        ]
+                    },
+                    {
+                        "path": "current/music/shingeki-no-kyojin-s1-op2-linked-horizon-jiyuu-no-tsubasa-lyrics-with-english-translation.mp3",
+                        "link": "https://www.youtube.com/watch?v=W8UNLOOogU4",
+                        "duration": 333,
+                        "pointInfos": [
+                            { "name": "Chanteur", "value": "Linked Horizon" },
+                            { "name": "Titre", "value": "Wings of Freedom / Jiyuu no Tsubasa" },
+                            { "name": "Anime", "value": "Shingeki no Kyojin -  Opening 2" }
+                        ]
+                    },
+                    {
+                        "path": "current/music/michel-sardou-les-lacs-du-connemara-official-lyric-video.mp3",
+                        "link": "https://www.youtube.com/watch?v=ygc9dzuJIoI",
+                        "duration": 363,
+                        "pointInfos": [
+                            { "name": "Chanteur", "value": "Michel Sardou" },
+                            { "name": "Titre", "value": "Les lacs du Connemara" }
+                        ]
+                    },
+                    {
+                        "link": "https://www.youtube.com/watch?v=SRXH9AbT280",
+                        "duration": 216,
+                        "pointInfos": [
+                            { "name": "Chanteur", "value": "Linkin Park" },
+                            { "name": "Titre", "value": "The Emptiness Machine" }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "currentMusic": 2,
+    "currentSection": 0,
+    "audio": {},
+    "localStorageName": "PartyBlindtest"
+}

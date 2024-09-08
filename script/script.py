@@ -79,7 +79,6 @@ def download_all_musics(jsonFileName):
                     oldPath = music["path"]
                 except:
                     print("path no exist")
-                finally:
                     oldPath = ""
                 newPath = download_one_music(music["link"])
                 if oldPath != newPath and os.path.exists("./../"+oldPath) and oldPath != "":

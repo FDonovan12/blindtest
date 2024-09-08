@@ -2,11 +2,8 @@
     "blindtest": {
         "name": "Playlist 30 ans Donovan",
         "participants": [
-            { "name": "Benjamin", "classCss": "joueur joueur-rouge" },
-            { "name": "Dorian", "classCss": "joueur joueur-noir" },
-            { "name": "Tristan", "classCss": "joueur joueur-3" },
-            { "name": "Idriss", "classCss": "joueur joueur-4" },
-            { "name": "David", "classCss": "joueur joueur-5" }
+            { "name": "Rouge", "classCss": "joueur joueur-rouge" },
+            { "name": "Noir", "classCss": "joueur joueur-noir" }
         ],
         "sections": [
             {
@@ -182,9 +179,9 @@
                         ]
                     },
                     {
-                        "path": "current/music/shingeki-no-kyojin-s1-op2-linked-horizon-jiyuu-no-tsubasa-lyrics-with-english-translation.mp3",
-                        "link": "https://www.youtube.com/watch?v=_4aB23WUdIw",
-                        "duration": 333,
+                        "path": "current/music/自由の翼.mp3",
+                        "link": "https://www.youtube.com/watch?v=W8UNLOOogU4",
+                        "duration": 329,
                         "pointInfos": [
                             { "name": "Chanteur", "value": "Linked Horizon" },
                             { "name": "Titre", "value": "Wings of Freedom / Jiyuu no Tsubasa" },
@@ -242,9 +239,9 @@
                         ]
                     },
                     {
-                        "path": "current/music/僕のヒーローアカデミア米津玄師ピースサインスペシャルミュージックビデオ.mp3",
-                        "link": "https://www.youtube.com/watch?v=1oMxrHXzOsY",
-                        "duration": 257,
+                        "path": "current/music/kenshi-yonezu-米津玄師-peace-sign-kan-rom-eng-lyricsboku-no-hero-academia-season-2-op.mp3",
+                        "link": "https://www.youtube.com/watch?v=-_MeUX6KyK8",
+                        "duration": 243,
                         "pointInfos": [
                             { "name": "Chanteur", "value": "Yonezu Kenshi" },
                             { "name": "Titre", "value": "Peace Sign" },
@@ -283,7 +280,7 @@
                     },
                     {
                         "path": "current/music/flow-granrodeo-7-seven-.mp3",
-                        "link": "https://www.youtube.com/watch?v=_8u_r7xIKz8",
+                        "link": "https://www.youtube.com/watch?v=ePn_MemvARE",
                         "duration": 269,
                         "pointInfos": [
                             { "name": "Chanteur", "value": "FLOW et GRANRODEO" },
@@ -471,9 +468,9 @@
                         ]
                     },
                     {
-                        "path": "current/music/billy-talent-red-flag-official-video.mp3",
-                        "link": "https://www.youtube.com/watch?v=l2UktJtKpFw",
-                        "duration": 211,
+                        "path": "current/music/billy-talent-red-flag-hdhq.mp3",
+                        "link": "https://www.youtube.com/watch?v=1XAn5Gbrcs4",
+                        "duration": 198,
                         "pointInfos": [
                             { "name": "Chanteur", "value": "Billy Talent" },
                             { "name": "Titre", "value": "Red Flag" }
@@ -496,6 +493,15 @@
                             { "name": "Titre", "value": "Iris" }
                         ],
                         "path": "current/music/goo-goo-dolls-iris-official-music-video-4k-remaster.mp3"
+                    },
+                    {
+                        "link": "https://www.youtube.com/watch?v=SRXH9AbT280",
+                        "duration": 201,
+                        "pointInfos": [
+                            { "name": "Chanteur", "value": "Linkin Park" },
+                            { "name": "Titre", "value": "The Emptiness Machine" }
+                        ],
+                        "path": "current/music/the-emptiness-machine-official-music-video-linkin-park.mp3"
                     }
                 ]
             },
@@ -620,8 +626,8 @@
                     },
                     {
                         "path": "current/music/zebda-tomber-la-chemise.mp3",
-                        "link": "https://www.youtube.com/watch?v=4y4D-evzDTo",
-                        "duration": 262,
+                        "link": "https://www.youtube.com/watch?v=wsQaQBpTOK0",
+                        "duration": 264,
                         "pointInfos": [
                             { "name": "Chanteur", "value": "Zebda" },
                             { "name": "Titre", "value": "Tomber La Chemise" }
@@ -643,15 +649,6 @@
                         "pointInfos": [
                             { "name": "Chanteur", "value": "Rednex" },
                             { "name": "Titre", "value": "Cotton Eye Joe" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/joyeux-anniversaire-patrick-sébastien.mp3",
-                        "link": "https://www.youtube.com/watch?v=HjXxvooa-0g",
-                        "duration": 194,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Patrick Sébastien" },
-                            { "name": "Titre", "value": "Joyeux Anniversaire" }
                         ]
                     },
                     {
@@ -682,15 +679,6 @@
                         ]
                     },
                     {
-                        "path": "current/music/michel-sardou-les-lacs-du-connemara-official-lyric-video.mp3",
-                        "link": "https://www.youtube.com/watch?v=bpEmjxobvbY",
-                        "duration": 363,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Michel Sardou" },
-                            { "name": "Titre", "value": "Les lacs du Connemara" }
-                        ]
-                    },
-                    {
                         "link": "https://www.youtube.com/watch?v=WDfxsnyOkeg",
                         "duration": 182,
                         "pointInfos": [
@@ -698,6 +686,24 @@
                             { "name": "Titre", "value": "Cosmo" }
                         ],
                         "path": "current/music/soprano-cosmo-audio-officiel.mp3"
+                    },
+                    {
+                        "path": "current/music/michel-sardou-les-lacs-du-connemara-paroles.mp3",
+                        "link": "https://www.youtube.com/watch?v=ygc9dzuJIoI",
+                        "duration": 352,
+                        "pointInfos": [
+                            { "name": "Chanteur", "value": "Michel Sardou" },
+                            { "name": "Titre", "value": "Les lacs du Connemara" }
+                        ]
+                    },
+                    {
+                        "path": "current/music/joyeux-anniversaire-patrick-sébastien.mp3",
+                        "link": "https://www.youtube.com/watch?v=HjXxvooa-0g",
+                        "duration": 194,
+                        "pointInfos": [
+                            { "name": "Chanteur", "value": "Patrick Sébastien" },
+                            { "name": "Titre", "value": "Joyeux Anniversaire" }
+                        ]
                     }
                 ]
             }
