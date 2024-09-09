@@ -11,16 +11,24 @@
 
 html:where(.bootfish) {
     --spacer: 0.2em; /* affect margin padding .btn*/
-    --success-color: hsl(120 100% 25%);
+    --success-color-background: hsl(120 100% 25%);
+    --success-color-text: hsl(120 100% 25%);
+
+    --error-color-background: hsl(0 90% 40%);
     --error-color: hsl(0 90% 40%);
-    --warning-color: hsl(40 90% 40%);
-    --primary-color: hsl(0 50% 50%);
-    --primary-color: hsl(0 30% 50%);
+
+    --warning-color-background: hsl(40 90% 40%);
+    --light-color-background: rgb(230 230 230);
+    --dark-color-background: rgb(20 20 20);
 
     --primary-color: hsl(200, 80%, 50%);
-    --primary-color-dark: hsl(200, 80%, 30%);
-    --secondary-color: hsl(85, 100%, 55%);
-    --secondary-color-dark: hsl(85, 100%, 25%);
+    --primary-color2: hsl(200, 79%, 56%);
+    --primary-color-dark-background: hsl(200, 80%, 30%);
+    --test-color-text: hsl(from var(--primary-color) h 0 calc(l * -1 + 100));
+    --test-color-text: hsl(from var(--background-color) h 0 max(10, min(90, calc((l - 80) * -100 + 90))) / 1);
+    /* --test-color-text: hsl(from var(--primary-color) h 0 max(10, min(90, calc((l - 50) * -100 + 90))) / 1); */
+    --secondary-color-background: hsl(85, 100%, 55%);
+    --secondary-color-dark-background: hsl(85, 100%, 25%);
 
     --fs-300: clamp(0.94rem, calc(0.92rem + 0.08vw), 0.98rem);
     --fs-400: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);

@@ -9,7 +9,9 @@
     :root {
         --color-text: hsl(208 100% 97%);
         --background-color: hsla(0 0% 0% / 0);
-        --primary-color: hsl(234 85% 30%);
+        --primary-color: hsl(226, 52%, 25%);
+        --background-color: hsla(0, 0%, 100%, 0);
+        /* --primary-color: var(--test2-color); */
         --button-active: hsla(30, 25%, 2%, 0.4);
     }
 

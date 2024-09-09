@@ -4,10 +4,10 @@
     --border-size: 0.1em;
     --color-box: currentColor;
     :where(.btn, .btn-group > *) {
+        --background-color: rgba(0 0 0 / 0.9);
         border: solid var(--color-box) var(--border-size);
-        /* border: solid currentColor 0.1em; */
         border-radius: var(--border-radius);
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: var(--background-color);
         padding: var(--spacer);
         position: relative;
         display: inline-flex;
