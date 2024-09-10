@@ -8,10 +8,8 @@
 @layer base {
     :root {
         --color-text: hsl(208 100% 97%);
-        --background-color: hsla(0 0% 0% / 0);
-        --primary-color: hsl(226, 52%, 25%);
+        --primary-color: hsl(226, 59%, 57%);
         --background-color: hsla(0, 0%, 100%, 0);
-        /* --primary-color: var(--test2-color); */
         --button-active: hsla(30, 25%, 2%, 0.4);
     }
 
@@ -22,6 +20,7 @@
         background: url('7210104-galaxy-stars-in-the-univers-hors-terre-abstract-graphic-design-wallpaper-card-3d-gratuit-photo.jpg');
         background: url('7359962-galaxy-stars-in-the-univers-hors-terre-abstract-graphic-design-wallpaper-card-3d-gratuit-photo.jpg');
         background-size: cover;
+        color: var(--color-text);
     }
 }
 main {
@@ -49,8 +48,8 @@ canvas {
 } */
 
 .all-buttons {
-    --base-min-col-size: 9ch;
-    display: grid;
+    --base-min-col-size: 7ch;
+    /* display: grid; */
     & > * {
         outline: none;
     }
@@ -83,26 +82,27 @@ footer {
 .undefined {
     --background-color: var(--primary-color);
     --color-text: aliceblue;
+    color: aliceblue;
 }
 .joueur-rouge {
     --background-color: hsl(0, 60%, 45%);
-    --color-text: black;
+    color: black;
 }
 .joueur-noir {
     --background-color: hsl(0, 0%, 0%);
-    --color-text: white;
+    color: aliceblue;
 }
 .joueur-3 {
-    --background-color: hsl(118, 93%, 34%);
-    --color-text: black;
+    --background-color: hsl(118, 93%, 41%);
+    color: black;
 }
 .joueur-4 {
-    --background-color: hsl(180, 71%, 37%);
-    --color-text: black;
+    --background-color: hsl(295, 71%, 41%);
+    color: black;
 }
 .joueur-5 {
     --background-color: hsl(51, 80%, 61%);
-    --color-text: black;
+    color: black;
 }
 .section-details {
     background-color: hsl(0 0 0 / 0.1);

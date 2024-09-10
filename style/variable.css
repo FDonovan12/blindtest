@@ -8,28 +8,30 @@
     inherits: false;
     initial-value: 1em;
 }
-
-html:where(.bootfish) {
+:root {
     --spacer: 0.2em; /* affect margin padding .btn*/
     --background-color: hsla(0, 0%, 0%, 0);
 
-    --success-color-background: hsl(120 100% 25%);
-    --success-color-text: hsl(120 100% 25%);
+    --success-color: hsl(120 100% 25%);
+    --success-color-text: hsl(0, 0%, 0%);
 
-    --error-color-background: hsl(0 90% 40%);
     --error-color: hsl(0 90% 40%);
+    --error-color-text: hsl(0, 0%, 0%);
 
-    --warning-color-background: hsl(40 90% 40%);
-    --light-color-background: rgb(230 230 230);
-    --dark-color-background: rgb(20 20 20);
+    --warning-color: hsl(40 90% 40%);
+    --warning-color-text: hsl(0, 0%, 0%);
 
-    --primary-color: hsl(200, 80%, 50%);
-    --primary-color2: hsl(200, 79%, 56%);
-    --primary-color-dark-background: hsl(200, 80%, 30%);
-    --test-color-text: hsl(from var(--primary-color) h 0 calc(l * -1 + 100));
-    --test-color-text: hsl(from var(--background-color) h 0 max(10, min(90, calc((l - 80) * -100 + 90))) / 1);
-    /* --test-color-text: hsl(from var(--primary-color) h 0 max(10, min(90, calc((l - 50) * -100 + 90))) / 1); */
-    --secondary-color-background: hsl(85, 100%, 55%);
+    --light-color: rgb(230 230 230);
+    --light-color-text: rgb(37, 37, 37);
+
+    --dark-color: rgb(20 20 20);
+    --dark-color-text: rgb(245, 245, 245);
+
+    --primary-color: hsl(200, 84%, 48%);
+    --primary-color-text: hsl(0, 0%, 0%);
+
+    --secondary-color: hsl(85, 100%, 55%);
+    --secondary-color-text: hsl(0, 0%, 0%);
     --secondary-color-dark-background: hsl(85, 100%, 25%);
 
     --fs-300: clamp(0.94rem, calc(0.92rem + 0.08vw), 0.98rem);

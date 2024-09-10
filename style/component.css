@@ -6,6 +6,7 @@
     /* --color-box: blue; */
     :where([class*='btn-group'] > *, [class*='btn']:not(*[class*='btn-group'])) {
         --color-box: hsl(from var(--background-color) h s l / 1);
+        color: var(--color-text);
         border: solid var(--color-box) var(--border-size);
         border-radius: var(--border-radius);
         background-color: var(--background-color);
@@ -16,16 +17,38 @@
         align-items: center;
     }
     :where(.btn, .btn-group > *) {
-        --background-color: hsl(0 0 0 / 0.9);
+        --background-color: hsl(0 0 0 / 0.6);
     }
     :where(.btn-outline, .btn-group-outline > *, .btn, .btn-group > *) {
         --color-box: currentColor;
     }
     :where(.btn-primary, .btn-group-primary > *) {
         --background-color: var(--primary-color);
+        --color-text: var(--primary-color-text);
+    }
+    :where(.btn-secondary, .btn-group-secondary > *) {
+        --background-color: var(--secondary-color);
+        --color-text: var(--secondary-color-text);
+    }
+    :where(.btn-warning, .btn-group-warning > *) {
+        --background-color: var(--warning-color);
+        --color-text: var(--warning-color-text);
+    }
+    :where(.btn-success, .btn-group-success > *) {
+        --background-color: var(--success-color);
+        --color-text: var(--success-color-text);
+    }
+    :where(.btn-light, .btn-group-light > *) {
+        --background-color: var(--light-color);
+        --color-text: var(--light-color-text);
+    }
+    :where(.btn-dark, .btn-group-dark > *) {
+        --background-color: var(--dark-color);
+        --color-text: var(--dark-color-text);
     }
     :where(.btn-danger, .btn-group-danger > *) {
         --background-color: var(--error-color);
+        --color-text: var(--error-color-text);
     }
     :where([class*='btn-group'].scale > *, [class*='btn-group'] > *.scale, [class*='btn']:not(*[class*='btn-group']).scale) {
         transition: scale ease-in-out 300ms, filter ease-in-out 300ms;

@@ -1,7 +1,7 @@
 *,
 *:before,
 *:after {
-    color: hsl(from var(--background-color) h 0 max(10, min(90, calc((l - 40) * -100 + 90))) / 1);
+    /* color: hsl(from var(--background-color) h 0 max(10, min(90, calc((l - 40) * -100 + 90))) / 1); */
     background-color: transparent;
     border-color: currentColor;
     box-sizing: border-box;
@@ -46,7 +46,7 @@ body {
 :where(body) {
     display: grid;
     grid-template-rows: auto 1fr auto;
-    & > :where(*:nth-child(1)) {
+    & > :where(*:nth-child(1):not(header)) {
         display: grid;
         grid-template-rows: auto 1fr auto;
     }
