@@ -27,7 +27,7 @@
     :where(.btn-danger, .btn-group-danger > *) {
         --background-color: var(--error-color);
     }
-    :where(.btn.scale, .btn-group.scale > *, .btn-group > *:where(.scale)) {
+    :where([class*='btn-group'].scale > *, [class*='btn-group'] > *.scale, [class*='btn']:not(*[class*='btn-group']).scale) {
         transition: scale ease-in-out 300ms, filter ease-in-out 300ms;
         &:where(:not(:hover)) {
             animation: zIndexHack 100ms;
@@ -37,7 +37,7 @@
             z-index: 10;
         }
     }
-    :where(.btn.inline, .btn-group.inline > *, .btn-group > *:where(.inline)) {
+    :where([class*='btn-group'].inline > *, [class*='btn-group'] > *.inline, [class*='btn']:not(*[class*='btn-group']).inline) {
         &::after {
             content: '';
             width: calc(100% - 4 * var(--spacer));
@@ -53,7 +53,7 @@
             }
         }
     }
-    :where(.btn-group.blur) {
+    :where([class*='btn-group'].blur) {
         &:has(*:focus:focus-visible) *:not(:focus:focus-visible),
         &:has(*:hover) *:not(:hover) {
             filter: blur(1px);
