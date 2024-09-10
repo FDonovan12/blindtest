@@ -16,6 +16,7 @@
     }
 
     body {
+        --background-color: hsla(0, 0%, 0%, 0);
         row-gap: 0;
         background: url('1230968-ciel-etoile-gratuit-photo.jpeg');
         background: url('7210104-galaxy-stars-in-the-univers-hors-terre-abstract-graphic-design-wallpaper-card-3d-gratuit-photo.jpg');

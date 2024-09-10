@@ -1,7 +1,7 @@
 *,
 *:before,
 *:after {
-    color: hsl(from var(--background-color) h 0 max(10, min(90, calc((l - 30) * -100 + 90))) / 1);
+    color: hsl(from var(--background-color) h 0 max(10, min(90, calc((l - 40) * -100 + 90))) / 1);
     background-color: transparent;
     border-color: currentColor;
     box-sizing: border-box;

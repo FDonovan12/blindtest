@@ -2,9 +2,9 @@
     --border-radius: 0.4em;
     --scale-button: 1.1;
     --border-size: 0.1em;
-    --color-box: currentColor;
-    :where(.btn, .btn-group > *) {
-        --background-color: rgba(0 0 0 / 0.9);
+    --color-box: hsl(from var(--background-color) h s h);
+    --color-box: hsl(from red 120 120 120);
+    :where([class*='btn-group'] > *, [class*='btn']:not(*[class*='btn-group'])) {
         border: solid var(--color-box) var(--border-size);
         border-radius: var(--border-radius);
         background-color: var(--background-color);
@@ -13,6 +13,18 @@
         display: inline-flex;
         justify-content: center;
         align-items: center;
+    }
+    :where(.btn, .btn-group > *) {
+        --background-color: hsl(0 0 0 / 0.9);
+    }
+    :where(.btn-outline, .btn-group-outline > *, .btn, .btn-group > *) {
+        --color-box: currentColor;
+    }
+    :where(.btn-primary, .btn-group-primary > *) {
+        --background-color: var(--primary-color);
+    }
+    :where(.btn-danger, .btn-group-danger > *) {
+        --background-color: var(--error-color);
     }
     :where(.btn.scale, .btn-group.scale > *, .btn-group > *:where(.scale)) {
         transition: scale ease-in-out 300ms, filter ease-in-out 300ms;

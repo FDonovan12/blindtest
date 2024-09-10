@@ -11,6 +11,8 @@
 
 html:where(.bootfish) {
     --spacer: 0.2em; /* affect margin padding .btn*/
+    --background-color: hsla(0, 0%, 0%, 0);
+
     --success-color-background: hsl(120 100% 25%);
     --success-color-text: hsl(120 100% 25%);
 
