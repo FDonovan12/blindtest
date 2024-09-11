@@ -1,82 +1,97 @@
 :where(.bootfish) {
-    --border-radius: 0.4em;
-    --scale-button: 1.1;
-    --border-size: 0.1em;
     /* --color-box: hsl(from red h s l); */
     /* --color-box: blue; */
-    :where([class*='btn-group'] > *, [class*='btn']:not(*[class*='btn-group'])) {
-        --color-box: hsl(from var(--background-color) h s l / 1);
-        color: var(--color-text);
-        border: solid var(--color-box) var(--border-size);
-        border-radius: var(--border-radius);
-        background-color: var(--background-color);
+    & :where([class*='btn-group'] > *, [class*='btn']:not(*[class*='btn-group'])) {
+        --_border-size: 0.1em;
+        --_border-radius: 0.4em;
+        --_scale-button: 1.1;
+        --_color-box: hsl(from var(--_color) h s l / 1);
+
+        color: var(--_text);
+        border: solid var(--_color-box) var(--_border-size);
+        border-radius: var(--_border-radius);
+        background-color: var(--_color);
         padding: var(--spacer);
         position: relative;
         display: inline-flex;
         justify-content: center;
         align-items: center;
-    }
-    :where(.btn, .btn-group > *) {
-        --background-color: hsl(0 0 0 / 0.6);
-    }
-    :where(.btn-outline, .btn-group-outline > *, .btn, .btn-group > *) {
-        --color-box: currentColor;
-    }
-    :where(.btn-primary, .btn-group-primary > *) {
-        --background-color: var(--primary-color);
-        --color-text: var(--primary-color-text);
-    }
-    :where(.btn-secondary, .btn-group-secondary > *) {
-        --background-color: var(--secondary-color);
-        --color-text: var(--secondary-color-text);
-    }
-    :where(.btn-warning, .btn-group-warning > *) {
-        --background-color: var(--warning-color);
-        --color-text: var(--warning-color-text);
-    }
-    :where(.btn-success, .btn-group-success > *) {
-        --background-color: var(--success-color);
-        --color-text: var(--success-color-text);
-    }
-    :where(.btn-light, .btn-group-light > *) {
-        --background-color: var(--light-color);
-        --color-text: var(--light-color-text);
-    }
-    :where(.btn-dark, .btn-group-dark > *) {
-        --background-color: var(--dark-color);
-        --color-text: var(--dark-color-text);
-    }
-    :where(.btn-danger, .btn-group-danger > *) {
-        --background-color: var(--error-color);
-        --color-text: var(--error-color-text);
-    }
-    :where([class*='btn-group'].scale > *, [class*='btn-group'] > *.scale, [class*='btn']:not(*[class*='btn-group']).scale) {
-        transition: scale ease-in-out 300ms, filter ease-in-out 300ms;
-        &:where(:not(:hover)) {
-            animation: zIndexHack 100ms;
+        &:where(.btn-outline, .btn-group-outline > *) {
+            --_color: var(--dark-color);
+            --_text: var(--dark-color-text);
         }
-        &:where(:focus:focus-visible, :hover) {
-            scale: var(--scale-button);
-            z-index: 10;
+        &:where(.btn, .btn-group > *) {
+            --_color: hsl(0 0 0 / 0.6);
         }
-    }
-    :where([class*='btn-group'].inline > *, [class*='btn-group'] > *.inline, [class*='btn']:not(*[class*='btn-group']).inline) {
-        &::after {
-            content: '';
-            width: calc(100% - 4 * var(--spacer));
-            outline: calc(var(--border-size) / 2) currentColor solid;
-            position: absolute;
-            bottom: calc(var(--border-size));
-            scale: 0 1;
-            transition: scale 300ms ease-in-out;
+        &:where([class*='btn-primary'], [class*='btn-group-primary'] > *) {
+            --_color: var(--primary-color);
+            --_text: var(--primary-color-text);
         }
-        &:where(:focus:focus-visible, :hover) {
+        &:where([class*='btn-secondary'], [class*='btn-group-secondary'] > *) {
+            --_color: var(--secondary-color);
+            --_text: var(--secondary-color-text);
+        }
+        &:where([class*='btn-warning'], [class*='btn-group-warning'] > *) {
+            --_color: var(--warning-color);
+            --_text: var(--warning-color-text);
+        }
+        &:where([class*='btn-success'], [class*='btn-group-success'] > *) {
+            --_color: var(--success-color);
+            --_text: var(--success-color-text);
+        }
+        &:where([class*='btn-danger'], [class*='btn-group-danger'] > *) {
+            --_color: var(--danger-color);
+            --_text: var(--danger-color-text);
+        }
+        &:where([class*='btn-light'], [class*='btn-group-light'] > *) {
+            --_color: var(--light-color);
+            --_text: var(--light-color-text);
+        }
+        &:where(.btn-dark, .btn-group-dark > *) {
+            --_color: var(--dark-color);
+            --_text: var(--dark-color-text);
+        }
+        /* &:not(:where([class*='outline'], :where([class*='outline'], [class*='btn-group']) > *)) {
+            --_color-box: var(--_color);
+            --_color: transparent;
+        } */
+        &:where([class*='outline'], :where([class*='outline'], [class*='btn-group-outline']) > *) {
+            --_color-box: var(--_color);
+            /* --_color: transparent; */
+            background-color: transparent;
+            --_text: var(--_color);
+        }
+        &:where(.btn, .btn-group > *) {
+            --_color-box: currentColor;
+        }
+        &:where([class*='btn-group'].scale > *, [class*='btn-group'] > *.scale, [class*='btn']:not(*[class*='btn-group']).scale) {
+            transition: scale ease-in-out 300ms, filter ease-in-out 300ms;
+            &:where(:not(:hover)) {
+                animation: zIndexHack 100ms;
+            }
+            &:where(:focus:focus-visible, :hover) {
+                scale: var(--_scale-button);
+                z-index: 10;
+            }
+        }
+        &:where([class*='btn-group'].inline > *, [class*='btn-group'] > *.inline, [class*='btn']:not(*[class*='btn-group']).inline) {
             &::after {
-                scale: 1 1;
+                content: '';
+                width: calc(100% - 4 * var(--spacer));
+                outline: calc(var(--_border-size) / 2) currentColor solid;
+                position: absolute;
+                bottom: calc(var(--_border-size));
+                scale: 0 1;
+                transition: scale 300ms ease-in-out;
+            }
+            &:where(:focus:focus-visible, :hover) {
+                &::after {
+                    scale: 1 1;
+                }
             }
         }
     }
-    :where([class*='btn-group'].blur) {
+    & :where([class*='btn-group'].blur) {
         &:has(*:focus:focus-visible) *:not(:focus:focus-visible),
         &:has(*:hover) *:not(:hover) {
             filter: blur(1px);

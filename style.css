@@ -10,7 +10,7 @@
         --color-text: hsl(208 100% 97%);
         --primary-color: hsl(226, 59%, 57%);
         --background-color: hsla(0, 0%, 100%, 0);
-        --button-active: hsla(30, 25%, 2%, 0.4);
+        --button-active: hsla(30, 75%, 39%, 0.4);
     }
 
     body {
@@ -20,6 +20,7 @@
         background: url('7210104-galaxy-stars-in-the-univers-hors-terre-abstract-graphic-design-wallpaper-card-3d-gratuit-photo.jpg');
         background: url('7359962-galaxy-stars-in-the-univers-hors-terre-abstract-graphic-design-wallpaper-card-3d-gratuit-photo.jpg');
         background-size: cover;
+        /* background: aliceblue; */
         color: var(--color-text);
     }
 }

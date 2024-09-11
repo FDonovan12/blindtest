@@ -15,8 +15,8 @@
     --success-color: hsl(120 100% 25%);
     --success-color-text: hsl(0, 0%, 0%);
 
-    --error-color: hsl(0 90% 40%);
-    --error-color-text: hsl(0, 0%, 0%);
+    --danger-color: hsl(0 90% 40%);
+    --danger-color-text: hsl(0, 0%, 0%);
 
     --warning-color: hsl(40 90% 40%);
     --warning-color-text: hsl(0, 0%, 0%);
