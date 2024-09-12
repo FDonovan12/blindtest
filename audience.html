@@ -8,17 +8,34 @@
         <script type="module" src="./script/script.js" defer></script>
         <script type="module" src="./script/header.js" defer></script>
     </head>
-    <body>
-        <header class="grid-container">
+    <body class="grid-container">
+        <header class="full-width">
             <div id="participants" class="full-width"></div>
         </header>
-        <main class="grid-container">
+        <main class="full-width grid-container">
             <canvas id="audioVisualizer" class="full-width"></canvas>
             <div class="content-wrapper full-width">
+                <div id="section-details" class="section-details grid-container">
+                    <div class="basic-grid breakout">
+                        <h1 id="section-title" class="h2 center start-2 col-8"></h1>
+                        <div class="mb-auto ml-auto col-2">
+                            <div>Section</div>
+                            <div id="number-section"></div>
+                        </div>
+                    </div>
+                    <div class="basic-grid breakout">
+                        <div class="col-3">
+                            <div>Musique</div>
+                            <div id="number-music"></div>
+                        </div>
+                        <div id="section-description" class="fs-400 col-6 center"></div>
+                    </div>
+                    <!-- <div id="timer"></div> -->
+                </div>
                 <div id="response" class="response grid-container"></div>
                 <audio id="music-audio"></audio>
             </div>
         </main>
-        <footer></footer>
+        <footer class="full-width"></footer>
     </body>
 </html>

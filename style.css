@@ -57,7 +57,7 @@ canvas {
 }
 button {
     &:where(:active, [active]) {
-        background-color: var(--button-active);
+        background-color: var(--danger-color);
     }
 }
 
@@ -85,11 +85,11 @@ footer {
     --color-text: aliceblue;
     color: aliceblue;
 }
-.joueur-rouge {
+:is(.joueur-rouge, .joueur-1) {
     --background-color: hsl(0, 60%, 45%);
     color: black;
 }
-.joueur-noir {
+:is(.joueur-noir, .joueur-2) {
     --background-color: hsl(0, 0%, 0%);
     color: aliceblue;
 }
@@ -123,7 +123,7 @@ footer {
     background-color: rgb(from var(--background-color) r g b / 0.8);
     transition: all 300ms ease-in-out;
     &:is(:focus-within, :hover) {
-        scale: 1.1;
+        scale: 1.05;
     }
     .response:has(&) {
         height: fit-content;
@@ -217,6 +217,6 @@ input {
 footer {
     width: 100%;
     background-color: darkgray;
-    --color-text: black;
+    color: black;
     font-size: var(--fs-300);
 }
