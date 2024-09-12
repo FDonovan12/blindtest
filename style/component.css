@@ -16,6 +16,8 @@
         display: inline-flex;
         justify-content: center;
         align-items: center;
+        transition: color 300ms ease-in-out, background-color 300ms ease-in-out, scale ease-in-out 300ms, filter ease-in-out 300ms,
+            opacity ease-in-out 300ms;
         &:where(.btn-outline, .btn-group-outline > *) {
             --_color: var(--dark-color);
             --_text: var(--dark-color-text);
@@ -57,15 +59,17 @@
         } */
         &:where([class*='outline'], :where([class*='outline'], [class*='btn-group-outline']) > *) {
             --_color-box: var(--_color);
-            /* --_color: transparent; */
             background-color: transparent;
-            --_text: var(--_color);
+            color: var(--_color);
+            &:where(:focus:focus-visible, :hover) {
+                background-color: var(--_color);
+                color: var(--_text);
+            }
         }
         &:where(.btn, .btn-group > *) {
             --_color-box: currentColor;
         }
         &:where([class*='btn-group'].scale > *, [class*='btn-group'] > *.scale, [class*='btn']:not(*[class*='btn-group']).scale) {
-            transition: scale ease-in-out 300ms, filter ease-in-out 300ms;
             &:where(:not(:hover)) {
                 animation: zIndexHack 100ms;
             }
@@ -88,6 +92,18 @@
                 &::after {
                     scale: 1 1;
                 }
+            }
+        }
+        &:where([class*='neon'], :where([class*='neon'], [class*='btn-group-neon']) > *) {
+            --_color-box: var(--_color);
+            background-color: transparent;
+            color: var(--_color);
+            box-shadow: 0 0 10px 4px var(--_color), inset 0 0 10px 4px var(--_color);
+            border-radius: 100vh;
+            &:where(:focus:focus-visible, :hover) {
+                background-color: var(--_color);
+                color: var(--_text);
+                box-shadow: 0 0 10px 10px var(--_color);
             }
         }
     }
