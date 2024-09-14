@@ -57,16 +57,12 @@ canvas {
 }
 button {
     &:where(:active, [active]) {
-        background-color: var(--danger-color);
+        background-color: hsl(0 0 0 / 0.6);
+        color: aliceblue;
+        color: aliceblue;
     }
 }
 
-footer {
-    width: 100%;
-    background-color: darkgray;
-    --color-text: black;
-    font-size: var(--fs-300);
-}
 #participants {
     display: flex;
     flex-wrap: wrap;
@@ -219,4 +215,6 @@ footer {
     background-color: darkgray;
     color: black;
     font-size: var(--fs-300);
+    width: 100%;
+    /* --color-text: black; */
 }
