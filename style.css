@@ -119,7 +119,7 @@ button {
     background-color: rgb(from var(--background-color) r g b / 0.8);
     transition: all 300ms ease-in-out;
     &:is(:focus-within, :hover) {
-        scale: 1.05;
+        /* scale: 1.05; */
     }
     .response:has(&) {
         height: fit-content;
@@ -189,7 +189,11 @@ select {
 form {
     input {
         min-width: 40ch;
+        background-color: aliceblue;
     }
+    /* button {
+        background-color: aliceblue;
+    } */
 }
 input {
     border: 3px solid;

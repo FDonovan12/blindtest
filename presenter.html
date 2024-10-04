@@ -16,17 +16,17 @@
         </header>
         <main class="full-width grid-container">
             <canvas id="audioVisualizer" class="full-width"></canvas>
-            <div id="forms" class="d-none">
+            <div id="forms" class="d-noned">
                 <div>
                     <form>
                         <input placeholder="Mot de passe" type="password" id="passwordInput" />
-                        <button id="password">Valider mot de passe</button>
+                        <button id="password" class="btn-success">Valider mot de passe</button>
                     </form>
                 </div>
                 <div>
                     <form>
                         <input placeholder="Nom du particpant" type="text" id="addParticpantInput" />
-                        <button id="addParticpant">Ajouter participant</button>
+                        <button id="addParticpant" class="btn-success">Ajouter participant</button>
                     </form>
                 </div>
                 <div>
@@ -38,7 +38,7 @@
                                 id="linkYoutubeInput"
                                 value="https://www.youtube.com/watch?v=NaFd8ucHLuo&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=55"
                                 required />
-                            <button id="addLinkYoutube">Ajouter lien Youtube</button>
+                            <button id="addLinkYoutube" class="btn-success">Ajouter contenu Youtube</button>
                         </div>
                         <div id="blockOfPointInfos">
                             <div>
@@ -46,7 +46,7 @@
                                 <input placeholder="Value Point infos" type="text" required />
                             </div>
                         </div>
-                        <button id="validMusic">Valide musique</button>
+                        <button id="validMusic" class="btn-success">Valide musique</button>
                     </form>
                     <i id="addPointInfo" onclick="addFormPointInfo()" class="fa-solid fa-circle-plus"></i>
                 </div>
@@ -57,7 +57,7 @@
                 <button id="play" class="btn-danger">play</button>
                 <button id="next" class="">suivant</button>
                 <button id="downloadAnchorElem" class="">export JSON</button>
-                <button id="readJson" class="">import JSON</button>
+                <button id="readJson" class="">reset JSON</button>
                 <button id="shuffleMusics">Shuffle musique</button>
             </div>
             <div class="content-wrapper full-width">
