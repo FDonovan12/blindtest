@@ -103,52 +103,22 @@ export function createResponse(partyBlindtest) {
     // divSectionDetails.innerHTML = null;
     updateSectionContent(partyBlindtest);
 
-    // const firstDivSection = new TagBuilder('div', divSectionDetails).setClass('basic-grid breakout').build();
-    // const divSectionName = new TagBuilder('h1', firstDivSection)
-    //     .setClass('center start-2 col-8')
-    //     .setTextContent(partyBlindtest.getSection().name)
-    //     .build();
-    // const divSectionNumber = new TagBuilder('div', firstDivSection).setClass('right col-2').build();
-    // const firstDivSectionNumber = new TagBuilder('div', divSectionNumber).setTextContent(`Section`).build();
-    // const secondDivSectionNumber = new TagBuilder('div', divSectionNumber)
-    //     .setTextContent(`${partyBlindtest.currentSection + 1} / ${partyBlindtest.getNumberOfSection()}`)
-    //     .build();
-
-    // const secondDivSection = new TagBuilder('div', divSectionDetails).setClass('basic-grid breakout').build();
-    // const divCurrentMusicNumberSection = new TagBuilder('div', secondDivSection).setClass('col-3').build();
-    // const firstDivCurrentMusicNumberSection = new TagBuilder('div', divCurrentMusicNumberSection).setTextContent(`Musique`).build();
-    // const secondDivCurrentMusicNumberSection = new TagBuilder('div', divCurrentMusicNumberSection)
-    //     .setTextContent(`${partyBlindtest.currentMusic + 1} / ${partyBlindtest.getNumberOfMusic()}`)
-    //     .build();
-
-    // const divSectionDetailsContent = new TagBuilder('div', secondDivSection)
-    //     .setClass('col-6 center')
-    //     .setTextContent(partyBlindtest.getSection().details)
-    //     .build();
-    // const divTotalTime = new TagBuilder('div', divSectionDetails)
-    //     .setTextContent(`${secondsToTime(partyBlindtest.getDuration())} : ${partyBlindtest.getDuration()}s`)
-    //     .build();
-
     const divResponse = document.querySelector('#response');
     // divResponse.innerHTML = null;
     const pointInfos = partyBlindtest.getMusic().pointInfos;
     for (let i = 0; i < Math.max(pointInfos.length, divResponse.childElementCount); i++) {
         const classdivPointInfo = i % 2 ? 'breakout-start' : 'breakout-end';
         let divPointInfo;
-        console.log(i, divResponse.childElementCount);
         const notEnoughDiv = i >= divResponse.childElementCount;
         const tooMuchDiv = i >= pointInfos.length;
         if (tooMuchDiv) {
-            console.log('remove tag');
             divResponse.removeChild(divResponse.children[i]);
         } else {
             if (notEnoughDiv) {
-                console.log('create tag');
                 const divPointInfo = new TagBuilder('div', divResponse)
                     .setClass(classdivPointInfo + ' response-pointInfos ' + this?.participant?.classCss)
                     .build();
             }
-            console.log('modify tag');
             divPointInfo = divResponse.children[i];
             const pointInfo = pointInfos[i];
             divPointInfo.classList = classdivPointInfo + ' response-pointInfos ' + pointInfo?.participant?.classCss;
@@ -220,6 +190,8 @@ export async function researchFromYoutubeLink() {
         const title = data.items[0].snippet.title;
         const durationString = data.items[0]?.contentDetails?.duration;
         const channelName = data.items[0].snippet.channelTitle;
+        console.log(title);
+        console.log(channelName);
         resetPointInfo();
         addFormPointInfo('Chanteur', channelName);
         addFormPointInfo('Titre', title);

@@ -6,8 +6,8 @@
         <!-- <script src="./objectValueBlindtest.js" type="module"></script> -->
         <link rel="stylesheet" href="style.css" />
         <link rel="shortcun icon" href="asset/logo.png" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js" defer></script>
         <script type="module" src="./script/header.js" defer></script>
-        <script type="module" src="./script/script.js" defer></script>
         <script type="module" src="./script/script.js" defer></script>
         <title>Blind Test - Présentateur</title>
     </head>
@@ -63,7 +63,7 @@
             </div>
             <div class="content-wrapper full-width">
                 <div id="section-details" class="section-details grid-container">
-                    <div class="basic-grid breakout">
+                    <div class="basic-grid breakout d-none">
                         <h1 id="section-title" class="h2 center start-2 col-8"></h1>
                         <div class="mb-auto ml-auto col-2">
                             <div>Section</div>
@@ -71,11 +71,11 @@
                         </div>
                     </div>
                     <div class="basic-grid breakout">
-                        <div class="col-3">
-                            <div>Musique</div>
-                            <div id="number-music"></div>
+                        <div class="col-6">
+                            <span>Musique</span>
+                            <span id="number-music"></span>
                         </div>
-                        <div id="section-description" class="fs-400 col-6 center"></div>
+                        <div id="section-description" class="fs-400 col-6 center d-none"></div>
                     </div>
                     <!-- <div id="timer"></div> -->
                 </div>

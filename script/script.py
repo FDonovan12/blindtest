@@ -99,6 +99,6 @@ def download_all_musics(jsonFileName):
     f.close()
     jsonFile.close()
 
-filename = "./../current/data.json"
-# filename = "./../current/testdata.json"
+# filename = "./../current/data.json"
+filename = "./../current/testdata.json"
 download_all_musics(filename)

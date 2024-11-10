@@ -101,10 +101,18 @@ button {
     --background-color: hsl(51, 80%, 61%);
     color: black;
 }
+.joueur-alliance {
+    --background-color: hsl(213, 88%, 16%);
+    color: white;
+}
+.joueur-horde {
+    --background-color: hsl(0, 86%, 27%);
+    color: white;
+}
 .section-details {
     background-color: hsl(0 0 0 / 0.1);
     backdrop-filter: blur(1px);
-    margin-bottom: 1em;
+    /* margin-bottom: 1em; */
     padding-bottom: 1em;
 }
 
@@ -221,4 +229,11 @@ footer {
     font-size: var(--fs-300);
     width: 100%;
     /* --color-text: black; */
+}
+
+#blockOfPointInfos {
+    & > div {
+        display: flex;
+        gap: 0.2em;
+    }
 }

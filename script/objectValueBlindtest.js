@@ -258,6 +258,7 @@ export class PartyBlindtest {
             const inputs = pointInfo.querySelectorAll('input');
             const name = inputs[0].value;
             const value = inputs[1].value;
+            console.log(value);
             music.addPointInfo(name, value);
         });
         this.save();
