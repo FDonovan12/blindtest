@@ -113,6 +113,7 @@ export function createResponse(partyBlindtest) {
         const tooMuchDiv = i >= pointInfos.length;
         if (tooMuchDiv) {
             divResponse.removeChild(divResponse.children[i]);
+            i--;
         } else {
             if (notEnoughDiv) {
                 const divPointInfo = new TagBuilder('div', divResponse)
