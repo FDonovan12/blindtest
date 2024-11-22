@@ -3,22 +3,13 @@
   "htmlWhitespaceSensitivity": "ignore",
   "singleQuote": true,
   "printWidth": 150,
-  "[python]": {
-    "tabWidth": 4
-  },
-  "[javascript]": {
-    "tabWidth": 4
-  },
-  "[typescript]": {
-    "tabWidth": 4
-  },
-  "[html]": {
-    "tabWidth": 2
-  },
-  "[css]": {
-    "tabWidth": 2
-  },
-  "[json]": {
-    "tabWidth": 2
-  }
+  "tabWidth": 4,
+  "overrides": [
+    {
+      "files": ["*.css", "*.html", "*.json", ".prettierrc"],
+      "options": {
+        "tabWidth": 2
+      }
+    }
+  ]
 }

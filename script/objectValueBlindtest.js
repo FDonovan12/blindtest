@@ -21,7 +21,6 @@ export class MainObject {
     }
 
     updateStatus() {
-        console.log('updateStatus');
         this.partyBlindtest = PartyBlindtest.get();
         const isPresentateurPlaying = localStorage.getItem('audio-is-playing') === 'true' ? true : false;
         addResponse(this.partyBlindtest);
@@ -38,10 +37,8 @@ export class PartyBlindtest {
             partyBlindtest = JSON.parse(partyBlindtest);
         }
         if (partyBlindtest?.blindtest) {
-            console.log('partyBlindtest.blindtest :', partyBlindtest.blindtest);
             this.blindtest = new Blindtest(partyBlindtest.blindtest);
         } else {
-            console.log('partyBlindtest :', partyBlindtest);
             this.blindtest = new Blindtest(partyBlindtest);
         }
         this.currentMusic = partyBlindtest?.currentMusic || 0;
@@ -55,7 +52,6 @@ export class PartyBlindtest {
                 return partyBlindtestFromStorage;
             }
         }
-        console.log(this);
         this.changeAudio();
     }
 
@@ -95,7 +91,6 @@ export class PartyBlindtest {
 
     playMusic() {
         const buttonPlayPause = document.querySelector('#play');
-        console.log(this.audio);
         this.audio.play();
         if (buttonPlayPause) {
             buttonPlayPause.setAttribute('active', true);
@@ -145,7 +140,6 @@ export class PartyBlindtest {
     }
 
     save(storage) {
-        console.log('save');
         if (!storage) {
             storage = this.localStorageName;
         }
@@ -161,11 +155,8 @@ export class PartyBlindtest {
         return new PartyBlindtest(JSON.parse(localStorage.getItem(storage)), true);
     }
     static updateStatus() {
-        console.log('updateStatus');
         const partyBlindtest = PartyBlindtest.get();
         const isPresentateurPlaying = localStorage.getItem('audio-is-playing') === 'true' ? true : false;
-        console.log('isPresentateurPlaying : ', isPresentateurPlaying);
-        console.log('partyBlindtest.isPlaying() : ', partyBlindtest.isPlaying());
         if (isPresentateurPlaying !== partyBlindtest.isPlaying()) {
             // not work well the two music are desync and
             // partyBlindtest.playAndPauseMusic();
@@ -207,11 +198,11 @@ export class PartyBlindtest {
     nextSection() {
         if (this.currentSection < this.getNumberOfSection() - 1) {
             this.currentSection++;
-            this.currentMusic = 0;
         } else {
             // TODO modify when the project is finished, this doesn't have to cycle
             this.currentSection = 0;
         }
+        this.currentMusic = 0;
         this.changeAudio();
         this.save();
     }
@@ -229,13 +220,11 @@ export class PartyBlindtest {
     previousSection() {
         if (this.currentSection > 0) {
             this.currentSection--;
-            this.currentMusic = this.getNumberOfMusic() - 1;
         } else {
             // TODO modify when the project is finished, this doesn't have to cycle
-            // this.currentSection = this.getNumberOfSection() - 1;
+            this.currentSection = this.getNumberOfSection() - 1;
         }
-        // console.log(this.currentMusic);
-        // console.log(this.currentMusic);
+        this.currentMusic = this.getNumberOfMusic() - 1;
         this.changeAudio();
         this.save();
     }
@@ -370,13 +359,8 @@ export class PointInfo {
     }
 
     changeParticipant(newParticipantName, partyBlindtest) {
-        console.log('changeParticipant : ', newParticipantName);
-        console.log(newParticipantName);
         const newParticipant = partyBlindtest.getParticipant(newParticipantName);
-        console.log(newParticipant);
         this.participant = newParticipant ? newParticipant : undefined;
-        // this.participant = newParticipantName && new Participant(newParticipantName);
-        console.log('this.participant : ', this.participant);
         partyBlindtest.save();
     }
 

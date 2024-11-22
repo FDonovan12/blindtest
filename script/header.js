@@ -164,7 +164,6 @@ function addHeader() {
 
 function createLinkNav(nav, href, text) {
     let link = createTagWithParentClassContent('a', nav, 'nav-bar-link', text);
-    console.log(href);
     link.href = href;
     if (document.title === text) {
         link.classList.add('active');

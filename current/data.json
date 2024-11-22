@@ -500,7 +500,7 @@
             ]
           },
           {
-            "path": "current/music/ed-sheeran-perfect-official-music-video.mp3",
+            "path": "current/music/ed-sheeran-perfect.mp3",
             "link": "https://www.youtube.com/watch?v=2Vv-BfVoq4g",
             "duration": 280,
             "pointInfos": [
@@ -1037,6 +1037,15 @@
               { "name": "Bonus 1", "value": "Dragon Ball Z" },
               { "name": "Bonus 1", "value": "Film 13 : L'Attaque du dragon" },
               { "name": "Bonus 2", "value": "Tapion's Theme" }
+            ]
+          },
+          {
+            "path": "current/music/farruko-pepas-official-video.mp3",
+            "link": "https://www.youtube.com/watch?v=y8trd3gjJt0",
+            "duration": 295,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Farruko" },
+              { "name": "Titre", "value": "Pepas" }
             ]
           }
         ]

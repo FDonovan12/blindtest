@@ -8,11 +8,13 @@
         "details": "test details2",
         "musics": [
           {
+            "link": "https://www.youtube.com/watch?v=y8trd3gjJt0",
             "pointInfos": [
-              { "name": "Chanteur", "value": "Lord Kossity" },
-              { "name": "Titre", "value": "Hey Sexy Wow" },
-              { "name": "Featuring", "value": "Chico" }
-            ]
+              { "name": "Chanteur", "value": "Farruko" },
+              { "name": "Titre", "value": "Pepas" }
+            ],
+            "path": "current/music/farruko-pepas-official-video.mp3",
+            "duration": 295
           }
         ]
       }

@@ -15,12 +15,9 @@ function testTheme(numberOne, numberTwo) {
     for (let i = 0; i < numberTwo; i++) {
         sum += result;
     }
-    console.log('sum :', sum);
     return sum;
 }
-// console.log(fileName);
 const mainObject = new MainObject();
-console.log(mainObject);
 // let partyBlindtest = null;
 
 createClickEventOnButton('#password', start);
@@ -100,11 +97,6 @@ function resizeCanvas() {
     const main = document.querySelector('main');
     canvas.width = main.getBoundingClientRect().width;
     canvas.height = main.getBoundingClientRect().height;
-    // const style = getComputedStyle(canvas);
-    // canvas.width = parseInt(style.width);
-    // canvas.height = parseInt(style.height);
-    console.log('canvas.width : ', canvas.width);
-    console.log('canvas.height : ', canvas.height);
 }
 
 const canvas = document.getElementById('audioVisualizer');
@@ -130,7 +122,6 @@ const channel = new BroadcastChannel('audio-channel');
 
 // Fonction de visualisation
 function draw(dataArray) {
-    console.log('draw');
     // Effacer le canvas
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -226,7 +217,6 @@ audioElement.onplay = function () {
         audioContext.resume().then(() => {
             function loop() {
                 if (audioElement.paused) {
-                    console.log('stop loop');
                     return;
                 } // Arrêter la boucle si la musique est en pause
                 // analyser.getByteFrequencyData(dataArray);

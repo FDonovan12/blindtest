@@ -2,9 +2,7 @@ import { PartyBlindtest, MainObject } from './objectValueBlindtest.js';
 import { createClickEventOnButton, getValueFromPathname, getPathnameFromValue, researchFromYoutubeLink, addFormPointInfo } from './utils.js';
 import unitTest from './unitTest.js';
 
-// console.log(fileName);
 let mainObject = new MainObject();
-console.log(mainObject);
 // let partyBlindtest = null;
 
 createClickEventOnButton('#password', start);
