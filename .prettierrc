@@ -1,7 +1,24 @@
 {
-    "bracketSameLine": true,
-    "htmlWhitespaceSensitivity": "ignore",
-    "singleQuote": true,
-    "tabWidth": 4,
-    "printWidth": 150
+  "bracketSameLine": true,
+  "htmlWhitespaceSensitivity": "ignore",
+  "singleQuote": true,
+  "printWidth": 150,
+  "[python]": {
+    "tabWidth": 4
+  },
+  "[javascript]": {
+    "tabWidth": 4
+  },
+  "[typescript]": {
+    "tabWidth": 4
+  },
+  "[html]": {
+    "tabWidth": 2
+  },
+  "[css]": {
+    "tabWidth": 2
+  },
+  "[json]": {
+    "tabWidth": 2
+  }
 }

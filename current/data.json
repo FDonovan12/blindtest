@@ -1,1016 +1,1050 @@
 {
-    "blindtest": {
-        "name": "Playlist Journee wow",
-        "participants": [
-            { "name": "Horde", "classCss": "joueur joueur-horde" },
-            { "name": "Alliance", "classCss": "joueur joueur-alliance" }
-        ],
-        "sections": [
-            {
-                "name": "Pop music",
-                "details": "Plusieurs musiques pop",
-                "musics": [
-                    {
-                        "path": "current/music/zom-100-bucket-list-of-the-dead-opening-full-song-of-the-dead-by-kana-boon-lyrics.mp3",
-                        "link": "https://www.youtube.com/watch?v=bB-w6nTjP6c",
-                        "duration": 197,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Kana-Boon" },
-                            { "name": "Titre", "value": "Song of the Dead" },
-                            { "name": "Anime", "value": "Zom 100: Bucket List of the Dead" },
-                            { "name": "Bonus", "value": "Opening 1" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/bradio-flyerstvアニメデスパレードop曲official-video.mp3",
-                        "link": "https://www.youtube.com/watch?v=9wh8FgsEtNQ",
-                        "duration": 215,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Bradio" },
-                            { "name": "Titre", "value": "Flyers" },
-                            { "name": "Anime", "value": "Death Parade" },
-                            { "name": "Bonus", "value": "Opening 1" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/miguel-angel-munoz-diras-que-estoy-loco-hd.mp3",
-                        "link": "https://www.youtube.com/watch?v=vhWijLAlCgM",
-                        "duration": 182,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Miguel Angel Munoz" },
-                            { "name": "Titre", "value": "Diras que estoy loco" },
-                            { "name": "Bonus", "value": "Un, dos, tres" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/david-guetta-chris-willis-feat-fergie-lmfao-gettin-over-you-official-video.mp3",
-                        "link": "https://www.youtube.com/watch?v=hWjrMTWXH28",
-                        "duration": 188,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "David Guetta" },
-                            { "name": "Titre", "value": "Gettin' Over You" },
-                            { "name": "Featuring 1", "value": "Chris Willis" },
-                            { "name": "Featuring 2", "value": "Fergie" },
-                            { "name": "Featuring 3", "value": "LMFAO" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/charli-xcx-break-the-rules-official-video.mp3",
-                        "link": "https://www.youtube.com/watch?v=ABhDiXbUaBE",
-                        "duration": 206,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Charli XCX" },
-                            { "name": "Titre", "value": "Break The Rules" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/alien-ant-farm-smooth-criminal-official-music-video.mp3",
-                        "link": "https://www.youtube.com/watch?v=CDl9ZMfj6aE",
-                        "duration": 213,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Alien Ant Farm" },
-                            { "name": "Titre", "value": "Smooth Criminal" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/daft-punk-pentatonix-audio.mp3",
-                        "link": "https://www.youtube.com/watch?v=_5ltJ33V9JI",
-                        "duration": 249,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Pentatonix" },
-                            { "name": "Titre", "value": "Daft Punk" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/ポルノグラフィティヒトリノ夜music-videoアニメgtoopテーマ.mp3",
-                        "link": "https://www.youtube.com/watch?v=_rw6Vnyo8Sc",
-                        "duration": 262,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Porno Graffitti" },
-                            { "name": "Titre", "value": "Hitori no Yoru" },
-                            { "name": "Anime", "value": "GTO : Great Teach Onizuka" },
-                            { "name": "Bonus", "value": "Opening 2" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/manuel-gas-gas-gas.mp3",
-                        "link": "https://www.youtube.com/watch?v=atuFSv2bLa8",
-                        "duration": 272,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Manuel" },
-                            { "name": "Titre", "value": "Gas Gas Gas" },
-                            { "name": "Anime", "value": "Initial D" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/selena-gomez-slow-down-official.mp3",
-                        "link": "https://www.youtube.com/watch?v=Z8eXaXoUJRQ",
-                        "duration": 211,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Selena Gomez" },
-                            { "name": "Titre", "value": "Slow Down" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/warriors-season-2020-cinematic-league-of-legends-ft-2wei-and-edda-hayes.mp3",
-                        "link": "https://www.youtube.com/watch?v=aR-KAldshAE",
-                        "duration": 202,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Edda Hayes" },
-                            { "name": "Titre", "value": "Warriors" },
-                            { "name": "Bonus", "value": "Season 2020 Cinematic - League of Legends" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/parov-stelar-all-night-official-audio.mp3",
-                        "link": "https://www.youtube.com/watch?v=_C7UgR_sIW0",
-                        "duration": 166,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Parov Stelar" },
-                            { "name": "Titre", "value": "All Night" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/tank.mp3",
-                        "link": "https://www.youtube.com/watch?v=UFFa0QoHWvE",
-                        "duration": 211,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Tim Jensen" },
-                            { "name": "Titre", "value": "Tank!" },
-                            { "name": "Anime", "value": "Cowboy Bebop" },
-                            { "name": "Bonus", "value": "Opening 1" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/man-with-a-mission-seven-deadly-sins.mp3",
-                        "link": "https://www.youtube.com/watch?v=2Vzksex5REE",
-                        "duration": 244,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Man with a Mission" },
-                            { "name": "Titre", "value": "Seven Deadly Sins" },
-                            { "name": "Anime", "value": "nanatsu no Taizai" },
-                            { "name": "Bonus", "value": "Opening 2" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/pigeon-john-hey-you.mp3",
-                        "link": "https://www.youtube.com/watch?v=Z-oiYs4A3lk",
-                        "duration": 197,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Pigeon John" },
-                            { "name": "Titre", "value": "Hey You" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/capital-cities-safe-and-sound-lyrics.mp3",
-                        "link": "https://www.youtube.com/watch?v=jR-OsKMD80c",
-                        "duration": 193,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Capital Cities" },
-                            { "name": "Titre", "value": "Safe And Sound" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/katsute-mahou-shoujo-to-aku-wa-tekitai-shiteita-opening-full-mikansei-rendezvous-by-lezel-lyrics.mp3",
-                        "link": "https://www.youtube.com/watch?v=FoQRMrJL89I",
-                        "duration": 176,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Lezel" },
-                            { "name": "Titre", "value": "Mikansei Rendezvous" },
-                            { "name": "Anime", "value": "Katsute Mahou Shoujo to Aku wa Tekitai shiteita" },
-                            { "name": "Bonus", "value": "Opening 1" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/hollysiz-come-back-to-me.mp3",
-                        "link": "https://www.youtube.com/watch?v=LF3R5p0C5tA",
-                        "duration": 166,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "HOLLYSIZ" },
-                            { "name": "Titre", "value": "Come Back To Me" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/gavin-degraw-i-dont-want-to-be-official-video.mp3",
-                        "link": "https://www.youtube.com/watch?v=8gFCW3PHBws",
-                        "duration": 216,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Gavin DeGraw" },
-                            { "name": "Titre", "value": "I Don't Want To Be" },
-                            { "name": "Bonus", "value": "Les Frères Scott" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/pzk-chuis-bo.mp3",
-                        "link": "https://www.youtube.com/watch?v=owSigbWXR_U",
-                        "duration": 217,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "PZK" },
-                            { "name": "Titre", "value": "Chuis Bo" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/simple-plan-jet-lag-ft-marie-mai-official-video.mp3",
-                        "link": "https://www.youtube.com/watch?v=HxtfFoFwrmA",
-                        "duration": 209,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Simple Plan" },
-                            { "name": "Titre", "value": "Jet Lag" },
-                            { "name": "Featuring", "value": "Marie-Mai" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/zara-larsson-lush-life.mp3",
-                        "link": "https://www.youtube.com/watch?v=tD4HCZe-tew",
-                        "duration": 202,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Zara Larsson" },
-                            { "name": "Titre", "value": "Lush Life" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/timmy-trumpet-savage-freaks-official-music-video.mp3",
-                        "link": "https://www.youtube.com/watch?v=ofmzX1nI7SE",
-                        "duration": 174,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Timmy Trumpet" },
-                            { "name": "Titre", "value": "Freaks" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/hello-sleepwalkers午夜の待ち合わせmusic-video.mp3",
-                        "link": "https://www.youtube.com/watch?v=J69oCCM1EcI",
-                        "duration": 181,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Hello Sleepwalkers" },
-                            { "name": "Titre", "value": "Goya no Machiawase" },
-                            { "name": "Anime", "value": "Noragami" },
-                            { "name": "Bonus", "value": "Opening 2" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/imagine-dragons-whatever-it-takes-official-music-video.mp3",
-                        "link": "https://www.youtube.com/watch?v=gOsM-DYAEhY",
-                        "duration": 221,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "ImagineDragons" },
-                            { "name": "Titre", "value": "Whatever It Takes" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/backstreet-boys-larger-than-life-hq.mp3",
-                        "link": "https://www.youtube.com/watch?v=F5pJrlW8AhU",
-                        "duration": 235,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Backstreet Boys" },
-                            { "name": "Titre", "value": "Larger Than Life" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/magic-rude-official-video.mp3",
-                        "link": "https://www.youtube.com/watch?v=PIh2xe4jnpk",
-                        "duration": 226,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "MAGIC!" },
-                            { "name": "Titre", "value": "Rude" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/gerard-way-hazy-shade-of-winter-feat-ray-toro-official-audio.mp3",
-                        "link": "https://www.youtube.com/watch?v=ZTCrqXpKHec",
-                        "duration": 198,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Gerard Way" },
-                            { "name": "Titre", "value": "Hazy Shade of Winter" },
-                            { "name": "Bonus", "value": "Umbrella Academy" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/seven-oops-lovers.mp3",
-                        "link": "https://www.youtube.com/watch?v=MF8kHWWFO10",
-                        "duration": 229,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Seven Oops" },
-                            { "name": "Titre", "value": "Lovers" },
-                            { "name": "Anime", "value": "Naruto Shippuden" },
-                            { "name": "Bonus", "value": "Opening 9" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/gto-great-techer-onizuka-opening-1-full-drivers-high.mp3",
-                        "link": "https://www.youtube.com/watch?v=B82MDzrcH9Q",
-                        "duration": 253,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "L'Arc-en-Ciel" },
-                            { "name": "Titre", "value": "Driver's High" },
-                            { "name": "Anime", "value": "GTO : Great Teach Onizuka" },
-                            { "name": "Bonus", "value": "Opening 1" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/cest-mon-rêve-clip-officiel.mp3",
-                        "link": "https://www.youtube.com/watch?v=Hjz-o0RH0JY",
-                        "duration": 256,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Damien JEAN" },
-                            { "name": "Titre", "value": "C'est Mon Rêve" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/3oh3-my-first-kiss-feat-keha.mp3",
-                        "link": "https://www.youtube.com/watch?v=N1MMoZ-DLlY",
-                        "duration": 194,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "3OH!3" },
-                            { "name": "Titre", "value": "My First Kiss" },
-                            { "name": "Featuring", "value": "Ke$ha" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/bleach-ichigos-theme-number-one.mp3",
-                        "link": "https://www.youtube.com/watch?v=1lsn2tT5yTc",
-                        "duration": 297,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Hazel Fernandes" },
-                            { "name": "Titre", "value": "Number One" },
-                            { "name": "Anime", "value": "Bleach" },
-                            { "name": "Bonus", "value": "Ichigo's Theme" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/grip-inuyasha-amv-opening-4-with-lyrics.mp3",
-                        "link": "https://www.youtube.com/watch?v=AAXv5fdjn1Q",
-                        "duration": 286,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Every Little Thing" },
-                            { "name": "Titre", "value": "Grip!" },
-                            { "name": "Anime", "value": "Inuyasha" },
-                            { "name": "Bonus", "value": "Opening 4" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/pitbull-back-in-time-official-video.mp3",
-                        "link": "https://www.youtube.com/watch?v=zaSZE194D4I",
-                        "duration": 213,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Pitbull" },
-                            { "name": "Titre", "value": "Back in Time" },
-                            { "name": "Bonus", "value": "Men in Black 3" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/youre-gonna-go-far-kid.mp3",
-                        "link": "https://www.youtube.com/watch?v=_pmZKkb_UAg",
-                        "duration": 179,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "The Offspring" },
-                            { "name": "Titre", "value": "You're Gonna Go Far, Kid" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/nneka-heartbeat-videoclip.mp3",
-                        "link": "https://www.youtube.com/watch?v=6ivg3J3h5Ps",
-                        "duration": 191,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Nneka" },
-                            { "name": "Titre", "value": "Heartbeat" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/b小町フルver-full-ver-pop-in-2推しの子-歌詞-color-coded-lyrics.mp3",
-                        "link": "https://www.youtube.com/watch?v=oyKsqz99_is",
-                        "duration": 268,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "B Komachi" },
-                            { "name": "Titre", "value": "POP IN 2" },
-                            { "name": "Anime", "value": "Oshi no Ko" },
-                            { "name": "Bonus (Impossible)", "value": "Han Megumi, Igoma Yurie, Ookubo Rumi" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/fall-out-boy-beat-it-mtv-version-official-music-video-ft-john-mayer.mp3",
-                        "link": "https://www.youtube.com/watch?v=sk8Pb17pcQI",
-                        "duration": 230,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Fall Out Boy" },
-                            { "name": "Titre", "value": "Beat It" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/vinland-saga-opening-fullsurvive-said-the-prophet-mukanjyo.mp3",
-                        "link": "https://www.youtube.com/watch?v=o94gVQeP6PQ",
-                        "duration": 193,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Survive Said the Prophet" },
-                            { "name": "Titre", "value": "Mukanjyo" },
-                            { "name": "Anime", "value": "Vinland Saga" },
-                            { "name": "Bonus", "value": "Opening 1" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/keha-take-it-off-official-video.mp3",
-                        "link": "https://www.youtube.com/watch?v=edP0L6LQzZE",
-                        "duration": 223,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Ke$ha" },
-                            { "name": "Titre", "value": "Take It Off" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/deorro-ft-elvis-crespo-bailar-official-video.mp3",
-                        "link": "https://www.youtube.com/watch?v=IKlbvsExpwg",
-                        "duration": 162,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Deorro" },
-                            { "name": "Titre", "value": "Bailar" },
-                            { "name": "Featuring", "value": "Elvis Crespo" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/claymore-opening-full.mp3",
-                        "link": "https://www.youtube.com/watch?v=vZFXrjL6fxA",
-                        "duration": 233,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Nightmare" },
-                            { "name": "Titre", "value": "Raison d'Etre - レゾンデートル - Killer Show" },
-                            { "name": "Anime", "value": "Claymore" },
-                            { "name": "Bonus", "value": "Opening 1" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/jonas-brothers-sos.mp3",
-                        "link": "https://www.youtube.com/watch?v=EbBGkqll8lI",
-                        "duration": 156,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Jonas Brothers" },
-                            { "name": "Titre", "value": "S.O.S." }
-                        ]
-                    },
-                    {
-                        "path": "current/music/christina-perri-a-thousand-years-official-music-video.mp3",
-                        "link": "https://www.youtube.com/watch?v=rtOvBOTyX00",
-                        "duration": 288,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Christina Perri" },
-                            { "name": "Titre", "value": "A Thousand Years" },
-                            { "name": "Bonus", "value": "Twilight" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/kda-popstars-ft-madison-beer-gi-dle-jaira-burns-music-video-league-of-legends.mp3",
-                        "link": "https://www.youtube.com/watch?v=UOxkGD8qRB4",
-                        "duration": 203,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "K/DA" },
-                            { "name": "Titre", "value": "POP/STARS" },
-                            { "name": "Featuring 1", "value": "Madison Beer" },
-                            { "name": "Featuring 2", "value": "(G)I-DLE" },
-                            { "name": "Featuring 3", "value": "Jaira Burns" },
-                            { "name": "Bonus", "value": "League of Legends" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/therapie-taxi-ft-roméo-elvis-hit-sale-clip-officiel-13.mp3",
-                        "link": "https://www.youtube.com/watch?v=CpTLFchI8Zk",
-                        "duration": 200,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Therapie TAXI" },
-                            { "name": "Titre", "value": "Hit Sale" },
-                            { "name": "Featuring", "value": "Roméo Elvis" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/poom-big-bang.mp3",
-                        "link": "https://www.youtube.com/watch?v=MJmpxw-O4-s",
-                        "duration": 251,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Poom" },
-                            { "name": "Titre", "value": "Big Bang" },
-                            { "name": "Bonus", "value": "Pub Veet" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/shaka-ponk-lets-bang-18.mp3",
-                        "link": "https://www.youtube.com/watch?v=vWJ5JcmSnVM",
-                        "duration": 218,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Shaka Ponk" },
-                            { "name": "Titre", "value": "Let's Bang" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/ed-sheeran-perfect-official-music-video.mp3",
-                        "link": "https://www.youtube.com/watch?v=2Vv-BfVoq4g",
-                        "duration": 280,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Ed Sheeran" },
-                            { "name": "Titre", "value": "Perfect" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/the-killers-mr-brightside-official-music-video.mp3",
-                        "link": "https://www.youtube.com/watch?v=gGdGFtwCNBE",
-                        "duration": 228,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "The Killers" },
-                            { "name": "Titre", "value": "Mr. Brightside" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/bastille-pompeii-lyric-video.mp3",
-                        "link": "https://www.youtube.com/watch?v=ilLEuwH4hws",
-                        "duration": 215,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Bastille" },
-                            { "name": "Titre", "value": "Pompeii" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/dream-on-glee-cast-version.mp3",
-                        "link": "https://www.youtube.com/watch?v=rD8y2ad1Thg",
-                        "duration": 275,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Neil Patrick Harris" },
-                            { "name": "Titre", "value": "Dream On" },
-                            { "name": "Bonus", "value": "Glee" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/vianney-je-te-déteste.mp3",
-                        "link": "https://www.youtube.com/watch?v=BGZkDBc6vAk",
-                        "duration": 238,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Vianney" },
-                            { "name": "Titre", "value": "Je te déteste" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/karim-ouellet-l-amour-vidéoclip.mp3",
-                        "link": "https://www.youtube.com/watch?v=YilwH1Tal_w",
-                        "duration": 215,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Karim Ouellet" },
-                            { "name": "Titre", "value": "L' Amour" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/5-seconds-of-summer-youngblood-lyrics-5sos.mp3",
-                        "link": "https://www.youtube.com/watch?v=Vwhrqd3UaKo",
-                        "duration": 204,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "5 Seconds Of Summer" },
-                            { "name": "Titre", "value": "Youngblood" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/lady-gaga-applause.mp3",
-                        "link": "https://www.youtube.com/watch?v=pco91kroVgQ",
-                        "duration": 215,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "LadyGaga" },
-                            { "name": "Titre", "value": "Applause" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/hikaru-nara-goose-house-romaji-español-english-color-coded.mp3",
-                        "link": "https://www.youtube.com/watch?v=cWtgGTCAjYY",
-                        "duration": 249,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Goose House" },
-                            { "name": "Titre", "value": "Hikaru Nara" },
-                            { "name": "Anime", "value": "Your Lie in April" },
-                            { "name": "Bonus", "value": "Opening 1" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/could-have-been-me.mp3",
-                        "link": "https://www.youtube.com/watch?v=ZJocdnMvTYs",
-                        "duration": 149,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Halsey" },
-                            { "name": "Titre", "value": "Could Have Been Me" },
-                            { "name": "Bonus", "value": "Sing 2 - Tous en Scène 2" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/cinema-staff-great-escapemvtvアニメ進撃の巨人後期edテーマ.mp3",
-                        "link": "https://www.youtube.com/watch?v=u2YSzzXb2I4",
-                        "duration": 206,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "cinema staff" },
-                            { "name": "Titre", "value": "great escape" },
-                            { "name": "Anime", "value": "Attack on Titan / Shingeki no Kyojin" },
-                            { "name": "Bonus", "value": "Ending 2" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/psycho-pass-3-opening-fullwho-ya-extended-q-vism.mp3",
-                        "link": "https://www.youtube.com/watch?v=XKJLGfcuEQo",
-                        "duration": 183,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Who-ya Extended" },
-                            { "name": "Titre", "value": "Q-vism" },
-                            { "name": "Anime", "value": "Psycho-Pass" },
-                            { "name": "Bonus", "value": "Opening 4" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/b小町フルver-full-ver-startrain-推しの子.mp3",
-                        "link": "https://www.youtube.com/watch?v=kS66nXNYTME",
-                        "duration": 235,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "B Komachi" },
-                            { "name": "Titre", "value": "Star-t-Rain" },
-                            { "name": "Anime", "value": "Oshi no Ko" },
-                            { "name": "Bonus (Impossible)", "value": "Han Megumi, Igoma Yurie, Ookubo Rumi" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/ヒロアカhero-tooミュージックビデオmv雄英高校ヒーロー科1年a組僕のヒーローアカデミア4期文化祭編my-heroacademia.mp3",
-                        "link": "https://www.youtube.com/watch?v=GgwUenaQqlM",
-                        "duration": 267,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Chrissy Costanza" },
-                            { "name": "Titre", "value": "Hero too" },
-                            { "name": "Anime", "value": "My Hero Academia" },
-                            { "name": "Bonus", "value": "Festival Song" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/faint-official-music-video-4k-upgrade-linkin-park.mp3",
-                        "link": "https://www.youtube.com/watch?v=LYU-8IFcDPw",
-                        "duration": 169,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Linkin Park" },
-                            { "name": "Titre", "value": "Faint" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/laeko-axio-intro-rewind-de-twitch.mp3",
-                        "link": "https://www.youtube.com/watch?v=mfEuA-5FWzo",
-                        "duration": 204,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Laeko" },
-                            { "name": "Titre", "value": "Axio" },
-                            { "name": "Bonus", "value": "Rewind Twitch" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/sum-41-in-too-deep-official-music-video.mp3",
-                        "link": "https://www.youtube.com/watch?v=emGri7i8Y2Y",
-                        "duration": 221,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Sum41" },
-                            { "name": "Titre", "value": "In Too Deep" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/initial-d-dogfight-anime-music-video-amv.mp3",
-                        "link": "https://www.youtube.com/watch?v=eu-QEKnTr0s",
-                        "duration": 259,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "m.o.v.e" },
-                            { "name": "Titre", "value": "Dogfight" },
-                            { "name": "Anime", "value": "Initial D" },
-                            { "name": "Bonus", "value": "Opening 5" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/nobodyknows-heros-come-back.mp3",
-                        "link": "https://www.youtube.com/watch?v=ipBCtl0j4O8",
-                        "duration": 277,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Nobodyknows+" },
-                            { "name": "Titre", "value": "Hero's Come Back" },
-                            { "name": "Anime", "value": "Naruto Shippuden" },
-                            { "name": "Bonus", "value": "Opening 1" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/parasyte-its-the-right-time-lyric-video.mp3",
-                        "link": "https://www.youtube.com/watch?v=N_qDn5ZCoDU",
-                        "duration": 225,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Miura Daichi" },
-                            { "name": "Titre", "value": "It's the Right Time" },
-                            { "name": "Anime", "value": "Parasyte" },
-                            { "name": "Bonus", "value": "Ending 1" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/bish-innocent-arrogance-lyric-video.mp3",
-                        "link": "https://www.youtube.com/watch?v=8hmzTHsuc44",
-                        "duration": 213,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Bish" },
-                            { "name": "Titre", "value": "Innocent Arrogance" },
-                            { "name": "Anime", "value": "Tengoku Daimakyou / Heavenly Delusion" },
-                            { "name": "Bonus", "value": "Opening1" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/pitch-perfect-since-u-been-gone-hd.mp3",
-                        "link": "https://www.youtube.com/watch?v=aNV6UtkYPU4",
-                        "duration": 162,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Pitch Perfect Cast" },
-                            { "name": "Titre", "value": "Since U Been Gone" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/mr-villains-day-off-full-ending-day-off-by-glasgow-lyrics-romaji-english-kanji.mp3",
-                        "link": "https://www.youtube.com/watch?v=aWLkju3ldqY",
-                        "duration": 207,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Glasgow" },
-                            { "name": "Titre", "value": "Kyuusoku Juuden" },
-                            { "name": "Anime", "value": "Mr Villain's Day Off / Kyuujitsu no Warumono-san" },
-                            { "name": "Bonus", "value": "Ending 1" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/black-veil-brides-in-the-end.mp3",
-                        "link": "https://www.youtube.com/watch?v=f0EQlIzPowM",
-                        "duration": 225,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Black Veil Brides" },
-                            { "name": "Titre", "value": "In The End" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/runnin.mp3",
-                        "link": "https://www.youtube.com/watch?v=M-YvkPtneYE",
-                        "duration": 229,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Adam Lambert" },
-                            { "name": "Titre", "value": "Runnin'" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/alvaro-soler-sofia.mp3",
-                        "link": "https://www.youtube.com/watch?v=qaZ0oAh4evU",
-                        "duration": 214,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Alvaro Soler" },
-                            { "name": "Titre", "value": "Sofia" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/tenacious-d-beelzeboss-with-lyrics.mp3",
-                        "link": "https://www.youtube.com/watch?v=vOBKxUT9Da4",
-                        "duration": 341,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Tenacious D" },
-                            { "name": "Titre", "value": "Beelzeboss" },
-                            { "name": "Bonus", "value": "Tenacious D et le Médiator du destin" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/one-piece-opening-16-hands-up-full-version-hd.mp3",
-                        "link": "https://www.youtube.com/watch?v=cijbjBSxRR0",
-                        "duration": 250,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Shinzato Kouta" },
-                            { "name": "Titre", "value": "Hands Up!" },
-                            { "name": "Anime", "value": "One Piece" },
-                            { "name": "Bonus", "value": "Opening 16" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/the-black-keys-lonely-boy-official-music-video.mp3",
-                        "link": "https://www.youtube.com/watch?v=a_426RiwST8",
-                        "duration": 196,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "The Black Keys" },
-                            { "name": "Titre", "value": "Lonely Boy" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/rainbow-nisha-rokubō-no-shichinin-opening-1-were-not-alone-lyrics.mp3",
-                        "link": "https://www.youtube.com/watch?v=_d0HRTx5CAI",
-                        "duration": 234,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Coldrain" },
-                            { "name": "Titre", "value": "We're Not Alone" },
-                            { "name": "Anime", "value": "Rainbow: Nisha Rokubō no Shichinin" },
-                            { "name": "Bonus", "value": "Opening 1" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/metro-station-shake-it-official-video.mp3",
-                        "link": "https://www.youtube.com/watch?v=_wjFahULCK8",
-                        "duration": 185,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Metro Station" },
-                            { "name": "Titre", "value": "Shake It" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/fool-hd-move-everybody.mp3",
-                        "link": "https://www.youtube.com/watch?v=u6tUDXBnB7U",
-                        "duration": 215,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Fool HD" },
-                            { "name": "Titre", "value": "Move Everybody" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/alphonse-brown-le-frunkp.mp3",
-                        "link": "https://www.youtube.com/watch?v=VUjn2Vs65Z8",
-                        "duration": 204,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Alphonse Brown" },
-                            { "name": "Titre", "value": " Le Frunkp" },
-                            { "name": "Bonus", "value": "La Beuze" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/miwa-changemusic-video.mp3",
-                        "link": "https://www.youtube.com/watch?v=99zfIoCp3nk",
-                        "duration": 268,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Hands Up" },
-                            { "name": "Titre", "value": "Change" },
-                            { "name": "Anime", "value": "Bleach" },
-                            { "name": "Bonus", "value": "Opening 12" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/hikaru-no-go-get-over.mp3",
-                        "link": "https://www.youtube.com/watch?v=ouvNTlTsyPg",
-                        "duration": 317,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Dream" },
-                            { "name": "Titre", "value": "Get Over" },
-                            { "name": "Anime", "value": "Hikaru no Go" },
-                            { "name": "Bonus", "value": "Opening 1" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/heavy-is-the-crown-official-audio-linkin-park.mp3",
-                        "link": "https://www.youtube.com/watch?v=ZAt8oxY0GQo",
-                        "duration": 168,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Linkin Park" },
-                            { "name": "Titre", "value": "Heavy Is the Crown" },
-                            { "name": "Bonus", "value": "League of Legends World 2024" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/pushing-me-away-linkin-park-hybrid-theory.mp3",
-                        "link": "https://www.youtube.com/watch?v=Ve1LNJEIKUE",
-                        "duration": 192,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Linkin Park" },
-                            { "name": "Titre", "value": "Pushing Me Away" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/ado逆光ウタ-from-one-piece-film-red.mp3",
-                        "link": "https://www.youtube.com/watch?v=gt-v_YCkaMY",
-                        "duration": 250,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Ado" },
-                            { "name": "Titre", "value": "Backlight" },
-                            { "name": "Anime", "value": "One Piece" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/orelsan-rêves-bizarres-feat-damso-paroleslyrics.mp3",
-                        "link": "https://www.youtube.com/watch?v=7aOfMAnQZxU",
-                        "duration": 207,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "OrelSan" },
-                            { "name": "Titre", "value": "Rêves bizarres" },
-                            { "name": "Featuring", "value": "Damso" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/spy-x-familyopening-2-full-souvenir-lyrics-bump-of-chicken.mp3",
-                        "link": "https://www.youtube.com/watch?v=PxhezW8nhCM",
-                        "duration": 266,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Bump of Chicken" },
-                            { "name": "Titre", "value": "Souvenir" },
-                            { "name": "Anime", "value": "SPY x FAMILY" },
-                            { "name": "Bonus", "value": "Opening 2" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/papa-roach-to-be-loved-lyrics-on-screen-hd.mp3",
-                        "link": "https://www.youtube.com/watch?v=ZESUHSbTIVE",
-                        "duration": 185,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Papa Roach" },
-                            { "name": "Titre", "value": "To Be Loved" },
-                            { "name": "Bonus", "value": "WWE Raw" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/dua-lipa-physical-official-video.mp3",
-                        "link": "https://www.youtube.com/watch?v=9HDEHj2yzew",
-                        "duration": 244,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Dua Lipa" },
-                            { "name": "Titre", "value": "Physical" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/santa-esmeralda-dont-let-me-be-misunderstood-1977-toppop.mp3",
-                        "link": "https://www.youtube.com/watch?v=uvXeeus94GY",
-                        "duration": 186,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Santa Esmeralda" },
-                            { "name": "Titre", "value": "Don't Let Me Be Misunderstood" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/sean-paul-temperature-official-video.mp3",
-                        "link": "https://www.youtube.com/watch?v=dW2MmuA1nI4",
-                        "duration": 217,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Sean Paul" },
-                            { "name": "Titre", "value": "Temperature" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/marshmello-alone-official-music-video.mp3",
-                        "link": "https://www.youtube.com/watch?v=ALZHF5UqnU4",
-                        "duration": 200,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Marshmello" },
-                            { "name": "Titre", "value": "Alone" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/chainsaw-man-opening-full-kick-back-by-kenshi-yonezu-lyrics.mp3",
-                        "link": "https://www.youtube.com/watch?v=494STlRAn3A",
-                        "duration": 196,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Yonezu Kenshi" },
-                            { "name": "Titre", "value": "Kick Back" },
-                            { "name": "Anime", "value": "Chainsaw Man" },
-                            { "name": "Bonus", "value": "Opening 1" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/rezero-kara-hajimeru-isekai-seikatsu-ending-full-reゼロから始める異世界生活-ed-styx-helix.mp3",
-                        "link": "https://www.youtube.com/watch?v=HdQCWXh3XXU",
-                        "duration": 292,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Myth & Roid" },
-                            { "name": "Titre", "value": "Styx Helix" },
-                            { "name": "Anime", "value": "Re Zero" },
-                            { "name": "Bonus", "value": "Ending 1" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/demi-lovato-let-it-go-from-frozen-official-video.mp3",
-                        "link": "https://www.youtube.com/watch?v=kHue-HaXXzg",
-                        "duration": 231,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Demi Lovato" },
-                            { "name": "Titre", "value": "Let It Go" },
-                            { "name": "Bonus", "value": "Frozen" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/ready-to.mp3",
-                        "link": "https://www.youtube.com/watch?v=zn-ixEGR9Mg",
-                        "duration": 201,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Rihoco" },
-                            { "name": "Titre", "value": "Ready to" },
-                            { "name": "Anime", "value": "BNA : Brand New Animal" },
-                            { "name": "Bonus", "value": "Opening 1" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/cascada-evacuate-the-dancefloor-official-music-video.mp3",
-                        "link": "https://www.youtube.com/watch?v=A68j28KQaik",
-                        "duration": 208,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Cascada" },
-                            { "name": "Titre", "value": "Evacuate The Dancefloor" }
-                        ]
-                    },
-                    {
-                        "path": "current/music/cant-hold-us-macklemore-ryan-lewis-feat-ray-dalton.mp3",
-                        "link": "https://www.youtube.com/watch?v=VG3JsmOmDqw",
-                        "duration": 258,
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Macklemore" },
-                            { "name": "Titre", "value": "Can't Hold Us" },
-                            { "name": "Featuring 1", "value": "Ryan Lewis" },
-                            { "name": "Featuring 2", "value": "Ray Dalton" }
-                        ]
-                    }
-                ]
-            }
+  "blindtest": {
+    "name": "Playlist Journee wow",
+    "participants": [
+      { "name": "Horde", "classCss": "joueur joueur-horde" },
+      { "name": "Alliance", "classCss": "joueur joueur-alliance" }
+    ],
+    "sections": [
+      {
+        "name": "Pop music",
+        "details": "Plusieurs musiques pop",
+        "musics": [
+          {
+            "path": "current/music/zom-100-bucket-list-of-the-dead-opening-full-song-of-the-dead-by-kana-boon-lyrics.mp3",
+            "link": "https://www.youtube.com/watch?v=bB-w6nTjP6c",
+            "duration": 197,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Kana-Boon" },
+              { "name": "Titre", "value": "Song of the Dead" },
+              { "name": "Anime", "value": "Zom 100: Bucket List of the Dead" },
+              { "name": "Bonus", "value": "Opening tout court" }
+            ]
+          },
+          {
+            "path": "current/music/bradio-flyerstvアニメデスパレードop曲official-video.mp3",
+            "link": "https://www.youtube.com/watch?v=9wh8FgsEtNQ",
+            "duration": 215,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Bradio" },
+              { "name": "Titre", "value": "Flyers" },
+              { "name": "Anime", "value": "Death Parade" },
+              { "name": "Bonus", "value": "Opening tout court" }
+            ]
+          },
+          {
+            "path": "current/music/miguel-angel-munoz-diras-que-estoy-loco-hd.mp3",
+            "link": "https://www.youtube.com/watch?v=vhWijLAlCgM",
+            "duration": 182,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Miguel Angel Munoz" },
+              { "name": "Titre", "value": "Diras que estoy loco" },
+              { "name": "Bonus", "value": "Un, dos, tres" }
+            ]
+          },
+          {
+            "path": "current/music/david-guetta-chris-willis-feat-fergie-lmfao-gettin-over-you-official-video.mp3",
+            "link": "https://www.youtube.com/watch?v=hWjrMTWXH28",
+            "duration": 188,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "David Guetta" },
+              { "name": "Titre", "value": "Gettin' Over You" },
+              { "name": "Featuring 1", "value": "Chris Willis" },
+              { "name": "Featuring 2", "value": "Fergie" },
+              { "name": "Featuring 3", "value": "LMFAO" }
+            ]
+          },
+          {
+            "path": "current/music/charli-xcx-break-the-rules-official-video.mp3",
+            "link": "https://www.youtube.com/watch?v=ABhDiXbUaBE",
+            "duration": 206,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Charli XCX" },
+              { "name": "Titre", "value": "Break The Rules" }
+            ]
+          },
+          {
+            "path": "current/music/alien-ant-farm-smooth-criminal-official-music-video.mp3",
+            "link": "https://www.youtube.com/watch?v=CDl9ZMfj6aE",
+            "duration": 213,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Alien Ant Farm" },
+              { "name": "Titre", "value": "Smooth Criminal" }
+            ]
+          },
+          {
+            "path": "current/music/daft-punk-pentatonix-audio.mp3",
+            "link": "https://www.youtube.com/watch?v=_5ltJ33V9JI",
+            "duration": 249,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Pentatonix" },
+              { "name": "Titre", "value": "Daft Punk" }
+            ]
+          },
+          {
+            "path": "current/music/ポルノグラフィティヒトリノ夜music-videoアニメgtoopテーマ.mp3",
+            "link": "https://www.youtube.com/watch?v=_rw6Vnyo8Sc",
+            "duration": 262,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Porno Graffitti" },
+              { "name": "Titre", "value": "Hitori no Yoru" },
+              { "name": "Anime", "value": "GTO : Great Teach Onizuka" },
+              { "name": "Bonus", "value": "Opening 2" }
+            ]
+          },
+          {
+            "path": "current/music/manuel-gas-gas-gas.mp3",
+            "link": "https://www.youtube.com/watch?v=atuFSv2bLa8",
+            "duration": 272,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Manuel" },
+              { "name": "Titre", "value": "Gas Gas Gas" },
+              { "name": "Anime", "value": "Initial D" }
+            ]
+          },
+          {
+            "path": "current/music/selena-gomez-slow-down-official.mp3",
+            "link": "https://www.youtube.com/watch?v=Z8eXaXoUJRQ",
+            "duration": 211,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Selena Gomez" },
+              { "name": "Titre", "value": "Slow Down" }
+            ]
+          },
+          {
+            "path": "current/music/warriors-season-2020-cinematic-league-of-legends-ft-2wei-and-edda-hayes.mp3",
+            "link": "https://www.youtube.com/watch?v=aR-KAldshAE",
+            "duration": 202,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Edda Hayes" },
+              { "name": "Titre", "value": "Warriors" },
+              { "name": "Bonus", "value": "Season 2020 Cinematic - League of Legends" }
+            ]
+          },
+          {
+            "path": "current/music/parov-stelar-all-night-official-audio.mp3",
+            "link": "https://www.youtube.com/watch?v=_C7UgR_sIW0",
+            "duration": 166,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Parov Stelar" },
+              { "name": "Titre", "value": "All Night" }
+            ]
+          },
+          {
+            "path": "current/music/tank.mp3",
+            "link": "https://www.youtube.com/watch?v=UFFa0QoHWvE",
+            "duration": 211,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Tim Jensen" },
+              { "name": "Titre", "value": "Tank!" },
+              { "name": "Anime", "value": "Cowboy Bebop" },
+              { "name": "Bonus", "value": "Opening tout court" }
+            ]
+          },
+          {
+            "path": "current/music/opening-2-nanatsu-no-taizai-man-with-a-mission-seven-deadly-sins.mp3",
+            "link": "https://www.youtube.com/watch?v=7gduMeR9-vw",
+            "duration": 201,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Man with a Mission" },
+              { "name": "Titre", "value": "Seven Deadly Sins" },
+              { "name": "Anime", "value": "nanatsu no Taizai" },
+              { "name": "Bonus", "value": "Opening 2" }
+            ]
+          },
+          {
+            "path": "current/music/pigeon-john-7-hey-you-dragon-slayer.mp3",
+            "link": "https://www.youtube.com/watch?v=YGCBtL_T7E0",
+            "duration": 140,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Pigeon John" },
+              { "name": "Titre", "value": "Hey You" }
+            ]
+          },
+          {
+            "path": "current/music/capital-cities-safe-and-sound-lyrics.mp3",
+            "link": "https://www.youtube.com/watch?v=jR-OsKMD80c",
+            "duration": 193,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Capital Cities" },
+              { "name": "Titre", "value": "Safe And Sound" }
+            ]
+          },
+          {
+            "path": "current/music/katsute-mahou-shoujo-to-aku-wa-tekitai-shiteita-opening-full-mikansei-rendezvous-by-lezel-lyrics.mp3",
+            "link": "https://www.youtube.com/watch?v=FoQRMrJL89I",
+            "duration": 176,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Lezel" },
+              { "name": "Titre", "value": "Mikansei Rendezvous" },
+              { "name": "Anime", "value": "Katsute Mahou Shoujo to Aku wa Tekitai shiteita" },
+              { "name": "Bonus", "value": "Opening tout court" }
+            ]
+          },
+          {
+            "path": "current/music/hollysiz-come-back-to-me.mp3",
+            "link": "https://www.youtube.com/watch?v=LF3R5p0C5tA",
+            "duration": 166,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "HOLLYSIZ" },
+              { "name": "Titre", "value": "Come Back To Me" }
+            ]
+          },
+          {
+            "path": "current/music/gavin-degraw-i-dont-want-to-be-official-video.mp3",
+            "link": "https://www.youtube.com/watch?v=8gFCW3PHBws",
+            "duration": 216,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Gavin DeGraw" },
+              { "name": "Titre", "value": "I Don't Want To Be" },
+              { "name": "Bonus", "value": "Les Frères Scott" }
+            ]
+          },
+          {
+            "path": "current/music/pzk-chuis-bo.mp3",
+            "link": "https://www.youtube.com/watch?v=owSigbWXR_U",
+            "duration": 217,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "PZK" },
+              { "name": "Titre", "value": "Chuis Bo" }
+            ]
+          },
+          {
+            "path": "current/music/simple-plan-jet-lag-ft-marie-mai-official-video.mp3",
+            "link": "https://www.youtube.com/watch?v=HxtfFoFwrmA",
+            "duration": 209,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Simple Plan" },
+              { "name": "Titre", "value": "Jet Lag" },
+              { "name": "Featuring", "value": "Marie-Mai" }
+            ]
+          },
+          {
+            "path": "current/music/zara-larsson-lush-life.mp3",
+            "link": "https://www.youtube.com/watch?v=tD4HCZe-tew",
+            "duration": 202,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Zara Larsson" },
+              { "name": "Titre", "value": "Lush Life" }
+            ]
+          },
+          {
+            "path": "current/music/timmy-trumpet-savage-freaks-official-music-video.mp3",
+            "link": "https://www.youtube.com/watch?v=ofmzX1nI7SE",
+            "duration": 174,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Timmy Trumpet" },
+              { "name": "Titre", "value": "Freaks" },
+              { "name": "Featuring", "value": "Savage" }
+            ]
+          },
+          {
+            "path": "current/music/hello-sleepwalkers午夜の待ち合わせmusic-video.mp3",
+            "link": "https://www.youtube.com/watch?v=J69oCCM1EcI",
+            "duration": 181,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Hello Sleepwalkers" },
+              { "name": "Titre", "value": "Goya no Machiawase" },
+              { "name": "Anime", "value": "Noragami" },
+              { "name": "Bonus", "value": "Opening 2" }
+            ]
+          },
+          {
+            "path": "current/music/imagine-dragons-whatever-it-takes-official-music-video.mp3",
+            "link": "https://www.youtube.com/watch?v=gOsM-DYAEhY",
+            "duration": 221,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Imagine Dragons" },
+              { "name": "Titre", "value": "Whatever It Takes" }
+            ]
+          },
+          {
+            "path": "current/music/backstreet-boys-larger-than-life-hq.mp3",
+            "link": "https://www.youtube.com/watch?v=F5pJrlW8AhU",
+            "duration": 235,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Backstreet Boys" },
+              { "name": "Titre", "value": "Larger Than Life" }
+            ]
+          },
+          {
+            "path": "current/music/magic-rude-official-video.mp3",
+            "link": "https://www.youtube.com/watch?v=PIh2xe4jnpk",
+            "duration": 226,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "MAGIC!" },
+              { "name": "Titre", "value": "Rude" }
+            ]
+          },
+          {
+            "path": "current/music/gerard-way-hazy-shade-of-winter-feat-ray-toro-official-audio.mp3",
+            "link": "https://www.youtube.com/watch?v=ZTCrqXpKHec",
+            "duration": 198,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Gerard Way" },
+              { "name": "Titre", "value": "Hazy Shade of Winter" },
+              { "name": "Bonus", "value": "Umbrella Academy" }
+            ]
+          },
+          {
+            "path": "current/music/seven-oops-lovers.mp3",
+            "link": "https://www.youtube.com/watch?v=MF8kHWWFO10",
+            "duration": 229,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Seven Oops" },
+              { "name": "Titre", "value": "Lovers" },
+              { "name": "Anime", "value": "Naruto Shippuden" },
+              { "name": "Bonus", "value": "Opening 9" }
+            ]
+          },
+          {
+            "path": "current/music/gto-great-techer-onizuka-opening-1-full-drivers-high.mp3",
+            "link": "https://www.youtube.com/watch?v=B82MDzrcH9Q",
+            "duration": 253,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "L'Arc-en-Ciel" },
+              { "name": "Titre", "value": "Driver's High" },
+              { "name": "Anime", "value": "GTO : Great Teach Onizuka" },
+              { "name": "Bonus", "value": "Opening 1" }
+            ]
+          },
+          {
+            "path": "current/music/cest-mon-rêve-clip-officiel.mp3",
+            "link": "https://www.youtube.com/watch?v=Hjz-o0RH0JY",
+            "duration": 256,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Damien JEAN" },
+              { "name": "Titre", "value": "C'est Mon Rêve" }
+            ]
+          },
+          {
+            "path": "current/music/3oh3-my-first-kiss-feat-keha.mp3",
+            "link": "https://www.youtube.com/watch?v=N1MMoZ-DLlY",
+            "duration": 194,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "3OH!3" },
+              { "name": "Titre", "value": "My First Kiss" },
+              { "name": "Featuring", "value": "Ke$ha" }
+            ]
+          },
+          {
+            "path": "current/music/bleach-ichigos-theme-number-one.mp3",
+            "link": "https://www.youtube.com/watch?v=1lsn2tT5yTc",
+            "duration": 297,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Hazel Fernandes" },
+              { "name": "Titre", "value": "Number One" },
+              { "name": "Anime", "value": "Bleach" },
+              { "name": "Bonus", "value": "Ichigo's Theme" }
+            ]
+          },
+          {
+            "path": "current/music/grip-inuyasha-amv-opening-4-with-lyrics.mp3",
+            "link": "https://www.youtube.com/watch?v=AAXv5fdjn1Q",
+            "duration": 286,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Every Little Thing" },
+              { "name": "Titre", "value": "Grip!" },
+              { "name": "Anime", "value": "Inuyasha" },
+              { "name": "Bonus", "value": "Opening 4" }
+            ]
+          },
+          {
+            "path": "current/music/pitbull-back-in-time-official-video.mp3",
+            "link": "https://www.youtube.com/watch?v=zaSZE194D4I",
+            "duration": 213,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Pitbull" },
+              { "name": "Titre", "value": "Back in Time" },
+              { "name": "Bonus", "value": "Men in Black 3" }
+            ]
+          },
+          {
+            "path": "current/music/the-offspring-youre-gonna-go-far-kid-explicit.mp3",
+            "link": "https://www.youtube.com/watch?v=lHFG10pqJVs",
+            "duration": 178,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "The Offspring" },
+              { "name": "Titre", "value": "You're Gonna Go Far, Kid" }
+            ]
+          },
+          {
+            "path": "current/music/nneka-heartbeat-videoclip.mp3",
+            "link": "https://www.youtube.com/watch?v=6ivg3J3h5Ps",
+            "duration": 191,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Nneka" },
+              { "name": "Titre", "value": "Heartbeat" }
+            ]
+          },
+          {
+            "path": "current/music/b小町フルver-full-ver-pop-in-2推しの子-歌詞-color-coded-lyrics.mp3",
+            "link": "https://www.youtube.com/watch?v=oyKsqz99_is",
+            "duration": 268,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "B Komachi" },
+              { "name": "Titre", "value": "POP IN 2" },
+              { "name": "Anime", "value": "Oshi no Ko" },
+              { "name": "Bonus (Impossible)", "value": "Han Megumi, Igoma Yurie, Ookubo Rumi" }
+            ]
+          },
+          {
+            "path": "current/music/fall-out-boy-beat-it-mtv-version-official-music-video-ft-john-mayer.mp3",
+            "link": "https://www.youtube.com/watch?v=sk8Pb17pcQI",
+            "duration": 230,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Fall Out Boy" },
+              { "name": "Titre", "value": "Beat It" }
+            ]
+          },
+          {
+            "path": "current/music/vinland-saga-opening-fullsurvive-said-the-prophet-mukanjyo.mp3",
+            "link": "https://www.youtube.com/watch?v=o94gVQeP6PQ",
+            "duration": 193,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Survive Said the Prophet" },
+              { "name": "Titre", "value": "Mukanjyo" },
+              { "name": "Anime", "value": "Vinland Saga" },
+              { "name": "Bonus", "value": "Opening 1" }
+            ]
+          },
+          {
+            "path": "current/music/keha-take-it-off-official-video.mp3",
+            "link": "https://www.youtube.com/watch?v=edP0L6LQzZE",
+            "duration": 223,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Ke$ha" },
+              { "name": "Titre", "value": "Take It Off" }
+            ]
+          },
+          {
+            "path": "current/music/deorro-ft-elvis-crespo-bailar-official-video.mp3",
+            "link": "https://www.youtube.com/watch?v=IKlbvsExpwg",
+            "duration": 162,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Deorro" },
+              { "name": "Titre", "value": "Bailar" },
+              { "name": "Featuring", "value": "Elvis Crespo" }
+            ]
+          },
+          {
+            "path": "current/music/claymore-opening-full.mp3",
+            "link": "https://www.youtube.com/watch?v=vZFXrjL6fxA",
+            "duration": 233,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Nightmare" },
+              { "name": "Titre", "value": "Raison d'Etre - レゾンデートル - Killer Show" },
+              { "name": "Anime", "value": "Claymore" },
+              { "name": "Bonus", "value": "Opening 1" }
+            ]
+          },
+          {
+            "path": "current/music/jonas-brothers-sos.mp3",
+            "link": "https://www.youtube.com/watch?v=EbBGkqll8lI",
+            "duration": 156,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Jonas Brothers" },
+              { "name": "Titre", "value": "S.O.S." }
+            ]
+          },
+          {
+            "path": "current/music/christina-perri-a-thousand-years-official-music-video.mp3",
+            "link": "https://www.youtube.com/watch?v=rtOvBOTyX00",
+            "duration": 288,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Christina Perri" },
+              { "name": "Titre", "value": "A Thousand Years" },
+              { "name": "Bonus", "value": "Twilight" }
+            ]
+          },
+          {
+            "path": "current/music/kda-popstars-ft-madison-beer-gi-dle-jaira-burns-music-video-league-of-legends.mp3",
+            "link": "https://www.youtube.com/watch?v=UOxkGD8qRB4",
+            "duration": 203,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "K/DA" },
+              { "name": "Titre", "value": "POP/STARS" },
+              { "name": "Featuring 1", "value": "Madison Beer" },
+              { "name": "Featuring 2", "value": "(G)I-DLE" },
+              { "name": "Featuring 3", "value": "Jaira Burns" },
+              { "name": "Bonus", "value": "League of Legends" }
+            ]
+          },
+          {
+            "path": "current/music/hit-sale-therapie-taxi-ft-roméo-elvis-paroles.mp3",
+            "link": "https://www.youtube.com/watch?v=M00tjsBAyXY",
+            "duration": 184,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Therapie TAXI" },
+              { "name": "Titre", "value": "Hit Sale" },
+              { "name": "Featuring", "value": "Roméo Elvis" }
+            ]
+          },
+          {
+            "path": "current/music/big-bang-poom.mp3",
+            "link": "https://www.youtube.com/watch?v=44-dhIDaPKM",
+            "duration": 144,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Poom" },
+              { "name": "Titre", "value": "Big Bang" },
+              { "name": "Bonus", "value": "Pub Veet" }
+            ]
+          },
+          {
+            "path": "current/music/shaka-ponk-lets-bang-18.mp3",
+            "link": "https://www.youtube.com/watch?v=vWJ5JcmSnVM",
+            "duration": 218,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Shaka Ponk" },
+              { "name": "Titre", "value": "Let's Bang" }
+            ]
+          },
+          {
+            "path": "current/music/ed-sheeran-perfect-official-music-video.mp3",
+            "link": "https://www.youtube.com/watch?v=2Vv-BfVoq4g",
+            "duration": 280,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Ed Sheeran" },
+              { "name": "Titre", "value": "Perfect" }
+            ]
+          },
+          {
+            "path": "current/music/the-killers-mr-brightside-official-music-video.mp3",
+            "link": "https://www.youtube.com/watch?v=gGdGFtwCNBE",
+            "duration": 228,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "The Killers" },
+              { "name": "Titre", "value": "Mr. Brightside" }
+            ]
+          },
+          {
+            "path": "current/music/bastille-pompeii-lyric-video.mp3",
+            "link": "https://www.youtube.com/watch?v=ilLEuwH4hws",
+            "duration": 215,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Bastille" },
+              { "name": "Titre", "value": "Pompeii" }
+            ]
+          },
+          {
+            "path": "current/music/dream-on-glee-cast-version.mp3",
+            "link": "https://www.youtube.com/watch?v=rD8y2ad1Thg",
+            "duration": 275,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Neil Patrick Harris" },
+              { "name": "Titre", "value": "Dream On" },
+              { "name": "Bonus", "value": "Glee" }
+            ]
+          },
+          {
+            "path": "current/music/vianney-je-te-déteste.mp3",
+            "link": "https://www.youtube.com/watch?v=BGZkDBc6vAk",
+            "duration": 238,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Vianney" },
+              { "name": "Titre", "value": "Je te déteste" }
+            ]
+          },
+          {
+            "path": "current/music/karim-ouellet-l-amour-vidéoclip.mp3",
+            "link": "https://www.youtube.com/watch?v=YilwH1Tal_w",
+            "duration": 215,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Karim Ouellet" },
+              { "name": "Titre", "value": "L' Amour" }
+            ]
+          },
+          {
+            "path": "current/music/5-seconds-of-summer-youngblood-lyrics-5sos.mp3",
+            "link": "https://www.youtube.com/watch?v=Vwhrqd3UaKo",
+            "duration": 204,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "5 Seconds Of Summer" },
+              { "name": "Titre", "value": "Youngblood" }
+            ]
+          },
+          {
+            "path": "current/music/lady-gaga-applause.mp3",
+            "link": "https://www.youtube.com/watch?v=pco91kroVgQ",
+            "duration": 215,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "LadyGaga" },
+              { "name": "Titre", "value": "Applause" }
+            ]
+          },
+          {
+            "path": "current/music/hikaru-nara-goose-house-romaji-español-english-color-coded.mp3",
+            "link": "https://www.youtube.com/watch?v=cWtgGTCAjYY",
+            "duration": 249,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Goose House" },
+              { "name": "Titre", "value": "Hikaru Nara" },
+              { "name": "Anime", "value": "Your Lie in April" },
+              { "name": "Bonus", "value": "Opening 1" }
+            ]
+          },
+          {
+            "path": "current/music/could-have-been-me.mp3",
+            "link": "https://www.youtube.com/watch?v=ZJocdnMvTYs",
+            "duration": 149,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Halsey" },
+              { "name": "Titre", "value": "Could Have Been Me" },
+              { "name": "Bonus", "value": "Sing 2 - Tous en Scène 2" }
+            ]
+          },
+          {
+            "path": "current/music/cinema-staff-great-escapemvtvアニメ進撃の巨人後期edテーマ.mp3",
+            "link": "https://www.youtube.com/watch?v=u2YSzzXb2I4",
+            "duration": 206,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "cinema staff" },
+              { "name": "Titre", "value": "great escape" },
+              { "name": "Anime", "value": "Attack on Titan / Shingeki no Kyojin" },
+              { "name": "Bonus", "value": "Ending 2" }
+            ]
+          },
+          {
+            "path": "current/music/psycho-pass-3-opening-fullwho-ya-extended-q-vism.mp3",
+            "link": "https://www.youtube.com/watch?v=XKJLGfcuEQo",
+            "duration": 183,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Who-ya Extended" },
+              { "name": "Titre", "value": "Q-vism" },
+              { "name": "Anime", "value": "Psycho-Pass" },
+              { "name": "Bonus", "value": "Opening 4" }
+            ]
+          },
+          {
+            "path": "current/music/b小町フルver-full-ver-startrain-推しの子.mp3",
+            "link": "https://www.youtube.com/watch?v=kS66nXNYTME",
+            "duration": 235,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "B Komachi" },
+              { "name": "Titre", "value": "Star-t-Rain" },
+              { "name": "Anime", "value": "Oshi no Ko" },
+              { "name": "Bonus (Impossible)", "value": "Han Megumi, Igoma Yurie, Ookubo Rumi" }
+            ]
+          },
+          {
+            "path": "current/music/ヒロアカhero-tooミュージックビデオmv雄英高校ヒーロー科1年a組僕のヒーローアカデミア4期文化祭編my-heroacademia.mp3",
+            "link": "https://www.youtube.com/watch?v=GgwUenaQqlM",
+            "duration": 267,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Chrissy Costanza" },
+              { "name": "Titre", "value": "Hero too" },
+              { "name": "Anime", "value": "My Hero Academia" },
+              { "name": "Bonus", "value": "Festival Song" }
+            ]
+          },
+          {
+            "path": "current/music/faint-official-music-video-4k-upgrade-linkin-park.mp3",
+            "link": "https://www.youtube.com/watch?v=LYU-8IFcDPw",
+            "duration": 169,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Linkin Park" },
+              { "name": "Titre", "value": "Faint" }
+            ]
+          },
+          {
+            "path": "current/music/laeko-axio-intro-rewind-de-twitch.mp3",
+            "link": "https://www.youtube.com/watch?v=mfEuA-5FWzo",
+            "duration": 204,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Laeko" },
+              { "name": "Titre", "value": "Axio" },
+              { "name": "Bonus", "value": "Rewind Twitch" }
+            ]
+          },
+          {
+            "path": "current/music/sum-41-in-too-deep-official-music-video.mp3",
+            "link": "https://www.youtube.com/watch?v=emGri7i8Y2Y",
+            "duration": 221,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Sum 41" },
+              { "name": "Titre", "value": "In Too Deep" }
+            ]
+          },
+          {
+            "path": "current/music/initial-d-dogfight-anime-music-video-amv.mp3",
+            "link": "https://www.youtube.com/watch?v=eu-QEKnTr0s",
+            "duration": 259,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "m.o.v.e" },
+              { "name": "Titre", "value": "Dogfight" },
+              { "name": "Anime", "value": "Initial D" },
+              { "name": "Bonus", "value": "Opening 5" }
+            ]
+          },
+          {
+            "path": "current/music/nobodyknows-heros-come-back.mp3",
+            "link": "https://www.youtube.com/watch?v=ipBCtl0j4O8",
+            "duration": 277,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Nobodyknows+" },
+              { "name": "Titre", "value": "Hero's Come Back" },
+              { "name": "Anime", "value": "Naruto Shippuden" },
+              { "name": "Bonus", "value": "Opening 1" }
+            ]
+          },
+          {
+            "path": "current/music/parasyte-its-the-right-time-lyric-video.mp3",
+            "link": "https://www.youtube.com/watch?v=N_qDn5ZCoDU",
+            "duration": 225,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Miura Daichi" },
+              { "name": "Titre", "value": "It's the Right Time" },
+              { "name": "Anime", "value": "Parasyte" },
+              { "name": "Bonus", "value": "Ending tout court" }
+            ]
+          },
+          {
+            "path": "current/music/bish-innocent-arrogance-lyric-video.mp3",
+            "link": "https://www.youtube.com/watch?v=8hmzTHsuc44",
+            "duration": 213,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Bish" },
+              { "name": "Titre", "value": "Innocent Arrogance" },
+              { "name": "Anime", "value": "Tengoku Daimakyou / Heavenly Delusion" },
+              { "name": "Bonus", "value": "Opening tout court" }
+            ]
+          },
+          {
+            "path": "current/music/pitch-perfect-since-u-been-gone-hd.mp3",
+            "link": "https://www.youtube.com/watch?v=aNV6UtkYPU4",
+            "duration": 162,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Pitch Perfect Cast" },
+              { "name": "Titre", "value": "Since U Been Gone" }
+            ]
+          },
+          {
+            "path": "current/music/mr-villains-day-off-full-ending-day-off-by-glasgow-lyrics-romaji-english-kanji.mp3",
+            "link": "https://www.youtube.com/watch?v=aWLkju3ldqY",
+            "duration": 207,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Glasgow" },
+              { "name": "Titre", "value": "Kyuusoku Juuden" },
+              { "name": "Anime", "value": "Mr Villain's Day Off / Kyuujitsu no Warumono-san" },
+              { "name": "Bonus", "value": "Ending 1" }
+            ]
+          },
+          {
+            "path": "current/music/black-veil-brides-in-the-end.mp3",
+            "link": "https://www.youtube.com/watch?v=f0EQlIzPowM",
+            "duration": 225,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Black Veil Brides" },
+              { "name": "Titre", "value": "In The End" }
+            ]
+          },
+          {
+            "path": "current/music/runnin.mp3",
+            "link": "https://www.youtube.com/watch?v=M-YvkPtneYE",
+            "duration": 229,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Adam Lambert" },
+              { "name": "Titre", "value": "Runnin'" }
+            ]
+          },
+          {
+            "path": "current/music/alvaro-soler-sofia.mp3",
+            "link": "https://www.youtube.com/watch?v=qaZ0oAh4evU",
+            "duration": 214,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Alvaro Soler" },
+              { "name": "Titre", "value": "Sofia" }
+            ]
+          },
+          {
+            "path": "current/music/tenacious-d-beelzeboss-with-lyrics.mp3",
+            "link": "https://www.youtube.com/watch?v=vOBKxUT9Da4",
+            "duration": 341,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Tenacious D" },
+              { "name": "Titre", "value": "Beelzeboss" },
+              { "name": "Bonus", "value": "Tenacious D et le Médiator du destin" }
+            ]
+          },
+          {
+            "path": "current/music/one-piece-opening-16-hands-up-full-version-hd.mp3",
+            "link": "https://www.youtube.com/watch?v=cijbjBSxRR0",
+            "duration": 250,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Shinzato Kouta" },
+              { "name": "Titre", "value": "Hands Up!" },
+              { "name": "Anime", "value": "One Piece" },
+              { "name": "Bonus", "value": "Opening 16" }
+            ]
+          },
+          {
+            "path": "current/music/the-black-keys-lonely-boy-official-music-video.mp3",
+            "link": "https://www.youtube.com/watch?v=a_426RiwST8",
+            "duration": 196,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "The Black Keys" },
+              { "name": "Titre", "value": "Lonely Boy" }
+            ]
+          },
+          {
+            "path": "current/music/rainbow-nisha-rokubō-no-shichinin-opening-1-were-not-alone-lyrics.mp3",
+            "link": "https://www.youtube.com/watch?v=_d0HRTx5CAI",
+            "duration": 234,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Coldrain" },
+              { "name": "Titre", "value": "We're Not Alone" },
+              { "name": "Anime", "value": "Rainbow: Nisha Rokubō no Shichinin" },
+              { "name": "Bonus", "value": "Opening tout court" }
+            ]
+          },
+          {
+            "path": "current/music/metro-station-shake-it-official-video.mp3",
+            "link": "https://www.youtube.com/watch?v=_wjFahULCK8",
+            "duration": 185,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Metro Station" },
+              { "name": "Titre", "value": "Shake It" }
+            ]
+          },
+          {
+            "path": "current/music/fool-hd-move-everybody.mp3",
+            "link": "https://www.youtube.com/watch?v=u6tUDXBnB7U",
+            "duration": 215,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Fool HD" },
+              { "name": "Titre", "value": "Move Everybody" }
+            ]
+          },
+          {
+            "path": "current/music/alphonse-brown-le-frunkp.mp3",
+            "link": "https://www.youtube.com/watch?v=VUjn2Vs65Z8",
+            "duration": 204,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Alphonse Brown" },
+              { "name": "Titre", "value": " Le Frunkp" },
+              { "name": "Bonus", "value": "La Beuze" }
+            ]
+          },
+          {
+            "path": "current/music/miwa-changemusic-video.mp3",
+            "link": "https://www.youtube.com/watch?v=99zfIoCp3nk",
+            "duration": 268,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Hands Up" },
+              { "name": "Titre", "value": "Change" },
+              { "name": "Anime", "value": "Bleach" },
+              { "name": "Bonus", "value": "Opening 12" }
+            ]
+          },
+          {
+            "path": "current/music/hikaru-no-go-get-over.mp3",
+            "link": "https://www.youtube.com/watch?v=ouvNTlTsyPg",
+            "duration": 317,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Dream" },
+              { "name": "Titre", "value": "Get Over" },
+              { "name": "Anime", "value": "Hikaru no Go" },
+              { "name": "Bonus", "value": "Opening 1" }
+            ]
+          },
+          {
+            "path": "current/music/heavy-is-the-crown-official-audio-linkin-park.mp3",
+            "link": "https://www.youtube.com/watch?v=ZAt8oxY0GQo",
+            "duration": 168,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Linkin Park" },
+              { "name": "Titre", "value": "Heavy Is the Crown" },
+              { "name": "Bonus", "value": "League of Legends World 2024" }
+            ]
+          },
+          {
+            "path": "current/music/pushing-me-away-linkin-park-hybrid-theory.mp3",
+            "link": "https://www.youtube.com/watch?v=Ve1LNJEIKUE",
+            "duration": 192,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Linkin Park" },
+              { "name": "Titre", "value": "Pushing Me Away" }
+            ]
+          },
+          {
+            "path": "current/music/ado逆光ウタ-from-one-piece-film-red.mp3",
+            "link": "https://www.youtube.com/watch?v=gt-v_YCkaMY",
+            "duration": 250,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Ado" },
+              { "name": "Titre", "value": "Backlight" },
+              { "name": "Anime", "value": "One Piece" },
+              { "name": "Bonus", "value": "Film 15 : One Piece Red" }
+            ]
+          },
+          {
+            "path": "current/music/orelsan-rêves-bizarres-feat-damso-paroleslyrics.mp3",
+            "link": "https://www.youtube.com/watch?v=7aOfMAnQZxU",
+            "duration": 207,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "OrelSan" },
+              { "name": "Titre", "value": "Rêves bizarres" },
+              { "name": "Featuring", "value": "Damso" }
+            ]
+          },
+          {
+            "path": "current/music/spy-x-familyopening-2-full-souvenir-lyrics-bump-of-chicken.mp3",
+            "link": "https://www.youtube.com/watch?v=PxhezW8nhCM",
+            "duration": 266,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Bump of Chicken" },
+              { "name": "Titre", "value": "Souvenir" },
+              { "name": "Anime", "value": "SPY x FAMILY" },
+              { "name": "Bonus", "value": "Opening 2" }
+            ]
+          },
+          {
+            "path": "current/music/papa-roach-to-be-loved-lyrics-on-screen-hd.mp3",
+            "link": "https://www.youtube.com/watch?v=ZESUHSbTIVE",
+            "duration": 185,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Papa Roach" },
+              { "name": "Titre", "value": "To Be Loved" },
+              { "name": "Bonus", "value": "WWE Raw" }
+            ]
+          },
+          {
+            "path": "current/music/dua-lipa-physical-official-video.mp3",
+            "link": "https://www.youtube.com/watch?v=9HDEHj2yzew",
+            "duration": 244,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Dua Lipa" },
+              { "name": "Titre", "value": "Physical" }
+            ]
+          },
+          {
+            "path": "current/music/santa-esmeralda-dont-let-me-be-misunderstood-1977-toppop.mp3",
+            "link": "https://www.youtube.com/watch?v=uvXeeus94GY",
+            "duration": 186,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Santa Esmeralda" },
+              { "name": "Titre", "value": "Don't Let Me Be Misunderstood" }
+            ]
+          },
+          {
+            "path": "current/music/sean-paul-temperature-official-video.mp3",
+            "link": "https://www.youtube.com/watch?v=dW2MmuA1nI4",
+            "duration": 217,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Sean Paul" },
+              { "name": "Titre", "value": "Temperature" }
+            ]
+          },
+          {
+            "path": "current/music/marshmello-alone-official-music-video.mp3",
+            "link": "https://www.youtube.com/watch?v=ALZHF5UqnU4",
+            "duration": 200,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Marshmello" },
+              { "name": "Titre", "value": "Alone" }
+            ]
+          },
+          {
+            "path": "current/music/chainsaw-man-opening-full-kick-back-by-kenshi-yonezu-lyrics.mp3",
+            "link": "https://www.youtube.com/watch?v=494STlRAn3A",
+            "duration": 196,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Yonezu Kenshi" },
+              { "name": "Titre", "value": "Kick Back" },
+              { "name": "Anime", "value": "Chainsaw Man" },
+              { "name": "Bonus", "value": "Opening 1" }
+            ]
+          },
+          {
+            "path": "current/music/rezero-kara-hajimeru-isekai-seikatsu-ending-full-reゼロから始める異世界生活-ed-styx-helix.mp3",
+            "link": "https://www.youtube.com/watch?v=HdQCWXh3XXU",
+            "duration": 292,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Myth & Roid" },
+              { "name": "Titre", "value": "Styx Helix" },
+              { "name": "Anime", "value": "Re Zero" },
+              { "name": "Bonus", "value": "Ending 1" }
+            ]
+          },
+          {
+            "path": "current/music/demi-lovato-let-it-go-from-frozen-official-video.mp3",
+            "link": "https://www.youtube.com/watch?v=kHue-HaXXzg",
+            "duration": 231,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Demi Lovato" },
+              { "name": "Titre", "value": "Let It Go" },
+              { "name": "Bonus", "value": "Frozen" }
+            ]
+          },
+          {
+            "path": "current/music/ready-to.mp3",
+            "link": "https://www.youtube.com/watch?v=zn-ixEGR9Mg",
+            "duration": 201,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Rihoco" },
+              { "name": "Titre", "value": "Ready to" },
+              { "name": "Anime", "value": "BNA : Brand New Animal" },
+              { "name": "Bonus", "value": "Opening 1" }
+            ]
+          },
+          {
+            "path": "current/music/cascada-evacuate-the-dancefloor-official-music-video.mp3",
+            "link": "https://www.youtube.com/watch?v=A68j28KQaik",
+            "duration": 208,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Cascada" },
+              { "name": "Titre", "value": "Evacuate The Dancefloor" }
+            ]
+          },
+          {
+            "path": "current/music/cant-hold-us-macklemore-ryan-lewis-feat-ray-dalton.mp3",
+            "link": "https://www.youtube.com/watch?v=VG3JsmOmDqw",
+            "duration": 258,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Macklemore" },
+              { "name": "Titre", "value": "Can't Hold Us" },
+              { "name": "Featuring 1", "value": "Ryan Lewis" },
+              { "name": "Featuring 2", "value": "Ray Dalton" }
+            ]
+          },
+          {
+            "path": "current/music/lugias-song-original.mp3",
+            "link": "https://www.youtube.com/watch?v=ZqpXrDuLqE0",
+            "duration": 255,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Mélodie" },
+              { "name": "Anime", "value": "Pokemon " },
+              { "name": "Bonus 1", "value": "Film 2 : Le pouvoir est en toi" },
+              { "name": "Bonus 2", "value": "Lugia's Song" }
+            ]
+          },
+          {
+            "path": "current/music/legends-never-die-ft-against-the-current-worlds-2017-league-of-legends.mp3",
+            "link": "https://www.youtube.com/watch?v=r6zIGXun57U",
+            "duration": 180,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Against The Current" },
+              { "name": "Titre", "value": "Legends Never Die" },
+              { "name": "Bonus", "value": "Worlds 2017 - League of Legends" }
+            ]
+          },
+          {
+            "path": "current/music/tapion-ocarina-original.mp3",
+            "link": "https://www.youtube.com/watch?v=Ch461Ux75a4",
+            "duration": 141,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Tapion" },
+              { "name": "Bonus 1", "value": "Dragon Ball Z" },
+              { "name": "Bonus 1", "value": "Film 13 : L'Attaque du dragon" },
+              { "name": "Bonus 2", "value": "Tapion's Theme" }
+            ]
+          }
         ]
-    },
-    "currentMusic": 0,
-    "currentSection": 0,
-    "audio": {},
-    "localStorageName": "PartyBlindtest"
+      }
+    ]
+  },
+  "currentMusic": 0,
+  "currentSection": 0,
+  "audio": {},
+  "localStorageName": "PartyBlindtest"
 }

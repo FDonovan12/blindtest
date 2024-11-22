@@ -210,7 +210,7 @@ export class PartyBlindtest {
             this.currentMusic = 0;
         } else {
             // TODO modify when the project is finished, this doesn't have to cycle
-            // this.currentSection = 0;
+            this.currentSection = 0;
         }
         this.changeAudio();
         this.save();

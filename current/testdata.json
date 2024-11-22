@@ -1,37 +1,25 @@
 {
-    "blindtest": {
-        "name": "test_current1",
-        "participants": [{ "name": "j1" }, { "name": "j2" }],
-        "sections": [
-            {
-                "name": "test sections2",
-                "details": "test details2",
-                "musics": [
-                    {
-                        "link": "https://www.youtube.com/watch?v=vWJ5JcmSnVM",
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Shaka Ponk" },
-                            { "name": "Titre", "value": "Let's Bang" }
-                        ],
-                        "path": "current/music/shaka-ponk-lets-bang-18.mp3",
-                        "duration": 218
-                    },
-                    {
-                        "link": "https://www.youtube.com/watch?v=MJmpxw-O4-s",
-                        "pointInfos": [
-                            { "name": "Chanteur", "value": "Poom" },
-                            { "name": "Titre", "value": "Big Bang" },
-                            { "name": "Bonus", "value": "Pub Veet" }
-                        ],
-                        "path": "current/music/poom-big-bang.mp3",
-                        "duration": 251
-                    }
-                ]
-            }
+  "blindtest": {
+    "name": "test_current1",
+    "participants": [{ "name": "j1" }, { "name": "j2" }],
+    "sections": [
+      {
+        "name": "test sections2",
+        "details": "test details2",
+        "musics": [
+          {
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Lord Kossity" },
+              { "name": "Titre", "value": "Hey Sexy Wow" },
+              { "name": "Featuring", "value": "Chico" }
+            ]
+          }
         ]
-    },
-    "currentMusic": 2,
-    "currentSection": 0,
-    "audio": {},
-    "localStorageName": "PartyBlindtest"
+      }
+    ]
+  },
+  "currentMusic": 2,
+  "currentSection": 0,
+  "audio": {},
+  "localStorageName": "PartyBlindtest"
 }
