@@ -275,6 +275,12 @@ export class PartyBlindtest {
             .map((section) => section.getMaxNumberOfPointRemaining(this.currentMusic))
             .reduce((subtotal, duration) => subtotal + duration, 0);
     }
+    makeVisible() {
+        this.getMusic().makeVisible(this);
+    }
+    changeParticipant(participantNumber) {
+        this.getMusic().changeParticipant(this.getParticipants()[participantNumber].name, this);
+    }
 }
 
 export class Blindtest {
@@ -321,7 +327,6 @@ export class Section {
         return this.musics.map((music) => music.getMaxNumberOfPoint()).reduce((subtotal, duration) => subtotal + duration, 0);
     }
     getMaxNumberOfPointRemaining(currentIndexMusic) {
-        console.log(currentIndexMusic);
         return this.musics
             .filter((music, index) => index >= currentIndexMusic)
             .map((music) => music.getMaxNumberOfPointRemaining())
@@ -356,7 +361,15 @@ export class Music {
         return this.pointInfos.length;
     }
     getMaxNumberOfPointRemaining() {
-        return this.pointInfos.filter((pointInfo) => !pointInfo.participant).length;
+        return this.pointInfos.filter((pointInfo) => !pointInfo.participant && !pointInfo.isVisible).length;
+    }
+    makeVisible(partyBlindtest) {
+        this.pointInfos.map((pointInfo) => pointInfo.makeVisible(partyBlindtest));
+    }
+    changeParticipant(newParticipantName, partyBlindtest) {
+        this.pointInfos
+            .filter((pointInfo) => !pointInfo.participant)
+            .map((pointInfo) => pointInfo.changeParticipant(newParticipantName, partyBlindtest));
     }
 }
 export class PointInfo {
@@ -390,6 +403,11 @@ export class PointInfo {
     }
 
     makeVisible(partyBlindtest) {
+        this.isVisible = true;
+        partyBlindtest.save();
+    }
+
+    changeVisible(partyBlindtest) {
         this.isVisible = !this.isVisible;
         partyBlindtest.save();
     }
@@ -398,7 +416,7 @@ export class PointInfo {
         const divVisiblePointinfo = new TagBuilder('i', divPointInfo).setClass('fa-solid fa-eye' + (this.isVisible ? '-slash' : '')).build();
 
         divVisiblePointinfo.addEventListener('click', () => {
-            this.makeVisible(partyBlindtest);
+            this.changeVisible(partyBlindtest);
         });
         // if (!isAudience()) {
         const divselectValuePointInfo = createTagWithParentClassContent('div', divPointInfo);

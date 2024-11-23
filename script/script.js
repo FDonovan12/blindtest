@@ -73,7 +73,7 @@ function start() {
             return;
         }
         console.log('key :', key);
-        switch (key.code) {
+        switch (key.key) {
             case 'Space':
                 key.preventDefault();
                 mainObject.partyBlindtest.playAndPauseMusic();
@@ -85,6 +85,22 @@ function start() {
             case 'ArrowLeft':
                 key.preventDefault();
                 mainObject.partyBlindtest.previousMusic();
+                break;
+            case 'v':
+                key.preventDefault();
+                mainObject.partyBlindtest.makeVisible();
+                break;
+            case '1':
+                key.preventDefault();
+                mainObject.partyBlindtest.changeParticipant(0);
+                break;
+            case '2':
+                key.preventDefault();
+                mainObject.partyBlindtest.changeParticipant(1);
+                break;
+            case '3':
+                key.preventDefault();
+                mainObject.partyBlindtest.changeParticipant(2);
                 break;
 
             default:
