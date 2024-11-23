@@ -266,6 +266,15 @@ export class PartyBlindtest {
     getDuration() {
         return this.blindtest.sections.map((section) => section.getDuration()).reduce((subtotal, duration) => subtotal + duration, 0);
     }
+    getMaxNumberOfPoint() {
+        return this.blindtest.sections.map((section) => section.getMaxNumberOfPoint()).reduce((subtotal, duration) => subtotal + duration, 0);
+    }
+    getMaxNumberOfPointRemaining() {
+        return this.blindtest.sections
+            .filter((section, index) => index >= this.currentSection)
+            .map((section) => section.getMaxNumberOfPointRemaining(this.currentMusic))
+            .reduce((subtotal, duration) => subtotal + duration, 0);
+    }
 }
 
 export class Blindtest {
@@ -308,6 +317,16 @@ export class Section {
     getDuration() {
         return this.musics.map((music) => music.getDuration()).reduce((subtotal, duration) => subtotal + duration, 0);
     }
+    getMaxNumberOfPoint() {
+        return this.musics.map((music) => music.getMaxNumberOfPoint()).reduce((subtotal, duration) => subtotal + duration, 0);
+    }
+    getMaxNumberOfPointRemaining(currentIndexMusic) {
+        console.log(currentIndexMusic);
+        return this.musics
+            .filter((music, index) => index >= currentIndexMusic)
+            .map((music) => music.getMaxNumberOfPointRemaining())
+            .reduce((subtotal, duration) => subtotal + duration, 0);
+    }
 }
 export class Music {
     constructor(music) {
@@ -332,6 +351,12 @@ export class Music {
         } else {
             return 0;
         }
+    }
+    getMaxNumberOfPoint() {
+        return this.pointInfos.length;
+    }
+    getMaxNumberOfPointRemaining() {
+        return this.pointInfos.filter((pointInfo) => !pointInfo.participant).length;
     }
 }
 export class PointInfo {

@@ -1,88 +1,92 @@
 <!DOCTYPE html>
 <html lang="fr" class="bootfish">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- <script src="./objectValueBlindtest.js" type="module"></script> -->
-        <link rel="stylesheet" href="style.css" />
-        <link rel="shortcun icon" href="asset/logo.png" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js" defer></script>
-        <script type="module" src="./script/header.js" defer></script>
-        <script type="module" src="./script/script.js" defer></script>
-        <title>Blind Test - Présentateur</title>
-    </head>
-    <body class="grid-container">
-        <header class="full-width">
-            <div id="participants" class="fw-500"></div>
-        </header>
-        <main class="full-width grid-container">
-            <canvas id="audioVisualizer" class="full-width"></canvas>
-            <div id="forms" class="d-none">
-                <div>
-                    <form>
-                        <input placeholder="Mot de passe" type="password" id="passwordInput" />
-                        <button id="password" class="btn-success">Valider mot de passe</button>
-                    </form>
-                </div>
-                <div>
-                    <form>
-                        <input placeholder="Nom du particpant" type="text" id="addParticpantInput" />
-                        <button id="addParticpant" class="btn-success">Ajouter participant</button>
-                    </form>
-                </div>
-                <div>
-                    <form>
-                        <div>
-                            <input
-                                placeholder="lien Youtube de la musique"
-                                type="text"
-                                id="linkYoutubeInput"
-                                value="https://www.youtube.com/watch?v=NaFd8ucHLuo&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=55"
-                                required />
-                            <button id="addLinkYoutube" class="btn-success">Ajouter contenu Youtube</button>
-                        </div>
-                        <div id="blockOfPointInfos">
-                            <div>
-                                <input placeholder="Titre Point infos" type="text" required />
-                                <input placeholder="Value Point infos" type="text" required />
-                            </div>
-                        </div>
-                        <button id="validMusic" class="btn-success">Valide musique</button>
-                    </form>
-                    <i id="addPointInfo" onclick="addFormPointInfo()" class="fa-solid fa-circle-plus"></i>
-                </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="./objectValueBlindtest.js" type="module"></script> -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcun icon" href="asset/logo.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js" defer></script>
+    <script type="module" src="./script/header.js" defer></script>
+    <script type="module" src="./script/script.js" defer></script>
+    <title>Blind Test - Présentateur</title>
+  </head>
+  <body class="grid-container">
+    <header class="full-width">
+      <div id="participants" class="fw-500"></div>
+    </header>
+    <main class="full-width grid-container">
+      <canvas id="audioVisualizer" class="full-width"></canvas>
+      <div id="forms" class="d-none">
+        <div>
+          <form>
+            <input placeholder="Mot de passe" type="password" id="passwordInput" />
+            <button id="password" class="btn-success">Valider mot de passe</button>
+          </form>
+        </div>
+        <div>
+          <form>
+            <input placeholder="Nom du particpant" type="text" id="addParticpantInput" />
+            <button id="addParticpant" class="btn-success">Ajouter participant</button>
+          </form>
+        </div>
+        <div>
+          <form>
+            <div>
+              <input
+                placeholder="lien Youtube de la musique"
+                type="text"
+                id="linkYoutubeInput"
+                value="https://www.youtube.com/watch?v=NaFd8ucHLuo&list=LRYR2yAPC69L3iw0uOffKDj0J0O8kUhuY8Lnd&index=55"
+                required />
+              <button id="addLinkYoutube" class="btn-success">Ajouter contenu Youtube</button>
             </div>
-            <div class="all-buttons mt-2 gap-2 breakout btn-group blur inline scale auto-grid gap-4">
-                <button id="openAudience" class="">Ouvrir Audience</button>
-                <button id="previous" class="">precedent</button>
-                <button id="play" class="btn-danger">play</button>
-                <button id="next" class="">suivant</button>
-                <button id="downloadAnchorElem" class="">export JSON</button>
-                <button id="readJson" class="">reset JSON</button>
-                <button id="shuffleMusics">Shuffle musique</button>
+            <div id="blockOfPointInfos">
+              <div>
+                <input placeholder="Titre Point infos" type="text" required />
+                <input placeholder="Value Point infos" type="text" required />
+              </div>
             </div>
-            <div class="content-wrapper full-width">
-                <div id="section-details" class="section-details grid-container">
-                    <div class="basic-grid breakout d-none">
-                        <h1 id="section-title" class="h2 center start-2 col-8"></h1>
-                        <div class="mb-auto ml-auto col-2">
-                            <div>Section</div>
-                            <div id="number-section"></div>
-                        </div>
-                    </div>
-                    <div class="basic-grid breakout">
-                        <div class="col-6">
-                            <span>Musique</span>
-                            <span id="number-music"></span>
-                        </div>
-                        <div id="section-description" class="fs-400 col-6 center d-none"></div>
-                    </div>
-                    <div id="timer"></div>
-                </div>
-                <div id="response" class="response grid-container"></div>
-                <audio id="music-audio"></audio>
+            <button id="validMusic" class="btn-success">Valide musique</button>
+          </form>
+          <i id="addPointInfo" onclick="addFormPointInfo()" class="fa-solid fa-circle-plus"></i>
+        </div>
+      </div>
+      <div class="all-buttons mt-2 gap-2 breakout btn-group blur inline scale auto-grid gap-4">
+        <button id="openAudience" class="">Ouvrir Audience</button>
+        <button id="previous" class="">precedent</button>
+        <button id="play" class="btn-danger">play</button>
+        <button id="next" class="">suivant</button>
+        <button id="downloadAnchorElem" class="">export JSON</button>
+        <button id="readJson" class="">reset JSON</button>
+        <button id="shuffleMusics">Shuffle musique</button>
+      </div>
+      <div class="content-wrapper full-width">
+        <div id="section-details" class="section-details grid-container">
+          <div class="basic-grid breakout d-none">
+            <h1 id="section-title" class="h2 center start-2 col-8"></h1>
+            <div class="mb-auto ml-auto col-2">
+              <div>Section</div>
+              <div id="number-section"></div>
             </div>
-        </main>
-        <footer class="full-width ch-ml-3 ch-mb-1"></footer>
-    </body>
+          </div>
+          <div class="basic-grid breakout">
+            <div class="col-6">
+              <span>Musique :</span>
+              <span id="number-music"></span>
+            </div>
+            <div class="fs-400 col-6 center">
+              <span>Point :</span>
+              <span id="number-points"></span>
+            </div>
+            <div id="section-description" class="fs-400 col-6 center d-none"></div>
+          </div>
+          <!-- <div id="timer"></div> -->
+        </div>
+        <div id="response" class="response grid-container"></div>
+        <audio id="music-audio"></audio>
+      </div>
+    </main>
+    <footer class="full-width ch-ml-3 ch-mb-1"></footer>
+  </body>
 </html>
