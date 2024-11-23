@@ -47,7 +47,7 @@ def download_one_music(youtube_url):
     print("download_one_music")
     custom_filename = extract_title(youtube_url)
     path_for_json = os.path.join('current/music/', custom_filename + ".mp3")
-    download_path = os.path.join("./../current/music/" , custom_filename)
+    download_path = os.path.join("/mnt/d/Projet/blindtest/current/music/" , custom_filename)
     if os.path.exists(download_path + ".mp3"):
         print("File already exists")
         return path_for_json
