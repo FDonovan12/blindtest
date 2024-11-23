@@ -8,13 +8,15 @@
         "details": "test details2",
         "musics": [
           {
-            "link": "https://www.youtube.com/watch?v=y8trd3gjJt0",
+            "path": "current/music/stromae-pomme-ma-meilleure-ennemie-from-arcane-season-2-official-visualizer.mp3",
+            "duration": 149,
+            "link": "https://www.youtube.com/watch?v=1F3OGIFnW1k",
             "pointInfos": [
-              { "name": "Chanteur", "value": "Farruko" },
-              { "name": "Titre", "value": "Pepas" }
-            ],
-            "path": "current/music/farruko-pepas-official-video.mp3",
-            "duration": 295
+              { "name": "Chanteur", "value": "Stromae" },
+              { "name": "Titre", "value": "Ma Meilleure Ennemie" },
+              { "name": "Featuring 1", "value": "Pomme" },
+              { "name": "Bonus", "value": "Arcane" }
+            ]
           }
         ]
       }

@@ -101,4 +101,5 @@ def download_all_musics(jsonFileName):
 
 # filename = "./../current/data.json"
 filename = "./../current/testdata.json"
+filename = "/mnt/d/Projet/blindtest/current/testdata.json"
 download_all_musics(filename)

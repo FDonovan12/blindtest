@@ -1047,6 +1047,17 @@
               { "name": "Titre", "value": "Let It Go" },
               { "name": "Bonus", "value": "Frozen" }
             ]
+          },
+          {
+            "path": "current/music/stromae-pomme-ma-meilleure-ennemie-from-arcane-season-2-official-visualizer.mp3",
+            "link": "https://www.youtube.com/watch?v=1F3OGIFnW1k",
+            "duration": 149,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Stromae" },
+              { "name": "Titre", "value": "Ma Meilleure Ennemie" },
+              { "name": "Featuring 1", "value": "Pomme" },
+              { "name": "Bonus", "value": "Arcane" }
+            ]
           }
         ]
       }
