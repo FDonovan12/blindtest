@@ -366,7 +366,7 @@
               { "name": "Chanteur", "value": "Glasgow" },
               { "name": "Titre", "value": "Kyuusoku Juuden" },
               { "name": "Anime", "value": "Mr Villain's Day Off / Kyuujitsu no Warumono-san" },
-              { "name": "Bonus", "value": "Ending 1" }
+              { "name": "Bonus", "value": "Ending tout court / Opening 2" }
             ]
           },
           {
@@ -388,6 +388,17 @@
               { "name": "Chanteur", "value": "Miguel Angel Munoz" },
               { "name": "Titre", "value": "Diras que estoy loco" },
               { "name": "Bonus", "value": "Un, dos, tres" }
+            ]
+          },
+          {
+            "path": "current/music/gto-great-techer-onizuka-opening-1-full-drivers-high.mp3",
+            "link": "https://www.youtube.com/watch?v=B82MDzrcH9Q",
+            "duration": 253,
+            "pointInfos": [
+              { "name": "Chanteur", "value": "L'Arc-en-Ciel" },
+              { "name": "Titre", "value": "Driver's High" },
+              { "name": "Anime", "value": "GTO : Great Teach Onizuka" },
+              { "name": "Bonus", "value": "Opening 1" }
             ]
           },
           {
@@ -859,17 +870,6 @@
             "pointInfos": [
               { "name": "Chanteur", "value": "LadyGaga" },
               { "name": "Titre", "value": "Applause" }
-            ]
-          },
-          {
-            "path": "current/music/gto-great-techer-onizuka-opening-1-full-drivers-high.mp3",
-            "link": "https://www.youtube.com/watch?v=B82MDzrcH9Q",
-            "duration": 253,
-            "pointInfos": [
-              { "name": "Chanteur", "value": "L'Arc-en-Ciel" },
-              { "name": "Titre", "value": "Driver's High" },
-              { "name": "Anime", "value": "GTO : Great Teach Onizuka" },
-              { "name": "Bonus", "value": "Opening 1" }
             ]
           },
           {
