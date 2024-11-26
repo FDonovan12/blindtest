@@ -180,6 +180,7 @@ export class PartyBlindtest {
             this.pauseMusic();
             // this.audio.pause();
             const pathMusic = this.getMusic().path;
+            console.log(pathMusic);
             this.audio.src = pathMusic;
         }
     }
