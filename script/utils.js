@@ -93,6 +93,7 @@ export function updateSectionContent(partyBlindtest) {
         document.querySelector(
             '#number-points'
         ).textContent = `${partyBlindtest.getMaxNumberOfPointRemaining()} / ${partyBlindtest.getMaxNumberOfPoint()}`;
+        document.querySelector('#title-music-span').textContent = partyBlindtest.getMusic().title || '';
         document.querySelector('#timer').textContent = `${secondsToTime(partyBlindtest.getDuration())} : ${partyBlindtest.getDuration()}s`;
     } catch (error) {}
 }

@@ -239,10 +239,11 @@ export class PartyBlindtest {
     validMusic() {
         console.log('validMusic');
         const youtubeLink = document.querySelector('#linkYoutubeInput').value;
+        const titleMusic = document.querySelector('#title-music').value;
         console.log(youtubeLink);
         const blockPointInfos = document.querySelector('#blockOfPointInfos');
         const allPointInfosInput = blockPointInfos.querySelectorAll('div');
-        const music = this.addMusic(youtubeLink);
+        const music = this.addMusic(youtubeLink, titleMusic);
         allPointInfosInput.forEach((pointInfo) => {
             const inputs = pointInfo.querySelectorAll('input');
             const name = inputs[0].value;
@@ -252,9 +253,9 @@ export class PartyBlindtest {
         });
         this.save();
     }
-    addMusic(link) {
+    addMusic(link, titleMusic) {
         const section = this.getSection();
-        const music = section.addMusic(link);
+        const music = section.addMusic(link, titleMusic);
         return music;
     }
     shuffleMusics() {
@@ -305,8 +306,8 @@ export class Section {
         return score;
     }
 
-    addMusic(link, path, duration) {
-        const music = new Music({ link: link, path: path, duration: duration });
+    addMusic(link, titleMusic) {
+        const music = new Music({ link: link, title: titleMusic });
         this.musics.push(music);
         return music;
     }
@@ -338,6 +339,7 @@ export class Music {
         this.path = music?.path;
         this.link = music?.link;
         this.duration = music?.duration;
+        this.title = music?.title;
         this.pointInfos = music?.pointInfos?.map((pointInfo) => new PointInfo(pointInfo)) || [];
     }
     addPointInfo(name, value) {

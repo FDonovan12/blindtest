@@ -17,7 +17,7 @@
     </header>
     <main class="full-width grid-container">
       <canvas id="audioVisualizer" class="full-width"></canvas>
-      <div id="forms" class="d-none">
+      <div id="forms" class="d-noned">
         <div>
           <form>
             <input placeholder="Mot de passe" type="password" id="passwordInput" />
@@ -41,6 +41,7 @@
                 required />
               <button id="addLinkYoutube" class="btn-success">Ajouter contenu Youtube</button>
             </div>
+            <input id="title-music" type="text" placeholder="Titre" />
             <div id="blockOfPointInfos">
               <div>
                 <input placeholder="Titre Point infos" type="text" required />
@@ -71,17 +72,22 @@
             </div>
           </div>
           <div class="basic-grid breakout">
-            <div class="col-6">
+            <div class="col-4">
               <span>Musique :</span>
               <span id="number-music"></span>
             </div>
-            <div class="fs-400 col-6 center">
-              <span>Point :</span>
-              <span id="number-points"></span>
+            <div class="fs-400 col-8 center basic-grid">
+              <div class="col-4">
+                <span id="title-music-span"></span>
+              </div>
+              <div class="col-4">
+                <span>Point :</span>
+                <span id="number-points"></span>
+              </div>
             </div>
             <div id="section-description" class="fs-400 col-6 center d-none"></div>
           </div>
-          <!-- <div id="timer"></div> -->
+          <div id="timer"></div>
         </div>
         <div id="response" class="response grid-container"></div>
         <audio id="music-audio"></audio>
