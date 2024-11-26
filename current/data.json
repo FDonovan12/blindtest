@@ -7,9 +7,7 @@
     ],
     "sections": [
       {
-        "name": "Pop music",
-        "details": "Plusieurs musiques pop",
-
+        "name": "Dorian",
         "musics": [
           {
             "link": "https://www.youtube.com/watch?v=mu2-tYq76_E",
@@ -160,7 +158,12 @@
             ],
             "path": "current/music/ドラマツルギー-eve-mv.mp3",
             "duration": 246
-          },
+          }
+        ]
+      },
+      {
+        "name": "Tristan",
+        "musics": [
           {
             "link": "https://www.youtube.com/watch?v=5mWkn0Xb6KM",
             "title": "Tristan",
@@ -310,7 +313,12 @@
             ],
             "path": "current/music/ultra-vomit-feat-andréas-je-collectionne-des-canards-vivants.mp3",
             "duration": 233
-          },
+          }
+        ]
+      },
+      {
+        "name": "Donovan",
+        "musics": [
           {
             "link": "https://www.youtube.com/watch?v=ei8hPkyJ0bU",
             "title": "Donovan",
