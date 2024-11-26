@@ -50,7 +50,7 @@ def download_one_music(youtube_url):
     download_path = os.path.join("/mnt/d/Projet/blindtest/current/music/" , custom_filename)
     if os.path.exists(download_path + ".mp3"):
         print("File already exists")
-        return path_for_json
+        return path_for_json, download_path
         
     ydl_opts = {
         'format': 'bestaudio/best',
@@ -63,7 +63,7 @@ def download_one_music(youtube_url):
     }
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         info_dict = ydl.extract_info(youtube_url, download=True)
-    return path_for_json
+    return path_for_json, download_path
 
 def download_all_musics(jsonFileName):
     f = open(jsonFileName)
@@ -80,15 +80,14 @@ def download_all_musics(jsonFileName):
                 except:
                     print("path no exist")
                     oldPath = ""
-                newPath = download_one_music(music["link"])
-                if oldPath != newPath and os.path.exists("./../"+oldPath) and oldPath != "":
+                path_for_json, download_path = download_one_music(music["link"])
+                if oldPath != path_for_json and os.path.exists("./../"+oldPath) and oldPath != "":
                     os.remove("./../"+oldPath)
                 
-                music["path"] = newPath
-                audio = MP3("./../"+newPath)
+                music["path"] = path_for_json
+                audio = MP3(download_path + ".mp3")
                 duration = math.ceil(audio.info.length)
                 music["duration"] = duration
-                
                 
             except:
                 print("error occured and was catch")
