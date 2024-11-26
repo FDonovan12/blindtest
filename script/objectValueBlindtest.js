@@ -52,7 +52,6 @@ export class PartyBlindtest {
                 return partyBlindtestFromStorage;
             }
         }
-        console.log(this);
         this.changeAudio();
     }
 
@@ -180,9 +179,7 @@ export class PartyBlindtest {
         if (this.audio) {
             this.pauseMusic();
             // this.audio.pause();
-            console.log(this.getMusic());
             const pathMusic = this.getMusic().path;
-            console.log(pathMusic);
             this.audio.src = pathMusic;
         }
     }
