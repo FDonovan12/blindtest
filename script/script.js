@@ -74,7 +74,7 @@ function start() {
         }
         console.log('key :', key);
         switch (key.key) {
-            case 'Space':
+            case ' ':
                 key.preventDefault();
                 mainObject.partyBlindtest.playAndPauseMusic();
                 break;
