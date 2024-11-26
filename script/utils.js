@@ -90,7 +90,7 @@ export function updateSectionContent(partyBlindtest) {
         document.querySelector('#section-description').textContent = partyBlindtest.getSection().details;
         document.querySelector('#number-section').textContent = `${partyBlindtest.currentSection + 1} / ${partyBlindtest.getNumberOfSection()}`;
         document.querySelector('#number-music').textContent = `${partyBlindtest.currentMusic + 1} / ${partyBlindtest.getNumberOfMusic()}`;
-        document.querySelector
+        document.querySelector(
             '#number-points'
         ).textContent = `${partyBlindtest.getMaxNumberOfPointRemaining()} / ${partyBlindtest.getMaxNumberOfPoint()}`;
         document.querySelector('#timer').textContent = `${secondsToTime(partyBlindtest.getDuration())} : ${partyBlindtest.getDuration()}s`;
