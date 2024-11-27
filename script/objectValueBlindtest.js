@@ -364,7 +364,11 @@ export class Music {
         return this.pointInfos.filter((pointInfo) => !pointInfo.participant && !pointInfo.isVisible).length;
     }
     makeVisible(partyBlindtest) {
-        this.pointInfos.map((pointInfo) => pointInfo.makeVisible(partyBlindtest));
+        if (this.pointInfos.filter((pointInfo) => !pointInfo.isVisible).length === 0) {
+            this.pointInfos.map((pointInfo) => pointInfo.changeVisible(partyBlindtest));
+        } else {
+            this.pointInfos.map((pointInfo) => pointInfo.makeVisible(partyBlindtest));
+        }
     }
     changeParticipant(newParticipantName, partyBlindtest) {
         this.pointInfos

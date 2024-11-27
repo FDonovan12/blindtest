@@ -72,7 +72,6 @@ function start() {
         if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA') {
             return;
         }
-        console.log('key :', key);
         switch (key.key) {
             case ' ':
                 key.preventDefault();
@@ -104,6 +103,7 @@ function start() {
                 break;
 
             default:
+                console.log('key :', key);
                 break;
         }
     });
