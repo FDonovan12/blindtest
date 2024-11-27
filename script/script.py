@@ -43,11 +43,11 @@ def extract_title(youtube_url):
         print(f'\n {custom_filename = }')
         return custom_filename
 
-def download_one_music(youtube_url):
+def download_one_music(youtube_url, base_path):
     print("download_one_music")
     custom_filename = extract_title(youtube_url)
     path_for_json = os.path.join('current/music/', custom_filename + ".mp3")
-    download_path = os.path.join("/mnt/d/Projet/blindtest/current/music/" , custom_filename)
+    download_path = os.path.join(base_path + "current/music/" , custom_filename)
     if os.path.exists(download_path + ".mp3"):
         print("File already exists")
         return path_for_json, download_path
@@ -65,7 +65,7 @@ def download_one_music(youtube_url):
         info_dict = ydl.extract_info(youtube_url, download=True)
     return path_for_json, download_path
 
-def download_all_musics(jsonFileName):
+def download_all_musics(jsonFileName, base_path = "/mnt/d/Projet/blindtest/"):
     f = open(jsonFileName)
     data = json.load(f)
 
@@ -81,8 +81,12 @@ def download_all_musics(jsonFileName):
                     print("path no exist")
                     oldPath = ""
                 path_for_json, download_path = download_one_music(music["link"])
-                if oldPath != path_for_json and os.path.exists("./../"+oldPath) and oldPath != "":
-                    os.remove("./../"+oldPath)
+                print(f'{path_for_json = }')
+                print(f'{download_path = }')
+                print(f'{oldPath = }')
+                if oldPath != path_for_json and os.path.exists(base_path+oldPath) and oldPath != "":
+                    print(f'{oldPath} exist')
+                    os.remove(base_path+oldPath)
                 
                 music["path"] = path_for_json
                 audio = MP3(download_path + ".mp3")
