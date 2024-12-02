@@ -470,6 +470,146 @@
             "duration": 194
           }
         ]
+      },
+      {
+        "name": "Alexandre",
+        "musics": [
+          {
+            "link": "https://www.youtube.com/watch?v=60tcJiNHHLI",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "David Hallyday" },
+              { "name": "Titre", "value": "Un Homme Libre" }
+            ],
+            "path": "current/music/david-hallyday-un-homme-libre.mp3",
+            "duration": 202
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=o1FO2TOhl8Y",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Tryo" },
+              { "name": "Titre", "value": "Apocalypticodramatic" }
+            ],
+            "path": "current/music/tryo-apocalypticodramatic-audio.mp3",
+            "duration": 227
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=j26esoayz2c",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Eric Prydz" },
+              { "name": "Titre", "value": "Pjanoo" }
+            ],
+            "path": "current/music/pjanooradio-edit-eric-prydz.mp3",
+            "duration": 158
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=09839DpTctU",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Eagles" },
+              { "name": "Titre", "value": "Hotel California" }
+            ],
+            "path": "current/music/eagles-hotel-california-live-1977-official-video-hd.mp3",
+            "duration": 405
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=iy7mmbdau-g",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "La Secte Phonétik" },
+              { "name": "Titre", "value": "Bienvenue dans la Secte" }
+            ],
+            "path": "current/music/la-secte-phonétik-bienvenue-dans-la-secte-officiel.mp3",
+            "duration": 263
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=ebXbLfLACGM",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Calvin Harris" },
+              { "name": "Titre", "value": "Summer" }
+            ],
+            "path": "current/music/calvin-harris-summer-official-video.mp3",
+            "duration": 235
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=VaxFIr3GJ-8",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Major Lazer & Showtek" },
+              { "name": "Titre", "value": "Believer" }
+            ],
+            "path": "current/music/major-lazer-showtek-believer-official-lyric-video.mp3",
+            "duration": 224
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=X1yS8sDj9v4",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Josef Salvat" },
+              { "name": "Titre", "value": "Open Season" }
+            ],
+            "path": "current/music/josef-salvat-open-season-une-autre-saison-official-video.mp3",
+            "duration": 245
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=5NHkrKNbPYA",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Vianney" },
+              { "name": "Titre", "value": "Je m'en vais" }
+            ],
+            "path": "current/music/vianney-je-men-vais-paroles.mp3",
+            "duration": 195
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=lkV3CR0jpSs",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Angèle ft. Damso" },
+              { "name": "Titre", "value": "Démons" }
+            ],
+            "path": "current/music/angèle-ft-damso-démons-paroles.mp3",
+            "duration": 252
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=QWKdi7C_hIw",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Florent Pagny" },
+              { "name": "Titre", "value": "Savoir Aimer paroles" }
+            ],
+            "path": "current/music/florent-pagny-savoir-aimer-paroles.mp3",
+            "duration": 283
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=rs6Y4kZ8qtw",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Manu Chao" },
+              { "name": "Titre", "value": "Me Gustas Tu" }
+            ],
+            "path": "current/music/manu-chao-me-gustas-tu-official-audio.mp3",
+            "duration": 241
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=PCkOghb1qmQ",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "La Tribu De Dana" },
+              { "name": "Titre", "value": "Manau" }
+            ],
+            "path": "current/music/la-tribu-de-dana-manau-paroles-lyrics.mp3",
+            "duration": 287
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=9tGzK8gEDA8",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Renaud & Axelle Red" },
+              { "name": "Titre", "value": "Manhattan Kaboul" }
+            ],
+            "path": "current/music/renaud-axelle-red-manhattan-kaboul-paroles.mp3",
+            "duration": 228
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=Y9GCM9DZUJo",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Claudio Capéo" },
+              { "name": "Titre", "value": "Un homme debout" }
+            ],
+            "path": "current/music/claudio-capéo-un-homme-debout-clip-officiel.mp3",
+            "duration": 202
+          }
+        ]
       }
     ]
   },

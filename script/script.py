@@ -78,14 +78,14 @@ def download_all_musics(jsonFileName, base_path = "/mnt/d/Projet/blindtest/"):
                 try:
                     oldPath = music["path"]
                 except:
-                    print("path no exist")
+                    print(" path no exist")
                     oldPath = ""
-                path_for_json, download_path = download_one_music(music["link"])
-                print(f'{path_for_json = }')
-                print(f'{download_path = }')
-                print(f'{oldPath = }')
+                path_for_json, download_path = download_one_music(music["link"], base_path)
+                print(f' {path_for_json = }')
+                print(f' {download_path = }')
+                print(f' {oldPath = }')
                 if oldPath != path_for_json and os.path.exists(base_path+oldPath) and oldPath != "":
-                    print(f'{oldPath} exist')
+                    print(f' {oldPath} exist')
                     os.remove(base_path+oldPath)
                 
                 music["path"] = path_for_json
@@ -94,8 +94,8 @@ def download_all_musics(jsonFileName, base_path = "/mnt/d/Projet/blindtest/"):
                 music["duration"] = duration
                 
             except:
-                print("error occured and was catch")
-                print(f'{music = }')
+                print(" line 97 error occured and was catch")
+                print(f' {music = }')
                 
     with open(jsonFileName, "w") as jsonFile:
         json.dump(data, jsonFile, ensure_ascii=False)

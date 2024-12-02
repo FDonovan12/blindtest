@@ -6,18 +6,7 @@
       {
         "name": "test sections2",
         "details": "test details2",
-        "musics": [
-          {
-            "link": "https://www.youtube.com/watch?v=dLlD-dZNACM",
-            "title": "Dorian",
-            "pointInfos": [
-              { "name": "Chanteur", "value": "Queen Bee" },
-              { "name": "Titre", "value": "Mephisto" }
-            ],
-            "path": "current/music/mephisto.mp3",
-            "duration": 228
-          }
-        ]
+        "musics": []
       }
     ]
   },
