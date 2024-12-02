@@ -6,7 +6,17 @@
       {
         "name": "test sections2",
         "details": "test details2",
-        "musics": []
+        "musics": [
+          {
+            "link": "https://www.youtube.com/watch?v=McEoTIqoRKk",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Calvin Harris" },
+              { "name": "Titre", "value": "Summer" }
+            ],
+            "path": "current/music/calvin-harris-summer-audio.mp3",
+            "duration": 223
+          }
+        ]
       }
     ]
   },

@@ -520,13 +520,13 @@
             "duration": 263
           },
           {
-            "link": "https://www.youtube.com/watch?v=ebXbLfLACGM",
+            "link": "https://www.youtube.com/watch?v=McEoTIqoRKk",
             "pointInfos": [
               { "name": "Chanteur", "value": "Calvin Harris" },
               { "name": "Titre", "value": "Summer" }
             ],
-            "path": "current/music/calvin-harris-summer-official-video.mp3",
-            "duration": 235
+            "path": "current/music/calvin-harris-summer-audio.mp3",
+            "duration": 223
           },
           {
             "link": "https://www.youtube.com/watch?v=VaxFIr3GJ-8",
