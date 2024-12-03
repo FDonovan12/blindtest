@@ -238,15 +238,15 @@ export class PartyBlindtest {
     }
     validMusic() {
         console.log('validMusic');
-        const youtubeLink = document.querySelector('#linkYoutubeInput').value;
+        const youtubeLink = document.querySelector('#linkYoutubeInput').value.trim();
         console.log(youtubeLink);
         const blockPointInfos = document.querySelector('#blockOfPointInfos');
         const allPointInfosInput = blockPointInfos.querySelectorAll('div');
         const music = this.addMusic(youtubeLink);
         allPointInfosInput.forEach((pointInfo) => {
             const inputs = pointInfo.querySelectorAll('input');
-            const name = inputs[0].value;
-            const value = inputs[1].value;
+            const name = inputs[0].value.trim();
+            const value = inputs[1].value.trim();
             console.log(value);
             music.addPointInfo(name, value);
         });
