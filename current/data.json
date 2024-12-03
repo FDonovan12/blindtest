@@ -610,6 +610,161 @@
             "duration": 202
           }
         ]
+      },
+      {
+        "name": "Maxime",
+        "musics": [
+          {
+            "link": "https://www.youtube.com/watch?v=SpIgOm5vFkE",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Martin Garrix & Zedd" },
+              { "name": "Titre", "value": "Follow" }
+            ],
+            "path": "current/music/martin-garrix-zedd-follow-official-video.mp3",
+            "duration": 222
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=soamUONtXBI",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "FLAWX" },
+              { "name": "Titre", "value": "Partenaire Particulier" }
+            ],
+            "path": "current/music/flawx-partenaire-particulier-hardstyle-remix.mp3",
+            "duration": 207
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=tSKjjvb8yL0",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Grand Corp Malade / Gaël Faye / Ben Mazué" },
+              { "name": "Titre", "value": "Éphémère" }
+            ],
+            "path": "current/music/éphémère.mp3",
+            "duration": 160
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=Bkm03KcnKHE",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Lomepal" },
+              { "name": "Titre", "value": "Trop beau" }
+            ],
+            "path": "current/music/lomepal-trop-beau-clip-officiel.mp3",
+            "duration": 265
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=N6w-UzfGX0c",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Porter Robinson" },
+              { "name": "Titre", "value": "Russian Roulette" }
+            ],
+            "path": "current/music/porter-robinson-russian-roulette.mp3",
+            "duration": 389
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=VYG1-czlu2s",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Lost Frequencies" },
+              { "name": "Titre", "value": "The Feeling" }
+            ],
+            "path": "current/music/lost-frequencies-the-feeling-official-video.mp3",
+            "duration": 158
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=lLNUj7kvn2w",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Olly Alexander" },
+              { "name": "Titre", "value": "Dizzy" }
+            ],
+            "path": "current/music/olly-alexander-dizzy-official-video.mp3",
+            "duration": 171
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=lh6qt2SOdaA",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Sick Individuals & Axwell" },
+              { "name": "Titre", "value": "I AM" }
+            ],
+            "path": "current/music/sick-individuals-axwell-ft-taylr-renee-i-am.mp3",
+            "duration": 300
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=_IRjvHeEc2o",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Timmy Trumpet & Vini Vici" },
+              { "name": "Titre", "value": "Thunder" }
+            ],
+            "path": "current/music/timmy-trumpet-vini-vici-thunder-official-audio.mp3",
+            "duration": 171
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=J5spiMVI9U8",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Martin Garrix x JVKE" },
+              { "name": "Titre", "value": "Hero" }
+            ],
+            "path": "current/music/martin-garrix-x-jvke-hero-official-video.mp3",
+            "duration": 170
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=1M6evm8ycmg",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Justin Bieber ft. Dominic Fike" },
+              { "name": "Titre", "value": "Die For You" }
+            ],
+            "path": "current/music/justin-bieber-die-for-you-visualizer-ft-dominic-fike.mp3",
+            "duration": 199
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=rsM5U8Tb2sM",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Avicii ft. Agnes, Vargas & Lagola" },
+              { "name": "Titre", "value": "Tough Love" }
+            ],
+            "path": "current/music/avicii-tough-love-official-audio-ft-agnes-vargas-lagola.mp3",
+            "duration": 191
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=XoZF2ajwWvQ",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Bigflo & Oli" },
+              { "name": "Titre", "value": "Dernière" }
+            ],
+            "path": "current/music/dernière.mp3",
+            "duration": 204
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=84yMbRzejC4",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "DVBBS, Powfu" },
+              { "name": "Titre", "value": "Losing Sleep" }
+            ],
+            "path": "current/music/dvbbs-powfu-losing-sleep-lyrics.mp3",
+            "duration": 162
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=5JBdBD8ST3M",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Mike Williams" },
+              { "name": "Titre", "value": "Melody" }
+            ],
+            "path": "current/music/mike-williams-melody-tip-of-my-tongue-official-audio.mp3",
+            "duration": 192
+          }
+        ]
+      },
+      {
+        "name": "David",
+        "musics": [
+          {
+            "link": "https://www.youtube.com/watch?v=5JBdBD8ST3M",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Musique temporaire" },
+              { "name": "Titre", "value": "Musique temporaire" }
+            ],
+            "isVisible": true,
+            "path": "current/music/mike-williams-melody-tip-of-my-tongue-official-audio.mp3",
+            "duration": 192
+          }
+        ]
       }
     ]
   },
