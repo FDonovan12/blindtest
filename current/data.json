@@ -585,8 +585,8 @@
           {
             "link": "https://www.youtube.com/watch?v=PCkOghb1qmQ",
             "pointInfos": [
-              { "name": "Chanteur", "value": "La Tribu De Dana" },
-              { "name": "Titre", "value": "Manau" }
+              { "name": "Chanteur", "value": "Manau" },
+              { "name": "Titre", "value": "La Tribu De Dana" }
             ],
             "path": "current/music/la-tribu-de-dana-manau-paroles-lyrics.mp3",
             "duration": 287
