@@ -1,0 +1,875 @@
+{
+  "blindtest": {
+    "name": "Playlist Journee wow partie 2",
+    "participants": [
+      { "name": "Horde", "classCss": "joueur joueur-horde" },
+      { "name": "Alliance", "classCss": "joueur joueur-alliance" }
+    ],
+    "sections": [
+      {
+        "name": "tout",
+        "musics": [
+          {
+            "link": "https://www.youtube.com/watch?v=mu2-tYq76_E",
+            "title": "Dorian",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Aimer" },
+              { "name": "Titre", "value": "Hz" }
+            ],
+            "path": "current/music/hz.mp3",
+            "duration": 290
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=L72R8VFVNEY",
+            "title": "Dorian",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Sayuri" },
+              { "name": "Titre", "value": "Sanketsu Shoujo" }
+            ],
+            "path": "current/music/酸欠少女さユり酸欠少女mv-フルver.mp3",
+            "duration": 251
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=dLlD-dZNACM",
+            "title": "Dorian",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Queen Bee" },
+              { "name": "Titre", "value": "Mephisto" }
+            ],
+            "path": "current/music/mephisto.mp3",
+            "duration": 228
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=lfw8W3uWO7s",
+            "title": "Dorian",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Ado" },
+              { "name": "Titre", "value": "All Night Radio" }
+            ],
+            "path": "current/music/adoオールナイトレディオ.mp3",
+            "duration": 215
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=QdnVT22LBBs",
+            "title": "Dorian",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Yoasobi" },
+              { "name": "Titre", "value": "Yoru ni Kakeru (Racing Into The Night)" }
+            ],
+            "path": "current/music/yoasobi-racing-into-the-night-yoru-ni-kakeru-music-video.mp3",
+            "duration": 259
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=F6_zbnfxoBA",
+            "title": "Dorian",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Creepy Nuts" },
+              { "name": "Titre", "value": "Yofukashi No Uta (Call of the Night)" }
+            ],
+            "path": "current/music/mvcreepy-nuts-よふかしのうた.mp3",
+            "duration": 247
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=wP-MnPA3JCU",
+            "title": "Dorian",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Burnout Syndrome" },
+              { "name": "Titre", "value": "Blizzard" }
+            ],
+            "path": "current/music/burnout-syndromes-blizzard-music-videotvアニメましろのおとオープニングテーマ.mp3",
+            "duration": 227
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=lm3t3myPspk",
+            "title": "Dorian",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "HOYO-MiX" },
+              { "name": "Titre", "value": "La Vaguelette" }
+            ],
+            "path": "current/music/la-vaguelette.mp3",
+            "duration": 150
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=GRyVGMXJNbI",
+            "title": "Dorian",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Kenshi Yonezu" },
+              { "name": "Titre", "value": "Flamingo" }
+            ],
+            "path": "current/music/kenshi-yonezu-米津玄師-flamingo-jnpromengsub.mp3",
+            "duration": 197
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=pLBX9vdrtn4",
+            "title": "Dorian",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Wanuka" },
+              { "name": "Titre", "value": "Orgasm Anthem" }
+            ],
+            "path": "current/music/絶頂讃歌和ぬかmusic-video.mp3",
+            "duration": 184
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=sTVc1ZFhQJ0",
+            "title": "Dorian",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Vaundy" },
+              { "name": "Titre", "value": "Chainsaw Blood" }
+            ],
+            "path": "current/music/chainsaw-man-ending-1-fullchainsaw-bloodby-vaundy-lyrics-kanromeng.mp3",
+            "duration": 203
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=T9MLjIsfUOU",
+            "title": "Dorian",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "OxT" },
+              { "name": "Titre", "value": "Highest" }
+            ],
+            "path": "current/music/highest.mp3",
+            "duration": 217
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=k7rHDHJG1jA",
+            "title": "Dorian",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "King Gnu" },
+              { "name": "Titre", "value": "Stardom" }
+            ],
+            "path": "current/music/king-gnu-stardom.mp3",
+            "duration": 227
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=GuQSy8DOUvc",
+            "title": "Dorian",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Miyano Mamoru" },
+              { "name": "Titre", "value": "Last Dance" }
+            ],
+            "path": "current/music/last-dance-mamoru-miyano-sub-español.mp3",
+            "duration": 224
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=jJzw1h5CR-I",
+            "title": "Dorian",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Eve" },
+              { "name": "Titre", "value": "Dramaturgy" }
+            ],
+            "path": "current/music/ドラマツルギー-eve-mv.mp3",
+            "duration": 246
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=5mWkn0Xb6KM",
+            "title": "Tristan",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Madison Beer" },
+              { "name": "Titre", "value": "15 Minute" }
+            ],
+            "path": "current/music/madison-beer-15-minutes-official-music-video.mp3",
+            "duration": 203
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=Fp_P_e1cPOE",
+            "title": "Tristan",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Camilla Cabello" },
+              { "name": "Titre", "value": "Shameless" }
+            ],
+            "path": "current/music/camila-cabello-shameless-official-video.mp3",
+            "duration": 227
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=d-jU0q5UVxo",
+            "title": "Tristan",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Dove Cameron" },
+              { "name": "Titre", "value": "Sand" }
+            ],
+            "path": "current/music/dove-cameron-sand-official-video.mp3",
+            "duration": 231
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=0XPBvDgfKHY",
+            "title": "Tristan",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Dua Lipa" },
+              { "name": "Titre", "value": "Training season" }
+            ],
+            "path": "current/music/dua-lipa-training-season.mp3",
+            "duration": 210
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=R7Qt15FDNVA",
+            "title": "Tristan",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Mes" },
+              { "name": "Titre", "value": "Burning Desire" }
+            ],
+            "path": "current/music/bouncing-burnice-burning-desires-full-song-zenless-zone-zero.mp3",
+            "duration": 136
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=K9gw0ZpWbSg",
+            "title": "Tristan",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Neoni" },
+              { "name": "Titre", "value": "Haunted House" }
+            ],
+            "path": "current/music/neoni-haunted-house-official-lyric-video.mp3",
+            "duration": 182
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=tAp9BKosZXs",
+            "title": "Tristan",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Katy Perry" },
+              { "name": "Titre", "value": "I kissed a girl" }
+            ],
+            "path": "current/music/katy-perry-i-kissed-a-girl-official-music-video.mp3",
+            "duration": 185
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=WZWTnm3EQNs",
+            "title": "Tristan",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Drunk Dazed" },
+              { "name": "Titre", "value": "Enhypen" }
+            ],
+            "path": "current/music/enhypen-drunk-dazed-audio.mp3",
+            "duration": 194
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=FKlGHHhTOsQ",
+            "title": "Tristan",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Dreamcatcher" },
+              { "name": "Titre", "value": "Scream" }
+            ],
+            "path": "current/music/dreamcatcher드림캐쳐-scream-mv.mp3",
+            "duration": 210
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=N6f6CVlgN8A",
+            "title": "Tristan",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Everglow" },
+              { "name": "Titre", "value": "Zombie" }
+            ],
+            "path": "current/music/everglow-에버글로우-zombie-mv.mp3",
+            "duration": 221
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=GC3wgN9SOVQ",
+            "title": "Tristan",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Stray Kids" },
+              { "name": "Titre", "value": "Megaverse" }
+            ],
+            "path": "current/music/stray-kids-스트레이키즈-megaverse-official-audio.mp3",
+            "duration": 186
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=ekr2nIex040",
+            "title": "Tristan",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Rosé" },
+              { "name": "Titre", "value": "Apt" }
+            ],
+            "path": "current/music/rosé-bruno-mars-apt-official-music-video.mp3",
+            "duration": 174
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=wG3uq8dH_Fo",
+            "title": "Tristan",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Masayoshi Soken" },
+              { "name": "Titre", "value": "Bee My Honey" }
+            ],
+            "path": "current/music/arcadion-floor-2-theme-bee-my-honey-ffxiv-ost.mp3",
+            "duration": 375
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=-w2m-TeLi6I",
+            "title": "Tristan",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Eluveitie" },
+              { "name": "Titre", "value": "Call of the Mountain" }
+            ],
+            "path": "current/music/eluveitie-the-call-of-the-mountains-official-music-video.mp3",
+            "duration": 256
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=-w0qTvjydik",
+            "title": "Tristan",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Ultra Vomit" },
+              { "name": "Titre", "value": "Je collectionne des cannards (vivant)" }
+            ],
+            "path": "current/music/ultra-vomit-feat-andréas-je-collectionne-des-canards-vivants.mp3",
+            "duration": 233
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=ei8hPkyJ0bU",
+            "title": "Donovan",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Paramore" },
+              { "name": "Titre", "value": "crushcrushcrush" }
+            ],
+            "path": "current/music/paramore-crushcrushcrush-official-video.mp3",
+            "duration": 190
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=OnuuYcqhzCE",
+            "title": "Donovan",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Linkin Park" },
+              { "name": "Titre", "value": "Bleed It Out" }
+            ],
+            "path": "current/music/bleed-it-out-official-music-video-4k-upgrade-linkin-park.mp3",
+            "duration": 169
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=iywaBOMvYLI",
+            "title": "Donovan",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "System Of A Down" },
+              { "name": "Titre", "value": "Toxicity" }
+            ],
+            "path": "current/music/system-of-a-down-toxicity-official-hd-video.mp3",
+            "duration": 225
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=IXInojjs3Hc",
+            "title": "Donovan",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Rihanna" },
+              { "name": "Titre", "value": "Unfaithful" }
+            ],
+            "path": "current/music/rihanna-unfaithful-lyrics.mp3",
+            "duration": 227
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=y1ygm_1fUuk",
+            "title": "Donovan",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "High School Musical" },
+              { "name": "Titre", "value": "Breaking Free" }
+            ],
+            "path": "current/music/high-school-musical-breaking-free.mp3",
+            "duration": 208
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=hUxSboj-FzI",
+            "title": "Donovan",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Nelly Furtado" },
+              { "name": "Titre", "value": "Maneater" }
+            ],
+            "path": "current/music/nelly-furtado-maneater-lyrics.mp3",
+            "duration": 268
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=NpNi7Gsz8_Q",
+            "title": "Donovan",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Vanessa Carlton" },
+              { "name": "Titre", "value": "A Thousand Miles" }
+            ],
+            "path": "current/music/a-thousand-miles.mp3",
+            "duration": 240
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=VrGI9-7uReI",
+            "title": "Donovan",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Papa Roach" },
+              { "name": "Titre", "value": "The Addict" }
+            ],
+            "path": "current/music/papa-roach-the-addict-lyrics-on-screen-hd.mp3",
+            "duration": 205
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=uHpcbSsPrRE",
+            "title": "Donovan",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Taylor Swift" },
+              { "name": "Titre", "value": "Blank Space" }
+            ],
+            "path": "current/music/taylor-swift-blank-space-lyrics.mp3",
+            "duration": 233
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=PAzH-YAlFYc",
+            "title": "Donovan",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "DNCE" },
+              { "name": "Titre", "value": "Cake By The Ocean" }
+            ],
+            "path": "current/music/dnce-cake-by-the-ocean.mp3",
+            "duration": 219
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=3-p0dy95T0Q",
+            "title": "Donovan",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "KANA-BOON" },
+              { "name": "Titre", "value": "Silhoutte" }
+            ],
+            "path": "current/music/kana-boon-silhoutte-full-lyrics-english-translation.mp3",
+            "duration": 238
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=a_RcfZoBBo8",
+            "title": "Donovan",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "FLOW" },
+              { "name": "Titre", "value": "Colors" }
+            ],
+            "path": "current/music/colors.mp3",
+            "duration": 219
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=FmkWxzDOu6U",
+            "title": "Donovan",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Girl's Day" },
+              { "name": "Titre", "value": "Don't Forget Me" }
+            ],
+            "path": "current/music/girls-day-걸스데이-dont-forget-me-나를-잊지마요-han-rom-eng-color-coded-lyrics.mp3",
+            "duration": 189
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=eCH9gClZprM",
+            "title": "Donovan",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Axwell Λ Ingrosso" },
+              { "name": "Titre", "value": "Something New" }
+            ],
+            "path": "current/music/axwell-λ-ingrosso-something-new-lyric-video.mp3",
+            "duration": 248
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=G9hAP106sSg",
+            "title": "Donovan",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "SCANDAL" },
+              { "name": "Titre", "value": "Shoujo S" }
+            ],
+            "path": "current/music/scandal-少女s-syoujo-s-music-video.mp3",
+            "duration": 194
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=60tcJiNHHLI",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "David Hallyday" },
+              { "name": "Titre", "value": "Un Homme Libre" }
+            ],
+            "path": "current/music/david-hallyday-un-homme-libre.mp3",
+            "duration": 202
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=o1FO2TOhl8Y",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Tryo" },
+              { "name": "Titre", "value": "Apocalypticodramatic" }
+            ],
+            "path": "current/music/tryo-apocalypticodramatic-audio.mp3",
+            "duration": 227
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=j26esoayz2c",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Eric Prydz" },
+              { "name": "Titre", "value": "Pjanoo" }
+            ],
+            "path": "current/music/pjanooradio-edit-eric-prydz.mp3",
+            "duration": 158
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=09839DpTctU",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Eagles" },
+              { "name": "Titre", "value": "Hotel California" }
+            ],
+            "path": "current/music/eagles-hotel-california-live-1977-official-video-hd.mp3",
+            "duration": 405
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=iy7mmbdau-g",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "La Secte Phonétik" },
+              { "name": "Titre", "value": "Bienvenue dans la Secte" }
+            ],
+            "path": "current/music/la-secte-phonétik-bienvenue-dans-la-secte-officiel.mp3",
+            "duration": 263
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=McEoTIqoRKk",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Calvin Harris" },
+              { "name": "Titre", "value": "Summer" }
+            ],
+            "path": "current/music/calvin-harris-summer-audio.mp3",
+            "duration": 223
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=VaxFIr3GJ-8",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Major Lazer & Showtek" },
+              { "name": "Titre", "value": "Believer" }
+            ],
+            "path": "current/music/major-lazer-showtek-believer-official-lyric-video.mp3",
+            "duration": 224
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=X1yS8sDj9v4",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Josef Salvat" },
+              { "name": "Titre", "value": "Open Season" }
+            ],
+            "path": "current/music/josef-salvat-open-season-une-autre-saison-official-video.mp3",
+            "duration": 245
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=5NHkrKNbPYA",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Vianney" },
+              { "name": "Titre", "value": "Je m'en vais" }
+            ],
+            "path": "current/music/vianney-je-men-vais-paroles.mp3",
+            "duration": 195
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=lkV3CR0jpSs",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Angèle ft. Damso" },
+              { "name": "Titre", "value": "Démons" }
+            ],
+            "path": "current/music/angèle-ft-damso-démons-paroles.mp3",
+            "duration": 252
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=QWKdi7C_hIw",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Florent Pagny" },
+              { "name": "Titre", "value": "Savoir Aimer paroles" }
+            ],
+            "path": "current/music/florent-pagny-savoir-aimer-paroles.mp3",
+            "duration": 283
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=rs6Y4kZ8qtw",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Manu Chao" },
+              { "name": "Titre", "value": "Me Gustas Tu" }
+            ],
+            "path": "current/music/manu-chao-me-gustas-tu-official-audio.mp3",
+            "duration": 241
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=PCkOghb1qmQ",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Manau" },
+              { "name": "Titre", "value": "La Tribu De Dana" }
+            ],
+            "path": "current/music/la-tribu-de-dana-manau-paroles-lyrics.mp3",
+            "duration": 287
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=9tGzK8gEDA8",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Renaud & Axelle Red" },
+              { "name": "Titre", "value": "Manhattan Kaboul" }
+            ],
+            "path": "current/music/renaud-axelle-red-manhattan-kaboul-paroles.mp3",
+            "duration": 228
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=Y9GCM9DZUJo",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Claudio Capéo" },
+              { "name": "Titre", "value": "Un homme debout" }
+            ],
+            "path": "current/music/claudio-capéo-un-homme-debout-clip-officiel.mp3",
+            "duration": 202
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=SpIgOm5vFkE",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Martin Garrix & Zedd" },
+              { "name": "Titre", "value": "Follow" }
+            ],
+            "path": "current/music/martin-garrix-zedd-follow-official-video.mp3",
+            "duration": 222
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=soamUONtXBI",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "FLAWX" },
+              { "name": "Titre", "value": "Partenaire Particulier" }
+            ],
+            "path": "current/music/flawx-partenaire-particulier-hardstyle-remix.mp3",
+            "duration": 207
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=tSKjjvb8yL0",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Grand Corp Malade / Gaël Faye / Ben Mazué" },
+              { "name": "Titre", "value": "Éphémère" }
+            ],
+            "path": "current/music/éphémère.mp3",
+            "duration": 160
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=Bkm03KcnKHE",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Lomepal" },
+              { "name": "Titre", "value": "Trop beau" }
+            ],
+            "path": "current/music/lomepal-trop-beau-clip-officiel.mp3",
+            "duration": 265
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=N6w-UzfGX0c",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Porter Robinson" },
+              { "name": "Titre", "value": "Russian Roulette" }
+            ],
+            "path": "current/music/porter-robinson-russian-roulette.mp3",
+            "duration": 389
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=VYG1-czlu2s",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Lost Frequencies" },
+              { "name": "Titre", "value": "The Feeling" }
+            ],
+            "path": "current/music/lost-frequencies-the-feeling-official-video.mp3",
+            "duration": 158
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=lLNUj7kvn2w",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Olly Alexander" },
+              { "name": "Titre", "value": "Dizzy" }
+            ],
+            "path": "current/music/olly-alexander-dizzy-official-video.mp3",
+            "duration": 171
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=lh6qt2SOdaA",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Sick Individuals & Axwell" },
+              { "name": "Titre", "value": "I AM" }
+            ],
+            "path": "current/music/sick-individuals-axwell-ft-taylr-renee-i-am.mp3",
+            "duration": 300
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=_IRjvHeEc2o",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Timmy Trumpet & Vini Vici" },
+              { "name": "Titre", "value": "Thunder" }
+            ],
+            "path": "current/music/timmy-trumpet-vini-vici-thunder-official-audio.mp3",
+            "duration": 171
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=J5spiMVI9U8",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Martin Garrix x JVKE" },
+              { "name": "Titre", "value": "Hero" }
+            ],
+            "path": "current/music/martin-garrix-x-jvke-hero-official-video.mp3",
+            "duration": 170
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=1M6evm8ycmg",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Justin Bieber ft. Dominic Fike" },
+              { "name": "Titre", "value": "Die For You" }
+            ],
+            "path": "current/music/justin-bieber-die-for-you-visualizer-ft-dominic-fike.mp3",
+            "duration": 199
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=rsM5U8Tb2sM",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Avicii ft. Agnes, Vargas & Lagola" },
+              { "name": "Titre", "value": "Tough Love" }
+            ],
+            "path": "current/music/avicii-tough-love-official-audio-ft-agnes-vargas-lagola.mp3",
+            "duration": 191
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=XoZF2ajwWvQ",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Bigflo & Oli" },
+              { "name": "Titre", "value": "Dernière" }
+            ],
+            "path": "current/music/dernière.mp3",
+            "duration": 204
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=84yMbRzejC4",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "DVBBS, Powfu" },
+              { "name": "Titre", "value": "Losing Sleep" }
+            ],
+            "path": "current/music/dvbbs-powfu-losing-sleep-lyrics.mp3",
+            "duration": 162
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=5JBdBD8ST3M",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Mike Williams" },
+              { "name": "Titre", "value": "Melody" }
+            ],
+            "path": "current/music/mike-williams-melody-tip-of-my-tongue-official-audio.mp3",
+            "duration": 192
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=hjtNZfractQ",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Jerry Goldsmith" },
+              { "name": "Titre", "value": "Haircut" }
+            ],
+            "path": "current/music/haircut-from-mulanscore.mp3",
+            "duration": 79
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=e6gjr98VFn0",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Mai Lan" },
+              { "name": "Titre", "value": "Gentiment Je T'immole" }
+            ],
+            "path": "current/music/mai-lan-gentiment-je-timmole.mp3",
+            "duration": 225
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=vimZj8HW0Kg",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "LL COOL J" },
+              { "name": "Titre", "value": "Mama Said Knock You Out" }
+            ],
+            "path": "current/music/ll-cool-j-mama-said-knock-you-out-official-music-video.mp3",
+            "duration": 297
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=0fZyNUikfEM",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Nickelback" },
+              { "name": "Titre", "value": "Animals" }
+            ],
+            "path": "current/music/animals.mp3",
+            "duration": 187
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=kG4uQ6Tk7fY",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Stratovarius" },
+              { "name": "Titre", "value": "Hunting High and Low" }
+            ],
+            "path": "current/music/stratovarius-hunting-high-and-low-hd-official-video.mp3",
+            "duration": 246
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=xgPxtntH3Js",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Halestorm" },
+              { "name": "Titre", "value": "Daughters of Darkness" }
+            ],
+            "path": "current/music/daughters-of-darkness.mp3",
+            "duration": 236
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=e-IWRmpefzE",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Knife Party" },
+              { "name": "Titre", "value": "Bonfire" }
+            ],
+            "path": "current/music/knife-party-bonfire.mp3",
+            "duration": 273
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=4NhKWZpkw1Q",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Sia" },
+              { "name": "Titre", "value": "Big Girls Cry" }
+            ],
+            "path": "current/music/sia-big-girls-cry-official-video.mp3",
+            "duration": 218
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=Wq8BqYus40A",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Alex Hepburn" },
+              { "name": "Titre", "value": "Under" }
+            ],
+            "path": "current/music/alex-hepburn-under-official-video.mp3",
+            "duration": 248
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=0xwurcRGPW8",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Sara Coito" },
+              { "name": "Titre", "value": "Ouvi Dizer Que Me Esqueceste" }
+            ],
+            "path": "current/music/ouvi-dizer-que-me-esqueceste.mp3",
+            "duration": 229
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=e_S9VvJM1PI",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Icon For Hire" },
+              { "name": "Titre", "value": "Make A Move" }
+            ],
+            "path": "current/music/icon-for-hire-make-a-move.mp3",
+            "duration": 184
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=4G9qnfcg1LQ",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Marina Kaye" },
+              { "name": "Titre", "value": "Freeze You Out" }
+            ],
+            "path": "current/music/marina-kaye-freeze-you-out-official-video.mp3",
+            "duration": 248
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=zPjqwKR9R5E",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Alyssa Reid" },
+              { "name": "Titre", "value": "Go" }
+            ],
+            "path": "current/music/go.mp3",
+            "duration": 287
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=s2NgG0M-Hdk",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Alter Bridge" },
+              { "name": "Titre", "value": "Metalingus" }
+            ],
+            "path": "current/music/alter-bridge-metalingus-official-lyric-video.mp3",
+            "duration": 261
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=PllrpKGJbOY",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "System Of A Down" },
+              { "name": "Titre", "value": "Roulette" }
+            ],
+            "path": "current/music/system-of-a-down-roulette-official-audio.mp3",
+            "duration": 203
+          }
+        ]
+      }
+    ]
+  },
+  "currentMusic": 0,
+  "currentSection": 0,
+  "audio": {},
+  "localStorageName": "PartyBlindtest"
+}
