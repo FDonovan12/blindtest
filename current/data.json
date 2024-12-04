@@ -755,14 +755,139 @@
         "name": "David",
         "musics": [
           {
-            "link": "https://www.youtube.com/watch?v=5JBdBD8ST3M",
+            "link": "https://www.youtube.com/watch?v=hjtNZfractQ",
             "pointInfos": [
-              { "name": "Chanteur", "value": "Musique temporaire" },
-              { "name": "Titre", "value": "Musique temporaire" }
+              { "name": "Chanteur", "value": "Jerry Goldsmith" },
+              { "name": "Titre", "value": "Haircut" }
             ],
-            "isVisible": true,
-            "path": "current/music/mike-williams-melody-tip-of-my-tongue-official-audio.mp3",
-            "duration": 192
+            "path": "current/music/haircut-from-mulanscore.mp3",
+            "duration": 79
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=e6gjr98VFn0",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Mai Lan" },
+              { "name": "Titre", "value": "Gentiment Je T'immole" }
+            ],
+            "path": "current/music/mai-lan-gentiment-je-timmole.mp3",
+            "duration": 225
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=vimZj8HW0Kg",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "LL COOL J" },
+              { "name": "Titre", "value": "Mama Said Knock You Out" }
+            ],
+            "path": "current/music/ll-cool-j-mama-said-knock-you-out-official-music-video.mp3",
+            "duration": 297
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=0fZyNUikfEM",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Nickelback" },
+              { "name": "Titre", "value": "Animals" }
+            ],
+            "path": "current/music/animals.mp3",
+            "duration": 187
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=kG4uQ6Tk7fY",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Stratovarius" },
+              { "name": "Titre", "value": "Hunting High and Low" }
+            ],
+            "path": "current/music/stratovarius-hunting-high-and-low-hd-official-video.mp3",
+            "duration": 246
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=xgPxtntH3Js",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Halestorm" },
+              { "name": "Titre", "value": "Daughters of Darkness" }
+            ],
+            "path": "current/music/daughters-of-darkness.mp3",
+            "duration": 236
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=e-IWRmpefzE",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Knife Party" },
+              { "name": "Titre", "value": "Bonfire" }
+            ],
+            "path": "current/music/knife-party-bonfire.mp3",
+            "duration": 273
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=4NhKWZpkw1Q",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Sia" },
+              { "name": "Titre", "value": "Big Girls Cry" }
+            ],
+            "path": "current/music/sia-big-girls-cry-official-video.mp3",
+            "duration": 218
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=Wq8BqYus40A",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Alex Hepburn" },
+              { "name": "Titre", "value": "Under" }
+            ],
+            "path": "current/music/alex-hepburn-under-official-video.mp3",
+            "duration": 248
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=0xwurcRGPW8",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Sara Coito" },
+              { "name": "Titre", "value": "Ouvi Dizer Que Me Esqueceste" }
+            ],
+            "path": "current/music/ouvi-dizer-que-me-esqueceste.mp3",
+            "duration": 229
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=e_S9VvJM1PI",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Icon For Hire" },
+              { "name": "Titre", "value": "Make A Move" }
+            ],
+            "path": "current/music/icon-for-hire-make-a-move.mp3",
+            "duration": 184
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=4G9qnfcg1LQ",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Marina Kaye" },
+              { "name": "Titre", "value": "Freeze You Out" }
+            ],
+            "path": "current/music/marina-kaye-freeze-you-out-official-video.mp3",
+            "duration": 248
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=zPjqwKR9R5E",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Alyssa Reid" },
+              { "name": "Titre", "value": "Go" }
+            ],
+            "path": "current/music/go.mp3",
+            "duration": 287
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=s2NgG0M-Hdk",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Alter Bridge" },
+              { "name": "Titre", "value": "Metalingus" }
+            ],
+            "path": "current/music/alter-bridge-metalingus-official-lyric-video.mp3",
+            "duration": 261
+          },
+          {
+            "link": "https://www.youtube.com/watch?v=PllrpKGJbOY",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "System Of A Down" },
+              { "name": "Titre", "value": "Roulette" }
+            ],
+            "path": "current/music/system-of-a-down-roulette-official-audio.mp3",
+            "duration": 203
           }
         ]
       }

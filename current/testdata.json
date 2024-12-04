@@ -8,139 +8,139 @@
         "details": "test details2",
         "musics": [
           {
-            "link": "https://www.youtube.com/watch?v=SpIgOm5vFkE",
+            "link": "https://www.youtube.com/watch?v=hjtNZfractQ",
             "pointInfos": [
-              { "name": "Chanteur", "value": "Martin Garrix & Zedd" },
-              { "name": "Titre", "value": "Follow" }
+              { "name": "Chanteur", "value": "Jerry Goldsmith" },
+              { "name": "Titre", "value": "Haircut" }
             ],
-            "path": "current/music/martin-garrix-zedd-follow-official-video.mp3",
-            "duration": 222
+            "path": "current/music/haircut-from-mulanscore.mp3",
+            "duration": 79
           },
           {
-            "link": "https://www.youtube.com/watch?v=soamUONtXBI",
+            "link": "https://www.youtube.com/watch?v=e6gjr98VFn0",
             "pointInfos": [
-              { "name": "Chanteur", "value": "FLAWX" },
-              { "name": "Titre", "value": "Partenaire Particulier" }
+              { "name": "Chanteur", "value": "Mai Lan" },
+              { "name": "Titre", "value": "Gentiment Je T'immole" }
             ],
-            "path": "current/music/flawx-partenaire-particulier-hardstyle-remix.mp3",
-            "duration": 207
+            "path": "current/music/mai-lan-gentiment-je-timmole.mp3",
+            "duration": 225
           },
           {
-            "link": "https://www.youtube.com/watch?v=tSKjjvb8yL0",
+            "link": "https://www.youtube.com/watch?v=vimZj8HW0Kg",
             "pointInfos": [
-              { "name": "Chanteur", "value": "Grand Corp Malade / Gaël Faye / Ben Mazué" },
-              { "name": "Titre", "value": "Éphémère" }
+              { "name": "Chanteur", "value": "LL COOL J" },
+              { "name": "Titre", "value": "Mama Said Knock You Out" }
             ],
-            "path": "current/music/éphémère.mp3",
-            "duration": 160
+            "path": "current/music/ll-cool-j-mama-said-knock-you-out-official-music-video.mp3",
+            "duration": 297
           },
           {
-            "link": "https://www.youtube.com/watch?v=Bkm03KcnKHE",
+            "link": "https://www.youtube.com/watch?v=0fZyNUikfEM",
             "pointInfos": [
-              { "name": "Chanteur", "value": "Lomepal" },
-              { "name": "Titre", "value": "Trop beau" }
+              { "name": "Chanteur", "value": "Nickelback" },
+              { "name": "Titre", "value": "Animals" }
             ],
-            "path": "current/music/lomepal-trop-beau-clip-officiel.mp3",
-            "duration": 265
+            "path": "current/music/animals.mp3",
+            "duration": 187
           },
           {
-            "link": "https://www.youtube.com/watch?v=N6w-UzfGX0c",
+            "link": "https://www.youtube.com/watch?v=kG4uQ6Tk7fY",
             "pointInfos": [
-              { "name": "Chanteur", "value": "Porter Robinson" },
-              { "name": "Titre", "value": "Russian Roulette" }
+              { "name": "Chanteur", "value": "Stratovarius" },
+              { "name": "Titre", "value": "Hunting High and Low" }
             ],
-            "path": "current/music/porter-robinson-russian-roulette.mp3",
-            "duration": 389
+            "path": "current/music/stratovarius-hunting-high-and-low-hd-official-video.mp3",
+            "duration": 246
           },
           {
-            "link": "https://www.youtube.com/watch?v=VYG1-czlu2s",
+            "link": "https://www.youtube.com/watch?v=xgPxtntH3Js",
             "pointInfos": [
-              { "name": "Chanteur", "value": "Lost Frequencies" },
-              { "name": "Titre", "value": "The Feeling" }
+              { "name": "Chanteur", "value": "Halestorm" },
+              { "name": "Titre", "value": "Daughters of Darkness" }
             ],
-            "path": "current/music/lost-frequencies-the-feeling-official-video.mp3",
-            "duration": 158
+            "path": "current/music/daughters-of-darkness.mp3",
+            "duration": 236
           },
           {
-            "link": "https://www.youtube.com/watch?v=lLNUj7kvn2w",
+            "link": "https://www.youtube.com/watch?v=e-IWRmpefzE",
             "pointInfos": [
-              { "name": "Chanteur", "value": "Olly Alexander" },
-              { "name": "Titre", "value": "Dizzy" }
+              { "name": "Chanteur", "value": "Knife Party" },
+              { "name": "Titre", "value": "Bonfire" }
             ],
-            "path": "current/music/olly-alexander-dizzy-official-video.mp3",
-            "duration": 171
+            "path": "current/music/knife-party-bonfire.mp3",
+            "duration": 273
           },
           {
-            "link": "https://www.youtube.com/watch?v=lh6qt2SOdaA",
+            "link": "https://www.youtube.com/watch?v=4NhKWZpkw1Q",
             "pointInfos": [
-              { "name": "Chanteur", "value": "Sick Individuals & Axwell" },
-              { "name": "Titre", "value": "I AM" }
+              { "name": "Chanteur", "value": "Sia" },
+              { "name": "Titre", "value": "Big Girls Cry" }
             ],
-            "path": "current/music/sick-individuals-axwell-ft-taylr-renee-i-am.mp3",
-            "duration": 300
+            "path": "current/music/sia-big-girls-cry-official-video.mp3",
+            "duration": 218
           },
           {
-            "link": "https://www.youtube.com/watch?v=_IRjvHeEc2o",
+            "link": "https://www.youtube.com/watch?v=Wq8BqYus40A",
             "pointInfos": [
-              { "name": "Chanteur", "value": "Timmy Trumpet & Vini Vici" },
-              { "name": "Titre", "value": "Thunder" }
+              { "name": "Chanteur", "value": "Alex Hepburn" },
+              { "name": "Titre", "value": "Under" }
             ],
-            "path": "current/music/timmy-trumpet-vini-vici-thunder-official-audio.mp3",
-            "duration": 171
+            "path": "current/music/alex-hepburn-under-official-video.mp3",
+            "duration": 248
           },
           {
-            "link": "https://www.youtube.com/watch?v=J5spiMVI9U8",
+            "link": "https://www.youtube.com/watch?v=0xwurcRGPW8",
             "pointInfos": [
-              { "name": "Chanteur", "value": "Martin Garrix x JVKE" },
-              { "name": "Titre", "value": "Hero" }
+              { "name": "Chanteur", "value": "Sara Coito" },
+              { "name": "Titre", "value": "Ouvi Dizer Que Me Esqueceste" }
             ],
-            "path": "current/music/martin-garrix-x-jvke-hero-official-video.mp3",
-            "duration": 170
+            "path": "current/music/ouvi-dizer-que-me-esqueceste.mp3",
+            "duration": 229
           },
           {
-            "link": "https://www.youtube.com/watch?v=1M6evm8ycmg",
+            "link": "https://www.youtube.com/watch?v=e_S9VvJM1PI",
             "pointInfos": [
-              { "name": "Chanteur", "value": "Justin Bieber ft. Dominic Fike" },
-              { "name": "Titre", "value": "Die For You" }
+              { "name": "Chanteur", "value": "Icon For Hire" },
+              { "name": "Titre", "value": "Make A Move" }
             ],
-            "path": "current/music/justin-bieber-die-for-you-visualizer-ft-dominic-fike.mp3",
-            "duration": 199
+            "path": "current/music/icon-for-hire-make-a-move.mp3",
+            "duration": 184
           },
           {
-            "link": "https://www.youtube.com/watch?v=rsM5U8Tb2sM",
+            "link": "https://www.youtube.com/watch?v=4G9qnfcg1LQ",
             "pointInfos": [
-              { "name": "Chanteur", "value": "Avicii ft. Agnes, Vargas & Lagola" },
-              { "name": "Titre", "value": "Tough Love" }
+              { "name": "Chanteur", "value": "Marina Kaye" },
+              { "name": "Titre", "value": "Freeze You Out" }
             ],
-            "path": "current/music/avicii-tough-love-official-audio-ft-agnes-vargas-lagola.mp3",
-            "duration": 191
+            "path": "current/music/marina-kaye-freeze-you-out-official-video.mp3",
+            "duration": 248
           },
           {
-            "link": "https://www.youtube.com/watch?v=XoZF2ajwWvQ",
+            "link": "https://www.youtube.com/watch?v=zPjqwKR9R5E",
             "pointInfos": [
-              { "name": "Chanteur", "value": "Bigflo & Oli" },
-              { "name": "Titre", "value": "Dernière" }
+              { "name": "Chanteur", "value": "Alyssa Reid" },
+              { "name": "Titre", "value": "Go" }
             ],
-            "path": "current/music/dernière.mp3",
-            "duration": 204
+            "path": "current/music/go.mp3",
+            "duration": 287
           },
           {
-            "link": "https://www.youtube.com/watch?v=84yMbRzejC4",
+            "link": "https://www.youtube.com/watch?v=s2NgG0M-Hdk",
             "pointInfos": [
-              { "name": "Chanteur", "value": "DVBBS, Powfu" },
-              { "name": "Titre", "value": "Losing Sleep" }
+              { "name": "Chanteur", "value": "Alter Bridge" },
+              { "name": "Titre", "value": "Metalingus" }
             ],
-            "path": "current/music/dvbbs-powfu-losing-sleep-lyrics.mp3",
-            "duration": 162
+            "path": "current/music/alter-bridge-metalingus-official-lyric-video.mp3",
+            "duration": 261
           },
           {
-            "link": "https://www.youtube.com/watch?v=5JBdBD8ST3M",
+            "link": "https://www.youtube.com/watch?v=PllrpKGJbOY",
             "pointInfos": [
-              { "name": "Chanteur", "value": "Mike Williams" },
-              { "name": "Titre", "value": "Melody" }
+              { "name": "Chanteur", "value": "System Of A Down" },
+              { "name": "Titre", "value": "Roulette" }
             ],
-            "path": "current/music/mike-williams-melody-tip-of-my-tongue-official-audio.mp3",
-            "duration": 192
+            "path": "current/music/system-of-a-down-roulette-official-audio.mp3",
+            "duration": 203
           }
         ]
       }
