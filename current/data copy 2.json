@@ -7,7 +7,7 @@
     ],
     "sections": [
       {
-        "name": "tout",
+        "name": "Dorian",
         "musics": [
           {
             "link": "https://www.youtube.com/watch?v=mu2-tYq76_E",
@@ -158,7 +158,12 @@
             ],
             "path": "current/music/ドラマツルギー-eve-mv.mp3",
             "duration": 246
-          },
+          }
+        ]
+      },
+      {
+        "name": "Tristan",
+        "musics": [
           {
             "link": "https://www.youtube.com/watch?v=5mWkn0Xb6KM",
             "title": "Tristan",
@@ -308,7 +313,12 @@
             ],
             "path": "current/music/ultra-vomit-feat-andréas-je-collectionne-des-canards-vivants.mp3",
             "duration": 233
-          },
+          }
+        ]
+      },
+      {
+        "name": "Donovan",
+        "musics": [
           {
             "link": "https://www.youtube.com/watch?v=ei8hPkyJ0bU",
             "title": "Donovan",
@@ -458,7 +468,12 @@
             ],
             "path": "current/music/scandal-少女s-syoujo-s-music-video.mp3",
             "duration": 194
-          },
+          }
+        ]
+      },
+      {
+        "name": "Alexandre",
+        "musics": [
           {
             "link": "https://www.youtube.com/watch?v=60tcJiNHHLI",
             "pointInfos": [
@@ -593,7 +608,12 @@
             ],
             "path": "current/music/claudio-capéo-un-homme-debout-clip-officiel.mp3",
             "duration": 202
-          },
+          }
+        ]
+      },
+      {
+        "name": "Maxime",
+        "musics": [
           {
             "link": "https://www.youtube.com/watch?v=SpIgOm5vFkE",
             "pointInfos": [
@@ -728,7 +748,12 @@
             ],
             "path": "current/music/mike-williams-melody-tip-of-my-tongue-official-audio.mp3",
             "duration": 192
-          },
+          }
+        ]
+      },
+      {
+        "name": "David",
+        "musics": [
           {
             "link": "https://www.youtube.com/watch?v=hjtNZfractQ",
             "pointInfos": [
