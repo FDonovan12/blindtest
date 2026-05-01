@@ -1,5 +1,5 @@
-import { addResponse, addParticipantsScore, createTagWithParentClassContent, isAudience, addOptionToSelect, readJsonSynchrone } from './utils.js';
 import { TagBuilder } from './tagBuilder.js';
+import { addOptionToSelect, addParticipantsScore, addResponse, createTagWithParentClassContent, isAudience, readJsonSynchrone } from './utils.js';
 
 let localStorageName = 'PartyBlindtest';
 
@@ -15,7 +15,7 @@ export class MainObject {
     constructor(partyBlindtest) {
         this.partyBlindtest = new PartyBlindtest(partyBlindtest);
         this.fileName = 'current/data.json';
-        this.fileName = 'current/karaoke_31.json';
+        // this.fileName = 'current/karaoke_31.json';
     }
     get(forceImportJson) {
         this.partyBlindtest = new PartyBlindtest(readJsonSynchrone(this.fileName)['blindtest'], forceImportJson);
