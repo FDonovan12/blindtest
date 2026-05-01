@@ -1,6 +1,6 @@
 {
-  "name": "Mon App",
-  "short_name": "App",
+  "name": "Blindtest",
+  "short_name": "Blindtest",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
