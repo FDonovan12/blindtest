@@ -1,0 +1,24 @@
+{
+  "blindtest": {
+    "name": " karaoke nouvelle année 2025",
+    "isKaraoke": true,
+    "participants": [{ "name": "j1" }, { "name": "j2" }],
+    "sections": [
+      {
+        "musics": [
+          {
+            "link": "https://www.youtube.com/watch?v=hjtNZfractQ",
+            "pointInfos": [
+              { "name": "Chanteur", "value": "Jerry Goldsmith" },
+              { "name": "Titre", "value": "Haircut" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "currentMusic": 0,
+  "currentSection": 0,
+  "audio": {},
+  "localStorageName": "PartyBlindtest"
+}

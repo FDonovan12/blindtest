@@ -43,12 +43,13 @@ def extract_title(youtube_url):
         print(f'\n {custom_filename = }')
         return custom_filename
 
-def download_one_music(youtube_url, base_path):
+def download_one_music(youtube_url, base_path, is_video=False):
     print("download_one_music")
     custom_filename = extract_title(youtube_url)
-    path_for_json = os.path.join('current/music/', custom_filename + ".mp3")
+    extension =  ".mp3"  if not is_video else ".mp4"
+    path_for_json = os.path.join('current/music/', custom_filename + extension)
     download_path = os.path.join(base_path + "current/music/" , custom_filename)
-    if os.path.exists(download_path + ".mp3"):
+    if os.path.exists(download_path + extension):
         print("File already exists")
         return path_for_json, download_path
         
@@ -61,6 +62,16 @@ def download_one_music(youtube_url, base_path):
         }],
         'outtmpl': download_path,
     }
+    if is_video:
+        ydl_opts = {
+            'format': 'bestvideo+bestaudio/best',
+            'postprocessors': [{
+                'key': 'FFmpegExtractAudio',
+                'preferredcodec': 'mp4',
+                'preferredquality': '192',
+            }],
+            'outtmpl': download_path,
+        }
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         info_dict = ydl.extract_info(youtube_url, download=True)
     return path_for_json, download_path
@@ -80,7 +91,7 @@ def download_all_musics(jsonFileName, base_path = "/mnt/d/Projet/blindtest/"):
                 except:
                     print(" path no exist")
                     oldPath = ""
-                path_for_json, download_path = download_one_music(music["link"], base_path)
+                path_for_json, download_path = download_one_music(music["link"], base_path, data["isKaraoke"])
                 print(f' {path_for_json = }')
                 print(f' {download_path = }')
                 print(f' {oldPath = }')

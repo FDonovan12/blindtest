@@ -1,13 +1,12 @@
-import { PartyBlindtest, MainObject } from './objectValueBlindtest.js';
+import { MainObject } from './objectValueBlindtest.js';
 import {
-    createClickEventOnButton,
-    getValueFromPathname,
-    getPathnameFromValue,
-    researchFromYoutubeLink,
     addFormPointInfo,
+    createClickEventOnButton,
+    getPathnameFromValue,
+    getValueFromPathname,
     isAudience,
+    researchFromYoutubeLink,
 } from './utils.js';
-import unitTest from './unitTest.js';
 
 function testTheme(numberOne, numberTwo) {
     const result = numberOne;
@@ -30,6 +29,13 @@ window.addEventListener('storage', () => {
 });
 function start() {
     // unitTest();
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js').catch((err) => {
+                console.error('SW registration failed:', err);
+            });
+        });
+    }
     getPathnameFromValue('presenter.html');
     getValueFromPathname();
     mainObject.get();

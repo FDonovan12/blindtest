@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr" class="bootfish">
   <head>
     <meta charset="UTF-8" />
@@ -9,6 +9,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js" defer></script>
     <script type="module" src="./script/header.js" defer></script>
     <script type="module" src="./script/script.js" defer></script>
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#000000" />
     <title>Blind Test - Présentateur</title>
   </head>
   <body class="grid-container">
@@ -17,7 +19,7 @@
     </header>
     <main class="full-width grid-container">
       <canvas id="audioVisualizer" class="full-width"></canvas>
-      <div id="forms" class="d-none">
+      <div id="forms" class="d-none1">
         <div>
           <form>
             <input placeholder="Mot de passe" type="password" id="passwordInput" />

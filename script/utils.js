@@ -137,7 +137,9 @@ export function createResponse(partyBlindtest) {
 export function addParticipantsScore(partyBlindtest) {
     const divParticipantsScore = document.querySelector('#participants');
     divParticipantsScore.innerHTML = null;
-    partyBlindtest.getParticipants().map((participant) => addparticipantScore(partyBlindtest, divParticipantsScore, participant));
+    if (!partyBlindtest.isKaraoke) {
+        partyBlindtest.getParticipants().map((participant) => addparticipantScore(partyBlindtest, divParticipantsScore, participant));
+    }
 }
 
 export function addparticipantScore(partyBlindtest, divParticipantsScore, participant) {

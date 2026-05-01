@@ -15,6 +15,7 @@ export class MainObject {
     constructor(partyBlindtest) {
         this.partyBlindtest = new PartyBlindtest(partyBlindtest);
         this.fileName = 'current/data.json';
+        this.fileName = 'current/karaoke_31.json';
     }
     get(forceImportJson) {
         this.partyBlindtest = new PartyBlindtest(readJsonSynchrone(this.fileName)['blindtest'], forceImportJson);
@@ -43,7 +44,17 @@ export class PartyBlindtest {
         }
         this.currentMusic = partyBlindtest?.currentMusic || 0;
         this.currentSection = partyBlindtest?.currentSection || 0;
-        this.audio = document.querySelector('#music-audio');
+
+        this.isKaraoke = partyBlindtest?.isKaraoke || false;
+        let audio = document.querySelector('#music-audio');
+        if (this.isKaraoke) {
+            const video = document.createElement('video');
+            video.id = 'music-audio';
+            audio.parentNode.replaceChild(video, audio);
+            audio = video;
+        }
+        this.audio = audio;
+
         this.localStorageName = localStorageName;
         if (!fromGetFunction) {
             const partyBlindtestFromStorage = PartyBlindtest.get();
@@ -441,7 +452,7 @@ export class PointInfo {
 
         let classVisible = null;
         const hasParticipantOrIsVisible = this?.participant?.name || this.isVisible;
-        if (!hasParticipantOrIsVisible) {
+        if (!hasParticipantOrIsVisible && !partyBlindtest.isKaraoke) {
             if (isAudience()) {
                 classVisible = 'd-none';
             }
