@@ -84,7 +84,7 @@ function start() {
         if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'playing';
     });
 
-    audio.addEventListener('pause', () => {
+    mainObject.partyBlindtest.audio.addEventListener('pause', () => {
         if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'paused';
     });
 
