@@ -56,6 +56,38 @@ function start() {
         });
     } catch (error) {}
 
+    if ('mediaSession' in navigator) {
+        navigator.mediaSession.metadata = new MediaMetadata({
+            title: 'Blind Test',
+        });
+
+        navigator.mediaSession.setActionHandler('play', () => {
+            mainObject.partyBlindtest.playMusic();
+            navigator.mediaSession.playbackState = 'playing';
+        });
+
+        navigator.mediaSession.setActionHandler('pause', () => {
+            mainObject.partyBlindtest.pauseMusic();
+            navigator.mediaSession.playbackState = 'paused';
+        });
+
+        navigator.mediaSession.setActionHandler('nexttrack', () => {
+            mainObject.partyBlindtest.nextMusic();
+        });
+
+        navigator.mediaSession.setActionHandler('previoustrack', () => {
+            mainObject.partyBlindtest.previousMusic();
+        });
+    }
+
+    mainObject.partyBlindtest.audio.addEventListener('play', () => {
+        if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'playing';
+    });
+
+    audio.addEventListener('pause', () => {
+        if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'paused';
+    });
+
     createClickEventOnButton('#play', mainObject.partyBlindtest.playAndPauseMusic, mainObject);
     createClickEventOnButton('#previous', mainObject.partyBlindtest.previousMusic, mainObject);
     createClickEventOnButton('#next', mainObject.partyBlindtest.nextMusic, mainObject);
