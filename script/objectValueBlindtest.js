@@ -103,40 +103,17 @@ export class PartyBlindtest {
     playMusic() {
         const buttonPlayPause = document.querySelector('#play');
         
-        // Assurez-vous que l'audio est dans un état valide
-        if (!this.audio.src) {
-            console.error('Aucun fichier audio chargé');
-            return;
+        try {
+            this.audio.play().catch((error) => {
+                console.error('Erreur play():', error.name);
+            });
+        } catch (err) {
+            console.error('Erreur lors du play:', err);
         }
-
-        // Sur mobile, la promesse play() peut être rejetée
-        const playPromise = this.audio.play();
         
-        if (playPromise !== undefined) {
-            playPromise
-                .then(() => {
-                    // La lecture a commencé
-                    if (buttonPlayPause) {
-                        buttonPlayPause.setAttribute('active', true);
-                        buttonPlayPause.textContent = 'pause';
-                    }
-                    console.log('Lecture démarrée');
-                })
-                .catch((error) => {
-                    console.error('Erreur lors du play():', error);
-                    // Essayez de recharger et relancer
-                    if (error.name === 'NotAllowedError') {
-                        console.warn('Lecture bloquée par le navigateur - nécessite une interaction utilisateur');
-                    } else if (error.name === 'NotSupportedError') {
-                        console.warn('Format audio non supporté');
-                    }
-                });
-        } else {
-            // Anciens navigateurs sans Promise
-            if (buttonPlayPause) {
-                buttonPlayPause.setAttribute('active', true);
-                buttonPlayPause.textContent = 'pause';
-            }
+        if (buttonPlayPause) {
+            buttonPlayPause.setAttribute('active', true);
+            buttonPlayPause.textContent = 'pause';
         }
     }
 
@@ -217,33 +194,20 @@ export class PartyBlindtest {
     }
 
     changeAudio() {
-        // const buttonPlayPause = document.querySelector('#play');
         if (this.audio) {
             this.pauseMusic();
-            // this.audio.pause();
             const pathMusic = this.getMusic().path;
+            this.audio.src = pathMusic;
             
-            // Réinitialisez l'audio
-            this.audio.src = '';
-            this.audio.load();
+            // Réattachez les écouteurs après le changement d'audio
+            if (typeof window.attachAudioListeners === 'function') {
+                window.attachAudioListeners();
+            }
             
-            // Attendez un peu avant de charger le nouveau fichier (évite les conditions de course)
-            setTimeout(() => {
-                this.audio.src = pathMusic;
-                this.audio.load(); // Force le préchargement des métadonnées
-                
-                // Réattachez les écouteurs après le changement d'audio
-                if (typeof window.attachAudioListeners === 'function') {
-                    window.attachAudioListeners();
-                }
-                
-                // Mettez à jour les métadonnées media pour la barre de contrôle mobile
-                if (typeof window.updateMediaMetadata === 'function') {
-                    window.updateMediaMetadata();
-                }
-                
-                console.log('Audio changé vers:', pathMusic);
-            }, 50);
+            // Mettez à jour les métadonnées media pour la barre de contrôle mobile
+            if (typeof window.updateMediaMetadata === 'function') {
+                window.updateMediaMetadata();
+            }
         }
     }
 

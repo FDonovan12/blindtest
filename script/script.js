@@ -166,32 +166,6 @@ function start() {
         }, 500);
     };
 
-    const handleLoadedMetadata = () => {
-        if (mainObject.partyBlindtest.audio.duration === 0 || !isFinite(mainObject.partyBlindtest.audio.duration)) {
-            console.warn('Durée invalide, passage à la musique suivante');
-            setTimeout(() => {
-                mainObject.partyBlindtest.nextMusic();
-                mainObject.partyBlindtest.playMusic();
-            }, 500);
-        }
-    };
-
-    const handleAudioStalled = () => {
-        console.warn('Audio stalled - le contexte audio est probablement suspendu');
-        // Essayez de relancer
-        if (!mainObject.partyBlindtest.audio.paused) {
-            setTimeout(() => {
-                mainObject.partyBlindtest.audio.load();
-                mainObject.partyBlindtest.playMusic();
-                console.log('Tentative de récupération du contexte audio');
-            }, 1000);
-        }
-    };
-
-    const handleAudioWaiting = () => {
-        console.log('Audio waiting - chargement des données en cours');
-    };
-
     // Fonction pour attacher les écouteurs (avec détachement des anciens)
     function attachAudioListeners() {
         const audio = mainObject.partyBlindtest.audio;
@@ -199,16 +173,10 @@ function start() {
         // Détachez les anciens écouteurs
         audio.removeEventListener('ended', handleAudioEnded);
         audio.removeEventListener('error', handleAudioError);
-        audio.removeEventListener('loadedmetadata', handleLoadedMetadata);
-        audio.removeEventListener('stalled', handleAudioStalled);
-        audio.removeEventListener('waiting', handleAudioWaiting);
 
         // Attachez les nouveaux écouteurs
         audio.addEventListener('ended', handleAudioEnded);
         audio.addEventListener('error', handleAudioError);
-        audio.addEventListener('loadedmetadata', handleLoadedMetadata);
-        audio.addEventListener('stalled', handleAudioStalled);
-        audio.addEventListener('waiting', handleAudioWaiting);
     }
 
     // Attachez les écouteurs initialement
@@ -218,61 +186,17 @@ function start() {
     window.attachAudioListeners = attachAudioListeners;
 
     // ===== GESTION SPÉCIFIQUE MOBILE =====
-    // Gérez la suspension du contexte audio sur mobile
     let wasPlayingBeforePause = false;
 
-    // Gérez la suspension du contexte audio quand l'app perd le focus
+    // Simple détection du changement de focus - ne pas relancer automatiquement
     document.addEventListener('visibilitychange', () => {
         if (document.hidden) {
-            // L'app a perdu le focus (écran OFF ou app en arrière-plan)
             wasPlayingBeforePause = !mainObject.partyBlindtest.audio.paused;
             console.log('App en arrière-plan, état audio:', wasPlayingBeforePause ? 'jouant' : 'pausé');
         } else {
-            // L'app a retrouvé le focus
             console.log('App au premier plan');
-            // Si elle jouait avant, vérifiez que la musique est toujours en cours
-            if (wasPlayingBeforePause && mainObject.partyBlindtest.audio.paused) {
-                setTimeout(() => {
-                    mainObject.partyBlindtest.playMusic();
-                    console.log('Reprise audio après retour au focus');
-                }, 100);
-            }
+            // Ne pas relancer automatiquement - laisser l'utilisateur contrôler
         }
-    });
-
-    // Récupérez après interruptions système (appels, notifications)
-    mainObject.partyBlindtest.audio.addEventListener('pause', () => {
-        // Vérifiez si c'est une pause involontaire (interruption système)
-        if (
-            mainObject.partyBlindtest.audio.currentTime > 0 &&
-            !mainObject.partyBlindtest.audio.ended &&
-            mainObject.partyBlindtest.audio.duration &&
-            wasPlayingBeforePause
-        ) {
-            console.log('Pause système/interruption détectée');
-            // Essayez de reprendre après un court délai
-            setTimeout(() => {
-                if (wasPlayingBeforePause && mainObject.partyBlindtest.audio.paused) {
-                    mainObject.partyBlindtest.playMusic();
-                    console.log('Reprise après interruption');
-                }
-            }, 1000);
-        }
-    });
-
-    // Prévenez la suspension du contexte audio
-    mainObject.partyBlindtest.audio.addEventListener('suspend', () => {
-        console.warn('Contexte audio suspendu - tentative de récupération');
-        if (mainObject.partyBlindtest.audio.src && wasPlayingBeforePause) {
-            mainObject.partyBlindtest.audio.load();
-            setTimeout(() => {
-                mainObject.partyBlindtest.playMusic();
-            }, 500);
-        }
-    });
-
-    mainObject.partyBlindtest.audio.addEventListener('playing', () => {
-        console.log('Lecture en cours - contexte audio actif');
     });
 
     window.addEventListener('keydown', (key) => {
