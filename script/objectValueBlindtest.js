@@ -192,6 +192,10 @@ export class PartyBlindtest {
             // this.audio.pause();
             const pathMusic = this.getMusic().path;
             this.audio.src = pathMusic;
+            // Réattachez les écouteurs après le changement d'audio
+            if (typeof window.attachAudioListeners === 'function') {
+                window.attachAudioListeners();
+            }
         }
     }
 

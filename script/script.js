@@ -98,14 +98,60 @@ function start() {
     window.addFormPointInfo = addFormPointInfo;
     createClickEventOnButton('#validMusic', mainObject.partyBlindtest.validMusic, mainObject);
     createClickEventOnButton('#shuffleMusics', mainObject.partyBlindtest.shuffleMusics, mainObject);
-    try {
-        document.querySelector('#music-audio').addEventListener('ended', () => {
+
+    // Fonctions de gestion des événements audio
+    const handleAudioEnded = () => {
+        setTimeout(() => {
+            mainObject.partyBlindtest.nextMusic();
+            mainObject.partyBlindtest.playMusic();
+        }, 1000);
+    };
+
+    const handleAudioError = () => {
+        const errorCode = mainObject.partyBlindtest.audio.error?.code;
+        const errorMessages = {
+            1: 'Chargement annulé',
+            2: 'Erreur réseau',
+            3: 'Décodage échoué',
+            4: 'Format non supporté'
+        };
+        console.error('Erreur audio:', errorMessages[errorCode] || 'Erreur inconnue');
+        setTimeout(() => {
+            mainObject.partyBlindtest.nextMusic();
+            mainObject.partyBlindtest.playMusic();
+        }, 500);
+    };
+
+    const handleLoadedMetadata = () => {
+        if (mainObject.partyBlindtest.audio.duration === 0 || !isFinite(mainObject.partyBlindtest.audio.duration)) {
+            console.warn('Durée invalide, passage à la musique suivante');
             setTimeout(() => {
                 mainObject.partyBlindtest.nextMusic();
                 mainObject.partyBlindtest.playMusic();
-            }, 1000);
-        });
-    } catch (error) {}
+            }, 500);
+        }
+    };
+
+    // Fonction pour attacher les écouteurs (avec détachement des anciens)
+    function attachAudioListeners() {
+        const audio = mainObject.partyBlindtest.audio;
+        
+        // Détachez les anciens écouteurs
+        audio.removeEventListener('ended', handleAudioEnded);
+        audio.removeEventListener('error', handleAudioError);
+        audio.removeEventListener('loadedmetadata', handleLoadedMetadata);
+        
+        // Attachez les nouveaux écouteurs
+        audio.addEventListener('ended', handleAudioEnded);
+        audio.addEventListener('error', handleAudioError);
+        audio.addEventListener('loadedmetadata', handleLoadedMetadata);
+    }
+
+    // Attachez les écouteurs initialement
+    attachAudioListeners();
+
+    // Exposez la fonction pour la réutiliser après changeAudio()
+    window.attachAudioListeners = attachAudioListeners;
     window.addEventListener('keydown', (key) => {
         if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA') {
             return;
