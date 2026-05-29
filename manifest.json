@@ -1,15 +1,48 @@
 {
-  "name": "Blindtest",
-  "short_name": "Blindtest",
+  "name": "Blind Test - Lecteur de musique",
+  "short_name": "Blind Test",
+  "description": "Application de Blind Test - Écoutez et devinez les musiques",
   "start_url": "/blindtest/",
   "display": "standalone",
+  "scope": "/blindtest/",
+  "orientation": "portrait-primary",
   "background_color": "#ffffff",
   "theme_color": "#000000",
-  "icons": [
+  "categories": ["music", "entertainment"],
+  "screenshots": [
     {
       "src": "./asset/logo.png",
       "sizes": "512x512",
       "type": "image/png"
+    }
+  ],
+  "icons": [
+    {
+      "src": "./asset/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./asset/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Jouer",
+      "short_name": "Jouer",
+      "description": "Lance une partie de Blind Test",
+      "url": "/blindtest/presenter.html",
+      "icons": [
+        {
+          "src": "./asset/logo.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        }
+      ]
     }
   ]
 }

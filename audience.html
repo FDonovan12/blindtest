@@ -1,11 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Blind Test" />
     <title>Blind Test - Audience</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcun icon" href="asset/logo.png" />
+    <link rel="apple-touch-icon" href="asset/logo.png" />
+    <link rel="manifest" href="./manifest.json" />
+    <meta name="theme-color" content="#000000" />
     <script type="module" src="./script/script.js" defer></script>
     <script type="module" src="./script/header.js" defer></script>
   </head>
@@ -38,7 +44,7 @@
           <!-- <div id="timer"></div> -->
         </div>
         <div id="response" class="response grid-container"></div>
-        <audio id="music-audio"></audio>
+        <audio id="music-audio" preload="metadata" crossorigin="anonymous"></audio>
       </div>
     </main>
     <footer class="full-width"></footer>

@@ -102,10 +102,41 @@ export class PartyBlindtest {
 
     playMusic() {
         const buttonPlayPause = document.querySelector('#play');
-        this.audio.play();
-        if (buttonPlayPause) {
-            buttonPlayPause.setAttribute('active', true);
-            buttonPlayPause.textContent = 'pause';
+        
+        // Assurez-vous que l'audio est dans un état valide
+        if (!this.audio.src) {
+            console.error('Aucun fichier audio chargé');
+            return;
+        }
+
+        // Sur mobile, la promesse play() peut être rejetée
+        const playPromise = this.audio.play();
+        
+        if (playPromise !== undefined) {
+            playPromise
+                .then(() => {
+                    // La lecture a commencé
+                    if (buttonPlayPause) {
+                        buttonPlayPause.setAttribute('active', true);
+                        buttonPlayPause.textContent = 'pause';
+                    }
+                    console.log('Lecture démarrée');
+                })
+                .catch((error) => {
+                    console.error('Erreur lors du play():', error);
+                    // Essayez de recharger et relancer
+                    if (error.name === 'NotAllowedError') {
+                        console.warn('Lecture bloquée par le navigateur - nécessite une interaction utilisateur');
+                    } else if (error.name === 'NotSupportedError') {
+                        console.warn('Format audio non supporté');
+                    }
+                });
+        } else {
+            // Anciens navigateurs sans Promise
+            if (buttonPlayPause) {
+                buttonPlayPause.setAttribute('active', true);
+                buttonPlayPause.textContent = 'pause';
+            }
         }
     }
 
@@ -191,11 +222,28 @@ export class PartyBlindtest {
             this.pauseMusic();
             // this.audio.pause();
             const pathMusic = this.getMusic().path;
-            this.audio.src = pathMusic;
-            // Réattachez les écouteurs après le changement d'audio
-            if (typeof window.attachAudioListeners === 'function') {
-                window.attachAudioListeners();
-            }
+            
+            // Réinitialisez l'audio
+            this.audio.src = '';
+            this.audio.load();
+            
+            // Attendez un peu avant de charger le nouveau fichier (évite les conditions de course)
+            setTimeout(() => {
+                this.audio.src = pathMusic;
+                this.audio.load(); // Force le préchargement des métadonnées
+                
+                // Réattachez les écouteurs après le changement d'audio
+                if (typeof window.attachAudioListeners === 'function') {
+                    window.attachAudioListeners();
+                }
+                
+                // Mettez à jour les métadonnées media pour la barre de contrôle mobile
+                if (typeof window.updateMediaMetadata === 'function') {
+                    window.updateMediaMetadata();
+                }
+                
+                console.log('Audio changé vers:', pathMusic);
+            }, 50);
         }
     }
 
